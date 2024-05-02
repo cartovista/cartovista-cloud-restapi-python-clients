@@ -1,0 +1,11 @@
+# DuplicateLayerParameter
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** |  | [optional] 
+**identifier** | **str** |  | [optional] 
+**data_column_filters** | [**list[DataColumnFilters]**](DataColumnFilters.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

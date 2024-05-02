@@ -1,0 +1,45 @@
+# UserDTO
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**is_anonymous** | **bool** |  | [optional] 
+**display_name** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
+**is_group** | **bool** |  | [optional] 
+**last_modification_time** | **datetime** |  | [optional] 
+**creation_time** | **datetime** |  | [optional] 
+**tenant_id** | **str** |  | [optional] 
+**provider** | [**SecurityProvider**](SecurityProvider.md) |  | [optional] 
+**provider_name** | **str** |  | [optional] 
+**identifier** | **str** |  | [optional] 
+**provider_status** | [**ProviderStatus**](ProviderStatus.md) |  | [optional] 
+**path** | **str** |  | [optional] 
+**secure_object_permissions** | [**list[PermissionPairDTO]**](PermissionPairDTO.md) |  | [optional] 
+**first_name** | **str** |  | [optional] 
+**last_name** | **str** |  | [optional] 
+**username** | **str** |  | [optional] 
+**email_address** | **str** |  | [optional] 
+**notes** | **str** |  | [optional] 
+**last_login_time** | **datetime** |  | [optional] 
+**login_count** | **int** |  | [optional] 
+**access_failed_count** | **int** |  | [optional] 
+**folder_id** | **str** |  | [optional] 
+**paid_products** | [**list[ProductUserDTO]**](ProductUserDTO.md) |  | [optional] 
+**app_name** | **str** |  | [optional] 
+**is_locked** | **bool** |  | [optional] 
+**password_reset_code** | **str** |  | [optional] 
+**thumbnail_url** | **str** |  | [optional] 
+**lockout_reason** | **str** |  | [optional] 
+**lockout_start_time** | **datetime** |  | [optional] 
+**groups** | [**list[GroupDTO]**](GroupDTO.md) |  | [optional] 
+**last_visit** | **datetime** |  | [optional] 
+**can_dismiss_subscription_banner** | **bool** |  | [optional] 
+**did_dimiss_schedule_notice** | **bool** |  | [optional] 
+**company_role** | **str** |  | [optional] 
+**phone** | **str** |  | [optional] 
+**disclaimer_accepted_time** | **datetime** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

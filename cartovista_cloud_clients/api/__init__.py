@@ -1,0 +1,46 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from cartovista_cloud_clients.api.api_key_api import ApiKeyApi
+from cartovista_cloud_clients.api.authentication_api import AuthenticationApi
+from cartovista_cloud_clients.api.composite_variable_scoring_api import CompositeVariableScoringApi
+from cartovista_cloud_clients.api.config_api import ConfigApi
+from cartovista_cloud_clients.api.data_api import DataApi
+from cartovista_cloud_clients.api.data_column_api import DataColumnApi
+from cartovista_cloud_clients.api.data_row_api import DataRowApi
+from cartovista_cloud_clients.api.data_services_api import DataServicesApi
+from cartovista_cloud_clients.api.data_table_api import DataTableApi
+from cartovista_cloud_clients.api.feature_api import FeatureApi
+from cartovista_cloud_clients.api.feedback_api import FeedbackApi
+from cartovista_cloud_clients.api.file_api import FileApi
+from cartovista_cloud_clients.api.folder_api import FolderApi
+from cartovista_cloud_clients.api.grid_layer_api import GridLayerApi
+from cartovista_cloud_clients.api.grid_layer_settings_api import GridLayerSettingsApi
+from cartovista_cloud_clients.api.group_api import GroupApi
+from cartovista_cloud_clients.api.heatmap_api import HeatmapApi
+from cartovista_cloud_clients.api.layer_api import LayerApi
+from cartovista_cloud_clients.api.layer_settings_api import LayerSettingsApi
+from cartovista_cloud_clients.api.location_api import LocationApi
+from cartovista_cloud_clients.api.map_api import MapApi
+from cartovista_cloud_clients.api.ogc_api import OGCApi
+from cartovista_cloud_clients.api.organization_api import OrganizationApi
+from cartovista_cloud_clients.api.permission_api import PermissionApi
+from cartovista_cloud_clients.api.plugin_api import PluginApi
+from cartovista_cloud_clients.api.portal_api import PortalApi
+from cartovista_cloud_clients.api.sign_up_api import SignUpApi
+from cartovista_cloud_clients.api.slide_api import SlideApi
+from cartovista_cloud_clients.api.statistics_api import StatisticsApi
+from cartovista_cloud_clients.api.style_theme_services_api import StyleThemeServicesApi
+from cartovista_cloud_clients.api.subscription_api import SubscriptionApi
+from cartovista_cloud_clients.api.symbol_api import SymbolApi
+from cartovista_cloud_clients.api.territory_manager_api import TerritoryManagerApi
+from cartovista_cloud_clients.api.user_api import UserApi
+from cartovista_cloud_clients.api.vector_services_api import VectorServicesApi
+from cartovista_cloud_clients.api.view_api import ViewApi
+from cartovista_cloud_clients.api.web_map_tile_service_api import WebMapTileServiceApi
+from cartovista_cloud_clients.api.wms_api import WmsApi
+from cartovista_cloud_clients.api.wms_settings_api import WmsSettingsApi
+from cartovista_cloud_clients.api.wmts_api import WmtsApi
+from cartovista_cloud_clients.api.wmts_settings_api import WmtsSettingsApi
