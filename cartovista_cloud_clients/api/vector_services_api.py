@@ -562,7 +562,7 @@ class VectorServicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param GetFeaturesExtentDTO body: (required)
+        :param GetFeaturesExtentDto body: (required)
         :param str tenant_url_code: (required)
         :return: GetFeaturesExtentResultDTO
                  If the method is called asynchronously,
@@ -584,7 +584,7 @@ class VectorServicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param GetFeaturesExtentDTO body: (required)
+        :param GetFeaturesExtentDto body: (required)
         :param str tenant_url_code: (required)
         :return: GetFeaturesExtentResultDTO
                  If the method is called asynchronously,

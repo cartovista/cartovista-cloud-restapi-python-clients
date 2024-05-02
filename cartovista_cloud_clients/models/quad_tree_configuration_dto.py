@@ -30,7 +30,7 @@ class QuadTreeConfigurationDTO(object):
     swagger_types = {
         'quad_keys': 'list[str]',
         'lowest_visible_zoom': 'int',
-        'quad_tree_extent': 'ExtentDTO'
+        'quad_tree_extent': 'ExtentDto'
     }
 
     attribute_map = {
@@ -100,7 +100,7 @@ class QuadTreeConfigurationDTO(object):
 
 
         :return: The quad_tree_extent of this QuadTreeConfigurationDTO.  # noqa: E501
-        :rtype: ExtentDTO
+        :rtype: ExtentDto
         """
         return self._quad_tree_extent
 
@@ -110,7 +110,7 @@ class QuadTreeConfigurationDTO(object):
 
 
         :param quad_tree_extent: The quad_tree_extent of this QuadTreeConfigurationDTO.  # noqa: E501
-        :type: ExtentDTO
+        :type: ExtentDto
         """
 
         self._quad_tree_extent = quad_tree_extent

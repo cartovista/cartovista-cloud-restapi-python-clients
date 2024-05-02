@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **wms_get_wms_extents**
-> list[ExtentDTO] wms_get_wms_extents(body, tenant_url_code)
+> list[ExtentDto] wms_get_wms_extents(body, tenant_url_code)
 
 Gets the extents of one or more WMS layers. NOTE: Some services may not have extents defined.
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ExtentDTO]**](ExtentDTO.md)
+[**list[ExtentDto]**](ExtentDto.md)
 
 ### Authorization
 

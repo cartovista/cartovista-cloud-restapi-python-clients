@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**extent** | [**ExtentDTO**](ExtentDTO.md) |  | [optional] 
+**extent** | [**ExtentDto**](ExtentDto.md) |  | [optional] 
 **feature_type** | **str** |  | [optional] 
 **filter_data_columns** | [**list[DataQueryColumnDTO]**](DataQueryColumnDTO.md) |  | [optional] 
 **selection_stack_parameters** | [**SelectionStackParametersDTOOfDataQueryColumnDTO**](SelectionStackParametersDTOOfDataQueryColumnDTO.md) |  | [optional] 

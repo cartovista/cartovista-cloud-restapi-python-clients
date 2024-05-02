@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **width** | **int** |  | [optional] 
-**extent** | [**ExtentDTO**](ExtentDTO.md) |  | [optional] 
+**extent** | [**ExtentDto**](ExtentDto.md) |  | [optional] 
 **thematic_data_column** | **OneOfGetHeatMapItemsDTOOfDataQueryColumnDTOThematicDataColumn** |  | [optional] 
 **filter_data_columns** | [**list[DataQueryColumnDTO]**](DataQueryColumnDTO.md) |  | [optional] 
 **spatial_filter** | **OneOfGetHeatMapItemsDTOOfDataQueryColumnDTOSpatialFilter** |  | [optional] 

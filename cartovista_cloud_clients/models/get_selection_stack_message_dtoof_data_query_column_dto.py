@@ -28,7 +28,7 @@ class GetSelectionStackMessageDTOOfDataQueryColumnDTO(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'extent': 'ExtentDTO',
+        'extent': 'ExtentDto',
         'feature_type': 'str',
         'filter_data_columns': 'list[DataQueryColumnDTO]',
         'selection_stack_parameters': 'SelectionStackParametersDTOOfDataQueryColumnDTO',
@@ -68,7 +68,7 @@ class GetSelectionStackMessageDTOOfDataQueryColumnDTO(object):
 
 
         :return: The extent of this GetSelectionStackMessageDTOOfDataQueryColumnDTO.  # noqa: E501
-        :rtype: ExtentDTO
+        :rtype: ExtentDto
         """
         return self._extent
 
@@ -78,7 +78,7 @@ class GetSelectionStackMessageDTOOfDataQueryColumnDTO(object):
 
 
         :param extent: The extent of this GetSelectionStackMessageDTOOfDataQueryColumnDTO.  # noqa: E501
-        :type: ExtentDTO
+        :type: ExtentDto
         """
 
         self._extent = extent

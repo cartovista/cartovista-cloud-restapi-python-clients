@@ -301,7 +301,7 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.VectorServicesApi(cartovista_cloud_clients.ApiClient(configuration))
-body = cartovista_cloud_clients.GetFeaturesExtentDTO() # GetFeaturesExtentDTO | 
+body = cartovista_cloud_clients.GetFeaturesExtentDto() # GetFeaturesExtentDto | 
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
@@ -315,7 +315,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**GetFeaturesExtentDTO**](GetFeaturesExtentDTO.md)|  | 
+ **body** | [**GetFeaturesExtentDto**](GetFeaturesExtentDto.md)|  | 
  **tenant_url_code** | **str**|  | 
 
 ### Return type

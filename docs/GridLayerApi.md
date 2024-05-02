@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **grid_layer_get_first_grid_source_extents**
-> list[ExtentDTO] grid_layer_get_first_grid_source_extents(body, tenant_url_code)
+> list[ExtentDto] grid_layer_get_first_grid_source_extents(body, tenant_url_code)
 
 Gets the extents of the first grid source of each layer.
 
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ExtentDTO]**](ExtentDTO.md)
+[**list[ExtentDto]**](ExtentDto.md)
 
 ### Authorization
 

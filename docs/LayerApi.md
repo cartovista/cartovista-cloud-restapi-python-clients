@@ -1011,7 +1011,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **layer_get_layers_extents**
-> list[ExtentDTO] layer_get_layers_extents(body, tenant_url_code)
+> list[ExtentDto] layer_get_layers_extents(body, tenant_url_code)
 
 Gets the layers' extents.
 
@@ -1051,7 +1051,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ExtentDTO]**](ExtentDTO.md)
+[**list[ExtentDto]**](ExtentDto.md)
 
 ### Authorization
 

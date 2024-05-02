@@ -30,7 +30,7 @@ class GetHeatMapItemsDTOOfDataQueryColumnDTO(object):
     swagger_types = {
         'id': 'str',
         'width': 'int',
-        'extent': 'ExtentDTO',
+        'extent': 'ExtentDto',
         'thematic_data_column': 'OneOfGetHeatMapItemsDTOOfDataQueryColumnDTOThematicDataColumn',
         'filter_data_columns': 'list[DataQueryColumnDTO]',
         'spatial_filter': 'OneOfGetHeatMapItemsDTOOfDataQueryColumnDTOSpatialFilter'
@@ -115,7 +115,7 @@ class GetHeatMapItemsDTOOfDataQueryColumnDTO(object):
 
 
         :return: The extent of this GetHeatMapItemsDTOOfDataQueryColumnDTO.  # noqa: E501
-        :rtype: ExtentDTO
+        :rtype: ExtentDto
         """
         return self._extent
 
@@ -125,7 +125,7 @@ class GetHeatMapItemsDTOOfDataQueryColumnDTO(object):
 
 
         :param extent: The extent of this GetHeatMapItemsDTOOfDataQueryColumnDTO.  # noqa: E501
-        :type: ExtentDTO
+        :type: ExtentDto
         """
 
         self._extent = extent

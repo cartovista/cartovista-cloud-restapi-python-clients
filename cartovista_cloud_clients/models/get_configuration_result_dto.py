@@ -29,7 +29,7 @@ class GetConfigurationResultDTO(object):
     """
     swagger_types = {
         'version': 'str',
-        'extent': 'ExtentDTO',
+        'extent': 'ExtentDto',
         'geometry_type': 'str',
         'srid': 'int',
         'tiled': 'bool',
@@ -119,7 +119,7 @@ class GetConfigurationResultDTO(object):
 
 
         :return: The extent of this GetConfigurationResultDTO.  # noqa: E501
-        :rtype: ExtentDTO
+        :rtype: ExtentDto
         """
         return self._extent
 
@@ -129,7 +129,7 @@ class GetConfigurationResultDTO(object):
 
 
         :param extent: The extent of this GetConfigurationResultDTO.  # noqa: E501
-        :type: ExtentDTO
+        :type: ExtentDto
         """
 
         self._extent = extent

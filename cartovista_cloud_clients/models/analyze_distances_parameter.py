@@ -31,7 +31,7 @@ class AnalyzeDistancesParameter(object):
         'target_layer_id': 'str',
         'origin_feature_id': 'str',
         'maximum_nearest': 'int',
-        'extent': 'ExtentDTO',
+        'extent': 'ExtentDto',
         'viewer_readable_coordinates': 'bool',
         'allowed_feature_ids': 'list[str]',
         'name_column_id': 'str'
@@ -141,7 +141,7 @@ class AnalyzeDistancesParameter(object):
 
 
         :return: The extent of this AnalyzeDistancesParameter.  # noqa: E501
-        :rtype: ExtentDTO
+        :rtype: ExtentDto
         """
         return self._extent
 
@@ -151,7 +151,7 @@ class AnalyzeDistancesParameter(object):
 
 
         :param extent: The extent of this AnalyzeDistancesParameter.  # noqa: E501
-        :type: ExtentDTO
+        :type: ExtentDto
         """
 
         self._extent = extent

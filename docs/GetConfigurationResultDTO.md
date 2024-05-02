@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **version** | **str** |  | [optional] 
-**extent** | [**ExtentDTO**](ExtentDTO.md) |  | [optional] 
+**extent** | [**ExtentDto**](ExtentDto.md) |  | [optional] 
 **geometry_type** | **str** |  | [optional] 
 **srid** | **int** |  | [optional] 
 **tiled** | **bool** |  | [optional] 

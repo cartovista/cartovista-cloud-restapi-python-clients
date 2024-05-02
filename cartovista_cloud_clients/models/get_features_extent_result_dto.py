@@ -29,7 +29,7 @@ class GetFeaturesExtentResultDTO(object):
     """
     swagger_types = {
         'feature_ids': 'list[str]',
-        'extents': 'list[ExtentDTO]'
+        'extents': 'list[ExtentDto]'
     }
 
     attribute_map = {
@@ -74,7 +74,7 @@ class GetFeaturesExtentResultDTO(object):
 
 
         :return: The extents of this GetFeaturesExtentResultDTO.  # noqa: E501
-        :rtype: list[ExtentDTO]
+        :rtype: list[ExtentDto]
         """
         return self._extents
 
@@ -84,7 +84,7 @@ class GetFeaturesExtentResultDTO(object):
 
 
         :param extents: The extents of this GetFeaturesExtentResultDTO.  # noqa: E501
-        :type: list[ExtentDTO]
+        :type: list[ExtentDto]
         """
 
         self._extents = extents
