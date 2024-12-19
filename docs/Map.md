@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **seo_title** | **str** |  | [optional] 
 **seo_description** | **str** |  | [optional] 
 **seo_custom_html** | **str** |  | [optional] 
-**scoring_enabled** | **bool** |  | [optional] 
 **thumbnail_url** | **str** |  | [optional] 
 **thumbnail_url_expiry** | **datetime** |  | [optional] 
 **creation_date** | **datetime** |  | [optional] 
@@ -24,9 +23,11 @@ Name | Type | Description | Notes
 **can_edit** | **bool** |  | [optional] 
 **public_access** | **bool** |  | [optional] 
 **vanity_url** | **str** |  | [optional] 
+**has_onboarding** | **bool** |  | [optional] 
 **is_locked** | **bool** |  | [optional] 
 **can_add_layers** | **bool** |  | [optional] 
 **has_custom_thumbnail** | **bool** |  | [optional] 
+**is_poi_analysis** | **bool** |  | [optional] 
 **folder_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -30,20 +30,23 @@ class PixelSizeBounds(object):
     swagger_types = {
         'min': 'int',
         'max': 'int',
-        'default': 'int'
+        'default': 'int',
+        'poi_default': 'int'
     }
 
     attribute_map = {
         'min': 'min',
         'max': 'max',
-        'default': 'default'
+        'default': 'default',
+        'poi_default': 'poiDefault'
     }
 
-    def __init__(self, min=None, max=None, default=None):  # noqa: E501
+    def __init__(self, min=None, max=None, default=None, poi_default=None):  # noqa: E501
         """PixelSizeBounds - a model defined in Swagger"""  # noqa: E501
         self._min = None
         self._max = None
         self._default = None
+        self._poi_default = None
         self.discriminator = None
         if min is not None:
             self.min = min
@@ -51,6 +54,8 @@ class PixelSizeBounds(object):
             self.max = max
         if default is not None:
             self.default = default
+        if poi_default is not None:
+            self.poi_default = poi_default
 
     @property
     def min(self):
@@ -114,6 +119,27 @@ class PixelSizeBounds(object):
         """
 
         self._default = default
+
+    @property
+    def poi_default(self):
+        """Gets the poi_default of this PixelSizeBounds.  # noqa: E501
+
+
+        :return: The poi_default of this PixelSizeBounds.  # noqa: E501
+        :rtype: int
+        """
+        return self._poi_default
+
+    @poi_default.setter
+    def poi_default(self, poi_default):
+        """Sets the poi_default of this PixelSizeBounds.
+
+
+        :param poi_default: The poi_default of this PixelSizeBounds.  # noqa: E501
+        :type: int
+        """
+
+        self._poi_default = poi_default
 
     def to_dict(self):
         """Returns the model properties as a dict"""

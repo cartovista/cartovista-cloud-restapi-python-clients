@@ -115,7 +115,7 @@ class GridLayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/gridLayerSettings/{gridLayerId}/default', 'GET',
@@ -216,7 +216,7 @@ class GridLayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/gridLayerSettings/{gridLayerSettingsId}', 'GET',
@@ -333,7 +333,7 @@ class GridLayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/gridLayerSettings/{gridLayerSettingsId}/map/{mapId}', 'GET',
@@ -446,7 +446,7 @@ class GridLayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/gridLayerSettings/{gridLayerSettingsId}/alias', 'PATCH',
@@ -559,7 +559,7 @@ class GridLayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/gridLayerSettings/{gridLayerSettingsId}/rendering', 'PATCH',
@@ -672,7 +672,7 @@ class GridLayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/gridLayerSettings/{gridLayerSettingsId}/style', 'PATCH',
@@ -785,7 +785,7 @@ class GridLayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/gridLayerSettings/{gridLayerSettingsId}/visibility-ranges', 'PATCH',

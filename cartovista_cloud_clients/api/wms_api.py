@@ -119,7 +119,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms', 'POST',
@@ -220,7 +220,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}', 'DELETE',
@@ -249,7 +249,7 @@ class WmsApi(object):
         :param async_req bool
         :param list[str] body: The layer identifiers. (required)
         :param str tenant_url_code: (required)
-        :return: list[ExtentDto]
+        :return: list[ExtentDTO]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -271,7 +271,7 @@ class WmsApi(object):
         :param async_req bool
         :param list[str] body: The layer identifiers. (required)
         :param str tenant_url_code: (required)
-        :return: list[ExtentDto]
+        :return: list[ExtentDTO]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -325,7 +325,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/GetExtents', 'POST',
@@ -335,7 +335,7 @@ class WmsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[ExtentDto]',  # noqa: E501
+            response_type='list[ExtentDTO]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -426,7 +426,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}', 'GET',
@@ -527,7 +527,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}/details', 'GET',
@@ -620,7 +620,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms', 'GET',
@@ -733,7 +733,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}', 'PATCH',
@@ -846,7 +846,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}/permissions', 'PATCH',

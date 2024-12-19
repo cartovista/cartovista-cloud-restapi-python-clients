@@ -35,7 +35,8 @@ class CreateWmsLayer(object):
         'set_public_access': 'bool',
         'layer_names': 'list[str]',
         'extent': 'OneOfCreateWmsLayerExtent',
-        'get_legend_url': 'str'
+        'get_legend_url': 'str',
+        'version': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class CreateWmsLayer(object):
         'set_public_access': 'setPublicAccess',
         'layer_names': 'layerNames',
         'extent': 'extent',
-        'get_legend_url': 'getLegendUrl'
+        'get_legend_url': 'getLegendUrl',
+        'version': 'version'
     }
 
-    def __init__(self, name=None, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, layer_names=None, extent=None, get_legend_url=None):  # noqa: E501
+    def __init__(self, name=None, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, layer_names=None, extent=None, get_legend_url=None, version=None):  # noqa: E501
         """CreateWmsLayer - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._url = None
@@ -59,6 +61,7 @@ class CreateWmsLayer(object):
         self._layer_names = None
         self._extent = None
         self._get_legend_url = None
+        self._version = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -76,6 +79,8 @@ class CreateWmsLayer(object):
             self.extent = extent
         if get_legend_url is not None:
             self.get_legend_url = get_legend_url
+        if version is not None:
+            self.version = version
 
     @property
     def name(self):
@@ -244,6 +249,27 @@ class CreateWmsLayer(object):
         """
 
         self._get_legend_url = get_legend_url
+
+    @property
+    def version(self):
+        """Gets the version of this CreateWmsLayer.  # noqa: E501
+
+
+        :return: The version of this CreateWmsLayer.  # noqa: E501
+        :rtype: str
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this CreateWmsLayer.
+
+
+        :param version: The version of this CreateWmsLayer.  # noqa: E501
+        :type: str
+        """
+
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -28,7 +28,7 @@ class UpdateHeatmapParameter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'column_id': 'str',
+        'column_ids': 'list[str]',
         'power': 'float',
         'smoothing': 'float',
         'radius': 'float',
@@ -36,23 +36,23 @@ class UpdateHeatmapParameter(object):
     }
 
     attribute_map = {
-        'column_id': 'columnId',
+        'column_ids': 'columnIds',
         'power': 'power',
         'smoothing': 'smoothing',
         'radius': 'radius',
         'pixel_size': 'pixelSize'
     }
 
-    def __init__(self, column_id=None, power=None, smoothing=None, radius=None, pixel_size=None):  # noqa: E501
+    def __init__(self, column_ids=None, power=None, smoothing=None, radius=None, pixel_size=None):  # noqa: E501
         """UpdateHeatmapParameter - a model defined in Swagger"""  # noqa: E501
-        self._column_id = None
+        self._column_ids = None
         self._power = None
         self._smoothing = None
         self._radius = None
         self._pixel_size = None
         self.discriminator = None
-        if column_id is not None:
-            self.column_id = column_id
+        if column_ids is not None:
+            self.column_ids = column_ids
         if power is not None:
             self.power = power
         if smoothing is not None:
@@ -63,25 +63,25 @@ class UpdateHeatmapParameter(object):
             self.pixel_size = pixel_size
 
     @property
-    def column_id(self):
-        """Gets the column_id of this UpdateHeatmapParameter.  # noqa: E501
+    def column_ids(self):
+        """Gets the column_ids of this UpdateHeatmapParameter.  # noqa: E501
 
 
-        :return: The column_id of this UpdateHeatmapParameter.  # noqa: E501
-        :rtype: str
+        :return: The column_ids of this UpdateHeatmapParameter.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._column_id
+        return self._column_ids
 
-    @column_id.setter
-    def column_id(self, column_id):
-        """Sets the column_id of this UpdateHeatmapParameter.
+    @column_ids.setter
+    def column_ids(self, column_ids):
+        """Sets the column_ids of this UpdateHeatmapParameter.
 
 
-        :param column_id: The column_id of this UpdateHeatmapParameter.  # noqa: E501
-        :type: str
+        :param column_ids: The column_ids of this UpdateHeatmapParameter.  # noqa: E501
+        :type: list[str]
         """
 
-        self._column_id = column_id
+        self._column_ids = column_ids
 
     @property
     def power(self):

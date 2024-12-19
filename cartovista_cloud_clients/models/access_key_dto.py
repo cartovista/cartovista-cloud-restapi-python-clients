@@ -30,7 +30,7 @@ class AccessKeyDTO(object):
     swagger_types = {
         'access_key': 'str',
         'access_key_string': 'str',
-        'secret_key': 'str',
+        'has_access_key': 'bool',
         'mode': 'ApiModeEnum',
         'enabled': 'bool',
         'user_id': 'str',
@@ -44,7 +44,7 @@ class AccessKeyDTO(object):
     attribute_map = {
         'access_key': 'accessKey',
         'access_key_string': 'accessKeyString',
-        'secret_key': 'secretKey',
+        'has_access_key': 'hasAccessKey',
         'mode': 'mode',
         'enabled': 'enabled',
         'user_id': 'userId',
@@ -55,11 +55,11 @@ class AccessKeyDTO(object):
         'notes': 'notes'
     }
 
-    def __init__(self, access_key=None, access_key_string=None, secret_key=None, mode=None, enabled=None, user_id=None, tenant_id=None, creation_time=None, last_used_time=None, ip_whitelisting=None, notes=None):  # noqa: E501
+    def __init__(self, access_key=None, access_key_string=None, has_access_key=None, mode=None, enabled=None, user_id=None, tenant_id=None, creation_time=None, last_used_time=None, ip_whitelisting=None, notes=None):  # noqa: E501
         """AccessKeyDTO - a model defined in Swagger"""  # noqa: E501
         self._access_key = None
         self._access_key_string = None
-        self._secret_key = None
+        self._has_access_key = None
         self._mode = None
         self._enabled = None
         self._user_id = None
@@ -73,8 +73,8 @@ class AccessKeyDTO(object):
             self.access_key = access_key
         if access_key_string is not None:
             self.access_key_string = access_key_string
-        if secret_key is not None:
-            self.secret_key = secret_key
+        if has_access_key is not None:
+            self.has_access_key = has_access_key
         if mode is not None:
             self.mode = mode
         if enabled is not None:
@@ -135,25 +135,25 @@ class AccessKeyDTO(object):
         self._access_key_string = access_key_string
 
     @property
-    def secret_key(self):
-        """Gets the secret_key of this AccessKeyDTO.  # noqa: E501
+    def has_access_key(self):
+        """Gets the has_access_key of this AccessKeyDTO.  # noqa: E501
 
 
-        :return: The secret_key of this AccessKeyDTO.  # noqa: E501
-        :rtype: str
+        :return: The has_access_key of this AccessKeyDTO.  # noqa: E501
+        :rtype: bool
         """
-        return self._secret_key
+        return self._has_access_key
 
-    @secret_key.setter
-    def secret_key(self, secret_key):
-        """Sets the secret_key of this AccessKeyDTO.
+    @has_access_key.setter
+    def has_access_key(self, has_access_key):
+        """Sets the has_access_key of this AccessKeyDTO.
 
 
-        :param secret_key: The secret_key of this AccessKeyDTO.  # noqa: E501
-        :type: str
+        :param has_access_key: The has_access_key of this AccessKeyDTO.  # noqa: E501
+        :type: bool
         """
 
-        self._secret_key = secret_key
+        self._has_access_key = has_access_key
 
     @property
     def mode(self):

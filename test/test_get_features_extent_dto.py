@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import cartovista_cloud_clients
-from cartovista_cloud_clients.models.get_features_extent_dto import GetFeaturesExtentDto  # noqa: E501
+from cartovista_cloud_clients.models.get_features_extent_dto import GetFeaturesExtentDTO  # noqa: E501
 from cartovista_cloud_clients.rest import ApiException
 
 
-class TestGetFeaturesExtentDto(unittest.TestCase):
-    """GetFeaturesExtentDto unit test stubs"""
+class TestGetFeaturesExtentDTO(unittest.TestCase):
+    """GetFeaturesExtentDTO unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestGetFeaturesExtentDto(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testGetFeaturesExtentDto(self):
-        """Test GetFeaturesExtentDto"""
+    def testGetFeaturesExtentDTO(self):
+        """Test GetFeaturesExtentDTO"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = cartovista_cloud_clients.models.get_features_extent_dto.GetFeaturesExtentDto()  # noqa: E501
+        # model = cartovista_cloud_clients.models.get_features_extent_dto.GetFeaturesExtentDTO()  # noqa: E501
         pass
 
 

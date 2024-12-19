@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**column_id** | **str** |  | [optional] 
+**column_ids** | **list[str]** |  | [optional] 
 **power** | **float** |  | [optional] 
 **smoothing** | **float** |  | [optional] 
 **radius** | **float** |  | [optional] 

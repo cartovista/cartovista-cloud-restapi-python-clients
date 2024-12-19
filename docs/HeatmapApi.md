@@ -4,13 +4,13 @@ All URIs are relative to *https://cloud.cartovista.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**heatmap_generate_heatmap**](HeatmapApi.md#heatmap_generate_heatmap) | **POST** /{tenantUrlCode}/api/v2/heatmap/{layerIdentifier} | Generates a new heatmap for the layer.
+[**heatmap_create_heatmap**](HeatmapApi.md#heatmap_create_heatmap) | **POST** /{tenantUrlCode}/api/v2/heatmap/{layerIdentifier} | Generates a new heatmap for the layer.
 [**heatmap_get_heatmap_settings**](HeatmapApi.md#heatmap_get_heatmap_settings) | **GET** /{tenantUrlCode}/api/v2/heatmap/{layerIdentifier} | Gets the parameters used to create the heatmap from the layer.
 [**heatmap_get_heatmap_settings_details**](HeatmapApi.md#heatmap_get_heatmap_settings_details) | **GET** /{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}/details | 
 [**heatmap_update_heatmap**](HeatmapApi.md#heatmap_update_heatmap) | **PATCH** /{tenantUrlCode}/api/v2/heatmap/{layerIdentifier} | Regenerates an existing heatmap and updates its settings.
 
-# **heatmap_generate_heatmap**
-> heatmap_generate_heatmap(body, layer_identifier, tenant_url_code)
+# **heatmap_create_heatmap**
+> heatmap_create_heatmap(body, layer_identifier, tenant_url_code)
 
 Generates a new heatmap for the layer.
 
@@ -27,25 +27,30 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.HeatmapApi(cartovista_cloud_clients.ApiClient(configuration))
-body = cartovista_cloud_clients.GenerateHeatmapParameter() # GenerateHeatmapParameter | 
+body = cartovista_cloud_clients.CreateHeatmapParameter() # CreateHeatmapParameter | 
 layer_identifier = 'layer_identifier_example' # str | 
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
     # Generates a new heatmap for the layer.
-    api_instance.heatmap_generate_heatmap(body, layer_identifier, tenant_url_code)
+    api_instance.heatmap_create_heatmap(body, layer_identifier, tenant_url_code)
 except ApiException as e:
-    print("Exception when calling HeatmapApi->heatmap_generate_heatmap: %s\n" % e)
+    print("Exception when calling HeatmapApi->heatmap_create_heatmap: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**GenerateHeatmapParameter**](GenerateHeatmapParameter.md)|  | 
+ **body** | [**CreateHeatmapParameter**](CreateHeatmapParameter.md)|  | 
  **layer_identifier** | **str**|  | 
  **tenant_url_code** | **str**|  | 
 
@@ -55,7 +60,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -82,6 +87,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.HeatmapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -109,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -136,6 +146,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.HeatmapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -162,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -189,6 +204,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.HeatmapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -217,7 +237,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -225,4 +245,5 @@ void (empty response body)
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 

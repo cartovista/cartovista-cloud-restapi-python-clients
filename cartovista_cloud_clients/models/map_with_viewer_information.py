@@ -37,7 +37,10 @@ class MapWithViewerInformation(object):
         'grid_layers': 'list[GridLayer]',
         'wms_layers': 'list[WmsLayer]',
         'identities_with_access': 'list[str]',
-        'has_map_action': 'bool'
+        'map_actions': 'list[MapActionSettings]',
+        'poi_analysis': 'OneOfMapWithViewerInformationPoiAnalysis',
+        'poi_analysis_is_generating': 'bool',
+        'custom_applications': 'list[CustomApplicationMapSettings]'
     }
 
     attribute_map = {
@@ -50,10 +53,13 @@ class MapWithViewerInformation(object):
         'grid_layers': 'gridLayers',
         'wms_layers': 'wmsLayers',
         'identities_with_access': 'identitiesWithAccess',
-        'has_map_action': 'hasMapAction'
+        'map_actions': 'mapActions',
+        'poi_analysis': 'poiAnalysis',
+        'poi_analysis_is_generating': 'poiAnalysisIsGenerating',
+        'custom_applications': 'customApplications'
     }
 
-    def __init__(self, map=None, slides=None, toolbar=None, advanced_settings=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None, identities_with_access=None, has_map_action=None):  # noqa: E501
+    def __init__(self, map=None, slides=None, toolbar=None, advanced_settings=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None, identities_with_access=None, map_actions=None, poi_analysis=None, poi_analysis_is_generating=None, custom_applications=None):  # noqa: E501
         """MapWithViewerInformation - a model defined in Swagger"""  # noqa: E501
         self._map = None
         self._slides = None
@@ -64,7 +70,10 @@ class MapWithViewerInformation(object):
         self._grid_layers = None
         self._wms_layers = None
         self._identities_with_access = None
-        self._has_map_action = None
+        self._map_actions = None
+        self._poi_analysis = None
+        self._poi_analysis_is_generating = None
+        self._custom_applications = None
         self.discriminator = None
         if map is not None:
             self.map = map
@@ -84,8 +93,14 @@ class MapWithViewerInformation(object):
             self.wms_layers = wms_layers
         if identities_with_access is not None:
             self.identities_with_access = identities_with_access
-        if has_map_action is not None:
-            self.has_map_action = has_map_action
+        if map_actions is not None:
+            self.map_actions = map_actions
+        if poi_analysis is not None:
+            self.poi_analysis = poi_analysis
+        if poi_analysis_is_generating is not None:
+            self.poi_analysis_is_generating = poi_analysis_is_generating
+        if custom_applications is not None:
+            self.custom_applications = custom_applications
 
     @property
     def map(self):
@@ -277,25 +292,88 @@ class MapWithViewerInformation(object):
         self._identities_with_access = identities_with_access
 
     @property
-    def has_map_action(self):
-        """Gets the has_map_action of this MapWithViewerInformation.  # noqa: E501
+    def map_actions(self):
+        """Gets the map_actions of this MapWithViewerInformation.  # noqa: E501
 
 
-        :return: The has_map_action of this MapWithViewerInformation.  # noqa: E501
+        :return: The map_actions of this MapWithViewerInformation.  # noqa: E501
+        :rtype: list[MapActionSettings]
+        """
+        return self._map_actions
+
+    @map_actions.setter
+    def map_actions(self, map_actions):
+        """Sets the map_actions of this MapWithViewerInformation.
+
+
+        :param map_actions: The map_actions of this MapWithViewerInformation.  # noqa: E501
+        :type: list[MapActionSettings]
+        """
+
+        self._map_actions = map_actions
+
+    @property
+    def poi_analysis(self):
+        """Gets the poi_analysis of this MapWithViewerInformation.  # noqa: E501
+
+
+        :return: The poi_analysis of this MapWithViewerInformation.  # noqa: E501
+        :rtype: OneOfMapWithViewerInformationPoiAnalysis
+        """
+        return self._poi_analysis
+
+    @poi_analysis.setter
+    def poi_analysis(self, poi_analysis):
+        """Sets the poi_analysis of this MapWithViewerInformation.
+
+
+        :param poi_analysis: The poi_analysis of this MapWithViewerInformation.  # noqa: E501
+        :type: OneOfMapWithViewerInformationPoiAnalysis
+        """
+
+        self._poi_analysis = poi_analysis
+
+    @property
+    def poi_analysis_is_generating(self):
+        """Gets the poi_analysis_is_generating of this MapWithViewerInformation.  # noqa: E501
+
+
+        :return: The poi_analysis_is_generating of this MapWithViewerInformation.  # noqa: E501
         :rtype: bool
         """
-        return self._has_map_action
+        return self._poi_analysis_is_generating
 
-    @has_map_action.setter
-    def has_map_action(self, has_map_action):
-        """Sets the has_map_action of this MapWithViewerInformation.
+    @poi_analysis_is_generating.setter
+    def poi_analysis_is_generating(self, poi_analysis_is_generating):
+        """Sets the poi_analysis_is_generating of this MapWithViewerInformation.
 
 
-        :param has_map_action: The has_map_action of this MapWithViewerInformation.  # noqa: E501
+        :param poi_analysis_is_generating: The poi_analysis_is_generating of this MapWithViewerInformation.  # noqa: E501
         :type: bool
         """
 
-        self._has_map_action = has_map_action
+        self._poi_analysis_is_generating = poi_analysis_is_generating
+
+    @property
+    def custom_applications(self):
+        """Gets the custom_applications of this MapWithViewerInformation.  # noqa: E501
+
+
+        :return: The custom_applications of this MapWithViewerInformation.  # noqa: E501
+        :rtype: list[CustomApplicationMapSettings]
+        """
+        return self._custom_applications
+
+    @custom_applications.setter
+    def custom_applications(self, custom_applications):
+        """Sets the custom_applications of this MapWithViewerInformation.
+
+
+        :param custom_applications: The custom_applications of this MapWithViewerInformation.  # noqa: E501
+        :type: list[CustomApplicationMapSettings]
+        """
+
+        self._custom_applications = custom_applications
 
     def to_dict(self):
         """Returns the model properties as a dict"""

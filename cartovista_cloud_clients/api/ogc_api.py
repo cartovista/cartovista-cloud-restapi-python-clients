@@ -115,7 +115,7 @@ class OGCApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/ogc/{apiKey}/api', 'GET',
@@ -216,7 +216,7 @@ class OGCApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/ogc/{apiKey}', 'GET',
@@ -325,7 +325,7 @@ class OGCApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/ogc/{apiKey}/collections/{collectionId}', 'GET',
@@ -426,7 +426,7 @@ class OGCApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/ogc/{apiKey}/collections', 'GET',
@@ -527,7 +527,7 @@ class OGCApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/ogc/{apiKey}/conformance', 'GET',
@@ -628,7 +628,7 @@ class OGCApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/ogc/{apiKey}/functions', 'GET',
@@ -745,7 +745,7 @@ class OGCApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/ogc/{apiKey}/collections/{collectionId}/items/{featureId}', 'GET',
@@ -854,7 +854,7 @@ class OGCApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/ogc/{apiKey}/collections/{collectionId}/items', 'GET',

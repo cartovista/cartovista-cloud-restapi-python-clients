@@ -28,11 +28,11 @@ class GetSelectionStackMessageDTOOfDataQueryColumnDTO(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'extent': 'ExtentDto',
+        'extent': 'ExtentDTO',
         'feature_type': 'str',
         'filter_data_columns': 'list[DataQueryColumnDTO]',
         'selection_stack_parameters': 'SelectionStackParametersDTOOfDataQueryColumnDTO',
-        'spatial_filter': 'SpatialFilterDTO'
+        'spatial_filter': 'OneOfGetSelectionStackMessageDTOOfDataQueryColumnDTOSpatialFilter'
     }
 
     attribute_map = {
@@ -68,7 +68,7 @@ class GetSelectionStackMessageDTOOfDataQueryColumnDTO(object):
 
 
         :return: The extent of this GetSelectionStackMessageDTOOfDataQueryColumnDTO.  # noqa: E501
-        :rtype: ExtentDto
+        :rtype: ExtentDTO
         """
         return self._extent
 
@@ -78,7 +78,7 @@ class GetSelectionStackMessageDTOOfDataQueryColumnDTO(object):
 
 
         :param extent: The extent of this GetSelectionStackMessageDTOOfDataQueryColumnDTO.  # noqa: E501
-        :type: ExtentDto
+        :type: ExtentDTO
         """
 
         self._extent = extent
@@ -152,7 +152,7 @@ class GetSelectionStackMessageDTOOfDataQueryColumnDTO(object):
 
 
         :return: The spatial_filter of this GetSelectionStackMessageDTOOfDataQueryColumnDTO.  # noqa: E501
-        :rtype: SpatialFilterDTO
+        :rtype: OneOfGetSelectionStackMessageDTOOfDataQueryColumnDTOSpatialFilter
         """
         return self._spatial_filter
 
@@ -162,7 +162,7 @@ class GetSelectionStackMessageDTOOfDataQueryColumnDTO(object):
 
 
         :param spatial_filter: The spatial_filter of this GetSelectionStackMessageDTOOfDataQueryColumnDTO.  # noqa: E501
-        :type: SpatialFilterDTO
+        :type: OneOfGetSelectionStackMessageDTOOfDataQueryColumnDTOSpatialFilter
         """
 
         self._spatial_filter = spatial_filter

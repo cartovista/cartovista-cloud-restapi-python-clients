@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **profile** | **bool** |  | [optional] 
 **time_view** | **bool** |  | [optional] 
 **time_animation_controller** | **bool** |  | [optional] 
+**composite_scoring** | **bool** |  | [optional] 
+**poi_analysis** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

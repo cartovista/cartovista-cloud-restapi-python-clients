@@ -41,7 +41,7 @@ class GridLayerApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FlatFileGridLayerDefinitionDTO body: (required)
+        :param FlatFileGridLayerDefinitionDTO body: The grid layer definition to use for the new grid source. (required)
         :param str grid_layer_id: The grid layer system identifier. (required)
         :param str tenant_url_code: (required)
         :return: GridSource
@@ -64,7 +64,7 @@ class GridLayerApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FlatFileGridLayerDefinitionDTO body: (required)
+        :param FlatFileGridLayerDefinitionDTO body: The grid layer definition to use for the new grid source. (required)
         :param str grid_layer_id: The grid layer system identifier. (required)
         :param str tenant_url_code: (required)
         :return: GridSource
@@ -127,7 +127,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/GridSources', 'POST',
@@ -236,7 +236,7 @@ class GridLayerApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/GridSources/all', 'POST',
@@ -341,7 +341,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer', 'POST',
@@ -442,7 +442,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}', 'DELETE',
@@ -460,15 +460,16 @@ class GridLayerApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def grid_layer_delete_grid_source(self, grid_layer_id, grid_source_id, tenant_url_code, **kwargs):  # noqa: E501
+    def grid_layer_delete_grid_source(self, body, grid_layer_id, grid_source_id, tenant_url_code, **kwargs):  # noqa: E501
         """Delete an existing grid source.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.grid_layer_delete_grid_source(grid_layer_id, grid_source_id, tenant_url_code, async_req=True)
+        >>> thread = api.grid_layer_delete_grid_source(body, grid_layer_id, grid_source_id, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param DeleteGridSourceParameter body: Additional parameters (required)
         :param str grid_layer_id: The grid layer system identifier. (required)
         :param str grid_source_id: The grid source system identifier. (required)
         :param str tenant_url_code: (required)
@@ -478,20 +479,21 @@ class GridLayerApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.grid_layer_delete_grid_source_with_http_info(grid_layer_id, grid_source_id, tenant_url_code, **kwargs)  # noqa: E501
+            return self.grid_layer_delete_grid_source_with_http_info(body, grid_layer_id, grid_source_id, tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.grid_layer_delete_grid_source_with_http_info(grid_layer_id, grid_source_id, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.grid_layer_delete_grid_source_with_http_info(body, grid_layer_id, grid_source_id, tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def grid_layer_delete_grid_source_with_http_info(self, grid_layer_id, grid_source_id, tenant_url_code, **kwargs):  # noqa: E501
+    def grid_layer_delete_grid_source_with_http_info(self, body, grid_layer_id, grid_source_id, tenant_url_code, **kwargs):  # noqa: E501
         """Delete an existing grid source.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.grid_layer_delete_grid_source_with_http_info(grid_layer_id, grid_source_id, tenant_url_code, async_req=True)
+        >>> thread = api.grid_layer_delete_grid_source_with_http_info(body, grid_layer_id, grid_source_id, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param DeleteGridSourceParameter body: Additional parameters (required)
         :param str grid_layer_id: The grid layer system identifier. (required)
         :param str grid_source_id: The grid source system identifier. (required)
         :param str tenant_url_code: (required)
@@ -500,7 +502,7 @@ class GridLayerApi(object):
                  returns the request thread.
         """
 
-        all_params = ['grid_layer_id', 'grid_source_id', 'tenant_url_code']  # noqa: E501
+        all_params = ['body', 'grid_layer_id', 'grid_source_id', 'tenant_url_code']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -515,6 +517,10 @@ class GridLayerApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `grid_layer_delete_grid_source`")  # noqa: E501
         # verify the required parameter 'grid_layer_id' is set
         if ('grid_layer_id' not in params or
                 params['grid_layer_id'] is None):
@@ -546,12 +552,18 @@ class GridLayerApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/GridSources/{gridSourceId}', 'DELETE',
@@ -672,7 +684,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/GridSources/{gridSourceId}/subset', 'POST',
@@ -701,7 +713,7 @@ class GridLayerApi(object):
         :param async_req bool
         :param list[str] body: (required)
         :param str tenant_url_code: (required)
-        :return: list[ExtentDto]
+        :return: list[ExtentDTO]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -723,7 +735,7 @@ class GridLayerApi(object):
         :param async_req bool
         :param list[str] body: (required)
         :param str tenant_url_code: (required)
-        :return: list[ExtentDto]
+        :return: list[ExtentDTO]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -777,7 +789,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/firstGridSourceExtents', 'POST',
@@ -787,7 +799,7 @@ class GridLayerApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[ExtentDto]',  # noqa: E501
+            response_type='list[ExtentDTO]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -878,7 +890,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}', 'GET',
@@ -979,7 +991,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/details', 'GET',
@@ -1072,7 +1084,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayers', 'GET',
@@ -1181,7 +1193,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/GridSources/{gridSourceId}', 'GET',
@@ -1282,7 +1294,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/GridSources', 'GET',
@@ -1383,7 +1395,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/maps', 'GET',
@@ -1496,7 +1508,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}', 'PATCH',
@@ -1609,7 +1621,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{identifier}/permissions', 'PATCH',
@@ -1730,7 +1742,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/GridSources/{gridSourceId}', 'PATCH',
@@ -1757,7 +1769,7 @@ class GridLayerApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FlatFileGridLayerDefinitionDTO body: (required)
+        :param FlatFileGridLayerDefinitionDTO body: The grid layer definition to update. (required)
         :param str grid_layer_id: The grid layer system identifier. (required)
         :param str grid_source_id: The grid source system identifier. (required)
         :param str tenant_url_code: (required)
@@ -1781,7 +1793,7 @@ class GridLayerApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FlatFileGridLayerDefinitionDTO body: (required)
+        :param FlatFileGridLayerDefinitionDTO body: The grid layer definition to update. (required)
         :param str grid_layer_id: The grid layer system identifier. (required)
         :param str grid_source_id: The grid source system identifier. (required)
         :param str tenant_url_code: (required)
@@ -1851,7 +1863,7 @@ class GridLayerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/GridLayer/{gridLayerId}/GridSources/{gridSourceId}/updateGeotiff', 'POST',

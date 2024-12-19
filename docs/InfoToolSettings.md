@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **as_panel** | **bool** |  | [optional] 
+**show_get_directions_button** | **bool** |  | [optional] 
 **display_coordinates** | **bool** |  | [optional] 
 **type** | [**CoordinatesType**](CoordinatesType.md) |  | [optional] 
 

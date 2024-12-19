@@ -1,4 +1,4 @@
-# GetFeaturesExtentDto
+# GetFeaturesExtentDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -31,7 +31,7 @@ class LayersExportByExtentParameter(object):
         'map_id': 'str',
         'selected_language': 'str',
         'layers_export': 'list[LayerExportParameter]',
-        'extent': 'ExtentDto'
+        'extent': 'ExtentDTO'
     }
 
     attribute_map = {
@@ -126,7 +126,7 @@ class LayersExportByExtentParameter(object):
 
 
         :return: The extent of this LayersExportByExtentParameter.  # noqa: E501
-        :rtype: ExtentDto
+        :rtype: ExtentDTO
         """
         return self._extent
 
@@ -136,7 +136,7 @@ class LayersExportByExtentParameter(object):
 
 
         :param extent: The extent of this LayersExportByExtentParameter.  # noqa: E501
-        :type: ExtentDto
+        :type: ExtentDTO
         """
 
         self._extent = extent

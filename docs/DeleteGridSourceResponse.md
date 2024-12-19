@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
+**grid_layer_id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **type** | [**GridLayerTypeEnum**](GridLayerTypeEnum.md) |  | [optional] 
 **did_delete** | **bool** |  | [optional] 

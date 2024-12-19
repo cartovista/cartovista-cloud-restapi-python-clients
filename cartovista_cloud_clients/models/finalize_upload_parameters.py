@@ -29,57 +29,42 @@ class FinalizeUploadParameters(object):
     """
     swagger_types = {
         'name': 'str',
-        'columns_tokeep': 'list[FinalizeColumnUploadParameters]',
-        'lat_long_columns': 'OneOfFinalizeUploadParametersLatLongColumns',
-        'address_columns': 'OneOfFinalizeUploadParametersAddressColumns',
         'grid_layer_definition': 'OneOfFinalizeUploadParametersGridLayerDefinition',
         'is_layer': 'bool',
         'is_grid_layer': 'bool',
         'map_identifier_to_add_layer': 'str',
         'upload_join_paramaters': 'OneOfFinalizeUploadParametersUploadJoinParamaters',
-        'selected_sheet_name': 'str',
+        'selected_sheets': 'list[UploadSheetDetail]',
         'folder_id': 'str',
         'set_public_access': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
-        'columns_tokeep': 'columnsTokeep',
-        'lat_long_columns': 'latLongColumns',
-        'address_columns': 'addressColumns',
         'grid_layer_definition': 'gridLayerDefinition',
         'is_layer': 'isLayer',
         'is_grid_layer': 'isGridLayer',
         'map_identifier_to_add_layer': 'mapIdentifierToAddLayer',
         'upload_join_paramaters': 'uploadJoinParamaters',
-        'selected_sheet_name': 'selectedSheetName',
+        'selected_sheets': 'selectedSheets',
         'folder_id': 'folderId',
         'set_public_access': 'setPublicAccess'
     }
 
-    def __init__(self, name=None, columns_tokeep=None, lat_long_columns=None, address_columns=None, grid_layer_definition=None, is_layer=None, is_grid_layer=None, map_identifier_to_add_layer=None, upload_join_paramaters=None, selected_sheet_name=None, folder_id=None, set_public_access=None):  # noqa: E501
+    def __init__(self, name=None, grid_layer_definition=None, is_layer=None, is_grid_layer=None, map_identifier_to_add_layer=None, upload_join_paramaters=None, selected_sheets=None, folder_id=None, set_public_access=None):  # noqa: E501
         """FinalizeUploadParameters - a model defined in Swagger"""  # noqa: E501
         self._name = None
-        self._columns_tokeep = None
-        self._lat_long_columns = None
-        self._address_columns = None
         self._grid_layer_definition = None
         self._is_layer = None
         self._is_grid_layer = None
         self._map_identifier_to_add_layer = None
         self._upload_join_paramaters = None
-        self._selected_sheet_name = None
+        self._selected_sheets = None
         self._folder_id = None
         self._set_public_access = None
         self.discriminator = None
         if name is not None:
             self.name = name
-        if columns_tokeep is not None:
-            self.columns_tokeep = columns_tokeep
-        if lat_long_columns is not None:
-            self.lat_long_columns = lat_long_columns
-        if address_columns is not None:
-            self.address_columns = address_columns
         if grid_layer_definition is not None:
             self.grid_layer_definition = grid_layer_definition
         if is_layer is not None:
@@ -90,8 +75,8 @@ class FinalizeUploadParameters(object):
             self.map_identifier_to_add_layer = map_identifier_to_add_layer
         if upload_join_paramaters is not None:
             self.upload_join_paramaters = upload_join_paramaters
-        if selected_sheet_name is not None:
-            self.selected_sheet_name = selected_sheet_name
+        if selected_sheets is not None:
+            self.selected_sheets = selected_sheets
         if folder_id is not None:
             self.folder_id = folder_id
         if set_public_access is not None:
@@ -117,69 +102,6 @@ class FinalizeUploadParameters(object):
         """
 
         self._name = name
-
-    @property
-    def columns_tokeep(self):
-        """Gets the columns_tokeep of this FinalizeUploadParameters.  # noqa: E501
-
-
-        :return: The columns_tokeep of this FinalizeUploadParameters.  # noqa: E501
-        :rtype: list[FinalizeColumnUploadParameters]
-        """
-        return self._columns_tokeep
-
-    @columns_tokeep.setter
-    def columns_tokeep(self, columns_tokeep):
-        """Sets the columns_tokeep of this FinalizeUploadParameters.
-
-
-        :param columns_tokeep: The columns_tokeep of this FinalizeUploadParameters.  # noqa: E501
-        :type: list[FinalizeColumnUploadParameters]
-        """
-
-        self._columns_tokeep = columns_tokeep
-
-    @property
-    def lat_long_columns(self):
-        """Gets the lat_long_columns of this FinalizeUploadParameters.  # noqa: E501
-
-
-        :return: The lat_long_columns of this FinalizeUploadParameters.  # noqa: E501
-        :rtype: OneOfFinalizeUploadParametersLatLongColumns
-        """
-        return self._lat_long_columns
-
-    @lat_long_columns.setter
-    def lat_long_columns(self, lat_long_columns):
-        """Sets the lat_long_columns of this FinalizeUploadParameters.
-
-
-        :param lat_long_columns: The lat_long_columns of this FinalizeUploadParameters.  # noqa: E501
-        :type: OneOfFinalizeUploadParametersLatLongColumns
-        """
-
-        self._lat_long_columns = lat_long_columns
-
-    @property
-    def address_columns(self):
-        """Gets the address_columns of this FinalizeUploadParameters.  # noqa: E501
-
-
-        :return: The address_columns of this FinalizeUploadParameters.  # noqa: E501
-        :rtype: OneOfFinalizeUploadParametersAddressColumns
-        """
-        return self._address_columns
-
-    @address_columns.setter
-    def address_columns(self, address_columns):
-        """Sets the address_columns of this FinalizeUploadParameters.
-
-
-        :param address_columns: The address_columns of this FinalizeUploadParameters.  # noqa: E501
-        :type: OneOfFinalizeUploadParametersAddressColumns
-        """
-
-        self._address_columns = address_columns
 
     @property
     def grid_layer_definition(self):
@@ -287,25 +209,25 @@ class FinalizeUploadParameters(object):
         self._upload_join_paramaters = upload_join_paramaters
 
     @property
-    def selected_sheet_name(self):
-        """Gets the selected_sheet_name of this FinalizeUploadParameters.  # noqa: E501
+    def selected_sheets(self):
+        """Gets the selected_sheets of this FinalizeUploadParameters.  # noqa: E501
 
 
-        :return: The selected_sheet_name of this FinalizeUploadParameters.  # noqa: E501
-        :rtype: str
+        :return: The selected_sheets of this FinalizeUploadParameters.  # noqa: E501
+        :rtype: list[UploadSheetDetail]
         """
-        return self._selected_sheet_name
+        return self._selected_sheets
 
-    @selected_sheet_name.setter
-    def selected_sheet_name(self, selected_sheet_name):
-        """Sets the selected_sheet_name of this FinalizeUploadParameters.
+    @selected_sheets.setter
+    def selected_sheets(self, selected_sheets):
+        """Sets the selected_sheets of this FinalizeUploadParameters.
 
 
-        :param selected_sheet_name: The selected_sheet_name of this FinalizeUploadParameters.  # noqa: E501
-        :type: str
+        :param selected_sheets: The selected_sheets of this FinalizeUploadParameters.  # noqa: E501
+        :type: list[UploadSheetDetail]
         """
 
-        self._selected_sheet_name = selected_sheet_name
+        self._selected_sheets = selected_sheets
 
     @property
     def folder_id(self):

@@ -39,7 +39,9 @@ class SubscriptionAndUser(object):
         'query_optimizer': 'bool',
         'heatmap_generation': 'bool',
         'grace_period_end_date': 'datetime',
-        'license_expired': 'bool'
+        'license_expired': 'bool',
+        'composite_scoring': 'bool',
+        'poi_analysis': 'bool'
     }
 
     attribute_map = {
@@ -54,10 +56,12 @@ class SubscriptionAndUser(object):
         'query_optimizer': 'queryOptimizer',
         'heatmap_generation': 'heatmapGeneration',
         'grace_period_end_date': 'gracePeriodEndDate',
-        'license_expired': 'licenseExpired'
+        'license_expired': 'licenseExpired',
+        'composite_scoring': 'compositeScoring',
+        'poi_analysis': 'poiAnalysis'
     }
 
-    def __init__(self, current_user=None, subscription=None, subscription_summary=None, maximum_number_of_users=None, public_maps=None, rest_api=None, live_layers=None, content_count=None, query_optimizer=None, heatmap_generation=None, grace_period_end_date=None, license_expired=None):  # noqa: E501
+    def __init__(self, current_user=None, subscription=None, subscription_summary=None, maximum_number_of_users=None, public_maps=None, rest_api=None, live_layers=None, content_count=None, query_optimizer=None, heatmap_generation=None, grace_period_end_date=None, license_expired=None, composite_scoring=None, poi_analysis=None):  # noqa: E501
         """SubscriptionAndUser - a model defined in Swagger"""  # noqa: E501
         self._current_user = None
         self._subscription = None
@@ -71,6 +75,8 @@ class SubscriptionAndUser(object):
         self._heatmap_generation = None
         self._grace_period_end_date = None
         self._license_expired = None
+        self._composite_scoring = None
+        self._poi_analysis = None
         self.discriminator = None
         if current_user is not None:
             self.current_user = current_user
@@ -96,6 +102,10 @@ class SubscriptionAndUser(object):
             self.grace_period_end_date = grace_period_end_date
         if license_expired is not None:
             self.license_expired = license_expired
+        if composite_scoring is not None:
+            self.composite_scoring = composite_scoring
+        if poi_analysis is not None:
+            self.poi_analysis = poi_analysis
 
     @property
     def current_user(self):
@@ -348,6 +358,48 @@ class SubscriptionAndUser(object):
         """
 
         self._license_expired = license_expired
+
+    @property
+    def composite_scoring(self):
+        """Gets the composite_scoring of this SubscriptionAndUser.  # noqa: E501
+
+
+        :return: The composite_scoring of this SubscriptionAndUser.  # noqa: E501
+        :rtype: bool
+        """
+        return self._composite_scoring
+
+    @composite_scoring.setter
+    def composite_scoring(self, composite_scoring):
+        """Sets the composite_scoring of this SubscriptionAndUser.
+
+
+        :param composite_scoring: The composite_scoring of this SubscriptionAndUser.  # noqa: E501
+        :type: bool
+        """
+
+        self._composite_scoring = composite_scoring
+
+    @property
+    def poi_analysis(self):
+        """Gets the poi_analysis of this SubscriptionAndUser.  # noqa: E501
+
+
+        :return: The poi_analysis of this SubscriptionAndUser.  # noqa: E501
+        :rtype: bool
+        """
+        return self._poi_analysis
+
+    @poi_analysis.setter
+    def poi_analysis(self, poi_analysis):
+        """Sets the poi_analysis of this SubscriptionAndUser.
+
+
+        :param poi_analysis: The poi_analysis of this SubscriptionAndUser.  # noqa: E501
+        :type: bool
+        """
+
+        self._poi_analysis = poi_analysis
 
     def to_dict(self):
         """Returns the model properties as a dict"""

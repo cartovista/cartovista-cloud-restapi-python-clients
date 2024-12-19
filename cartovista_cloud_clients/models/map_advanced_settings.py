@@ -30,7 +30,7 @@ class MapAdvancedSettings(object):
     swagger_types = {
         'interface': 'InterfaceSettings',
         'selection': 'SelectionSettings',
-        'units': 'UnitsSettings',
+        'map': 'MapSettings',
         'search_geocoding': 'SearchGeocodingSettings',
         'thematic_analysis': 'ThematicAnalysisSettings',
         'legend': 'LegendSettings',
@@ -42,7 +42,7 @@ class MapAdvancedSettings(object):
     attribute_map = {
         'interface': 'interface',
         'selection': 'selection',
-        'units': 'units',
+        'map': 'map',
         'search_geocoding': 'searchGeocoding',
         'thematic_analysis': 'thematicAnalysis',
         'legend': 'legend',
@@ -51,11 +51,11 @@ class MapAdvancedSettings(object):
         'annotations': 'annotations'
     }
 
-    def __init__(self, interface=None, selection=None, units=None, search_geocoding=None, thematic_analysis=None, legend=None, feedback_tool_settings=None, info_tool_settings=None, annotations=None):  # noqa: E501
+    def __init__(self, interface=None, selection=None, map=None, search_geocoding=None, thematic_analysis=None, legend=None, feedback_tool_settings=None, info_tool_settings=None, annotations=None):  # noqa: E501
         """MapAdvancedSettings - a model defined in Swagger"""  # noqa: E501
         self._interface = None
         self._selection = None
-        self._units = None
+        self._map = None
         self._search_geocoding = None
         self._thematic_analysis = None
         self._legend = None
@@ -67,8 +67,8 @@ class MapAdvancedSettings(object):
             self.interface = interface
         if selection is not None:
             self.selection = selection
-        if units is not None:
-            self.units = units
+        if map is not None:
+            self.map = map
         if search_geocoding is not None:
             self.search_geocoding = search_geocoding
         if thematic_analysis is not None:
@@ -125,25 +125,25 @@ class MapAdvancedSettings(object):
         self._selection = selection
 
     @property
-    def units(self):
-        """Gets the units of this MapAdvancedSettings.  # noqa: E501
+    def map(self):
+        """Gets the map of this MapAdvancedSettings.  # noqa: E501
 
 
-        :return: The units of this MapAdvancedSettings.  # noqa: E501
-        :rtype: UnitsSettings
+        :return: The map of this MapAdvancedSettings.  # noqa: E501
+        :rtype: MapSettings
         """
-        return self._units
+        return self._map
 
-    @units.setter
-    def units(self, units):
-        """Sets the units of this MapAdvancedSettings.
+    @map.setter
+    def map(self, map):
+        """Sets the map of this MapAdvancedSettings.
 
 
-        :param units: The units of this MapAdvancedSettings.  # noqa: E501
-        :type: UnitsSettings
+        :param map: The map of this MapAdvancedSettings.  # noqa: E501
+        :type: MapSettings
         """
 
-        self._units = units
+        self._map = map
 
     @property
     def search_geocoding(self):

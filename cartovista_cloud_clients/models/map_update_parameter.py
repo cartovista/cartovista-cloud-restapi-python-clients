@@ -35,7 +35,6 @@ class MapUpdateParameter(object):
         'seo_title': 'str',
         'seo_description': 'str',
         'seo_custom_html': 'str',
-        'scoring_enabled': 'bool',
         'keywords': 'list[KeywordDTO]'
     }
 
@@ -47,11 +46,10 @@ class MapUpdateParameter(object):
         'seo_title': 'seoTitle',
         'seo_description': 'seoDescription',
         'seo_custom_html': 'seoCustomHTML',
-        'scoring_enabled': 'scoringEnabled',
         'keywords': 'keywords'
     }
 
-    def __init__(self, title=None, description=None, language=None, editable=None, seo_title=None, seo_description=None, seo_custom_html=None, scoring_enabled=None, keywords=None):  # noqa: E501
+    def __init__(self, title=None, description=None, language=None, editable=None, seo_title=None, seo_description=None, seo_custom_html=None, keywords=None):  # noqa: E501
         """MapUpdateParameter - a model defined in Swagger"""  # noqa: E501
         self._title = None
         self._description = None
@@ -60,7 +58,6 @@ class MapUpdateParameter(object):
         self._seo_title = None
         self._seo_description = None
         self._seo_custom_html = None
-        self._scoring_enabled = None
         self._keywords = None
         self.discriminator = None
         if title is not None:
@@ -77,8 +74,6 @@ class MapUpdateParameter(object):
             self.seo_description = seo_description
         if seo_custom_html is not None:
             self.seo_custom_html = seo_custom_html
-        if scoring_enabled is not None:
-            self.scoring_enabled = scoring_enabled
         if keywords is not None:
             self.keywords = keywords
 
@@ -228,27 +223,6 @@ class MapUpdateParameter(object):
         """
 
         self._seo_custom_html = seo_custom_html
-
-    @property
-    def scoring_enabled(self):
-        """Gets the scoring_enabled of this MapUpdateParameter.  # noqa: E501
-
-
-        :return: The scoring_enabled of this MapUpdateParameter.  # noqa: E501
-        :rtype: bool
-        """
-        return self._scoring_enabled
-
-    @scoring_enabled.setter
-    def scoring_enabled(self, scoring_enabled):
-        """Sets the scoring_enabled of this MapUpdateParameter.
-
-
-        :param scoring_enabled: The scoring_enabled of this MapUpdateParameter.  # noqa: E501
-        :type: bool
-        """
-
-        self._scoring_enabled = scoring_enabled
 
     @property
     def keywords(self):

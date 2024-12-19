@@ -61,6 +61,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -90,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -117,6 +122,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -144,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -171,6 +181,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -198,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -225,6 +240,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -254,7 +274,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -281,6 +301,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -307,7 +332,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -334,6 +359,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -363,7 +393,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -390,6 +420,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -419,7 +454,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -446,6 +481,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -475,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -502,6 +542,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -531,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -558,6 +603,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -585,7 +635,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -612,6 +662,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -639,7 +694,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -666,6 +721,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -693,7 +753,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -720,6 +780,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -747,7 +812,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -774,6 +839,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -801,7 +871,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -828,6 +898,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -853,7 +928,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -880,6 +955,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -907,7 +987,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -934,6 +1014,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -961,7 +1046,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -988,6 +1073,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1015,7 +1105,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1042,6 +1132,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1069,7 +1164,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1096,6 +1191,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1123,7 +1223,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1150,6 +1250,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1177,7 +1282,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1204,6 +1309,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1229,7 +1339,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1256,6 +1366,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1283,7 +1398,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1310,6 +1425,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1337,7 +1457,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1364,6 +1484,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1392,7 +1517,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1402,7 +1527,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **map_run_map_action**
-> map_run_map_action(body, lat, lon, map_identifier, tenant_url_code)
+> map_run_map_action(body, map_action_id, map_identifier, tenant_url_code)
 
 Runs a map action.
 
@@ -1419,18 +1544,22 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
-body = ['body_example'] # list[str] | 
-lat = 1.2 # float | 
-lon = 1.2 # float | 
+body = NULL # dict(str, str) | 
+map_action_id = 'map_action_id_example' # str | 
 map_identifier = 'map_identifier_example' # str | 
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
     # Runs a map action.
-    api_instance.map_run_map_action(body, lat, lon, map_identifier, tenant_url_code)
+    api_instance.map_run_map_action(body, map_action_id, map_identifier, tenant_url_code)
 except ApiException as e:
     print("Exception when calling MapApi->map_run_map_action: %s\n" % e)
 ```
@@ -1439,9 +1568,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**list[str]**](str.md)|  | 
- **lat** | **float**|  | 
- **lon** | **float**|  | 
+ **body** | [**dict(str, str)**](dict.md)|  | 
+ **map_action_id** | **str**|  | 
  **map_identifier** | **str**|  | 
  **tenant_url_code** | **str**|  | 
 
@@ -1451,7 +1579,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1478,6 +1606,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1504,7 +1637,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1531,6 +1664,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1559,7 +1697,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1586,6 +1724,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1615,7 +1758,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1642,6 +1785,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1673,7 +1821,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1700,6 +1848,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1729,7 +1882,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1756,6 +1909,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1785,7 +1943,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1812,6 +1970,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1841,7 +2004,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1868,6 +2031,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1897,7 +2065,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1924,6 +2092,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1953,7 +2126,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1980,6 +2153,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -2009,7 +2187,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -2036,6 +2214,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -2065,7 +2248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -2092,6 +2275,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.MapApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -2121,7 +2309,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -2129,4 +2317,5 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 

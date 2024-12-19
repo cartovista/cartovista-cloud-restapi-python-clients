@@ -30,20 +30,23 @@ class UserReset(object):
     swagger_types = {
         'is_valid': 'bool',
         'first_name': 'str',
-        'last_name': 'str'
+        'last_name': 'str',
+        'user_exists': 'bool'
     }
 
     attribute_map = {
         'is_valid': 'isValid',
         'first_name': 'firstName',
-        'last_name': 'lastName'
+        'last_name': 'lastName',
+        'user_exists': 'userExists'
     }
 
-    def __init__(self, is_valid=None, first_name=None, last_name=None):  # noqa: E501
+    def __init__(self, is_valid=None, first_name=None, last_name=None, user_exists=None):  # noqa: E501
         """UserReset - a model defined in Swagger"""  # noqa: E501
         self._is_valid = None
         self._first_name = None
         self._last_name = None
+        self._user_exists = None
         self.discriminator = None
         if is_valid is not None:
             self.is_valid = is_valid
@@ -51,6 +54,8 @@ class UserReset(object):
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
+        if user_exists is not None:
+            self.user_exists = user_exists
 
     @property
     def is_valid(self):
@@ -114,6 +119,27 @@ class UserReset(object):
         """
 
         self._last_name = last_name
+
+    @property
+    def user_exists(self):
+        """Gets the user_exists of this UserReset.  # noqa: E501
+
+
+        :return: The user_exists of this UserReset.  # noqa: E501
+        :rtype: bool
+        """
+        return self._user_exists
+
+    @user_exists.setter
+    def user_exists(self, user_exists):
+        """Sets the user_exists of this UserReset.
+
+
+        :param user_exists: The user_exists of this UserReset.  # noqa: E501
+        :type: bool
+        """
+
+        self._user_exists = user_exists
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -123,7 +123,7 @@ class DataTableApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/append', 'POST',
@@ -228,7 +228,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/createDataTable', 'POST',
@@ -329,7 +329,7 @@ class DataTableApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/createFromCSV', 'POST',
@@ -430,7 +430,7 @@ class DataTableApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/createFromExcel', 'POST',
@@ -539,7 +539,7 @@ class DataTableApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/createFromExcel/{sheetName}', 'POST',
@@ -640,7 +640,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/deoptimize', 'GET',
@@ -741,7 +741,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}', 'DELETE',
@@ -854,7 +854,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/join/{joinId}', 'DELETE',
@@ -963,7 +963,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/geocode', 'POST',
@@ -1072,7 +1072,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/georeference', 'POST',
@@ -1173,7 +1173,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}', 'GET',
@@ -1274,7 +1274,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTables/{dataTableIdentifier}/details', 'GET',
@@ -1367,7 +1367,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTables', 'GET',
@@ -1480,7 +1480,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/getExpectedJoinCount', 'POST',
@@ -1589,7 +1589,7 @@ class DataTableApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/getFileDescription', 'POST',
@@ -1690,7 +1690,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/layers', 'GET',
@@ -1791,7 +1791,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/maps', 'GET',
@@ -1892,7 +1892,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/timeRange', 'GET',
@@ -1919,7 +1919,7 @@ class DataTableApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param TimeSeriesDataParameter body: (required)
+        :param TimeSeriesOneFeatureDataParameter body: (required)
         :param str data_table_identifier: (required)
         :param str tenant_url_code: (required)
         :return: TimeSeriesData
@@ -1942,7 +1942,7 @@ class DataTableApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param TimeSeriesDataParameter body: (required)
+        :param TimeSeriesOneFeatureDataParameter body: (required)
         :param str data_table_identifier: (required)
         :param str tenant_url_code: (required)
         :return: TimeSeriesData
@@ -2005,7 +2005,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/timeSeriesData', 'POST',
@@ -2016,6 +2016,220 @@ class DataTableApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='TimeSeriesData',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def data_table_get_time_series_data_many_features(self, body, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Returns an aggregation of the table's data using the time series column.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_table_get_time_series_data_many_features(body, data_table_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param TimeSeriesManyFeaturesDataParameter body: (required)
+        :param str data_table_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: list[TimeSeriesData]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_table_get_time_series_data_many_features_with_http_info(body, data_table_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_table_get_time_series_data_many_features_with_http_info(body, data_table_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_table_get_time_series_data_many_features_with_http_info(self, body, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Returns an aggregation of the table's data using the time series column.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_table_get_time_series_data_many_features_with_http_info(body, data_table_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param TimeSeriesManyFeaturesDataParameter body: (required)
+        :param str data_table_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: list[TimeSeriesData]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'data_table_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_table_get_time_series_data_many_features" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `data_table_get_time_series_data_many_features`")  # noqa: E501
+        # verify the required parameter 'data_table_identifier' is set
+        if ('data_table_identifier' not in params or
+                params['data_table_identifier'] is None):
+            raise ValueError("Missing the required parameter `data_table_identifier` when calling `data_table_get_time_series_data_many_features`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_table_get_time_series_data_many_features`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'data_table_identifier' in params:
+            path_params['dataTableIdentifier'] = params['data_table_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/timeSeriesDataManyFeatures', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[TimeSeriesData]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def data_table_get_time_series_dates(self, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Returns a list of all the dates in the time series table.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_table_get_time_series_dates(data_table_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str data_table_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: list[datetime]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_table_get_time_series_dates_with_http_info(data_table_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_table_get_time_series_dates_with_http_info(data_table_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_table_get_time_series_dates_with_http_info(self, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Returns a list of all the dates in the time series table.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_table_get_time_series_dates_with_http_info(data_table_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str data_table_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: list[datetime]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data_table_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_table_get_time_series_dates" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data_table_identifier' is set
+        if ('data_table_identifier' not in params or
+                params['data_table_identifier'] is None):
+            raise ValueError("Missing the required parameter `data_table_identifier` when calling `data_table_get_time_series_dates`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_table_get_time_series_dates`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'data_table_identifier' in params:
+            path_params['dataTableIdentifier'] = params['data_table_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/timeSeriesDates', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[datetime]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2118,7 +2332,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/join', 'POST',
@@ -2219,7 +2433,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/optimize', 'GET',
@@ -2328,7 +2542,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/setDataColumnUniqueId', 'POST',
@@ -2437,7 +2651,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/time-series-column', 'POST',
@@ -2546,7 +2760,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/setUniqueIdentifier', 'POST',
@@ -2659,7 +2873,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/update', 'POST',
@@ -2768,7 +2982,7 @@ class DataTableApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/updateFromFile', 'POST',
@@ -2881,7 +3095,7 @@ class DataTableApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/updateFromFileDescription', 'POST',

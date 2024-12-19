@@ -33,7 +33,7 @@ class FeatureDto(object):
         'description': 'str',
         'geometrytype': 'str',
         'properties': 'list[FeaturePropertyDto]',
-        'extent': 'ExtentDto',
+        'extent': 'OGCExtentDto',
         'links': 'list[LinkDto]'
     }
 
@@ -183,7 +183,7 @@ class FeatureDto(object):
 
 
         :return: The extent of this FeatureDto.  # noqa: E501
-        :rtype: ExtentDto
+        :rtype: OGCExtentDto
         """
         return self._extent
 
@@ -193,7 +193,7 @@ class FeatureDto(object):
 
 
         :param extent: The extent of this FeatureDto.  # noqa: E501
-        :type: ExtentDto
+        :type: OGCExtentDto
         """
 
         self._extent = extent

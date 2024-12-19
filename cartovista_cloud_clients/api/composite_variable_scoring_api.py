@@ -115,7 +115,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{mapIdentifier}/canModifyAnalyses', 'GET',
@@ -133,17 +133,18 @@ class CompositeVariableScoringApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def composite_variable_scoring_create_composite_scoring_analysis(self, map_id, layer_id, tenant_url_code, **kwargs):  # noqa: E501
+    def composite_variable_scoring_create_composite_scoring_analysis(self, map_id, layer_id, analysis_name, tenant_url_code, **kwargs):  # noqa: E501
         """Creates a scoring analysis for a map and a layer.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.composite_variable_scoring_create_composite_scoring_analysis(map_id, layer_id, tenant_url_code, async_req=True)
+        >>> thread = api.composite_variable_scoring_create_composite_scoring_analysis(map_id, layer_id, analysis_name, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str map_id: (required)
         :param str layer_id: (required)
+        :param str analysis_name: (required)
         :param str tenant_url_code: (required)
         :return: Analysis
                  If the method is called asynchronously,
@@ -151,29 +152,30 @@ class CompositeVariableScoringApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.composite_variable_scoring_create_composite_scoring_analysis_with_http_info(map_id, layer_id, tenant_url_code, **kwargs)  # noqa: E501
+            return self.composite_variable_scoring_create_composite_scoring_analysis_with_http_info(map_id, layer_id, analysis_name, tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.composite_variable_scoring_create_composite_scoring_analysis_with_http_info(map_id, layer_id, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.composite_variable_scoring_create_composite_scoring_analysis_with_http_info(map_id, layer_id, analysis_name, tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def composite_variable_scoring_create_composite_scoring_analysis_with_http_info(self, map_id, layer_id, tenant_url_code, **kwargs):  # noqa: E501
+    def composite_variable_scoring_create_composite_scoring_analysis_with_http_info(self, map_id, layer_id, analysis_name, tenant_url_code, **kwargs):  # noqa: E501
         """Creates a scoring analysis for a map and a layer.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.composite_variable_scoring_create_composite_scoring_analysis_with_http_info(map_id, layer_id, tenant_url_code, async_req=True)
+        >>> thread = api.composite_variable_scoring_create_composite_scoring_analysis_with_http_info(map_id, layer_id, analysis_name, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str map_id: (required)
         :param str layer_id: (required)
+        :param str analysis_name: (required)
         :param str tenant_url_code: (required)
         :return: Analysis
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['map_id', 'layer_id', 'tenant_url_code']  # noqa: E501
+        all_params = ['map_id', 'layer_id', 'analysis_name', 'tenant_url_code']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -196,6 +198,10 @@ class CompositeVariableScoringApi(object):
         if ('layer_id' not in params or
                 params['layer_id'] is None):
             raise ValueError("Missing the required parameter `layer_id` when calling `composite_variable_scoring_create_composite_scoring_analysis`")  # noqa: E501
+        # verify the required parameter 'analysis_name' is set
+        if ('analysis_name' not in params or
+                params['analysis_name'] is None):
+            raise ValueError("Missing the required parameter `analysis_name` when calling `composite_variable_scoring_create_composite_scoring_analysis`")  # noqa: E501
         # verify the required parameter 'tenant_url_code' is set
         if ('tenant_url_code' not in params or
                 params['tenant_url_code'] is None):
@@ -212,6 +218,8 @@ class CompositeVariableScoringApi(object):
             path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
 
         query_params = []
+        if 'analysis_name' in params:
+            query_params.append(('analysisName', params['analysis_name']))  # noqa: E501
 
         header_params = {}
 
@@ -224,7 +232,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{mapId}/layer/{layerId}', 'POST',
@@ -337,7 +345,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables', 'POST',
@@ -434,7 +442,7 @@ class CompositeVariableScoringApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}', 'DELETE',
@@ -543,7 +551,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables/{variableId}', 'DELETE',
@@ -644,7 +652,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{mapId}', 'GET',
@@ -745,7 +753,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/datatable', 'GET',
@@ -854,7 +862,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables/{variableId}', 'GET',
@@ -955,7 +963,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables', 'GET',
@@ -1068,7 +1076,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}', 'PATCH',
@@ -1181,7 +1189,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{variableId}/variables', 'PATCH',

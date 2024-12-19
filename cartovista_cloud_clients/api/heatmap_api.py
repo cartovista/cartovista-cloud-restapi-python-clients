@@ -32,16 +32,16 @@ class HeatmapApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def heatmap_generate_heatmap(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+    def heatmap_create_heatmap(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Generates a new heatmap for the layer.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.heatmap_generate_heatmap(body, layer_identifier, tenant_url_code, async_req=True)
+        >>> thread = api.heatmap_create_heatmap(body, layer_identifier, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param GenerateHeatmapParameter body: (required)
+        :param CreateHeatmapParameter body: (required)
         :param str layer_identifier: (required)
         :param str tenant_url_code: (required)
         :return: None
@@ -50,21 +50,21 @@ class HeatmapApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.heatmap_generate_heatmap_with_http_info(body, layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return self.heatmap_create_heatmap_with_http_info(body, layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.heatmap_generate_heatmap_with_http_info(body, layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.heatmap_create_heatmap_with_http_info(body, layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def heatmap_generate_heatmap_with_http_info(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+    def heatmap_create_heatmap_with_http_info(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Generates a new heatmap for the layer.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.heatmap_generate_heatmap_with_http_info(body, layer_identifier, tenant_url_code, async_req=True)
+        >>> thread = api.heatmap_create_heatmap_with_http_info(body, layer_identifier, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param GenerateHeatmapParameter body: (required)
+        :param CreateHeatmapParameter body: (required)
         :param str layer_identifier: (required)
         :param str tenant_url_code: (required)
         :return: None
@@ -83,22 +83,22 @@ class HeatmapApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method heatmap_generate_heatmap" % key
+                    " to method heatmap_create_heatmap" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `heatmap_generate_heatmap`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `heatmap_create_heatmap`")  # noqa: E501
         # verify the required parameter 'layer_identifier' is set
         if ('layer_identifier' not in params or
                 params['layer_identifier'] is None):
-            raise ValueError("Missing the required parameter `layer_identifier` when calling `heatmap_generate_heatmap`")  # noqa: E501
+            raise ValueError("Missing the required parameter `layer_identifier` when calling `heatmap_create_heatmap`")  # noqa: E501
         # verify the required parameter 'tenant_url_code' is set
         if ('tenant_url_code' not in params or
                 params['tenant_url_code'] is None):
-            raise ValueError("Missing the required parameter `tenant_url_code` when calling `heatmap_generate_heatmap`")  # noqa: E501
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `heatmap_create_heatmap`")  # noqa: E501
 
         collection_formats = {}
 
@@ -123,7 +123,7 @@ class HeatmapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}', 'POST',
@@ -224,7 +224,7 @@ class HeatmapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}', 'GET',
@@ -325,7 +325,7 @@ class HeatmapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}/details', 'GET',
@@ -434,7 +434,7 @@ class HeatmapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}', 'PATCH',

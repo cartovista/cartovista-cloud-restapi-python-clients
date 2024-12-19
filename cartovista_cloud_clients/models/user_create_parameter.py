@@ -29,33 +29,44 @@ class UserCreateParameter(object):
     """
     swagger_types = {
         'email_address': 'str',
+        'identifier': 'str',
         'first_name': 'str',
         'last_name': 'str',
         'role': 'PermissionDTO',
         'group_ids': 'list[str]',
-        'send_email_invitation': 'bool'
+        'send_email_invitation': 'bool',
+        'provider': 'SecurityProvider',
+        'provider_name': 'str'
     }
 
     attribute_map = {
         'email_address': 'emailAddress',
+        'identifier': 'identifier',
         'first_name': 'firstName',
         'last_name': 'lastName',
         'role': 'role',
         'group_ids': 'groupIds',
-        'send_email_invitation': 'sendEmailInvitation'
+        'send_email_invitation': 'sendEmailInvitation',
+        'provider': 'provider',
+        'provider_name': 'providerName'
     }
 
-    def __init__(self, email_address=None, first_name=None, last_name=None, role=None, group_ids=None, send_email_invitation=None):  # noqa: E501
+    def __init__(self, email_address=None, identifier=None, first_name=None, last_name=None, role=None, group_ids=None, send_email_invitation=None, provider=None, provider_name=None):  # noqa: E501
         """UserCreateParameter - a model defined in Swagger"""  # noqa: E501
         self._email_address = None
+        self._identifier = None
         self._first_name = None
         self._last_name = None
         self._role = None
         self._group_ids = None
         self._send_email_invitation = None
+        self._provider = None
+        self._provider_name = None
         self.discriminator = None
         if email_address is not None:
             self.email_address = email_address
+        if identifier is not None:
+            self.identifier = identifier
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
@@ -66,6 +77,10 @@ class UserCreateParameter(object):
             self.group_ids = group_ids
         if send_email_invitation is not None:
             self.send_email_invitation = send_email_invitation
+        if provider is not None:
+            self.provider = provider
+        if provider_name is not None:
+            self.provider_name = provider_name
 
     @property
     def email_address(self):
@@ -87,6 +102,27 @@ class UserCreateParameter(object):
         """
 
         self._email_address = email_address
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this UserCreateParameter.  # noqa: E501
+
+
+        :return: The identifier of this UserCreateParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this UserCreateParameter.
+
+
+        :param identifier: The identifier of this UserCreateParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._identifier = identifier
 
     @property
     def first_name(self):
@@ -192,6 +228,48 @@ class UserCreateParameter(object):
         """
 
         self._send_email_invitation = send_email_invitation
+
+    @property
+    def provider(self):
+        """Gets the provider of this UserCreateParameter.  # noqa: E501
+
+
+        :return: The provider of this UserCreateParameter.  # noqa: E501
+        :rtype: SecurityProvider
+        """
+        return self._provider
+
+    @provider.setter
+    def provider(self, provider):
+        """Sets the provider of this UserCreateParameter.
+
+
+        :param provider: The provider of this UserCreateParameter.  # noqa: E501
+        :type: SecurityProvider
+        """
+
+        self._provider = provider
+
+    @property
+    def provider_name(self):
+        """Gets the provider_name of this UserCreateParameter.  # noqa: E501
+
+
+        :return: The provider_name of this UserCreateParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._provider_name
+
+    @provider_name.setter
+    def provider_name(self, provider_name):
+        """Sets the provider_name of this UserCreateParameter.
+
+
+        :param provider_name: The provider_name of this UserCreateParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._provider_name = provider_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

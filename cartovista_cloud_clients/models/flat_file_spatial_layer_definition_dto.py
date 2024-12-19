@@ -28,219 +28,85 @@ class FlatFileSpatialLayerDefinitionDTO(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'sheets': 'list[FlatFileSheetDTOOfFlatFileSpatialColumnDTO]',
-        'sheet_count': 'int',
-        'selected_sheet_index': 'int',
-        'id': 'str',
-        'table_ref': 'str',
+        'file_id': 'str',
         'uploaded_file_path': 'str',
         'file_name': 'str',
         'name': 'str',
-        'description': 'str',
         'type_string': 'str',
+        'sheets': 'list[FlatFileSheetDTO]',
+        'selected_sheet_names': 'list[str]',
+        'sheet_count': 'int',
         'upload_id': 'str',
-        'spatial_metadata_id': 'str',
-        'geometry_type': 'GeometryTypeEnum',
-        'target_proj4': 'str',
-        'target_srid': 'int',
-        'proj4': 'str',
-        'user_friendly_proj': 'str',
-        'reprojection_requested': 'bool',
-        'is_spherical_mercator': 'bool',
         'type': 'DataElementType'
     }
 
     attribute_map = {
-        'sheets': 'sheets',
-        'sheet_count': 'sheetCount',
-        'selected_sheet_index': 'selectedSheetIndex',
-        'id': 'id',
-        'table_ref': 'tableRef',
+        'file_id': 'fileId',
         'uploaded_file_path': 'uploadedFilePath',
         'file_name': 'fileName',
         'name': 'name',
-        'description': 'description',
         'type_string': 'typeString',
+        'sheets': 'sheets',
+        'selected_sheet_names': 'selectedSheetNames',
+        'sheet_count': 'sheetCount',
         'upload_id': 'uploadId',
-        'spatial_metadata_id': 'spatialMetadataId',
-        'geometry_type': 'geometryType',
-        'target_proj4': 'targetProj4',
-        'target_srid': 'targetSrid',
-        'proj4': 'proj4',
-        'user_friendly_proj': 'userFriendlyProj',
-        'reprojection_requested': 'reprojectionRequested',
-        'is_spherical_mercator': 'isSphericalMercator',
         'type': 'type'
     }
 
-    def __init__(self, sheets=None, sheet_count=None, selected_sheet_index=None, id=None, table_ref=None, uploaded_file_path=None, file_name=None, name=None, description=None, type_string=None, upload_id=None, spatial_metadata_id=None, geometry_type=None, target_proj4=None, target_srid=None, proj4=None, user_friendly_proj=None, reprojection_requested=None, is_spherical_mercator=None, type=None):  # noqa: E501
+    def __init__(self, file_id=None, uploaded_file_path=None, file_name=None, name=None, type_string=None, sheets=None, selected_sheet_names=None, sheet_count=None, upload_id=None, type=None):  # noqa: E501
         """FlatFileSpatialLayerDefinitionDTO - a model defined in Swagger"""  # noqa: E501
-        self._sheets = None
-        self._sheet_count = None
-        self._selected_sheet_index = None
-        self._id = None
-        self._table_ref = None
+        self._file_id = None
         self._uploaded_file_path = None
         self._file_name = None
         self._name = None
-        self._description = None
         self._type_string = None
+        self._sheets = None
+        self._selected_sheet_names = None
+        self._sheet_count = None
         self._upload_id = None
-        self._spatial_metadata_id = None
-        self._geometry_type = None
-        self._target_proj4 = None
-        self._target_srid = None
-        self._proj4 = None
-        self._user_friendly_proj = None
-        self._reprojection_requested = None
-        self._is_spherical_mercator = None
         self._type = None
         self.discriminator = None
-        if sheets is not None:
-            self.sheets = sheets
-        if sheet_count is not None:
-            self.sheet_count = sheet_count
-        if selected_sheet_index is not None:
-            self.selected_sheet_index = selected_sheet_index
-        if id is not None:
-            self.id = id
-        if table_ref is not None:
-            self.table_ref = table_ref
+        if file_id is not None:
+            self.file_id = file_id
         if uploaded_file_path is not None:
             self.uploaded_file_path = uploaded_file_path
         if file_name is not None:
             self.file_name = file_name
         if name is not None:
             self.name = name
-        if description is not None:
-            self.description = description
         if type_string is not None:
             self.type_string = type_string
+        if sheets is not None:
+            self.sheets = sheets
+        if selected_sheet_names is not None:
+            self.selected_sheet_names = selected_sheet_names
+        if sheet_count is not None:
+            self.sheet_count = sheet_count
         if upload_id is not None:
             self.upload_id = upload_id
-        if spatial_metadata_id is not None:
-            self.spatial_metadata_id = spatial_metadata_id
-        if geometry_type is not None:
-            self.geometry_type = geometry_type
-        if target_proj4 is not None:
-            self.target_proj4 = target_proj4
-        if target_srid is not None:
-            self.target_srid = target_srid
-        if proj4 is not None:
-            self.proj4 = proj4
-        if user_friendly_proj is not None:
-            self.user_friendly_proj = user_friendly_proj
-        if reprojection_requested is not None:
-            self.reprojection_requested = reprojection_requested
-        if is_spherical_mercator is not None:
-            self.is_spherical_mercator = is_spherical_mercator
         if type is not None:
             self.type = type
 
     @property
-    def sheets(self):
-        """Gets the sheets of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+    def file_id(self):
+        """Gets the file_id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
 
 
-        :return: The sheets of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: list[FlatFileSheetDTOOfFlatFileSpatialColumnDTO]
-        """
-        return self._sheets
-
-    @sheets.setter
-    def sheets(self, sheets):
-        """Sets the sheets of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param sheets: The sheets of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: list[FlatFileSheetDTOOfFlatFileSpatialColumnDTO]
-        """
-
-        self._sheets = sheets
-
-    @property
-    def sheet_count(self):
-        """Gets the sheet_count of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The sheet_count of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: int
-        """
-        return self._sheet_count
-
-    @sheet_count.setter
-    def sheet_count(self, sheet_count):
-        """Sets the sheet_count of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param sheet_count: The sheet_count of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: int
-        """
-
-        self._sheet_count = sheet_count
-
-    @property
-    def selected_sheet_index(self):
-        """Gets the selected_sheet_index of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The selected_sheet_index of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: int
-        """
-        return self._selected_sheet_index
-
-    @selected_sheet_index.setter
-    def selected_sheet_index(self, selected_sheet_index):
-        """Sets the selected_sheet_index of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param selected_sheet_index: The selected_sheet_index of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: int
-        """
-
-        self._selected_sheet_index = selected_sheet_index
-
-    @property
-    def id(self):
-        """Gets the id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+        :return: The file_id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._file_id
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this FlatFileSpatialLayerDefinitionDTO.
+    @file_id.setter
+    def file_id(self, file_id):
+        """Sets the file_id of this FlatFileSpatialLayerDefinitionDTO.
 
 
-        :param id: The id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+        :param file_id: The file_id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
         :type: str
         """
 
-        self._id = id
-
-    @property
-    def table_ref(self):
-        """Gets the table_ref of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The table_ref of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._table_ref
-
-    @table_ref.setter
-    def table_ref(self, table_ref):
-        """Sets the table_ref of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param table_ref: The table_ref of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._table_ref = table_ref
+        self._file_id = file_id
 
     @property
     def uploaded_file_path(self):
@@ -306,27 +172,6 @@ class FlatFileSpatialLayerDefinitionDTO(object):
         self._name = name
 
     @property
-    def description(self):
-        """Gets the description of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The description of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param description: The description of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def type_string(self):
         """Gets the type_string of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
 
@@ -348,6 +193,69 @@ class FlatFileSpatialLayerDefinitionDTO(object):
         self._type_string = type_string
 
     @property
+    def sheets(self):
+        """Gets the sheets of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+
+
+        :return: The sheets of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+        :rtype: list[FlatFileSheetDTO]
+        """
+        return self._sheets
+
+    @sheets.setter
+    def sheets(self, sheets):
+        """Sets the sheets of this FlatFileSpatialLayerDefinitionDTO.
+
+
+        :param sheets: The sheets of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+        :type: list[FlatFileSheetDTO]
+        """
+
+        self._sheets = sheets
+
+    @property
+    def selected_sheet_names(self):
+        """Gets the selected_sheet_names of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+
+
+        :return: The selected_sheet_names of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._selected_sheet_names
+
+    @selected_sheet_names.setter
+    def selected_sheet_names(self, selected_sheet_names):
+        """Sets the selected_sheet_names of this FlatFileSpatialLayerDefinitionDTO.
+
+
+        :param selected_sheet_names: The selected_sheet_names of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._selected_sheet_names = selected_sheet_names
+
+    @property
+    def sheet_count(self):
+        """Gets the sheet_count of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+
+
+        :return: The sheet_count of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+        :rtype: int
+        """
+        return self._sheet_count
+
+    @sheet_count.setter
+    def sheet_count(self, sheet_count):
+        """Sets the sheet_count of this FlatFileSpatialLayerDefinitionDTO.
+
+
+        :param sheet_count: The sheet_count of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
+        :type: int
+        """
+
+        self._sheet_count = sheet_count
+
+    @property
     def upload_id(self):
         """Gets the upload_id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
 
@@ -367,174 +275,6 @@ class FlatFileSpatialLayerDefinitionDTO(object):
         """
 
         self._upload_id = upload_id
-
-    @property
-    def spatial_metadata_id(self):
-        """Gets the spatial_metadata_id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The spatial_metadata_id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._spatial_metadata_id
-
-    @spatial_metadata_id.setter
-    def spatial_metadata_id(self, spatial_metadata_id):
-        """Sets the spatial_metadata_id of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param spatial_metadata_id: The spatial_metadata_id of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._spatial_metadata_id = spatial_metadata_id
-
-    @property
-    def geometry_type(self):
-        """Gets the geometry_type of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The geometry_type of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: GeometryTypeEnum
-        """
-        return self._geometry_type
-
-    @geometry_type.setter
-    def geometry_type(self, geometry_type):
-        """Sets the geometry_type of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param geometry_type: The geometry_type of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: GeometryTypeEnum
-        """
-
-        self._geometry_type = geometry_type
-
-    @property
-    def target_proj4(self):
-        """Gets the target_proj4 of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The target_proj4 of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_proj4
-
-    @target_proj4.setter
-    def target_proj4(self, target_proj4):
-        """Sets the target_proj4 of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param target_proj4: The target_proj4 of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._target_proj4 = target_proj4
-
-    @property
-    def target_srid(self):
-        """Gets the target_srid of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The target_srid of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: int
-        """
-        return self._target_srid
-
-    @target_srid.setter
-    def target_srid(self, target_srid):
-        """Sets the target_srid of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param target_srid: The target_srid of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: int
-        """
-
-        self._target_srid = target_srid
-
-    @property
-    def proj4(self):
-        """Gets the proj4 of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The proj4 of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._proj4
-
-    @proj4.setter
-    def proj4(self, proj4):
-        """Sets the proj4 of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param proj4: The proj4 of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._proj4 = proj4
-
-    @property
-    def user_friendly_proj(self):
-        """Gets the user_friendly_proj of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The user_friendly_proj of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_friendly_proj
-
-    @user_friendly_proj.setter
-    def user_friendly_proj(self, user_friendly_proj):
-        """Sets the user_friendly_proj of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param user_friendly_proj: The user_friendly_proj of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._user_friendly_proj = user_friendly_proj
-
-    @property
-    def reprojection_requested(self):
-        """Gets the reprojection_requested of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The reprojection_requested of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: bool
-        """
-        return self._reprojection_requested
-
-    @reprojection_requested.setter
-    def reprojection_requested(self, reprojection_requested):
-        """Sets the reprojection_requested of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param reprojection_requested: The reprojection_requested of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: bool
-        """
-
-        self._reprojection_requested = reprojection_requested
-
-    @property
-    def is_spherical_mercator(self):
-        """Gets the is_spherical_mercator of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The is_spherical_mercator of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_spherical_mercator
-
-    @is_spherical_mercator.setter
-    def is_spherical_mercator(self, is_spherical_mercator):
-        """Sets the is_spherical_mercator of this FlatFileSpatialLayerDefinitionDTO.
-
-
-        :param is_spherical_mercator: The is_spherical_mercator of this FlatFileSpatialLayerDefinitionDTO.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_spherical_mercator = is_spherical_mercator
 
     @property
     def type(self):

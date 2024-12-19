@@ -12,7 +12,10 @@ Name | Type | Description | Notes
 **grid_layers** | [**list[GridLayer]**](GridLayer.md) |  | [optional] 
 **wms_layers** | [**list[WmsLayer]**](WmsLayer.md) |  | [optional] 
 **identities_with_access** | **list[str]** |  | [optional] 
-**has_map_action** | **bool** |  | [optional] 
+**map_actions** | [**list[MapActionSettings]**](MapActionSettings.md) |  | [optional] 
+**poi_analysis** | **OneOfMapWithViewerInformationPoiAnalysis** |  | [optional] 
+**poi_analysis_is_generating** | **bool** |  | [optional] 
+**custom_applications** | [**list[CustomApplicationMapSettings]**](CustomApplicationMapSettings.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

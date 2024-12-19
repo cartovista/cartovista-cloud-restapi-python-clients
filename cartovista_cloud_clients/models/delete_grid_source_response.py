@@ -29,6 +29,7 @@ class DeleteGridSourceResponse(object):
     """
     swagger_types = {
         'id': 'str',
+        'grid_layer_id': 'str',
         'name': 'str',
         'type': 'GridLayerTypeEnum',
         'did_delete': 'bool',
@@ -37,15 +38,17 @@ class DeleteGridSourceResponse(object):
 
     attribute_map = {
         'id': 'id',
+        'grid_layer_id': 'gridLayerId',
         'name': 'name',
         'type': 'type',
         'did_delete': 'didDelete',
         'used_in_maps': 'usedInMaps'
     }
 
-    def __init__(self, id=None, name=None, type=None, did_delete=None, used_in_maps=None):  # noqa: E501
+    def __init__(self, id=None, grid_layer_id=None, name=None, type=None, did_delete=None, used_in_maps=None):  # noqa: E501
         """DeleteGridSourceResponse - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._grid_layer_id = None
         self._name = None
         self._type = None
         self._did_delete = None
@@ -53,6 +56,8 @@ class DeleteGridSourceResponse(object):
         self.discriminator = None
         if id is not None:
             self.id = id
+        if grid_layer_id is not None:
+            self.grid_layer_id = grid_layer_id
         if name is not None:
             self.name = name
         if type is not None:
@@ -82,6 +87,27 @@ class DeleteGridSourceResponse(object):
         """
 
         self._id = id
+
+    @property
+    def grid_layer_id(self):
+        """Gets the grid_layer_id of this DeleteGridSourceResponse.  # noqa: E501
+
+
+        :return: The grid_layer_id of this DeleteGridSourceResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._grid_layer_id
+
+    @grid_layer_id.setter
+    def grid_layer_id(self, grid_layer_id):
+        """Sets the grid_layer_id of this DeleteGridSourceResponse.
+
+
+        :param grid_layer_id: The grid_layer_id of this DeleteGridSourceResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._grid_layer_id = grid_layer_id
 
     @property
     def name(self):

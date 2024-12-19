@@ -32,7 +32,8 @@ class CreateLayerFromServiceParameter(object):
         'add_to_map_id': 'str',
         'folder_id': 'str',
         'set_public_access': 'bool',
-        'service': 'LayerExternalService'
+        'service': 'LayerExternalService',
+        'authorization_token': 'str'
     }
 
     attribute_map = {
@@ -40,16 +41,18 @@ class CreateLayerFromServiceParameter(object):
         'add_to_map_id': 'addToMapId',
         'folder_id': 'folderId',
         'set_public_access': 'setPublicAccess',
-        'service': 'service'
+        'service': 'service',
+        'authorization_token': 'authorizationToken'
     }
 
-    def __init__(self, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, service=None):  # noqa: E501
+    def __init__(self, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, service=None, authorization_token=None):  # noqa: E501
         """CreateLayerFromServiceParameter - a model defined in Swagger"""  # noqa: E501
         self._url = None
         self._add_to_map_id = None
         self._folder_id = None
         self._set_public_access = None
         self._service = None
+        self._authorization_token = None
         self.discriminator = None
         if url is not None:
             self.url = url
@@ -61,6 +64,8 @@ class CreateLayerFromServiceParameter(object):
             self.set_public_access = set_public_access
         if service is not None:
             self.service = service
+        if authorization_token is not None:
+            self.authorization_token = authorization_token
 
     @property
     def url(self):
@@ -166,6 +171,27 @@ class CreateLayerFromServiceParameter(object):
         """
 
         self._service = service
+
+    @property
+    def authorization_token(self):
+        """Gets the authorization_token of this CreateLayerFromServiceParameter.  # noqa: E501
+
+
+        :return: The authorization_token of this CreateLayerFromServiceParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._authorization_token
+
+    @authorization_token.setter
+    def authorization_token(self, authorization_token):
+        """Sets the authorization_token of this CreateLayerFromServiceParameter.
+
+
+        :param authorization_token: The authorization_token of this CreateLayerFromServiceParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._authorization_token = authorization_token
 
     def to_dict(self):
         """Returns the model properties as a dict"""

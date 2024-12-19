@@ -127,7 +127,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/createDataColumns', 'POST',
@@ -240,7 +240,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/createDataColumns', 'POST',
@@ -345,7 +345,7 @@ class DataColumnApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumn/{dataColumnIdentifier}', 'DELETE',
@@ -450,7 +450,7 @@ class DataColumnApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumn/{dataColumnIdentifier}', 'DELETE',
@@ -559,7 +559,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumn/{dataColumnIdentifier}', 'GET',
@@ -660,7 +660,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumns', 'GET',
@@ -769,7 +769,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumn/{dataColumnIdentifier}', 'GET',
@@ -870,7 +870,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumns', 'GET',
@@ -987,7 +987,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumn/{dataColumnIdentifier}/setUniqueIdentifier', 'POST',
@@ -1104,7 +1104,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumn/{dataColumnIdentifier}/setUniqueIdentifier', 'POST',
@@ -1225,7 +1225,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumn/{dataColumnIdentifier}/update', 'POST',
@@ -1346,7 +1346,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumn/{dataColumnIdentifier}/update', 'POST',

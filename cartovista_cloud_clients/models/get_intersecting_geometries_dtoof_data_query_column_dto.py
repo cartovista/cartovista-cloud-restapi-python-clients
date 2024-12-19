@@ -31,7 +31,7 @@ class GetIntersectingGeometriesDTOOfDataQueryColumnDTO(object):
         'wkt': 'str',
         'target_layer': 'str',
         'filter_data_columns': 'list[DataQueryColumnDTO]',
-        'spatial_filter': 'SpatialFilterDTO'
+        'spatial_filter': 'OneOfGetIntersectingGeometriesDTOOfDataQueryColumnDTOSpatialFilter'
     }
 
     attribute_map = {
@@ -126,7 +126,7 @@ class GetIntersectingGeometriesDTOOfDataQueryColumnDTO(object):
 
 
         :return: The spatial_filter of this GetIntersectingGeometriesDTOOfDataQueryColumnDTO.  # noqa: E501
-        :rtype: SpatialFilterDTO
+        :rtype: OneOfGetIntersectingGeometriesDTOOfDataQueryColumnDTOSpatialFilter
         """
         return self._spatial_filter
 
@@ -136,7 +136,7 @@ class GetIntersectingGeometriesDTOOfDataQueryColumnDTO(object):
 
 
         :param spatial_filter: The spatial_filter of this GetIntersectingGeometriesDTOOfDataQueryColumnDTO.  # noqa: E501
-        :type: SpatialFilterDTO
+        :type: OneOfGetIntersectingGeometriesDTOOfDataQueryColumnDTOSpatialFilter
         """
 
         self._spatial_filter = spatial_filter

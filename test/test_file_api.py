@@ -42,6 +42,12 @@ class TestFileApi(unittest.TestCase):
         """
         pass
 
+    def test_file_download_series(self):
+        """Test case for file_download_series
+
+        """
+        pass
+
     def test_file_export_feedback(self):
         """Test case for file_export_feedback
 
@@ -49,10 +55,28 @@ class TestFileApi(unittest.TestCase):
         """
         pass
 
+    def test_file_get_custom_poi_analysis_post_project_heatmap(self):
+        """Test case for file_get_custom_poi_analysis_post_project_heatmap
+
+        """
+        pass
+
+    def test_file_get_custom_poi_analysis_worst_dispatch_heatmap(self):
+        """Test case for file_get_custom_poi_analysis_worst_dispatch_heatmap
+
+        """
+        pass
+
     def test_file_get_data(self):
         """Test case for file_get_data
 
         Gets a chunk of the grid layer's data.  # noqa: E501
+        """
+        pass
+
+    def test_file_get_poi_analysis_heatmap(self):
+        """Test case for file_get_poi_analysis_heatmap
+
         """
         pass
 
@@ -67,6 +91,12 @@ class TestFileApi(unittest.TestCase):
         """Test case for file_get_symbol_file
 
         Downloads the symbol's file.  # noqa: E501
+        """
+        pass
+
+    def test_file_get_tile(self):
+        """Test case for file_get_tile
+
         """
         pass
 

@@ -33,7 +33,8 @@ class CreateWmtsLayer(object):
         'add_to_map_id': 'str',
         'folder_id': 'str',
         'set_public_access': 'bool',
-        'extent': 'OneOfCreateWmtsLayerExtent'
+        'extent': 'OneOfCreateWmtsLayerExtent',
+        'authentication': 'str'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class CreateWmtsLayer(object):
         'add_to_map_id': 'addToMapId',
         'folder_id': 'folderId',
         'set_public_access': 'setPublicAccess',
-        'extent': 'extent'
+        'extent': 'extent',
+        'authentication': 'authentication'
     }
 
-    def __init__(self, name=None, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, extent=None):  # noqa: E501
+    def __init__(self, name=None, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, extent=None, authentication=None):  # noqa: E501
         """CreateWmtsLayer - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._url = None
@@ -53,6 +55,7 @@ class CreateWmtsLayer(object):
         self._folder_id = None
         self._set_public_access = None
         self._extent = None
+        self._authentication = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -66,6 +69,8 @@ class CreateWmtsLayer(object):
             self.set_public_access = set_public_access
         if extent is not None:
             self.extent = extent
+        if authentication is not None:
+            self.authentication = authentication
 
     @property
     def name(self):
@@ -192,6 +197,27 @@ class CreateWmtsLayer(object):
         """
 
         self._extent = extent
+
+    @property
+    def authentication(self):
+        """Gets the authentication of this CreateWmtsLayer.  # noqa: E501
+
+
+        :return: The authentication of this CreateWmtsLayer.  # noqa: E501
+        :rtype: str
+        """
+        return self._authentication
+
+    @authentication.setter
+    def authentication(self, authentication):
+        """Sets the authentication of this CreateWmtsLayer.
+
+
+        :param authentication: The authentication of this CreateWmtsLayer.  # noqa: E501
+        :type: str
+        """
+
+        self._authentication = authentication
 
     def to_dict(self):
         """Returns the model properties as a dict"""

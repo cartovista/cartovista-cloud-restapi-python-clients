@@ -7,6 +7,7 @@ from cartovista_cloud_clients.api.api_key_api import ApiKeyApi
 from cartovista_cloud_clients.api.authentication_api import AuthenticationApi
 from cartovista_cloud_clients.api.composite_variable_scoring_api import CompositeVariableScoringApi
 from cartovista_cloud_clients.api.config_api import ConfigApi
+from cartovista_cloud_clients.api.custom_application_api import CustomApplicationApi
 from cartovista_cloud_clients.api.data_api import DataApi
 from cartovista_cloud_clients.api.data_column_api import DataColumnApi
 from cartovista_cloud_clients.api.data_row_api import DataRowApi
@@ -28,6 +29,7 @@ from cartovista_cloud_clients.api.ogc_api import OGCApi
 from cartovista_cloud_clients.api.organization_api import OrganizationApi
 from cartovista_cloud_clients.api.permission_api import PermissionApi
 from cartovista_cloud_clients.api.plugin_api import PluginApi
+from cartovista_cloud_clients.api.poi_analysis_api import PoiAnalysisApi
 from cartovista_cloud_clients.api.portal_api import PortalApi
 from cartovista_cloud_clients.api.sign_up_api import SignUpApi
 from cartovista_cloud_clients.api.slide_api import SlideApi

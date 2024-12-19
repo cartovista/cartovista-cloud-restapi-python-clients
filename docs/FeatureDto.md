@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **geometrytype** | **str** |  | [optional] 
 **properties** | [**list[FeaturePropertyDto]**](FeaturePropertyDto.md) |  | [optional] 
-**extent** | [**ExtentDto**](ExtentDto.md) |  | [optional] 
+**extent** | [**OGCExtentDto**](OGCExtentDto.md) |  | [optional] 
 **links** | [**list[LinkDto]**](LinkDto.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -30,20 +30,23 @@ class SecurityIdentity(object):
     swagger_types = {
         'id': 'str',
         'name': 'str',
-        'is_group': 'bool'
+        'is_group': 'bool',
+        'provider': 'SecurityProvider'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
-        'is_group': 'isGroup'
+        'is_group': 'isGroup',
+        'provider': 'provider'
     }
 
-    def __init__(self, id=None, name=None, is_group=None):  # noqa: E501
+    def __init__(self, id=None, name=None, is_group=None, provider=None):  # noqa: E501
         """SecurityIdentity - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._is_group = None
+        self._provider = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -51,6 +54,8 @@ class SecurityIdentity(object):
             self.name = name
         if is_group is not None:
             self.is_group = is_group
+        if provider is not None:
+            self.provider = provider
 
     @property
     def id(self):
@@ -114,6 +119,27 @@ class SecurityIdentity(object):
         """
 
         self._is_group = is_group
+
+    @property
+    def provider(self):
+        """Gets the provider of this SecurityIdentity.  # noqa: E501
+
+
+        :return: The provider of this SecurityIdentity.  # noqa: E501
+        :rtype: SecurityProvider
+        """
+        return self._provider
+
+    @provider.setter
+    def provider(self, provider):
+        """Sets the provider of this SecurityIdentity.
+
+
+        :param provider: The provider of this SecurityIdentity.  # noqa: E501
+        :type: SecurityProvider
+        """
+
+        self._provider = provider
 
     def to_dict(self):
         """Returns the model properties as a dict"""

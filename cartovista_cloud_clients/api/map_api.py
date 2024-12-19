@@ -127,7 +127,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapId}/layers', 'POST',
@@ -228,7 +228,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/clone', 'POST',
@@ -333,7 +333,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps', 'POST',
@@ -446,7 +446,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/slides', 'POST',
@@ -543,7 +543,7 @@ class MapApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapId}', 'DELETE',
@@ -652,7 +652,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/grid/{gridLayerIdentifier}', 'DELETE',
@@ -761,7 +761,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/layers/{layerIdentifier}', 'DELETE',
@@ -870,7 +870,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/wms/{wmsLayerIdentifier}', 'DELETE',
@@ -979,7 +979,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/wmts/{wmtsLayerIdentifier}', 'DELETE',
@@ -1084,7 +1084,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/export-data-extent', 'POST',
@@ -1189,7 +1189,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/export-data-selection', 'POST',
@@ -1290,7 +1290,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/ExportMapElements', 'POST',
@@ -1391,7 +1391,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapId}/dataTables', 'GET',
@@ -1492,7 +1492,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapId}/gridLayers', 'GET',
@@ -1585,7 +1585,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/keywords', 'GET',
@@ -1686,7 +1686,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapId}/layers', 'GET',
@@ -1787,7 +1787,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapId}', 'GET',
@@ -1888,7 +1888,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/advancedSettings', 'GET',
@@ -1989,7 +1989,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/viewer', 'GET',
@@ -2090,7 +2090,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/toolbar', 'GET',
@@ -2191,7 +2191,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/details', 'GET',
@@ -2284,7 +2284,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/maps', 'GET',
@@ -2389,7 +2389,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/elements', 'POST',
@@ -2490,7 +2490,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/slides', 'GET',
@@ -2599,7 +2599,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/layer-order', 'PATCH',
@@ -2617,18 +2617,17 @@ class MapApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def map_run_map_action(self, body, lat, lon, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
+    def map_run_map_action(self, body, map_action_id, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Runs a map action.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.map_run_map_action(body, lat, lon, map_identifier, tenant_url_code, async_req=True)
+        >>> thread = api.map_run_map_action(body, map_action_id, map_identifier, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[str] body: (required)
-        :param float lat: (required)
-        :param float lon: (required)
+        :param dict(str, str) body: (required)
+        :param str map_action_id: (required)
         :param str map_identifier: (required)
         :param str tenant_url_code: (required)
         :return: None
@@ -2637,23 +2636,22 @@ class MapApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.map_run_map_action_with_http_info(body, lat, lon, map_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return self.map_run_map_action_with_http_info(body, map_action_id, map_identifier, tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.map_run_map_action_with_http_info(body, lat, lon, map_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.map_run_map_action_with_http_info(body, map_action_id, map_identifier, tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def map_run_map_action_with_http_info(self, body, lat, lon, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
+    def map_run_map_action_with_http_info(self, body, map_action_id, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Runs a map action.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.map_run_map_action_with_http_info(body, lat, lon, map_identifier, tenant_url_code, async_req=True)
+        >>> thread = api.map_run_map_action_with_http_info(body, map_action_id, map_identifier, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[str] body: (required)
-        :param float lat: (required)
-        :param float lon: (required)
+        :param dict(str, str) body: (required)
+        :param str map_action_id: (required)
         :param str map_identifier: (required)
         :param str tenant_url_code: (required)
         :return: None
@@ -2661,7 +2659,7 @@ class MapApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'lat', 'lon', 'map_identifier', 'tenant_url_code']  # noqa: E501
+        all_params = ['body', 'map_action_id', 'map_identifier', 'tenant_url_code']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2680,14 +2678,10 @@ class MapApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `map_run_map_action`")  # noqa: E501
-        # verify the required parameter 'lat' is set
-        if ('lat' not in params or
-                params['lat'] is None):
-            raise ValueError("Missing the required parameter `lat` when calling `map_run_map_action`")  # noqa: E501
-        # verify the required parameter 'lon' is set
-        if ('lon' not in params or
-                params['lon'] is None):
-            raise ValueError("Missing the required parameter `lon` when calling `map_run_map_action`")  # noqa: E501
+        # verify the required parameter 'map_action_id' is set
+        if ('map_action_id' not in params or
+                params['map_action_id'] is None):
+            raise ValueError("Missing the required parameter `map_action_id` when calling `map_run_map_action`")  # noqa: E501
         # verify the required parameter 'map_identifier' is set
         if ('map_identifier' not in params or
                 params['map_identifier'] is None):
@@ -2706,10 +2700,8 @@ class MapApi(object):
             path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
 
         query_params = []
-        if 'lat' in params:
-            query_params.append(('lat', params['lat']))  # noqa: E501
-        if 'lon' in params:
-            query_params.append(('lon', params['lon']))  # noqa: E501
+        if 'map_action_id' in params:
+            query_params.append(('mapActionId', params['map_action_id']))  # noqa: E501
 
         header_params = {}
 
@@ -2724,7 +2716,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/action', 'POST',
@@ -2825,7 +2817,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/save-default-layout', 'POST',
@@ -2934,7 +2926,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/save-layout', 'POST',
@@ -3047,7 +3039,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/search', 'POST',
@@ -3168,7 +3160,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/layer/{layerIdentifier}/search', 'POST',
@@ -3281,7 +3273,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/share', 'POST',
@@ -3394,7 +3386,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/share-external', 'POST',
@@ -3507,7 +3499,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapId}', 'PATCH',
@@ -3620,7 +3612,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/advancedSettings', 'POST',
@@ -3733,7 +3725,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/identifier', 'PATCH',
@@ -3846,7 +3838,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapId}/layers', 'PATCH',
@@ -3959,7 +3951,7 @@ class MapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/toolbar', 'POST',
@@ -4068,7 +4060,7 @@ class MapApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/thumbnail', 'PATCH',

@@ -36,10 +36,7 @@ class MapCreateParameter(object):
         'seo_title': 'str',
         'seo_description': 'str',
         'seo_custom_html': 'str',
-        'scoring_enabled': 'bool',
         'layers': 'list[MapLayerParameter]',
-        'themesets': 'str',
-        'thematic_schemas': 'str',
         'default_slide_name': 'str',
         'folder_id': 'str'
     }
@@ -53,15 +50,12 @@ class MapCreateParameter(object):
         'seo_title': 'seoTitle',
         'seo_description': 'seoDescription',
         'seo_custom_html': 'seoCustomHTML',
-        'scoring_enabled': 'scoringEnabled',
         'layers': 'layers',
-        'themesets': 'themesets',
-        'thematic_schemas': 'thematicSchemas',
         'default_slide_name': 'defaultSlideName',
         'folder_id': 'folderId'
     }
 
-    def __init__(self, system_identifier=None, title=None, description=None, language=None, editable=None, seo_title=None, seo_description=None, seo_custom_html=None, scoring_enabled=None, layers=None, themesets=None, thematic_schemas=None, default_slide_name=None, folder_id=None):  # noqa: E501
+    def __init__(self, system_identifier=None, title=None, description=None, language=None, editable=None, seo_title=None, seo_description=None, seo_custom_html=None, layers=None, default_slide_name=None, folder_id=None):  # noqa: E501
         """MapCreateParameter - a model defined in Swagger"""  # noqa: E501
         self._system_identifier = None
         self._title = None
@@ -71,10 +65,7 @@ class MapCreateParameter(object):
         self._seo_title = None
         self._seo_description = None
         self._seo_custom_html = None
-        self._scoring_enabled = None
         self._layers = None
-        self._themesets = None
-        self._thematic_schemas = None
         self._default_slide_name = None
         self._folder_id = None
         self.discriminator = None
@@ -94,14 +85,8 @@ class MapCreateParameter(object):
             self.seo_description = seo_description
         if seo_custom_html is not None:
             self.seo_custom_html = seo_custom_html
-        if scoring_enabled is not None:
-            self.scoring_enabled = scoring_enabled
         if layers is not None:
             self.layers = layers
-        if themesets is not None:
-            self.themesets = themesets
-        if thematic_schemas is not None:
-            self.thematic_schemas = thematic_schemas
         if default_slide_name is not None:
             self.default_slide_name = default_slide_name
         if folder_id is not None:
@@ -276,27 +261,6 @@ class MapCreateParameter(object):
         self._seo_custom_html = seo_custom_html
 
     @property
-    def scoring_enabled(self):
-        """Gets the scoring_enabled of this MapCreateParameter.  # noqa: E501
-
-
-        :return: The scoring_enabled of this MapCreateParameter.  # noqa: E501
-        :rtype: bool
-        """
-        return self._scoring_enabled
-
-    @scoring_enabled.setter
-    def scoring_enabled(self, scoring_enabled):
-        """Sets the scoring_enabled of this MapCreateParameter.
-
-
-        :param scoring_enabled: The scoring_enabled of this MapCreateParameter.  # noqa: E501
-        :type: bool
-        """
-
-        self._scoring_enabled = scoring_enabled
-
-    @property
     def layers(self):
         """Gets the layers of this MapCreateParameter.  # noqa: E501
 
@@ -316,48 +280,6 @@ class MapCreateParameter(object):
         """
 
         self._layers = layers
-
-    @property
-    def themesets(self):
-        """Gets the themesets of this MapCreateParameter.  # noqa: E501
-
-
-        :return: The themesets of this MapCreateParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._themesets
-
-    @themesets.setter
-    def themesets(self, themesets):
-        """Sets the themesets of this MapCreateParameter.
-
-
-        :param themesets: The themesets of this MapCreateParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._themesets = themesets
-
-    @property
-    def thematic_schemas(self):
-        """Gets the thematic_schemas of this MapCreateParameter.  # noqa: E501
-
-
-        :return: The thematic_schemas of this MapCreateParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._thematic_schemas
-
-    @thematic_schemas.setter
-    def thematic_schemas(self, thematic_schemas):
-        """Sets the thematic_schemas of this MapCreateParameter.
-
-
-        :param thematic_schemas: The thematic_schemas of this MapCreateParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._thematic_schemas = thematic_schemas
 
     @property
     def default_slide_name(self):

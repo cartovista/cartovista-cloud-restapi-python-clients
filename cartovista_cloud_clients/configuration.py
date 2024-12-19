@@ -239,6 +239,13 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                     'key': 'apiKey',
                     'value': self.get_api_key_with_prefix('apiKey')
                 },
+            'secretKey':
+                {
+                    'type': 'api_key',
+                    'in': 'header',
+                    'key': 'secretKey',
+                    'value': self.get_api_key_with_prefix('secretKey')
+                },
         }
 
     def to_debug_report(self):
@@ -250,5 +257,5 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 2.0.0\n"\
-               "SDK Package Version: 8.7".\
+               "SDK Package Version: 8.10".\
                format(env=sys.platform, pyversion=sys.version)

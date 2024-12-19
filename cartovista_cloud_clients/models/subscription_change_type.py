@@ -29,6 +29,7 @@ class SubscriptionChangeType(object):
     NUMBEROFUSERS = "NumberOfUsers"
     ISMONTHLY = "IsMonthly"
     DELETE = "Delete"
+    GEOCODINGUSAGERESET = "GeocodingUsageReset"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

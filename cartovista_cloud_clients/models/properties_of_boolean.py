@@ -38,7 +38,9 @@ class PropertiesOfBoolean(object):
         'routing': 'bool',
         'profile': 'bool',
         'time_view': 'bool',
-        'time_animation_controller': 'bool'
+        'time_animation_controller': 'bool',
+        'composite_scoring': 'bool',
+        'poi_analysis': 'bool'
     }
 
     attribute_map = {
@@ -52,10 +54,12 @@ class PropertiesOfBoolean(object):
         'routing': 'routing',
         'profile': 'profile',
         'time_view': 'timeView',
-        'time_animation_controller': 'timeAnimationController'
+        'time_animation_controller': 'timeAnimationController',
+        'composite_scoring': 'compositeScoring',
+        'poi_analysis': 'poiAnalysis'
     }
 
-    def __init__(self, map=None, layers=None, info=None, data=None, legend=None, chart=None, story=None, routing=None, profile=None, time_view=None, time_animation_controller=None):  # noqa: E501
+    def __init__(self, map=None, layers=None, info=None, data=None, legend=None, chart=None, story=None, routing=None, profile=None, time_view=None, time_animation_controller=None, composite_scoring=None, poi_analysis=None):  # noqa: E501
         """PropertiesOfBoolean - a model defined in Swagger"""  # noqa: E501
         self._map = None
         self._layers = None
@@ -68,6 +72,8 @@ class PropertiesOfBoolean(object):
         self._profile = None
         self._time_view = None
         self._time_animation_controller = None
+        self._composite_scoring = None
+        self._poi_analysis = None
         self.discriminator = None
         if map is not None:
             self.map = map
@@ -91,6 +97,10 @@ class PropertiesOfBoolean(object):
             self.time_view = time_view
         if time_animation_controller is not None:
             self.time_animation_controller = time_animation_controller
+        if composite_scoring is not None:
+            self.composite_scoring = composite_scoring
+        if poi_analysis is not None:
+            self.poi_analysis = poi_analysis
 
     @property
     def map(self):
@@ -322,6 +332,48 @@ class PropertiesOfBoolean(object):
         """
 
         self._time_animation_controller = time_animation_controller
+
+    @property
+    def composite_scoring(self):
+        """Gets the composite_scoring of this PropertiesOfBoolean.  # noqa: E501
+
+
+        :return: The composite_scoring of this PropertiesOfBoolean.  # noqa: E501
+        :rtype: bool
+        """
+        return self._composite_scoring
+
+    @composite_scoring.setter
+    def composite_scoring(self, composite_scoring):
+        """Sets the composite_scoring of this PropertiesOfBoolean.
+
+
+        :param composite_scoring: The composite_scoring of this PropertiesOfBoolean.  # noqa: E501
+        :type: bool
+        """
+
+        self._composite_scoring = composite_scoring
+
+    @property
+    def poi_analysis(self):
+        """Gets the poi_analysis of this PropertiesOfBoolean.  # noqa: E501
+
+
+        :return: The poi_analysis of this PropertiesOfBoolean.  # noqa: E501
+        :rtype: bool
+        """
+        return self._poi_analysis
+
+    @poi_analysis.setter
+    def poi_analysis(self, poi_analysis):
+        """Sets the poi_analysis of this PropertiesOfBoolean.
+
+
+        :param poi_analysis: The poi_analysis of this PropertiesOfBoolean.  # noqa: E501
+        :type: bool
+        """
+
+        self._poi_analysis = poi_analysis
 
     def to_dict(self):
         """Returns the model properties as a dict"""

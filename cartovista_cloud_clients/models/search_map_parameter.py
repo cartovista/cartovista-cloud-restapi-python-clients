@@ -29,24 +29,29 @@ class SearchMapParameter(object):
     """
     swagger_types = {
         'search': 'str',
+        'include_layers': 'bool',
         'include_addresses': 'bool',
-        'filter_data_columns': 'dict(str, list[DataColumnDTO])'
+        'filter_data_columns': 'dict(str, list[DataQueryColumnDTO])'
     }
 
     attribute_map = {
         'search': 'search',
+        'include_layers': 'includeLayers',
         'include_addresses': 'includeAddresses',
         'filter_data_columns': 'filterDataColumns'
     }
 
-    def __init__(self, search=None, include_addresses=None, filter_data_columns=None):  # noqa: E501
+    def __init__(self, search=None, include_layers=None, include_addresses=None, filter_data_columns=None):  # noqa: E501
         """SearchMapParameter - a model defined in Swagger"""  # noqa: E501
         self._search = None
+        self._include_layers = None
         self._include_addresses = None
         self._filter_data_columns = None
         self.discriminator = None
         if search is not None:
             self.search = search
+        if include_layers is not None:
+            self.include_layers = include_layers
         if include_addresses is not None:
             self.include_addresses = include_addresses
         if filter_data_columns is not None:
@@ -72,6 +77,27 @@ class SearchMapParameter(object):
         """
 
         self._search = search
+
+    @property
+    def include_layers(self):
+        """Gets the include_layers of this SearchMapParameter.  # noqa: E501
+
+
+        :return: The include_layers of this SearchMapParameter.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_layers
+
+    @include_layers.setter
+    def include_layers(self, include_layers):
+        """Sets the include_layers of this SearchMapParameter.
+
+
+        :param include_layers: The include_layers of this SearchMapParameter.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_layers = include_layers
 
     @property
     def include_addresses(self):
@@ -100,7 +126,7 @@ class SearchMapParameter(object):
 
 
         :return: The filter_data_columns of this SearchMapParameter.  # noqa: E501
-        :rtype: dict(str, list[DataColumnDTO])
+        :rtype: dict(str, list[DataQueryColumnDTO])
         """
         return self._filter_data_columns
 
@@ -110,7 +136,7 @@ class SearchMapParameter(object):
 
 
         :param filter_data_columns: The filter_data_columns of this SearchMapParameter.  # noqa: E501
-        :type: dict(str, list[DataColumnDTO])
+        :type: dict(str, list[DataQueryColumnDTO])
         """
 
         self._filter_data_columns = filter_data_columns

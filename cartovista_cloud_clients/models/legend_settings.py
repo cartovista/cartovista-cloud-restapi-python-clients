@@ -30,20 +30,23 @@ class LegendSettings(object):
     swagger_types = {
         'show_not_available': 'bool',
         'show_out_of_range': 'bool',
-        'show_feature_count': 'bool'
+        'show_feature_count': 'bool',
+        'show_layer_visibility_control': 'bool'
     }
 
     attribute_map = {
         'show_not_available': 'showNotAvailable',
         'show_out_of_range': 'showOutOfRange',
-        'show_feature_count': 'showFeatureCount'
+        'show_feature_count': 'showFeatureCount',
+        'show_layer_visibility_control': 'showLayerVisibilityControl'
     }
 
-    def __init__(self, show_not_available=None, show_out_of_range=None, show_feature_count=None):  # noqa: E501
+    def __init__(self, show_not_available=None, show_out_of_range=None, show_feature_count=None, show_layer_visibility_control=None):  # noqa: E501
         """LegendSettings - a model defined in Swagger"""  # noqa: E501
         self._show_not_available = None
         self._show_out_of_range = None
         self._show_feature_count = None
+        self._show_layer_visibility_control = None
         self.discriminator = None
         if show_not_available is not None:
             self.show_not_available = show_not_available
@@ -51,6 +54,8 @@ class LegendSettings(object):
             self.show_out_of_range = show_out_of_range
         if show_feature_count is not None:
             self.show_feature_count = show_feature_count
+        if show_layer_visibility_control is not None:
+            self.show_layer_visibility_control = show_layer_visibility_control
 
     @property
     def show_not_available(self):
@@ -114,6 +119,27 @@ class LegendSettings(object):
         """
 
         self._show_feature_count = show_feature_count
+
+    @property
+    def show_layer_visibility_control(self):
+        """Gets the show_layer_visibility_control of this LegendSettings.  # noqa: E501
+
+
+        :return: The show_layer_visibility_control of this LegendSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_layer_visibility_control
+
+    @show_layer_visibility_control.setter
+    def show_layer_visibility_control(self, show_layer_visibility_control):
+        """Sets the show_layer_visibility_control of this LegendSettings.
+
+
+        :param show_layer_visibility_control: The show_layer_visibility_control of this LegendSettings.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_layer_visibility_control = show_layer_visibility_control
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,9 +35,11 @@ class LayerCreateParameter(object):
         'geometry_type': 'str',
         'description': 'str',
         'vector_tiling': 'bool',
+        'live': 'bool',
         'system_identifier': 'str',
         'data_table_system_identifier': 'str',
-        'feature_id_column_system_identifier': 'str'
+        'feature_id_column_system_identifier': 'str',
+        'folder_id': 'str'
     }
 
     attribute_map = {
@@ -48,12 +50,14 @@ class LayerCreateParameter(object):
         'geometry_type': 'geometryType',
         'description': 'description',
         'vector_tiling': 'vectorTiling',
+        'live': 'live',
         'system_identifier': 'systemIdentifier',
         'data_table_system_identifier': 'dataTableSystemIdentifier',
-        'feature_id_column_system_identifier': 'featureIdColumnSystemIdentifier'
+        'feature_id_column_system_identifier': 'featureIdColumnSystemIdentifier',
+        'folder_id': 'folderId'
     }
 
-    def __init__(self, identifier=None, proj4=None, name=None, metadata=None, geometry_type=None, description=None, vector_tiling=None, system_identifier=None, data_table_system_identifier=None, feature_id_column_system_identifier=None):  # noqa: E501
+    def __init__(self, identifier=None, proj4=None, name=None, metadata=None, geometry_type=None, description=None, vector_tiling=None, live=None, system_identifier=None, data_table_system_identifier=None, feature_id_column_system_identifier=None, folder_id=None):  # noqa: E501
         """LayerCreateParameter - a model defined in Swagger"""  # noqa: E501
         self._identifier = None
         self._proj4 = None
@@ -62,9 +66,11 @@ class LayerCreateParameter(object):
         self._geometry_type = None
         self._description = None
         self._vector_tiling = None
+        self._live = None
         self._system_identifier = None
         self._data_table_system_identifier = None
         self._feature_id_column_system_identifier = None
+        self._folder_id = None
         self.discriminator = None
         if identifier is not None:
             self.identifier = identifier
@@ -80,12 +86,16 @@ class LayerCreateParameter(object):
             self.description = description
         if vector_tiling is not None:
             self.vector_tiling = vector_tiling
+        if live is not None:
+            self.live = live
         if system_identifier is not None:
             self.system_identifier = system_identifier
         if data_table_system_identifier is not None:
             self.data_table_system_identifier = data_table_system_identifier
         if feature_id_column_system_identifier is not None:
             self.feature_id_column_system_identifier = feature_id_column_system_identifier
+        if folder_id is not None:
+            self.folder_id = folder_id
 
     @property
     def identifier(self):
@@ -235,6 +245,27 @@ class LayerCreateParameter(object):
         self._vector_tiling = vector_tiling
 
     @property
+    def live(self):
+        """Gets the live of this LayerCreateParameter.  # noqa: E501
+
+
+        :return: The live of this LayerCreateParameter.  # noqa: E501
+        :rtype: bool
+        """
+        return self._live
+
+    @live.setter
+    def live(self, live):
+        """Sets the live of this LayerCreateParameter.
+
+
+        :param live: The live of this LayerCreateParameter.  # noqa: E501
+        :type: bool
+        """
+
+        self._live = live
+
+    @property
     def system_identifier(self):
         """Gets the system_identifier of this LayerCreateParameter.  # noqa: E501
 
@@ -296,6 +327,27 @@ class LayerCreateParameter(object):
         """
 
         self._feature_id_column_system_identifier = feature_id_column_system_identifier
+
+    @property
+    def folder_id(self):
+        """Gets the folder_id of this LayerCreateParameter.  # noqa: E501
+
+
+        :return: The folder_id of this LayerCreateParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._folder_id
+
+    @folder_id.setter
+    def folder_id(self, folder_id):
+        """Sets the folder_id of this LayerCreateParameter.
+
+
+        :param folder_id: The folder_id of this LayerCreateParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._folder_id = folder_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

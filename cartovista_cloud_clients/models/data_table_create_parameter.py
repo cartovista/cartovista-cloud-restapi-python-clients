@@ -32,7 +32,8 @@ class DataTableCreateParameter(object):
         'name': 'str',
         'metadata': 'str',
         'description': 'str',
-        'system_identifier': 'str'
+        'system_identifier': 'str',
+        'folder_id': 'str'
     }
 
     attribute_map = {
@@ -40,16 +41,18 @@ class DataTableCreateParameter(object):
         'name': 'name',
         'metadata': 'metadata',
         'description': 'description',
-        'system_identifier': 'systemIdentifier'
+        'system_identifier': 'systemIdentifier',
+        'folder_id': 'folderId'
     }
 
-    def __init__(self, identifier=None, name=None, metadata=None, description=None, system_identifier=None):  # noqa: E501
+    def __init__(self, identifier=None, name=None, metadata=None, description=None, system_identifier=None, folder_id=None):  # noqa: E501
         """DataTableCreateParameter - a model defined in Swagger"""  # noqa: E501
         self._identifier = None
         self._name = None
         self._metadata = None
         self._description = None
         self._system_identifier = None
+        self._folder_id = None
         self.discriminator = None
         if identifier is not None:
             self.identifier = identifier
@@ -61,6 +64,8 @@ class DataTableCreateParameter(object):
             self.description = description
         if system_identifier is not None:
             self.system_identifier = system_identifier
+        if folder_id is not None:
+            self.folder_id = folder_id
 
     @property
     def identifier(self):
@@ -166,6 +171,27 @@ class DataTableCreateParameter(object):
         """
 
         self._system_identifier = system_identifier
+
+    @property
+    def folder_id(self):
+        """Gets the folder_id of this DataTableCreateParameter.  # noqa: E501
+
+
+        :return: The folder_id of this DataTableCreateParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._folder_id
+
+    @folder_id.setter
+    def folder_id(self, folder_id):
+        """Sets the folder_id of this DataTableCreateParameter.
+
+
+        :param folder_id: The folder_id of this DataTableCreateParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._folder_id = folder_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

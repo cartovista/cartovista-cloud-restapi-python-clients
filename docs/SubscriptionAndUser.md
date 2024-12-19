@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **heatmap_generation** | **bool** |  | [optional] 
 **grace_period_end_date** | **datetime** |  | [optional] 
 **license_expired** | **bool** |  | [optional] 
+**composite_scoring** | **bool** |  | [optional] 
+**poi_analysis** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

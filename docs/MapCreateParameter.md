@@ -11,10 +11,7 @@ Name | Type | Description | Notes
 **seo_title** | **str** |  | [optional] 
 **seo_description** | **str** |  | [optional] 
 **seo_custom_html** | **str** |  | [optional] 
-**scoring_enabled** | **bool** |  | [optional] 
 **layers** | [**list[MapLayerParameter]**](MapLayerParameter.md) |  | [optional] 
-**themesets** | **str** |  | [optional] 
-**thematic_schemas** | **str** |  | [optional] 
 **default_slide_name** | **str** |  | [optional] 
 **folder_id** | **str** |  | [optional] 
 

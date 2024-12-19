@@ -29,24 +29,29 @@ class InfoToolSettings(object):
     """
     swagger_types = {
         'as_panel': 'bool',
+        'show_get_directions_button': 'bool',
         'display_coordinates': 'bool',
         'type': 'CoordinatesType'
     }
 
     attribute_map = {
         'as_panel': 'asPanel',
+        'show_get_directions_button': 'showGetDirectionsButton',
         'display_coordinates': 'displayCoordinates',
         'type': 'type'
     }
 
-    def __init__(self, as_panel=None, display_coordinates=None, type=None):  # noqa: E501
+    def __init__(self, as_panel=None, show_get_directions_button=None, display_coordinates=None, type=None):  # noqa: E501
         """InfoToolSettings - a model defined in Swagger"""  # noqa: E501
         self._as_panel = None
+        self._show_get_directions_button = None
         self._display_coordinates = None
         self._type = None
         self.discriminator = None
         if as_panel is not None:
             self.as_panel = as_panel
+        if show_get_directions_button is not None:
+            self.show_get_directions_button = show_get_directions_button
         if display_coordinates is not None:
             self.display_coordinates = display_coordinates
         if type is not None:
@@ -72,6 +77,27 @@ class InfoToolSettings(object):
         """
 
         self._as_panel = as_panel
+
+    @property
+    def show_get_directions_button(self):
+        """Gets the show_get_directions_button of this InfoToolSettings.  # noqa: E501
+
+
+        :return: The show_get_directions_button of this InfoToolSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_get_directions_button
+
+    @show_get_directions_button.setter
+    def show_get_directions_button(self, show_get_directions_button):
+        """Sets the show_get_directions_button of this InfoToolSettings.
+
+
+        :param show_get_directions_button: The show_get_directions_button of this InfoToolSettings.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_get_directions_button = show_get_directions_button
 
     @property
     def display_coordinates(self):

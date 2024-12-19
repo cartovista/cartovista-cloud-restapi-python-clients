@@ -30,20 +30,23 @@ class TimeSeriesData(object):
     swagger_types = {
         'data': 'list[TimeSeriesDataValue]',
         'range': 'TimeSeriesRange',
-        'limit': 'int'
+        'limit': 'int',
+        'feature_id': 'str'
     }
 
     attribute_map = {
         'data': 'data',
         'range': 'range',
-        'limit': 'limit'
+        'limit': 'limit',
+        'feature_id': 'featureId'
     }
 
-    def __init__(self, data=None, range=None, limit=None):  # noqa: E501
+    def __init__(self, data=None, range=None, limit=None, feature_id=None):  # noqa: E501
         """TimeSeriesData - a model defined in Swagger"""  # noqa: E501
         self._data = None
         self._range = None
         self._limit = None
+        self._feature_id = None
         self.discriminator = None
         if data is not None:
             self.data = data
@@ -51,6 +54,8 @@ class TimeSeriesData(object):
             self.range = range
         if limit is not None:
             self.limit = limit
+        if feature_id is not None:
+            self.feature_id = feature_id
 
     @property
     def data(self):
@@ -114,6 +119,27 @@ class TimeSeriesData(object):
         """
 
         self._limit = limit
+
+    @property
+    def feature_id(self):
+        """Gets the feature_id of this TimeSeriesData.  # noqa: E501
+
+
+        :return: The feature_id of this TimeSeriesData.  # noqa: E501
+        :rtype: str
+        """
+        return self._feature_id
+
+    @feature_id.setter
+    def feature_id(self, feature_id):
+        """Sets the feature_id of this TimeSeriesData.
+
+
+        :param feature_id: The feature_id of this TimeSeriesData.  # noqa: E501
+        :type: str
+        """
+
+        self._feature_id = feature_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

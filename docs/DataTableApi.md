@@ -23,6 +23,8 @@ Method | HTTP request | Description
 [**data_table_get_maps_by_data_table_identifier**](DataTableApi.md#data_table_get_maps_by_data_table_identifier) | **GET** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/maps | Gets all the maps that use the table.
 [**data_table_get_time_range_by_data_table_identifier**](DataTableApi.md#data_table_get_time_range_by_data_table_identifier) | **GET** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/timeRange | Gets the table&#x27;s time range. The time series column must be set.
 [**data_table_get_time_series_data**](DataTableApi.md#data_table_get_time_series_data) | **POST** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/timeSeriesData | Returns an aggregation of the table&#x27;s data using the time series column.
+[**data_table_get_time_series_data_many_features**](DataTableApi.md#data_table_get_time_series_data_many_features) | **POST** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/timeSeriesDataManyFeatures | Returns an aggregation of the table&#x27;s data using the time series column.
+[**data_table_get_time_series_dates**](DataTableApi.md#data_table_get_time_series_dates) | **GET** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/timeSeriesDates | Returns a list of all the dates in the time series table.
 [**data_table_join_data_table**](DataTableApi.md#data_table_join_data_table) | **POST** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/join | Joins a table to a layer. The number of valid links must be greater than 0.
 [**data_table_optimize_data_table**](DataTableApi.md#data_table_optimize_data_table) | **GET** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/optimize | Optimizes the table queries with ClickHouse. If the table belongs to a layer, the layer must be tiled.
 [**data_table_set_data_column_unique_id**](DataTableApi.md#data_table_set_data_column_unique_id) | **POST** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/setDataColumnUniqueId | Sets the table&#x27;s unique identifier column. The column becomes the primary way to identify its rows.
@@ -50,6 +52,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -79,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -106,6 +113,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -133,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -160,6 +172,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -187,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -214,6 +231,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -241,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -268,6 +290,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -297,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -324,6 +351,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -351,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -378,6 +410,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -405,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -432,6 +469,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -461,7 +503,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -488,6 +530,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -516,7 +563,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -543,6 +590,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -571,7 +623,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -598,6 +650,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -625,7 +682,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -652,6 +709,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -679,7 +741,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -706,6 +768,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -731,7 +798,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -758,6 +825,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -787,7 +859,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -814,6 +886,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -843,7 +920,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -870,6 +947,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -897,7 +979,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -924,6 +1006,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -951,7 +1038,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -978,6 +1065,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1005,7 +1097,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1032,10 +1124,15 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
-body = cartovista_cloud_clients.TimeSeriesDataParameter() # TimeSeriesDataParameter | 
+body = cartovista_cloud_clients.TimeSeriesOneFeatureDataParameter() # TimeSeriesOneFeatureDataParameter | 
 data_table_identifier = 'data_table_identifier_example' # str | 
 tenant_url_code = 'tenant_url_code_example' # str | 
 
@@ -1051,7 +1148,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**TimeSeriesDataParameter**](TimeSeriesDataParameter.md)|  | 
+ **body** | [**TimeSeriesOneFeatureDataParameter**](TimeSeriesOneFeatureDataParameter.md)|  | 
  **data_table_identifier** | **str**|  | 
  **tenant_url_code** | **str**|  | 
 
@@ -1061,11 +1158,131 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **data_table_get_time_series_data_many_features**
+> list[TimeSeriesData] data_table_get_time_series_data_many_features(body, data_table_identifier, tenant_url_code)
+
+Returns an aggregation of the table's data using the time series column.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cartovista_cloud_clients
+from cartovista_cloud_clients.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
+body = cartovista_cloud_clients.TimeSeriesManyFeaturesDataParameter() # TimeSeriesManyFeaturesDataParameter | 
+data_table_identifier = 'data_table_identifier_example' # str | 
+tenant_url_code = 'tenant_url_code_example' # str | 
+
+try:
+    # Returns an aggregation of the table's data using the time series column.
+    api_response = api_instance.data_table_get_time_series_data_many_features(body, data_table_identifier, tenant_url_code)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DataTableApi->data_table_get_time_series_data_many_features: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**TimeSeriesManyFeaturesDataParameter**](TimeSeriesManyFeaturesDataParameter.md)|  | 
+ **data_table_identifier** | **str**|  | 
+ **tenant_url_code** | **str**|  | 
+
+### Return type
+
+[**list[TimeSeriesData]**](TimeSeriesData.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **data_table_get_time_series_dates**
+> list[datetime] data_table_get_time_series_dates(data_table_identifier, tenant_url_code)
+
+Returns a list of all the dates in the time series table.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cartovista_cloud_clients
+from cartovista_cloud_clients.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
+data_table_identifier = 'data_table_identifier_example' # str | 
+tenant_url_code = 'tenant_url_code_example' # str | 
+
+try:
+    # Returns a list of all the dates in the time series table.
+    api_response = api_instance.data_table_get_time_series_dates(data_table_identifier, tenant_url_code)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DataTableApi->data_table_get_time_series_dates: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data_table_identifier** | **str**|  | 
+ **tenant_url_code** | **str**|  | 
+
+### Return type
+
+**list[datetime]**
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1088,6 +1305,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1117,7 +1339,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1144,6 +1366,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1171,7 +1398,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1198,6 +1425,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1227,7 +1459,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1254,6 +1486,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1283,7 +1520,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1310,6 +1547,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1339,7 +1581,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1366,6 +1608,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1395,7 +1642,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1422,6 +1669,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1451,7 +1703,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1478,6 +1730,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.DataTableApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1507,7 +1764,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1515,4 +1772,5 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 

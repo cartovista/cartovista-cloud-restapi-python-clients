@@ -16,8 +16,10 @@ Name | Type | Description | Notes
 **folder_id** | **str** |  | [optional] 
 **tenant_id** | **str** |  | [optional] 
 **extent** | **OneOfWmsLayerExtent** |  | [optional] 
-**thumbnail_url** | **str** |  | [optional] 
 **get_legend_url** | **str** |  | [optional] 
+**version** | **str** |  | [optional] 
+**projection_attribute** | **str** |  | [optional] 
+**thumbnail_url** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

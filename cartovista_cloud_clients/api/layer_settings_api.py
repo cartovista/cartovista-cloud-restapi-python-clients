@@ -115,7 +115,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerId}/default', 'GET',
@@ -216,7 +216,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}', 'GET',
@@ -234,17 +234,17 @@ class LayerSettingsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def layer_settings_get_map_layer_settings(self, map_id, layer_settings_id, tenant_url_code, **kwargs):  # noqa: E501
+    def layer_settings_get_map_layer_settings(self, map_id, layer_id, tenant_url_code, **kwargs):  # noqa: E501
         """Gets the layer settings for a specific map.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.layer_settings_get_map_layer_settings(map_id, layer_settings_id, tenant_url_code, async_req=True)
+        >>> thread = api.layer_settings_get_map_layer_settings(map_id, layer_id, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str map_id: (required)
-        :param str layer_settings_id: (required)
+        :param str layer_id: (required)
         :param str tenant_url_code: (required)
         :return: LayerSettings
                  If the method is called asynchronously,
@@ -252,29 +252,29 @@ class LayerSettingsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.layer_settings_get_map_layer_settings_with_http_info(map_id, layer_settings_id, tenant_url_code, **kwargs)  # noqa: E501
+            return self.layer_settings_get_map_layer_settings_with_http_info(map_id, layer_id, tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.layer_settings_get_map_layer_settings_with_http_info(map_id, layer_settings_id, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.layer_settings_get_map_layer_settings_with_http_info(map_id, layer_id, tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def layer_settings_get_map_layer_settings_with_http_info(self, map_id, layer_settings_id, tenant_url_code, **kwargs):  # noqa: E501
+    def layer_settings_get_map_layer_settings_with_http_info(self, map_id, layer_id, tenant_url_code, **kwargs):  # noqa: E501
         """Gets the layer settings for a specific map.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.layer_settings_get_map_layer_settings_with_http_info(map_id, layer_settings_id, tenant_url_code, async_req=True)
+        >>> thread = api.layer_settings_get_map_layer_settings_with_http_info(map_id, layer_id, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str map_id: (required)
-        :param str layer_settings_id: (required)
+        :param str layer_id: (required)
         :param str tenant_url_code: (required)
         :return: LayerSettings
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['map_id', 'layer_settings_id', 'tenant_url_code']  # noqa: E501
+        all_params = ['map_id', 'layer_id', 'tenant_url_code']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -293,10 +293,10 @@ class LayerSettingsApi(object):
         if ('map_id' not in params or
                 params['map_id'] is None):
             raise ValueError("Missing the required parameter `map_id` when calling `layer_settings_get_map_layer_settings`")  # noqa: E501
-        # verify the required parameter 'layer_settings_id' is set
-        if ('layer_settings_id' not in params or
-                params['layer_settings_id'] is None):
-            raise ValueError("Missing the required parameter `layer_settings_id` when calling `layer_settings_get_map_layer_settings`")  # noqa: E501
+        # verify the required parameter 'layer_id' is set
+        if ('layer_id' not in params or
+                params['layer_id'] is None):
+            raise ValueError("Missing the required parameter `layer_id` when calling `layer_settings_get_map_layer_settings`")  # noqa: E501
         # verify the required parameter 'tenant_url_code' is set
         if ('tenant_url_code' not in params or
                 params['tenant_url_code'] is None):
@@ -307,8 +307,8 @@ class LayerSettingsApi(object):
         path_params = {}
         if 'map_id' in params:
             path_params['mapId'] = params['map_id']  # noqa: E501
-        if 'layer_settings_id' in params:
-            path_params['layerSettingsId'] = params['layer_settings_id']  # noqa: E501
+        if 'layer_id' in params:
+            path_params['layerId'] = params['layer_id']  # noqa: E501
         if 'tenant_url_code' in params:
             path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
 
@@ -325,10 +325,10 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
-            '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/map/{mapId}', 'GET',
+            '/{tenantUrlCode}/api/v2/layerSettings/{layerId}/map/{mapId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -438,7 +438,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/alias', 'PATCH',
@@ -551,7 +551,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/effects', 'PATCH',
@@ -664,7 +664,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/general', 'PATCH',
@@ -777,7 +777,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/geometryStyle', 'PATCH',
@@ -890,7 +890,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/interactivity', 'PATCH',
@@ -1003,7 +1003,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/label', 'PATCH',
@@ -1116,7 +1116,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/rendering', 'PATCH',
@@ -1229,7 +1229,7 @@ class LayerSettingsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/layerSettings/{layerSettingsId}/visibility-ranges', 'PATCH',

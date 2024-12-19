@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **interface** | [**InterfaceSettings**](InterfaceSettings.md) |  | [optional] 
 **selection** | [**SelectionSettings**](SelectionSettings.md) |  | [optional] 
-**units** | [**UnitsSettings**](UnitsSettings.md) |  | [optional] 
+**map** | [**MapSettings**](MapSettings.md) |  | [optional] 
 **search_geocoding** | [**SearchGeocodingSettings**](SearchGeocodingSettings.md) |  | [optional] 
 **thematic_analysis** | [**ThematicAnalysisSettings**](ThematicAnalysisSettings.md) |  | [optional] 
 **legend** | [**LegendSettings**](LegendSettings.md) |  | [optional] 

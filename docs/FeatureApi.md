@@ -5,10 +5,10 @@ All URIs are relative to *https://cloud.cartovista.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**feature_create_features_from_geo_json**](FeatureApi.md#feature_create_features_from_geo_json) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromGeoJSON | Creates a feature using the provided geometry in GeoJSON format.
-[**feature_create_features_from_long_lat**](FeatureApi.md#feature_create_features_from_long_lat) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromLongLat | Creates a feature from the provided latutude and longitude coordinates. The layer must be a point layer.
+[**feature_create_features_from_long_lat**](FeatureApi.md#feature_create_features_from_long_lat) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromLongLat | Creates features from the provided latutude and longitude coordinates. The layer must be a point layer. Use \&quot;proj4\&quot;: \&quot;+proj&#x3D;longlat +ellps&#x3D;WGS84 +datum&#x3D;WGS84 +no_defs\&quot;.
 [**feature_create_features_from_wkt**](FeatureApi.md#feature_create_features_from_wkt) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromWKT | Creates a feature using the provided geometry in WKT format.
 [**feature_create_update_features_from_geo_json**](FeatureApi.md#feature_create_update_features_from_geo_json) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromGeoJSON | Creates a feature or updates it if it already exists with the input geometry in GeoJSON format.
-[**feature_create_update_features_from_long_lat**](FeatureApi.md#feature_create_update_features_from_long_lat) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromLongLat | Creates a feature or update it if it already exists with provided latutude and longitude coordinates. The layer must be a point layer.
+[**feature_create_update_features_from_long_lat**](FeatureApi.md#feature_create_update_features_from_long_lat) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromLongLat | Creates features or update them if they already exist with provided latutude and longitude coordinates. The layer must be a point layer. Use \&quot;proj4\&quot;: \&quot;+proj&#x3D;longlat +ellps&#x3D;WGS84 +datum&#x3D;WGS84 +no_defs\&quot;.
 [**feature_create_update_features_from_wkt**](FeatureApi.md#feature_create_update_features_from_wkt) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromWKT | Creates a feature or updates it if it already exists with the input geometry in WKT format.
 [**feature_delete_feature**](FeatureApi.md#feature_delete_feature) | **DELETE** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier} | Deletes a specific feature.
 [**feature_delete_features**](FeatureApi.md#feature_delete_features) | **DELETE** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features | Deletes a set of features. Invalid identifiers are ignored.
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**feature_get_features_in_long_lat**](FeatureApi.md#feature_get_features_in_long_lat) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/LongLat | Retrives the layer&#x27;s features with their coordinates. The layer must be a point layer.
 [**feature_get_features_in_wkt**](FeatureApi.md#feature_get_features_in_wkt) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/WKT | Gets the layer&#x27;s features with the geometries in WKT format.
 [**feature_update_from_geo_json**](FeatureApi.md#feature_update_from_geo_json) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateFromGeoJSON | Updates a feature&#x27;s geometry from a GeoJSON.
-[**feature_update_from_long_lat**](FeatureApi.md#feature_update_from_long_lat) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateFromLongLat | Updates a feature&#x27;s geometry with coordinates. The layer must a point layer.
+[**feature_update_from_long_lat**](FeatureApi.md#feature_update_from_long_lat) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateFromLongLat | Updates a feature&#x27;s geometry with coordinates. The layer must a point layer. Use \&quot;proj4\&quot;: \&quot;+proj&#x3D;longlat +ellps&#x3D;WGS84 +datum&#x3D;WGS84 +no_defs\&quot;.
 [**feature_update_geometry_from_wkt**](FeatureApi.md#feature_update_geometry_from_wkt) | **POST** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateGeometryFromWKT | Updates a feature&#x27;s geometry from a WKT.
 [**feature_update_values**](FeatureApi.md#feature_update_values) | **PATCH** /{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateValues | Updates a feature&#x27;s data. A subset of the columns can be used.
 
@@ -47,6 +47,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -76,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -88,7 +93,7 @@ Name | Type | Description  | Notes
 # **feature_create_features_from_long_lat**
 > ApiInsertReport feature_create_features_from_long_lat(body, layer_identifier, tenant_url_code)
 
-Creates a feature from the provided latutude and longitude coordinates. The layer must be a point layer.
+Creates features from the provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".
 
 ### Example
 ```python
@@ -103,6 +108,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -111,7 +121,7 @@ layer_identifier = 'layer_identifier_example' # str | The layer to query
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
-    # Creates a feature from the provided latutude and longitude coordinates. The layer must be a point layer.
+    # Creates features from the provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".
     api_response = api_instance.feature_create_features_from_long_lat(body, layer_identifier, tenant_url_code)
     pprint(api_response)
 except ApiException as e:
@@ -132,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -159,6 +169,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -188,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -215,6 +230,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -244,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -256,7 +276,7 @@ Name | Type | Description  | Notes
 # **feature_create_update_features_from_long_lat**
 > ApiInsertReport feature_create_update_features_from_long_lat(body, layer_identifier, tenant_url_code)
 
-Creates a feature or update it if it already exists with provided latutude and longitude coordinates. The layer must be a point layer.
+Creates features or update them if they already exist with provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".
 
 ### Example
 ```python
@@ -271,6 +291,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -279,7 +304,7 @@ layer_identifier = 'layer_identifier_example' # str | The layer to query
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
-    # Creates a feature or update it if it already exists with provided latutude and longitude coordinates. The layer must be a point layer.
+    # Creates features or update them if they already exist with provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".
     api_response = api_instance.feature_create_update_features_from_long_lat(body, layer_identifier, tenant_url_code)
     pprint(api_response)
 except ApiException as e:
@@ -300,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -327,6 +352,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -356,7 +386,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -383,6 +413,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -412,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -439,6 +474,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -468,7 +508,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -495,6 +535,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -526,7 +571,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -553,6 +598,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -582,7 +632,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -609,6 +659,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -638,7 +693,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -665,6 +720,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -694,7 +754,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -721,6 +781,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -750,7 +815,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -777,6 +842,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -806,7 +876,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -833,6 +903,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -864,7 +939,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -891,6 +966,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -922,7 +1002,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -949,6 +1029,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -980,7 +1065,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1007,6 +1092,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1036,7 +1126,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1063,6 +1153,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1092,7 +1187,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1119,6 +1214,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1148,7 +1248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1175,6 +1275,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1206,7 +1311,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1218,7 +1323,7 @@ Name | Type | Description  | Notes
 # **feature_update_from_long_lat**
 > FeatureLongLat feature_update_from_long_lat(body, layer_identifier, feature_identifier, tenant_url_code)
 
-Updates a feature's geometry with coordinates. The layer must a point layer.
+Updates a feature's geometry with coordinates. The layer must a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".
 
 ### Example
 ```python
@@ -1233,6 +1338,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1242,7 +1352,7 @@ feature_identifier = 'feature_identifier_example' # str | The feature to query
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
-    # Updates a feature's geometry with coordinates. The layer must a point layer.
+    # Updates a feature's geometry with coordinates. The layer must a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".
     api_response = api_instance.feature_update_from_long_lat(body, layer_identifier, feature_identifier, tenant_url_code)
     pprint(api_response)
 except ApiException as e:
@@ -1264,7 +1374,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1291,6 +1401,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1322,7 +1437,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1349,6 +1464,11 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.FeatureApi(cartovista_cloud_clients.ApiClient(configuration))
@@ -1380,7 +1500,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -1388,4 +1508,5 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 

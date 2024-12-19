@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **layer_names** | **list[str]** |  | [optional] 
 **extent** | **OneOfCreateWmsLayerExtent** |  | [optional] 
 **get_legend_url** | **str** |  | [optional] 
+**version** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -161,6 +161,20 @@ class TestDataTableApi(unittest.TestCase):
         """
         pass
 
+    def test_data_table_get_time_series_data_many_features(self):
+        """Test case for data_table_get_time_series_data_many_features
+
+        Returns an aggregation of the table's data using the time series column.  # noqa: E501
+        """
+        pass
+
+    def test_data_table_get_time_series_dates(self):
+        """Test case for data_table_get_time_series_dates
+
+        Returns a list of all the dates in the time series table.  # noqa: E501
+        """
+        pass
+
     def test_data_table_join_data_table(self):
         """Test case for data_table_join_data_table
 

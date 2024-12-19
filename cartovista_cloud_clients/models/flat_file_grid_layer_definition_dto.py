@@ -28,13 +28,14 @@ class FlatFileGridLayerDefinitionDTO(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'table_ref': 'str',
+        'file_id': 'str',
         'uploaded_file_path': 'str',
         'file_name': 'str',
         'name': 'str',
-        'description': 'str',
         'type_string': 'str',
+        'sheets': 'list[FlatFileSheetDTO]',
+        'selected_sheet_names': 'list[str]',
+        'sheet_count': 'int',
         'upload_id': 'str',
         'type': 'DataElementType',
         'band_count': 'int',
@@ -57,18 +58,18 @@ class FlatFileGridLayerDefinitionDTO(object):
         'is_scale_cumulative': 'bool',
         'cut_under': 'int',
         'cut_above': 'int',
-        'compression': 'str',
-        'sheet_count': 'int'
+        'compression': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'table_ref': 'tableRef',
+        'file_id': 'fileId',
         'uploaded_file_path': 'uploadedFilePath',
         'file_name': 'fileName',
         'name': 'name',
-        'description': 'description',
         'type_string': 'typeString',
+        'sheets': 'sheets',
+        'selected_sheet_names': 'selectedSheetNames',
+        'sheet_count': 'sheetCount',
         'upload_id': 'uploadId',
         'type': 'type',
         'band_count': 'bandCount',
@@ -91,19 +92,19 @@ class FlatFileGridLayerDefinitionDTO(object):
         'is_scale_cumulative': 'isScaleCumulative',
         'cut_under': 'cutUnder',
         'cut_above': 'cutAbove',
-        'compression': 'compression',
-        'sheet_count': 'sheetCount'
+        'compression': 'compression'
     }
 
-    def __init__(self, id=None, table_ref=None, uploaded_file_path=None, file_name=None, name=None, description=None, type_string=None, upload_id=None, type=None, band_count=None, proj4=None, user_friendly_proj=None, is_spherical_mercator=None, extent=None, unit=None, selected_band=None, metadata=None, width=None, height=None, band_metadatas=None, no_data_values=None, selected_band_metadata=None, reprojection_requested=None, select_all_bands=None, is_rgb=None, is_scale_min_max=None, is_scale_cumulative=None, cut_under=None, cut_above=None, compression=None, sheet_count=None):  # noqa: E501
+    def __init__(self, file_id=None, uploaded_file_path=None, file_name=None, name=None, type_string=None, sheets=None, selected_sheet_names=None, sheet_count=None, upload_id=None, type=None, band_count=None, proj4=None, user_friendly_proj=None, is_spherical_mercator=None, extent=None, unit=None, selected_band=None, metadata=None, width=None, height=None, band_metadatas=None, no_data_values=None, selected_band_metadata=None, reprojection_requested=None, select_all_bands=None, is_rgb=None, is_scale_min_max=None, is_scale_cumulative=None, cut_under=None, cut_above=None, compression=None):  # noqa: E501
         """FlatFileGridLayerDefinitionDTO - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._table_ref = None
+        self._file_id = None
         self._uploaded_file_path = None
         self._file_name = None
         self._name = None
-        self._description = None
         self._type_string = None
+        self._sheets = None
+        self._selected_sheet_names = None
+        self._sheet_count = None
         self._upload_id = None
         self._type = None
         self._band_count = None
@@ -127,22 +128,23 @@ class FlatFileGridLayerDefinitionDTO(object):
         self._cut_under = None
         self._cut_above = None
         self._compression = None
-        self._sheet_count = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if table_ref is not None:
-            self.table_ref = table_ref
+        if file_id is not None:
+            self.file_id = file_id
         if uploaded_file_path is not None:
             self.uploaded_file_path = uploaded_file_path
         if file_name is not None:
             self.file_name = file_name
         if name is not None:
             self.name = name
-        if description is not None:
-            self.description = description
         if type_string is not None:
             self.type_string = type_string
+        if sheets is not None:
+            self.sheets = sheets
+        if selected_sheet_names is not None:
+            self.selected_sheet_names = selected_sheet_names
+        if sheet_count is not None:
+            self.sheet_count = sheet_count
         if upload_id is not None:
             self.upload_id = upload_id
         if type is not None:
@@ -189,50 +191,27 @@ class FlatFileGridLayerDefinitionDTO(object):
             self.cut_above = cut_above
         if compression is not None:
             self.compression = compression
-        if sheet_count is not None:
-            self.sheet_count = sheet_count
 
     @property
-    def id(self):
-        """Gets the id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+    def file_id(self):
+        """Gets the file_id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
 
 
-        :return: The id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :return: The file_id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._file_id
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this FlatFileGridLayerDefinitionDTO.
+    @file_id.setter
+    def file_id(self, file_id):
+        """Sets the file_id of this FlatFileGridLayerDefinitionDTO.
 
 
-        :param id: The id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :param file_id: The file_id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
         :type: str
         """
 
-        self._id = id
-
-    @property
-    def table_ref(self):
-        """Gets the table_ref of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The table_ref of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._table_ref
-
-    @table_ref.setter
-    def table_ref(self, table_ref):
-        """Sets the table_ref of this FlatFileGridLayerDefinitionDTO.
-
-
-        :param table_ref: The table_ref of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._table_ref = table_ref
+        self._file_id = file_id
 
     @property
     def uploaded_file_path(self):
@@ -298,27 +277,6 @@ class FlatFileGridLayerDefinitionDTO(object):
         self._name = name
 
     @property
-    def description(self):
-        """Gets the description of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The description of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this FlatFileGridLayerDefinitionDTO.
-
-
-        :param description: The description of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
     def type_string(self):
         """Gets the type_string of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
 
@@ -338,6 +296,69 @@ class FlatFileGridLayerDefinitionDTO(object):
         """
 
         self._type_string = type_string
+
+    @property
+    def sheets(self):
+        """Gets the sheets of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+
+
+        :return: The sheets of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :rtype: list[FlatFileSheetDTO]
+        """
+        return self._sheets
+
+    @sheets.setter
+    def sheets(self, sheets):
+        """Sets the sheets of this FlatFileGridLayerDefinitionDTO.
+
+
+        :param sheets: The sheets of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :type: list[FlatFileSheetDTO]
+        """
+
+        self._sheets = sheets
+
+    @property
+    def selected_sheet_names(self):
+        """Gets the selected_sheet_names of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+
+
+        :return: The selected_sheet_names of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._selected_sheet_names
+
+    @selected_sheet_names.setter
+    def selected_sheet_names(self, selected_sheet_names):
+        """Sets the selected_sheet_names of this FlatFileGridLayerDefinitionDTO.
+
+
+        :param selected_sheet_names: The selected_sheet_names of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._selected_sheet_names = selected_sheet_names
+
+    @property
+    def sheet_count(self):
+        """Gets the sheet_count of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+
+
+        :return: The sheet_count of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :rtype: int
+        """
+        return self._sheet_count
+
+    @sheet_count.setter
+    def sheet_count(self, sheet_count):
+        """Sets the sheet_count of this FlatFileGridLayerDefinitionDTO.
+
+
+        :param sheet_count: The sheet_count of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :type: int
+        """
+
+        self._sheet_count = sheet_count
 
     @property
     def upload_id(self):
@@ -821,27 +842,6 @@ class FlatFileGridLayerDefinitionDTO(object):
         """
 
         self._compression = compression
-
-    @property
-    def sheet_count(self):
-        """Gets the sheet_count of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-
-
-        :return: The sheet_count of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-        :rtype: int
-        """
-        return self._sheet_count
-
-    @sheet_count.setter
-    def sheet_count(self, sheet_count):
-        """Sets the sheet_count of this FlatFileGridLayerDefinitionDTO.
-
-
-        :param sheet_count: The sheet_count of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
-        :type: int
-        """
-
-        self._sheet_count = sheet_count
 
     def to_dict(self):
         """Returns the model properties as a dict"""

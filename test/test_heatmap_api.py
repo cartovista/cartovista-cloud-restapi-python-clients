@@ -28,8 +28,8 @@ class TestHeatmapApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_heatmap_generate_heatmap(self):
-        """Test case for heatmap_generate_heatmap
+    def test_heatmap_create_heatmap(self):
+        """Test case for heatmap_create_heatmap
 
         Generates a new heatmap for the layer.  # noqa: E501
         """

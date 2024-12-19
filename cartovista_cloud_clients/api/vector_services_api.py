@@ -119,7 +119,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getClustersCount', 'POST',
@@ -224,7 +224,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getClustersRepresentation', 'POST',
@@ -325,7 +325,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getConfiguration/{layerId}', 'POST',
@@ -430,7 +430,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getFeatures', 'POST',
@@ -535,7 +535,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getFeaturesCombineMinMaxValue', 'POST',
@@ -562,7 +562,7 @@ class VectorServicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param GetFeaturesExtentDto body: (required)
+        :param GetFeaturesExtentDTO body: (required)
         :param str tenant_url_code: (required)
         :return: GetFeaturesExtentResultDTO
                  If the method is called asynchronously,
@@ -584,7 +584,7 @@ class VectorServicesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param GetFeaturesExtentDto body: (required)
+        :param GetFeaturesExtentDTO body: (required)
         :param str tenant_url_code: (required)
         :return: GetFeaturesExtentResultDTO
                  If the method is called asynchronously,
@@ -640,7 +640,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getFeaturesExtent', 'POST',
@@ -745,7 +745,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getHeatMapItems', 'POST',
@@ -850,7 +850,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getIntersectingGeometries', 'POST',
@@ -955,7 +955,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getSelectionStack', 'POST',
@@ -1060,7 +1060,7 @@ class VectorServicesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/VectorServices/getVectorTile', 'POST',

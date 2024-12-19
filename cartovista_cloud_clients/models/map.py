@@ -39,7 +39,6 @@ class Map(object):
         'seo_title': 'str',
         'seo_description': 'str',
         'seo_custom_html': 'str',
-        'scoring_enabled': 'bool',
         'thumbnail_url': 'str',
         'thumbnail_url_expiry': 'datetime',
         'creation_date': 'datetime',
@@ -49,9 +48,11 @@ class Map(object):
         'can_edit': 'bool',
         'public_access': 'bool',
         'vanity_url': 'str',
+        'has_onboarding': 'bool',
         'is_locked': 'bool',
         'can_add_layers': 'bool',
         'has_custom_thumbnail': 'bool',
+        'is_poi_analysis': 'bool',
         'folder_id': 'str'
     }
 
@@ -67,7 +68,6 @@ class Map(object):
         'seo_title': 'seoTitle',
         'seo_description': 'seoDescription',
         'seo_custom_html': 'seoCustomHTML',
-        'scoring_enabled': 'scoringEnabled',
         'thumbnail_url': 'thumbnailUrl',
         'thumbnail_url_expiry': 'thumbnailUrlExpiry',
         'creation_date': 'creationDate',
@@ -77,13 +77,15 @@ class Map(object):
         'can_edit': 'canEdit',
         'public_access': 'publicAccess',
         'vanity_url': 'vanityUrl',
+        'has_onboarding': 'hasOnboarding',
         'is_locked': 'isLocked',
         'can_add_layers': 'canAddLayers',
         'has_custom_thumbnail': 'hasCustomThumbnail',
+        'is_poi_analysis': 'isPoiAnalysis',
         'folder_id': 'folderId'
     }
 
-    def __init__(self, id=None, title=None, unique_identifier=None, description=None, language=None, type=None, is_territory_manager=None, editable=None, seo_title=None, seo_description=None, seo_custom_html=None, scoring_enabled=None, thumbnail_url=None, thumbnail_url_expiry=None, creation_date=None, last_update=None, owner_name=None, keywords=None, can_edit=None, public_access=None, vanity_url=None, is_locked=None, can_add_layers=None, has_custom_thumbnail=None, folder_id=None):  # noqa: E501
+    def __init__(self, id=None, title=None, unique_identifier=None, description=None, language=None, type=None, is_territory_manager=None, editable=None, seo_title=None, seo_description=None, seo_custom_html=None, thumbnail_url=None, thumbnail_url_expiry=None, creation_date=None, last_update=None, owner_name=None, keywords=None, can_edit=None, public_access=None, vanity_url=None, has_onboarding=None, is_locked=None, can_add_layers=None, has_custom_thumbnail=None, is_poi_analysis=None, folder_id=None):  # noqa: E501
         """Map - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._title = None
@@ -96,7 +98,6 @@ class Map(object):
         self._seo_title = None
         self._seo_description = None
         self._seo_custom_html = None
-        self._scoring_enabled = None
         self._thumbnail_url = None
         self._thumbnail_url_expiry = None
         self._creation_date = None
@@ -106,9 +107,11 @@ class Map(object):
         self._can_edit = None
         self._public_access = None
         self._vanity_url = None
+        self._has_onboarding = None
         self._is_locked = None
         self._can_add_layers = None
         self._has_custom_thumbnail = None
+        self._is_poi_analysis = None
         self._folder_id = None
         self.discriminator = None
         if id is not None:
@@ -133,8 +136,6 @@ class Map(object):
             self.seo_description = seo_description
         if seo_custom_html is not None:
             self.seo_custom_html = seo_custom_html
-        if scoring_enabled is not None:
-            self.scoring_enabled = scoring_enabled
         if thumbnail_url is not None:
             self.thumbnail_url = thumbnail_url
         if thumbnail_url_expiry is not None:
@@ -153,12 +154,16 @@ class Map(object):
             self.public_access = public_access
         if vanity_url is not None:
             self.vanity_url = vanity_url
+        if has_onboarding is not None:
+            self.has_onboarding = has_onboarding
         if is_locked is not None:
             self.is_locked = is_locked
         if can_add_layers is not None:
             self.can_add_layers = can_add_layers
         if has_custom_thumbnail is not None:
             self.has_custom_thumbnail = has_custom_thumbnail
+        if is_poi_analysis is not None:
+            self.is_poi_analysis = is_poi_analysis
         if folder_id is not None:
             self.folder_id = folder_id
 
@@ -394,27 +399,6 @@ class Map(object):
         self._seo_custom_html = seo_custom_html
 
     @property
-    def scoring_enabled(self):
-        """Gets the scoring_enabled of this Map.  # noqa: E501
-
-
-        :return: The scoring_enabled of this Map.  # noqa: E501
-        :rtype: bool
-        """
-        return self._scoring_enabled
-
-    @scoring_enabled.setter
-    def scoring_enabled(self, scoring_enabled):
-        """Sets the scoring_enabled of this Map.
-
-
-        :param scoring_enabled: The scoring_enabled of this Map.  # noqa: E501
-        :type: bool
-        """
-
-        self._scoring_enabled = scoring_enabled
-
-    @property
     def thumbnail_url(self):
         """Gets the thumbnail_url of this Map.  # noqa: E501
 
@@ -604,6 +588,27 @@ class Map(object):
         self._vanity_url = vanity_url
 
     @property
+    def has_onboarding(self):
+        """Gets the has_onboarding of this Map.  # noqa: E501
+
+
+        :return: The has_onboarding of this Map.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_onboarding
+
+    @has_onboarding.setter
+    def has_onboarding(self, has_onboarding):
+        """Sets the has_onboarding of this Map.
+
+
+        :param has_onboarding: The has_onboarding of this Map.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_onboarding = has_onboarding
+
+    @property
     def is_locked(self):
         """Gets the is_locked of this Map.  # noqa: E501
 
@@ -665,6 +670,27 @@ class Map(object):
         """
 
         self._has_custom_thumbnail = has_custom_thumbnail
+
+    @property
+    def is_poi_analysis(self):
+        """Gets the is_poi_analysis of this Map.  # noqa: E501
+
+
+        :return: The is_poi_analysis of this Map.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_poi_analysis
+
+    @is_poi_analysis.setter
+    def is_poi_analysis(self, is_poi_analysis):
+        """Sets the is_poi_analysis of this Map.
+
+
+        :param is_poi_analysis: The is_poi_analysis of this Map.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_poi_analysis = is_poi_analysis
 
     @property
     def folder_id(self):

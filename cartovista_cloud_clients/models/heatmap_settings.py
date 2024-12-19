@@ -28,50 +28,54 @@ class HeatmapSettings(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
         'layer_id': 'str',
+        'layer_name': 'str',
         'grid_layer_id': 'str',
-        'column_id': 'str',
+        'columns': 'list[HeatmapColumn]',
         'power': 'float',
         'smoothing': 'float',
         'radius': 'float',
         'pixel_size': 'int',
-        'is_generating': 'bool',
-        'layer_name': 'str',
-        'column_name': 'str'
+        'is_generating': 'bool'
     }
 
     attribute_map = {
+        'id': 'id',
         'layer_id': 'layerId',
+        'layer_name': 'layerName',
         'grid_layer_id': 'gridLayerId',
-        'column_id': 'columnId',
+        'columns': 'columns',
         'power': 'power',
         'smoothing': 'smoothing',
         'radius': 'radius',
         'pixel_size': 'pixelSize',
-        'is_generating': 'isGenerating',
-        'layer_name': 'layerName',
-        'column_name': 'columnName'
+        'is_generating': 'isGenerating'
     }
 
-    def __init__(self, layer_id=None, grid_layer_id=None, column_id=None, power=None, smoothing=None, radius=None, pixel_size=None, is_generating=None, layer_name=None, column_name=None):  # noqa: E501
+    def __init__(self, id=None, layer_id=None, layer_name=None, grid_layer_id=None, columns=None, power=None, smoothing=None, radius=None, pixel_size=None, is_generating=None):  # noqa: E501
         """HeatmapSettings - a model defined in Swagger"""  # noqa: E501
+        self._id = None
         self._layer_id = None
+        self._layer_name = None
         self._grid_layer_id = None
-        self._column_id = None
+        self._columns = None
         self._power = None
         self._smoothing = None
         self._radius = None
         self._pixel_size = None
         self._is_generating = None
-        self._layer_name = None
-        self._column_name = None
         self.discriminator = None
+        if id is not None:
+            self.id = id
         if layer_id is not None:
             self.layer_id = layer_id
+        if layer_name is not None:
+            self.layer_name = layer_name
         if grid_layer_id is not None:
             self.grid_layer_id = grid_layer_id
-        if column_id is not None:
-            self.column_id = column_id
+        if columns is not None:
+            self.columns = columns
         if power is not None:
             self.power = power
         if smoothing is not None:
@@ -82,10 +86,27 @@ class HeatmapSettings(object):
             self.pixel_size = pixel_size
         if is_generating is not None:
             self.is_generating = is_generating
-        if layer_name is not None:
-            self.layer_name = layer_name
-        if column_name is not None:
-            self.column_name = column_name
+
+    @property
+    def id(self):
+        """Gets the id of this HeatmapSettings.  # noqa: E501
+
+
+        :return: The id of this HeatmapSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this HeatmapSettings.
+
+
+        :param id: The id of this HeatmapSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def layer_id(self):
@@ -109,6 +130,27 @@ class HeatmapSettings(object):
         self._layer_id = layer_id
 
     @property
+    def layer_name(self):
+        """Gets the layer_name of this HeatmapSettings.  # noqa: E501
+
+
+        :return: The layer_name of this HeatmapSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._layer_name
+
+    @layer_name.setter
+    def layer_name(self, layer_name):
+        """Sets the layer_name of this HeatmapSettings.
+
+
+        :param layer_name: The layer_name of this HeatmapSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._layer_name = layer_name
+
+    @property
     def grid_layer_id(self):
         """Gets the grid_layer_id of this HeatmapSettings.  # noqa: E501
 
@@ -130,25 +172,25 @@ class HeatmapSettings(object):
         self._grid_layer_id = grid_layer_id
 
     @property
-    def column_id(self):
-        """Gets the column_id of this HeatmapSettings.  # noqa: E501
+    def columns(self):
+        """Gets the columns of this HeatmapSettings.  # noqa: E501
 
 
-        :return: The column_id of this HeatmapSettings.  # noqa: E501
-        :rtype: str
+        :return: The columns of this HeatmapSettings.  # noqa: E501
+        :rtype: list[HeatmapColumn]
         """
-        return self._column_id
+        return self._columns
 
-    @column_id.setter
-    def column_id(self, column_id):
-        """Sets the column_id of this HeatmapSettings.
+    @columns.setter
+    def columns(self, columns):
+        """Sets the columns of this HeatmapSettings.
 
 
-        :param column_id: The column_id of this HeatmapSettings.  # noqa: E501
-        :type: str
+        :param columns: The columns of this HeatmapSettings.  # noqa: E501
+        :type: list[HeatmapColumn]
         """
 
-        self._column_id = column_id
+        self._columns = columns
 
     @property
     def power(self):
@@ -254,48 +296,6 @@ class HeatmapSettings(object):
         """
 
         self._is_generating = is_generating
-
-    @property
-    def layer_name(self):
-        """Gets the layer_name of this HeatmapSettings.  # noqa: E501
-
-
-        :return: The layer_name of this HeatmapSettings.  # noqa: E501
-        :rtype: str
-        """
-        return self._layer_name
-
-    @layer_name.setter
-    def layer_name(self, layer_name):
-        """Sets the layer_name of this HeatmapSettings.
-
-
-        :param layer_name: The layer_name of this HeatmapSettings.  # noqa: E501
-        :type: str
-        """
-
-        self._layer_name = layer_name
-
-    @property
-    def column_name(self):
-        """Gets the column_name of this HeatmapSettings.  # noqa: E501
-
-
-        :return: The column_name of this HeatmapSettings.  # noqa: E501
-        :rtype: str
-        """
-        return self._column_name
-
-    @column_name.setter
-    def column_name(self, column_name):
-        """Sets the column_name of this HeatmapSettings.
-
-
-        :param column_name: The column_name of this HeatmapSettings.  # noqa: E501
-        :type: str
-        """
-
-        self._column_name = column_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

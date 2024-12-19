@@ -127,7 +127,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromGeoJSON', 'POST',
@@ -146,7 +146,7 @@ class FeatureApi(object):
             collection_formats=collection_formats)
 
     def feature_create_features_from_long_lat(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
-        """Creates a feature from the provided latutude and longitude coordinates. The layer must be a point layer.  # noqa: E501
+        """Creates features from the provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -169,7 +169,7 @@ class FeatureApi(object):
             return data
 
     def feature_create_features_from_long_lat_with_http_info(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
-        """Creates a feature from the provided latutude and longitude coordinates. The layer must be a point layer.  # noqa: E501
+        """Creates features from the provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -240,7 +240,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromLongLat', 'POST',
@@ -353,7 +353,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromWKT', 'POST',
@@ -466,7 +466,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromGeoJSON', 'POST',
@@ -485,7 +485,7 @@ class FeatureApi(object):
             collection_formats=collection_formats)
 
     def feature_create_update_features_from_long_lat(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
-        """Creates a feature or update it if it already exists with provided latutude and longitude coordinates. The layer must be a point layer.  # noqa: E501
+        """Creates features or update them if they already exist with provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -508,7 +508,7 @@ class FeatureApi(object):
             return data
 
     def feature_create_update_features_from_long_lat_with_http_info(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
-        """Creates a feature or update it if it already exists with provided latutude and longitude coordinates. The layer must be a point layer.  # noqa: E501
+        """Creates features or update them if they already exist with provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -579,7 +579,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromLongLat', 'POST',
@@ -692,7 +692,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromWKT', 'POST',
@@ -801,7 +801,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}', 'DELETE',
@@ -914,7 +914,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features', 'DELETE',
@@ -1035,7 +1035,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/column/{columnIdentifier}', 'DELETE',
@@ -1144,7 +1144,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/data', 'GET',
@@ -1253,7 +1253,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/GeoJSON', 'GET',
@@ -1362,7 +1362,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/LongLat', 'GET',
@@ -1471,7 +1471,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/WKT', 'GET',
@@ -1584,7 +1584,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features', 'POST',
@@ -1701,7 +1701,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/{latitude}/{longitude}/GeoJSON', 'GET',
@@ -1818,7 +1818,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/{latitude}/{longitude}/LongLat', 'GET',
@@ -1935,7 +1935,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/{latitude}/{longitude}/WKT', 'GET',
@@ -2048,7 +2048,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/GeoJSON', 'POST',
@@ -2161,7 +2161,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/LongLat', 'POST',
@@ -2274,7 +2274,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/WKT', 'POST',
@@ -2395,7 +2395,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateFromGeoJSON', 'POST',
@@ -2414,7 +2414,7 @@ class FeatureApi(object):
             collection_formats=collection_formats)
 
     def feature_update_from_long_lat(self, body, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
-        """Updates a feature's geometry with coordinates. The layer must a point layer.  # noqa: E501
+        """Updates a feature's geometry with coordinates. The layer must a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -2438,7 +2438,7 @@ class FeatureApi(object):
             return data
 
     def feature_update_from_long_lat_with_http_info(self, body, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
-        """Updates a feature's geometry with coordinates. The layer must a point layer.  # noqa: E501
+        """Updates a feature's geometry with coordinates. The layer must a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -2516,7 +2516,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateFromLongLat', 'POST',
@@ -2637,7 +2637,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateGeometryFromWKT', 'POST',
@@ -2758,7 +2758,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateValues', 'PATCH',

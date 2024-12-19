@@ -30,6 +30,9 @@ class AggregationType(object):
     AVERAGE = "Average"
     MIN = "Min"
     MAX = "Max"
+    DIFFERENCE = "Difference"
+    EARLIEST = "Earliest"
+    LATEST = "Latest"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

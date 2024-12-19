@@ -10,9 +10,11 @@ Name | Type | Description | Notes
 **geometry_type** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **vector_tiling** | **bool** |  | [optional] 
+**live** | **bool** |  | [optional] 
 **system_identifier** | **str** |  | [optional] 
 **data_table_system_identifier** | **str** |  | [optional] 
 **feature_id_column_system_identifier** | **str** |  | [optional] 
+**folder_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

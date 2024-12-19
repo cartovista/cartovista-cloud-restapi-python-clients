@@ -41,8 +41,10 @@ class WmsLayer(object):
         'folder_id': 'str',
         'tenant_id': 'str',
         'extent': 'OneOfWmsLayerExtent',
-        'thumbnail_url': 'str',
-        'get_legend_url': 'str'
+        'get_legend_url': 'str',
+        'version': 'str',
+        'projection_attribute': 'str',
+        'thumbnail_url': 'str'
     }
 
     attribute_map = {
@@ -59,11 +61,13 @@ class WmsLayer(object):
         'folder_id': 'folderId',
         'tenant_id': 'tenantId',
         'extent': 'extent',
-        'thumbnail_url': 'thumbnailUrl',
-        'get_legend_url': 'getLegendUrl'
+        'get_legend_url': 'getLegendUrl',
+        'version': 'version',
+        'projection_attribute': 'projectionAttribute',
+        'thumbnail_url': 'thumbnailUrl'
     }
 
-    def __init__(self, id=None, identifier=None, name=None, wms_layer_name=None, url=None, owner_name=None, public_access=None, can_edit=None, creation_time=None, modified_time=None, folder_id=None, tenant_id=None, extent=None, thumbnail_url=None, get_legend_url=None):  # noqa: E501
+    def __init__(self, id=None, identifier=None, name=None, wms_layer_name=None, url=None, owner_name=None, public_access=None, can_edit=None, creation_time=None, modified_time=None, folder_id=None, tenant_id=None, extent=None, get_legend_url=None, version=None, projection_attribute=None, thumbnail_url=None):  # noqa: E501
         """WmsLayer - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._identifier = None
@@ -78,8 +82,10 @@ class WmsLayer(object):
         self._folder_id = None
         self._tenant_id = None
         self._extent = None
-        self._thumbnail_url = None
         self._get_legend_url = None
+        self._version = None
+        self._projection_attribute = None
+        self._thumbnail_url = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -107,10 +113,14 @@ class WmsLayer(object):
             self.tenant_id = tenant_id
         if extent is not None:
             self.extent = extent
-        if thumbnail_url is not None:
-            self.thumbnail_url = thumbnail_url
         if get_legend_url is not None:
             self.get_legend_url = get_legend_url
+        if version is not None:
+            self.version = version
+        if projection_attribute is not None:
+            self.projection_attribute = projection_attribute
+        if thumbnail_url is not None:
+            self.thumbnail_url = thumbnail_url
 
     @property
     def id(self):
@@ -386,27 +396,6 @@ class WmsLayer(object):
         self._extent = extent
 
     @property
-    def thumbnail_url(self):
-        """Gets the thumbnail_url of this WmsLayer.  # noqa: E501
-
-
-        :return: The thumbnail_url of this WmsLayer.  # noqa: E501
-        :rtype: str
-        """
-        return self._thumbnail_url
-
-    @thumbnail_url.setter
-    def thumbnail_url(self, thumbnail_url):
-        """Sets the thumbnail_url of this WmsLayer.
-
-
-        :param thumbnail_url: The thumbnail_url of this WmsLayer.  # noqa: E501
-        :type: str
-        """
-
-        self._thumbnail_url = thumbnail_url
-
-    @property
     def get_legend_url(self):
         """Gets the get_legend_url of this WmsLayer.  # noqa: E501
 
@@ -426,6 +415,69 @@ class WmsLayer(object):
         """
 
         self._get_legend_url = get_legend_url
+
+    @property
+    def version(self):
+        """Gets the version of this WmsLayer.  # noqa: E501
+
+
+        :return: The version of this WmsLayer.  # noqa: E501
+        :rtype: str
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this WmsLayer.
+
+
+        :param version: The version of this WmsLayer.  # noqa: E501
+        :type: str
+        """
+
+        self._version = version
+
+    @property
+    def projection_attribute(self):
+        """Gets the projection_attribute of this WmsLayer.  # noqa: E501
+
+
+        :return: The projection_attribute of this WmsLayer.  # noqa: E501
+        :rtype: str
+        """
+        return self._projection_attribute
+
+    @projection_attribute.setter
+    def projection_attribute(self, projection_attribute):
+        """Sets the projection_attribute of this WmsLayer.
+
+
+        :param projection_attribute: The projection_attribute of this WmsLayer.  # noqa: E501
+        :type: str
+        """
+
+        self._projection_attribute = projection_attribute
+
+    @property
+    def thumbnail_url(self):
+        """Gets the thumbnail_url of this WmsLayer.  # noqa: E501
+
+
+        :return: The thumbnail_url of this WmsLayer.  # noqa: E501
+        :rtype: str
+        """
+        return self._thumbnail_url
+
+    @thumbnail_url.setter
+    def thumbnail_url(self, thumbnail_url):
+        """Sets the thumbnail_url of this WmsLayer.
+
+
+        :param thumbnail_url: The thumbnail_url of this WmsLayer.  # noqa: E501
+        :type: str
+        """
+
+        self._thumbnail_url = thumbnail_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

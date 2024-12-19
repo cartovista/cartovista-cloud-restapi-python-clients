@@ -127,7 +127,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/zone', 'POST',
@@ -240,7 +240,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/distance-analysis', 'POST',
@@ -353,7 +353,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/check-territory-pos-implantation', 'POST',
@@ -462,7 +462,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}/clone', 'POST',
@@ -575,7 +575,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos', 'POST',
@@ -676,7 +676,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/largest-zone', 'DELETE',
@@ -785,7 +785,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}', 'DELETE',
@@ -906,7 +906,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{territoryPosId}/export-data', 'POST',
@@ -1015,7 +1015,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/export-territory-layer/{language}', 'GET',
@@ -1108,7 +1108,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/defaultSettings', 'GET',
@@ -1209,7 +1209,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}', 'GET',
@@ -1322,7 +1322,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory/candidates', 'POST',
@@ -1423,7 +1423,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{mapId}/summary', 'GET',
@@ -1544,7 +1544,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}/redefine', 'POST',
@@ -1645,7 +1645,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/session', 'DELETE',
@@ -1758,7 +1758,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/datacolumn-configuration', 'PUT',
@@ -1867,7 +1867,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}', 'PATCH',
@@ -1984,7 +1984,7 @@ class TerritoryManagerApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{mapId}/update-from-csv', 'POST',
@@ -2093,7 +2093,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territories/{territoryId}/calculate-distances', 'PATCH',
@@ -2214,7 +2214,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory/{territoryPosId}/location', 'PATCH',
@@ -2327,7 +2327,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{mapId}/settings', 'PUT',
@@ -2440,7 +2440,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/urbanicity-value', 'PUT',
@@ -2561,7 +2561,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}/update-point-values', 'PUT',
@@ -2682,7 +2682,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}/blocks', 'POST',
@@ -2803,7 +2803,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}/exclusivity', 'PATCH',
@@ -2924,7 +2924,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}/name', 'PATCH',
@@ -3041,7 +3041,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}/pta-zone/{ptaZoneId}', 'PATCH',
@@ -3162,7 +3162,7 @@ class TerritoryManagerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/TerritoryManager/{scenarioId}/territory-pos/{posId}/status', 'PATCH',

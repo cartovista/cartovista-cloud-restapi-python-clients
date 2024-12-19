@@ -111,7 +111,7 @@ class AuthenticationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/authentication/login', 'POST',
@@ -196,7 +196,7 @@ class AuthenticationApi(object):
             ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/authentication/logout', 'POST',
@@ -293,7 +293,7 @@ class AuthenticationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/authentication/refresh-token', 'POST',
@@ -386,7 +386,7 @@ class AuthenticationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/authentication/reset-password', 'POST',
@@ -416,7 +416,7 @@ class AuthenticationApi(object):
         :param ResetPasswordWithCodeParameters body: (required)
         :param str user_id: (required)
         :param str reset_code: (required)
-        :return: InlineResponse200
+        :return: UserDTO
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -439,7 +439,7 @@ class AuthenticationApi(object):
         :param ResetPasswordWithCodeParameters body: (required)
         :param str user_id: (required)
         :param str reset_code: (required)
-        :return: InlineResponse200
+        :return: UserDTO
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -499,7 +499,7 @@ class AuthenticationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/authentication/reset-password/{userId}/{resetCode}', 'POST',
@@ -509,7 +509,7 @@ class AuthenticationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200',  # noqa: E501
+            response_type='UserDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -608,7 +608,7 @@ class AuthenticationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/authentication/provider/{userId}/{resetCode}', 'POST',
@@ -713,7 +713,7 @@ class AuthenticationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/authentication/tenant-login', 'POST',
@@ -814,7 +814,7 @@ class AuthenticationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/authentication/reset-password/{userId}/{resetCode}/validate', 'GET',

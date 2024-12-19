@@ -41,7 +41,6 @@ class Slide(object):
         'id': 'str',
         'map_id': 'str',
         'thumbnail_url': 'str',
-        'has_thumbnail': 'bool',
         'last_update': 'datetime',
         'analyses': 'list[SlideAnalysis]'
     }
@@ -60,12 +59,11 @@ class Slide(object):
         'id': 'id',
         'map_id': 'mapId',
         'thumbnail_url': 'thumbnailUrl',
-        'has_thumbnail': 'hasThumbnail',
         'last_update': 'lastUpdate',
         'analyses': 'analyses'
     }
 
-    def __init__(self, name=None, theme_set=None, thematic_schemes=None, extent=None, is_default_slide=None, vector_layers=None, displayed_data_columns_by_layer=None, layout=None, story=None, order=None, id=None, map_id=None, thumbnail_url=None, has_thumbnail=None, last_update=None, analyses=None):  # noqa: E501
+    def __init__(self, name=None, theme_set=None, thematic_schemes=None, extent=None, is_default_slide=None, vector_layers=None, displayed_data_columns_by_layer=None, layout=None, story=None, order=None, id=None, map_id=None, thumbnail_url=None, last_update=None, analyses=None):  # noqa: E501
         """Slide - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._theme_set = None
@@ -80,7 +78,6 @@ class Slide(object):
         self._id = None
         self._map_id = None
         self._thumbnail_url = None
-        self._has_thumbnail = None
         self._last_update = None
         self._analyses = None
         self.discriminator = None
@@ -110,8 +107,6 @@ class Slide(object):
             self.map_id = map_id
         if thumbnail_url is not None:
             self.thumbnail_url = thumbnail_url
-        if has_thumbnail is not None:
-            self.has_thumbnail = has_thumbnail
         if last_update is not None:
             self.last_update = last_update
         if analyses is not None:
@@ -389,27 +384,6 @@ class Slide(object):
         """
 
         self._thumbnail_url = thumbnail_url
-
-    @property
-    def has_thumbnail(self):
-        """Gets the has_thumbnail of this Slide.  # noqa: E501
-
-
-        :return: The has_thumbnail of this Slide.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_thumbnail
-
-    @has_thumbnail.setter
-    def has_thumbnail(self, has_thumbnail):
-        """Sets the has_thumbnail of this Slide.
-
-
-        :param has_thumbnail: The has_thumbnail of this Slide.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_thumbnail = has_thumbnail
 
     @property
     def last_update(self):

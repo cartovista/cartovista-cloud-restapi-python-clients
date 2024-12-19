@@ -77,6 +77,18 @@ class TestUserApi(unittest.TestCase):
         """
         pass
 
+    def test_user_get_importable_groups(self):
+        """Test case for user_get_importable_groups
+
+        """
+        pass
+
+    def test_user_get_importable_users(self):
+        """Test case for user_get_importable_users
+
+        """
+        pass
+
     def test_user_get_user(self):
         """Test case for user_get_user
 
@@ -102,6 +114,18 @@ class TestUserApi(unittest.TestCase):
         """Test case for user_get_users_content
 
         Searches across all the users (email, username, first name and last name), groups (name and description) and folders (name) for the provided search criteria.  # noqa: E501
+        """
+        pass
+
+    def test_user_import_groups(self):
+        """Test case for user_import_groups
+
+        """
+        pass
+
+    def test_user_import_users(self):
+        """Test case for user_import_users
+
         """
         pass
 

@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **map_id** | **str** |  | [optional] 
 **thumbnail_url** | **str** |  | [optional] 
-**has_thumbnail** | **bool** |  | [optional] 
 **last_update** | **datetime** |  | [optional] 
 **analyses** | [**list[SlideAnalysis]**](SlideAnalysis.md) |  | [optional] 
 

@@ -38,7 +38,7 @@ class TestFeatureApi(unittest.TestCase):
     def test_feature_create_features_from_long_lat(self):
         """Test case for feature_create_features_from_long_lat
 
-        Creates a feature from the provided latutude and longitude coordinates. The layer must be a point layer.  # noqa: E501
+        Creates features from the provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
         """
         pass
 
@@ -59,7 +59,7 @@ class TestFeatureApi(unittest.TestCase):
     def test_feature_create_update_features_from_long_lat(self):
         """Test case for feature_create_update_features_from_long_lat
 
-        Creates a feature or update it if it already exists with provided latutude and longitude coordinates. The layer must be a point layer.  # noqa: E501
+        Creates features or update them if they already exist with provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
         """
         pass
 
@@ -178,7 +178,7 @@ class TestFeatureApi(unittest.TestCase):
     def test_feature_update_from_long_lat(self):
         """Test case for feature_update_from_long_lat
 
-        Updates a feature's geometry with coordinates. The layer must a point layer.  # noqa: E501
+        Updates a feature's geometry with coordinates. The layer must a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
         """
         pass
 
