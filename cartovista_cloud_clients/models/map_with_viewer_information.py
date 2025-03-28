@@ -29,7 +29,7 @@ class MapWithViewerInformation(object):
     """
     swagger_types = {
         'map': 'Map',
-        'slides': 'list[Slide]',
+        'slide_items': 'SlideItems',
         'toolbar': 'MapToolbar',
         'advanced_settings': 'MapAdvancedSettings',
         'layers': 'list[Layer]',
@@ -45,7 +45,7 @@ class MapWithViewerInformation(object):
 
     attribute_map = {
         'map': 'map',
-        'slides': 'slides',
+        'slide_items': 'slideItems',
         'toolbar': 'toolbar',
         'advanced_settings': 'advancedSettings',
         'layers': 'layers',
@@ -59,10 +59,10 @@ class MapWithViewerInformation(object):
         'custom_applications': 'customApplications'
     }
 
-    def __init__(self, map=None, slides=None, toolbar=None, advanced_settings=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None, identities_with_access=None, map_actions=None, poi_analysis=None, poi_analysis_is_generating=None, custom_applications=None):  # noqa: E501
+    def __init__(self, map=None, slide_items=None, toolbar=None, advanced_settings=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None, identities_with_access=None, map_actions=None, poi_analysis=None, poi_analysis_is_generating=None, custom_applications=None):  # noqa: E501
         """MapWithViewerInformation - a model defined in Swagger"""  # noqa: E501
         self._map = None
-        self._slides = None
+        self._slide_items = None
         self._toolbar = None
         self._advanced_settings = None
         self._layers = None
@@ -77,8 +77,8 @@ class MapWithViewerInformation(object):
         self.discriminator = None
         if map is not None:
             self.map = map
-        if slides is not None:
-            self.slides = slides
+        if slide_items is not None:
+            self.slide_items = slide_items
         if toolbar is not None:
             self.toolbar = toolbar
         if advanced_settings is not None:
@@ -124,25 +124,25 @@ class MapWithViewerInformation(object):
         self._map = map
 
     @property
-    def slides(self):
-        """Gets the slides of this MapWithViewerInformation.  # noqa: E501
+    def slide_items(self):
+        """Gets the slide_items of this MapWithViewerInformation.  # noqa: E501
 
 
-        :return: The slides of this MapWithViewerInformation.  # noqa: E501
-        :rtype: list[Slide]
+        :return: The slide_items of this MapWithViewerInformation.  # noqa: E501
+        :rtype: SlideItems
         """
-        return self._slides
+        return self._slide_items
 
-    @slides.setter
-    def slides(self, slides):
-        """Sets the slides of this MapWithViewerInformation.
+    @slide_items.setter
+    def slide_items(self, slide_items):
+        """Sets the slide_items of this MapWithViewerInformation.
 
 
-        :param slides: The slides of this MapWithViewerInformation.  # noqa: E501
-        :type: list[Slide]
+        :param slide_items: The slide_items of this MapWithViewerInformation.  # noqa: E501
+        :type: SlideItems
         """
 
-        self._slides = slides
+        self._slide_items = slide_items
 
     @property
     def toolbar(self):

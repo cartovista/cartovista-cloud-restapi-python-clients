@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **join_id** | **str** |  | [optional] 
 **object_id** | **str** |  | [optional] 
 **object_type** | [**DataElementType**](DataElementType.md) |  | [optional] 
+**is_poi_join** | **bool** |  | [optional] 
 **did_delete** | **bool** |  | [optional] 
 **used_in_maps** | [**list[SimpleMap]**](SimpleMap.md) |  | [optional] 
 

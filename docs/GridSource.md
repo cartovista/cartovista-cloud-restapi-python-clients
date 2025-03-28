@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **thumbnail_url** | **str** |  | [optional] 
 **thumbnail_url_expiry** | **datetime** |  | [optional] 
 **is_heatmap** | **bool** |  | [optional] 
+**is_demo_source** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -31,7 +31,7 @@ class FeaturesGetParameters(object):
         'start_at': 'int',
         'row_count': 'int',
         'data_filters': 'list[DataColumnFilters]',
-        'data_sort': 'DataRowSortDefinition',
+        'data_sort': 'OneOfFeaturesGetParametersDataSort',
         'include_linked_tables': 'bool'
     }
 
@@ -131,7 +131,7 @@ class FeaturesGetParameters(object):
 
 
         :return: The data_sort of this FeaturesGetParameters.  # noqa: E501
-        :rtype: DataRowSortDefinition
+        :rtype: OneOfFeaturesGetParametersDataSort
         """
         return self._data_sort
 
@@ -141,7 +141,7 @@ class FeaturesGetParameters(object):
 
 
         :param data_sort: The data_sort of this FeaturesGetParameters.  # noqa: E501
-        :type: DataRowSortDefinition
+        :type: OneOfFeaturesGetParametersDataSort
         """
 
         self._data_sort = data_sort

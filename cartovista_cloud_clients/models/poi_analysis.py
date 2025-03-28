@@ -31,19 +31,19 @@ class PoiAnalysis(object):
         'map_id': 'str',
         'layer_id': 'str',
         'table_id': 'str',
-        'analysis_layer_id': 'str',
-        'results_table_id': 'str',
         'heatmap_layer_id': 'str',
-        'kv_levels_column_id': 'str',
+        'name_column_id': 'str',
+        'kv_values_column_id': 'str',
         'name': 'str',
-        'kv_levels': 'list[float]',
-        'scenarios_and_years': 'list[PoiAnalysisScenarioAndYear]',
+        'kv_values': 'list[str]',
+        'scenarios': 'list[PoiAnalysisScenario]',
         'has_footprint_polygon': 'bool',
         'is_pregenerating': 'bool',
         'can_use_worst_dispatch': 'bool',
-        'generating_scenario_and_year_id': 'str',
+        'generating_scenario_id': 'str',
         'extent': 'OneOfPoiAnalysisExtent',
         'custom_poi_analyses': 'list[CustomPoiAnalysis]',
+        'initial_contingency_loading_max_data': 'OneOfPoiAnalysisInitialContingencyLoadingMaxData',
         'transmission': 'OneOfPoiAnalysisTransmission'
     }
 
@@ -51,40 +51,40 @@ class PoiAnalysis(object):
         'map_id': 'mapId',
         'layer_id': 'layerId',
         'table_id': 'tableId',
-        'analysis_layer_id': 'analysisLayerId',
-        'results_table_id': 'resultsTableId',
         'heatmap_layer_id': 'heatmapLayerId',
-        'kv_levels_column_id': 'kvLevelsColumnId',
+        'name_column_id': 'nameColumnId',
+        'kv_values_column_id': 'kvValuesColumnId',
         'name': 'name',
-        'kv_levels': 'kvLevels',
-        'scenarios_and_years': 'scenariosAndYears',
+        'kv_values': 'kvValues',
+        'scenarios': 'scenarios',
         'has_footprint_polygon': 'hasFootprintPolygon',
         'is_pregenerating': 'isPregenerating',
         'can_use_worst_dispatch': 'canUseWorstDispatch',
-        'generating_scenario_and_year_id': 'generatingScenarioAndYearId',
+        'generating_scenario_id': 'generatingScenarioId',
         'extent': 'extent',
         'custom_poi_analyses': 'customPoiAnalyses',
+        'initial_contingency_loading_max_data': 'initialContingencyLoadingMaxData',
         'transmission': 'transmission'
     }
 
-    def __init__(self, map_id=None, layer_id=None, table_id=None, analysis_layer_id=None, results_table_id=None, heatmap_layer_id=None, kv_levels_column_id=None, name=None, kv_levels=None, scenarios_and_years=None, has_footprint_polygon=None, is_pregenerating=None, can_use_worst_dispatch=None, generating_scenario_and_year_id=None, extent=None, custom_poi_analyses=None, transmission=None):  # noqa: E501
+    def __init__(self, map_id=None, layer_id=None, table_id=None, heatmap_layer_id=None, name_column_id=None, kv_values_column_id=None, name=None, kv_values=None, scenarios=None, has_footprint_polygon=None, is_pregenerating=None, can_use_worst_dispatch=None, generating_scenario_id=None, extent=None, custom_poi_analyses=None, initial_contingency_loading_max_data=None, transmission=None):  # noqa: E501
         """PoiAnalysis - a model defined in Swagger"""  # noqa: E501
         self._map_id = None
         self._layer_id = None
         self._table_id = None
-        self._analysis_layer_id = None
-        self._results_table_id = None
         self._heatmap_layer_id = None
-        self._kv_levels_column_id = None
+        self._name_column_id = None
+        self._kv_values_column_id = None
         self._name = None
-        self._kv_levels = None
-        self._scenarios_and_years = None
+        self._kv_values = None
+        self._scenarios = None
         self._has_footprint_polygon = None
         self._is_pregenerating = None
         self._can_use_worst_dispatch = None
-        self._generating_scenario_and_year_id = None
+        self._generating_scenario_id = None
         self._extent = None
         self._custom_poi_analyses = None
+        self._initial_contingency_loading_max_data = None
         self._transmission = None
         self.discriminator = None
         if map_id is not None:
@@ -93,32 +93,32 @@ class PoiAnalysis(object):
             self.layer_id = layer_id
         if table_id is not None:
             self.table_id = table_id
-        if analysis_layer_id is not None:
-            self.analysis_layer_id = analysis_layer_id
-        if results_table_id is not None:
-            self.results_table_id = results_table_id
         if heatmap_layer_id is not None:
             self.heatmap_layer_id = heatmap_layer_id
-        if kv_levels_column_id is not None:
-            self.kv_levels_column_id = kv_levels_column_id
+        if name_column_id is not None:
+            self.name_column_id = name_column_id
+        if kv_values_column_id is not None:
+            self.kv_values_column_id = kv_values_column_id
         if name is not None:
             self.name = name
-        if kv_levels is not None:
-            self.kv_levels = kv_levels
-        if scenarios_and_years is not None:
-            self.scenarios_and_years = scenarios_and_years
+        if kv_values is not None:
+            self.kv_values = kv_values
+        if scenarios is not None:
+            self.scenarios = scenarios
         if has_footprint_polygon is not None:
             self.has_footprint_polygon = has_footprint_polygon
         if is_pregenerating is not None:
             self.is_pregenerating = is_pregenerating
         if can_use_worst_dispatch is not None:
             self.can_use_worst_dispatch = can_use_worst_dispatch
-        if generating_scenario_and_year_id is not None:
-            self.generating_scenario_and_year_id = generating_scenario_and_year_id
+        if generating_scenario_id is not None:
+            self.generating_scenario_id = generating_scenario_id
         if extent is not None:
             self.extent = extent
         if custom_poi_analyses is not None:
             self.custom_poi_analyses = custom_poi_analyses
+        if initial_contingency_loading_max_data is not None:
+            self.initial_contingency_loading_max_data = initial_contingency_loading_max_data
         if transmission is not None:
             self.transmission = transmission
 
@@ -186,48 +186,6 @@ class PoiAnalysis(object):
         self._table_id = table_id
 
     @property
-    def analysis_layer_id(self):
-        """Gets the analysis_layer_id of this PoiAnalysis.  # noqa: E501
-
-
-        :return: The analysis_layer_id of this PoiAnalysis.  # noqa: E501
-        :rtype: str
-        """
-        return self._analysis_layer_id
-
-    @analysis_layer_id.setter
-    def analysis_layer_id(self, analysis_layer_id):
-        """Sets the analysis_layer_id of this PoiAnalysis.
-
-
-        :param analysis_layer_id: The analysis_layer_id of this PoiAnalysis.  # noqa: E501
-        :type: str
-        """
-
-        self._analysis_layer_id = analysis_layer_id
-
-    @property
-    def results_table_id(self):
-        """Gets the results_table_id of this PoiAnalysis.  # noqa: E501
-
-
-        :return: The results_table_id of this PoiAnalysis.  # noqa: E501
-        :rtype: str
-        """
-        return self._results_table_id
-
-    @results_table_id.setter
-    def results_table_id(self, results_table_id):
-        """Sets the results_table_id of this PoiAnalysis.
-
-
-        :param results_table_id: The results_table_id of this PoiAnalysis.  # noqa: E501
-        :type: str
-        """
-
-        self._results_table_id = results_table_id
-
-    @property
     def heatmap_layer_id(self):
         """Gets the heatmap_layer_id of this PoiAnalysis.  # noqa: E501
 
@@ -249,25 +207,46 @@ class PoiAnalysis(object):
         self._heatmap_layer_id = heatmap_layer_id
 
     @property
-    def kv_levels_column_id(self):
-        """Gets the kv_levels_column_id of this PoiAnalysis.  # noqa: E501
+    def name_column_id(self):
+        """Gets the name_column_id of this PoiAnalysis.  # noqa: E501
 
 
-        :return: The kv_levels_column_id of this PoiAnalysis.  # noqa: E501
+        :return: The name_column_id of this PoiAnalysis.  # noqa: E501
         :rtype: str
         """
-        return self._kv_levels_column_id
+        return self._name_column_id
 
-    @kv_levels_column_id.setter
-    def kv_levels_column_id(self, kv_levels_column_id):
-        """Sets the kv_levels_column_id of this PoiAnalysis.
+    @name_column_id.setter
+    def name_column_id(self, name_column_id):
+        """Sets the name_column_id of this PoiAnalysis.
 
 
-        :param kv_levels_column_id: The kv_levels_column_id of this PoiAnalysis.  # noqa: E501
+        :param name_column_id: The name_column_id of this PoiAnalysis.  # noqa: E501
         :type: str
         """
 
-        self._kv_levels_column_id = kv_levels_column_id
+        self._name_column_id = name_column_id
+
+    @property
+    def kv_values_column_id(self):
+        """Gets the kv_values_column_id of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The kv_values_column_id of this PoiAnalysis.  # noqa: E501
+        :rtype: str
+        """
+        return self._kv_values_column_id
+
+    @kv_values_column_id.setter
+    def kv_values_column_id(self, kv_values_column_id):
+        """Sets the kv_values_column_id of this PoiAnalysis.
+
+
+        :param kv_values_column_id: The kv_values_column_id of this PoiAnalysis.  # noqa: E501
+        :type: str
+        """
+
+        self._kv_values_column_id = kv_values_column_id
 
     @property
     def name(self):
@@ -291,46 +270,46 @@ class PoiAnalysis(object):
         self._name = name
 
     @property
-    def kv_levels(self):
-        """Gets the kv_levels of this PoiAnalysis.  # noqa: E501
+    def kv_values(self):
+        """Gets the kv_values of this PoiAnalysis.  # noqa: E501
 
 
-        :return: The kv_levels of this PoiAnalysis.  # noqa: E501
-        :rtype: list[float]
+        :return: The kv_values of this PoiAnalysis.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._kv_levels
+        return self._kv_values
 
-    @kv_levels.setter
-    def kv_levels(self, kv_levels):
-        """Sets the kv_levels of this PoiAnalysis.
+    @kv_values.setter
+    def kv_values(self, kv_values):
+        """Sets the kv_values of this PoiAnalysis.
 
 
-        :param kv_levels: The kv_levels of this PoiAnalysis.  # noqa: E501
-        :type: list[float]
+        :param kv_values: The kv_values of this PoiAnalysis.  # noqa: E501
+        :type: list[str]
         """
 
-        self._kv_levels = kv_levels
+        self._kv_values = kv_values
 
     @property
-    def scenarios_and_years(self):
-        """Gets the scenarios_and_years of this PoiAnalysis.  # noqa: E501
+    def scenarios(self):
+        """Gets the scenarios of this PoiAnalysis.  # noqa: E501
 
 
-        :return: The scenarios_and_years of this PoiAnalysis.  # noqa: E501
-        :rtype: list[PoiAnalysisScenarioAndYear]
+        :return: The scenarios of this PoiAnalysis.  # noqa: E501
+        :rtype: list[PoiAnalysisScenario]
         """
-        return self._scenarios_and_years
+        return self._scenarios
 
-    @scenarios_and_years.setter
-    def scenarios_and_years(self, scenarios_and_years):
-        """Sets the scenarios_and_years of this PoiAnalysis.
+    @scenarios.setter
+    def scenarios(self, scenarios):
+        """Sets the scenarios of this PoiAnalysis.
 
 
-        :param scenarios_and_years: The scenarios_and_years of this PoiAnalysis.  # noqa: E501
-        :type: list[PoiAnalysisScenarioAndYear]
+        :param scenarios: The scenarios of this PoiAnalysis.  # noqa: E501
+        :type: list[PoiAnalysisScenario]
         """
 
-        self._scenarios_and_years = scenarios_and_years
+        self._scenarios = scenarios
 
     @property
     def has_footprint_polygon(self):
@@ -396,25 +375,25 @@ class PoiAnalysis(object):
         self._can_use_worst_dispatch = can_use_worst_dispatch
 
     @property
-    def generating_scenario_and_year_id(self):
-        """Gets the generating_scenario_and_year_id of this PoiAnalysis.  # noqa: E501
+    def generating_scenario_id(self):
+        """Gets the generating_scenario_id of this PoiAnalysis.  # noqa: E501
 
 
-        :return: The generating_scenario_and_year_id of this PoiAnalysis.  # noqa: E501
+        :return: The generating_scenario_id of this PoiAnalysis.  # noqa: E501
         :rtype: str
         """
-        return self._generating_scenario_and_year_id
+        return self._generating_scenario_id
 
-    @generating_scenario_and_year_id.setter
-    def generating_scenario_and_year_id(self, generating_scenario_and_year_id):
-        """Sets the generating_scenario_and_year_id of this PoiAnalysis.
+    @generating_scenario_id.setter
+    def generating_scenario_id(self, generating_scenario_id):
+        """Sets the generating_scenario_id of this PoiAnalysis.
 
 
-        :param generating_scenario_and_year_id: The generating_scenario_and_year_id of this PoiAnalysis.  # noqa: E501
+        :param generating_scenario_id: The generating_scenario_id of this PoiAnalysis.  # noqa: E501
         :type: str
         """
 
-        self._generating_scenario_and_year_id = generating_scenario_and_year_id
+        self._generating_scenario_id = generating_scenario_id
 
     @property
     def extent(self):
@@ -457,6 +436,27 @@ class PoiAnalysis(object):
         """
 
         self._custom_poi_analyses = custom_poi_analyses
+
+    @property
+    def initial_contingency_loading_max_data(self):
+        """Gets the initial_contingency_loading_max_data of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The initial_contingency_loading_max_data of this PoiAnalysis.  # noqa: E501
+        :rtype: OneOfPoiAnalysisInitialContingencyLoadingMaxData
+        """
+        return self._initial_contingency_loading_max_data
+
+    @initial_contingency_loading_max_data.setter
+    def initial_contingency_loading_max_data(self, initial_contingency_loading_max_data):
+        """Sets the initial_contingency_loading_max_data of this PoiAnalysis.
+
+
+        :param initial_contingency_loading_max_data: The initial_contingency_loading_max_data of this PoiAnalysis.  # noqa: E501
+        :type: OneOfPoiAnalysisInitialContingencyLoadingMaxData
+        """
+
+        self._initial_contingency_loading_max_data = initial_contingency_loading_max_data
 
     @property
     def transmission(self):

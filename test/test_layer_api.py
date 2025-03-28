@@ -126,6 +126,19 @@ class TestLayerApi(unittest.TestCase):
         """
         pass
 
+    def test_layer_get_data_tables_by_layer_identifiers(self):
+        """Test case for layer_get_data_tables_by_layer_identifiers
+
+        Gets the list of DataTables which are linked to any of the layers whose identifiers passed in argument.  # noqa: E501
+        """
+        pass
+
+    def test_layer_get_feature_ids_for_selection_stacks(self):
+        """Test case for layer_get_feature_ids_for_selection_stacks
+
+        """
+        pass
+
     def test_layer_get_file_description(self):
         """Test case for layer_get_file_description
 
@@ -210,6 +223,13 @@ class TestLayerApi(unittest.TestCase):
         """
         pass
 
+    def test_layer_regenerate_tile_cache(self):
+        """Test case for layer_regenerate_tile_cache
+
+        Regenerates the tile cache for the layer.  # noqa: E501
+        """
+        pass
+
     def test_layer_set_data_column_unique_id(self):
         """Test case for layer_set_data_column_unique_id
 
@@ -242,6 +262,13 @@ class TestLayerApi(unittest.TestCase):
         """Test case for layer_update_layer
 
         Updates the layer's properties.  # noqa: E501
+        """
+        pass
+
+    def test_layer_update_layer_external_service_url(self):
+        """Test case for layer_update_layer_external_service_url
+
+        Update a layer's external data provider url. The url isn't validated. Use synchronize API to import data to CartoVista server after changing the URL.  # noqa: E501
         """
         pass
 

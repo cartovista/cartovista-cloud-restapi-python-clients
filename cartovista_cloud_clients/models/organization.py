@@ -33,6 +33,7 @@ class Organization(object):
         'primary_color': 'str',
         'default_theme': 'ThemeEnum',
         'logo_url': 'str',
+        'logo_icon_url': 'str',
         'is_enterprise': 'bool',
         'url_code': 'str',
         'open_id_providers': 'list[OpenIdProviderInformation]',
@@ -47,6 +48,7 @@ class Organization(object):
         'primary_color': 'primaryColor',
         'default_theme': 'defaultTheme',
         'logo_url': 'logoUrl',
+        'logo_icon_url': 'logoIconUrl',
         'is_enterprise': 'isEnterprise',
         'url_code': 'urlCode',
         'open_id_providers': 'openIdProviders',
@@ -55,13 +57,14 @@ class Organization(object):
         'invalidate_disclaimer_time': 'invalidateDisclaimerTime'
     }
 
-    def __init__(self, name=None, default_language=None, primary_color=None, default_theme=None, logo_url=None, is_enterprise=None, url_code=None, open_id_providers=None, froala_key=None, disclaimers=None, invalidate_disclaimer_time=None):  # noqa: E501
+    def __init__(self, name=None, default_language=None, primary_color=None, default_theme=None, logo_url=None, logo_icon_url=None, is_enterprise=None, url_code=None, open_id_providers=None, froala_key=None, disclaimers=None, invalidate_disclaimer_time=None):  # noqa: E501
         """Organization - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._default_language = None
         self._primary_color = None
         self._default_theme = None
         self._logo_url = None
+        self._logo_icon_url = None
         self._is_enterprise = None
         self._url_code = None
         self._open_id_providers = None
@@ -79,6 +82,8 @@ class Organization(object):
             self.default_theme = default_theme
         if logo_url is not None:
             self.logo_url = logo_url
+        if logo_icon_url is not None:
+            self.logo_icon_url = logo_icon_url
         if is_enterprise is not None:
             self.is_enterprise = is_enterprise
         if url_code is not None:
@@ -196,6 +201,27 @@ class Organization(object):
         """
 
         self._logo_url = logo_url
+
+    @property
+    def logo_icon_url(self):
+        """Gets the logo_icon_url of this Organization.  # noqa: E501
+
+
+        :return: The logo_icon_url of this Organization.  # noqa: E501
+        :rtype: str
+        """
+        return self._logo_icon_url
+
+    @logo_icon_url.setter
+    def logo_icon_url(self, logo_icon_url):
+        """Sets the logo_icon_url of this Organization.
+
+
+        :param logo_icon_url: The logo_icon_url of this Organization.  # noqa: E501
+        :type: str
+        """
+
+        self._logo_icon_url = logo_icon_url
 
     @property
     def is_enterprise(self):

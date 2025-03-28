@@ -70,6 +70,12 @@ class TestDataRowApi(unittest.TestCase):
         """
         pass
 
+    def test_data_row_get_data_rows_with_total(self):
+        """Test case for data_row_get_data_rows_with_total
+
+        """
+        pass
+
     def test_data_row_update_data_row(self):
         """Test case for data_row_update_data_row
 

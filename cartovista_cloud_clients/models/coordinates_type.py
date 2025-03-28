@@ -27,6 +27,7 @@ class CoordinatesType(object):
     DECIMALDEGREES = "DecimalDegrees"
     GROUNDUNITS = "GroundUnits"
     DMS = "DMS"
+    PROJ4 = "Proj4"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

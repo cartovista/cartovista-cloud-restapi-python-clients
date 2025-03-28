@@ -38,7 +38,7 @@ class TestGridLayerApi(unittest.TestCase):
     def test_grid_layer_add_grid_sources(self):
         """Test case for grid_layer_add_grid_sources
 
-        Add all the bands from a tif file to an existing grid layer.  # noqa: E501
+        Add all the bands from a tif file to an existing grid layer as distinct grid sources. If the grid layer is an RGB layer and the file has the required bands, a single RGB grid source will be added instead.  # noqa: E501
         """
         pass
 

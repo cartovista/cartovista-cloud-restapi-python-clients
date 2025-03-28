@@ -30,20 +30,23 @@ class DataTableJoinParameter(object):
     swagger_types = {
         'data_table_source_identifier': 'str',
         'data_table_target_column_identifier': 'str',
-        'data_table_source_column_identifier': 'str'
+        'data_table_source_column_identifier': 'str',
+        'make_table_public': 'bool'
     }
 
     attribute_map = {
         'data_table_source_identifier': 'dataTableSourceIdentifier',
         'data_table_target_column_identifier': 'dataTableTargetColumnIdentifier',
-        'data_table_source_column_identifier': 'dataTableSourceColumnIdentifier'
+        'data_table_source_column_identifier': 'dataTableSourceColumnIdentifier',
+        'make_table_public': 'makeTablePublic'
     }
 
-    def __init__(self, data_table_source_identifier=None, data_table_target_column_identifier=None, data_table_source_column_identifier=None):  # noqa: E501
+    def __init__(self, data_table_source_identifier=None, data_table_target_column_identifier=None, data_table_source_column_identifier=None, make_table_public=None):  # noqa: E501
         """DataTableJoinParameter - a model defined in Swagger"""  # noqa: E501
         self._data_table_source_identifier = None
         self._data_table_target_column_identifier = None
         self._data_table_source_column_identifier = None
+        self._make_table_public = None
         self.discriminator = None
         if data_table_source_identifier is not None:
             self.data_table_source_identifier = data_table_source_identifier
@@ -51,6 +54,8 @@ class DataTableJoinParameter(object):
             self.data_table_target_column_identifier = data_table_target_column_identifier
         if data_table_source_column_identifier is not None:
             self.data_table_source_column_identifier = data_table_source_column_identifier
+        if make_table_public is not None:
+            self.make_table_public = make_table_public
 
     @property
     def data_table_source_identifier(self):
@@ -114,6 +119,27 @@ class DataTableJoinParameter(object):
         """
 
         self._data_table_source_column_identifier = data_table_source_column_identifier
+
+    @property
+    def make_table_public(self):
+        """Gets the make_table_public of this DataTableJoinParameter.  # noqa: E501
+
+
+        :return: The make_table_public of this DataTableJoinParameter.  # noqa: E501
+        :rtype: bool
+        """
+        return self._make_table_public
+
+    @make_table_public.setter
+    def make_table_public(self, make_table_public):
+        """Sets the make_table_public of this DataTableJoinParameter.
+
+
+        :param make_table_public: The make_table_public of this DataTableJoinParameter.  # noqa: E501
+        :type: bool
+        """
+
+        self._make_table_public = make_table_public
 
     def to_dict(self):
         """Returns the model properties as a dict"""

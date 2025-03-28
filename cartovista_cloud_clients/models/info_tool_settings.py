@@ -31,22 +31,25 @@ class InfoToolSettings(object):
         'as_panel': 'bool',
         'show_get_directions_button': 'bool',
         'display_coordinates': 'bool',
-        'type': 'CoordinatesType'
+        'type': 'CoordinatesType',
+        'projection': 'OneOfInfoToolSettingsProjection'
     }
 
     attribute_map = {
         'as_panel': 'asPanel',
         'show_get_directions_button': 'showGetDirectionsButton',
         'display_coordinates': 'displayCoordinates',
-        'type': 'type'
+        'type': 'type',
+        'projection': 'projection'
     }
 
-    def __init__(self, as_panel=None, show_get_directions_button=None, display_coordinates=None, type=None):  # noqa: E501
+    def __init__(self, as_panel=None, show_get_directions_button=None, display_coordinates=None, type=None, projection=None):  # noqa: E501
         """InfoToolSettings - a model defined in Swagger"""  # noqa: E501
         self._as_panel = None
         self._show_get_directions_button = None
         self._display_coordinates = None
         self._type = None
+        self._projection = None
         self.discriminator = None
         if as_panel is not None:
             self.as_panel = as_panel
@@ -56,6 +59,8 @@ class InfoToolSettings(object):
             self.display_coordinates = display_coordinates
         if type is not None:
             self.type = type
+        if projection is not None:
+            self.projection = projection
 
     @property
     def as_panel(self):
@@ -140,6 +145,27 @@ class InfoToolSettings(object):
         """
 
         self._type = type
+
+    @property
+    def projection(self):
+        """Gets the projection of this InfoToolSettings.  # noqa: E501
+
+
+        :return: The projection of this InfoToolSettings.  # noqa: E501
+        :rtype: OneOfInfoToolSettingsProjection
+        """
+        return self._projection
+
+    @projection.setter
+    def projection(self, projection):
+        """Sets the projection of this InfoToolSettings.
+
+
+        :param projection: The projection of this InfoToolSettings.  # noqa: E501
+        :type: OneOfInfoToolSettingsProjection
+        """
+
+        self._projection = projection
 
     def to_dict(self):
         """Returns the model properties as a dict"""

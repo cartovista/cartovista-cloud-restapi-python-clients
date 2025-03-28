@@ -54,7 +54,8 @@ class LayerDataTable(object):
         'optimization_status': 'ClickHouseStatus',
         'folder_id': 'str',
         'layer_id': 'str',
-        'join_id': 'str'
+        'join_id': 'str',
+        'is_layer_locked': 'bool'
     }
 
     attribute_map = {
@@ -84,10 +85,11 @@ class LayerDataTable(object):
         'optimization_status': 'optimizationStatus',
         'folder_id': 'folderId',
         'layer_id': 'layerId',
-        'join_id': 'joinId'
+        'join_id': 'joinId',
+        'is_layer_locked': 'isLayerLocked'
     }
 
-    def __init__(self, unique_identifier=None, name=None, system_identifier=None, unique_id_data_column=None, owner_name=None, description=None, metadata=None, icon=None, row_count=None, creation_time=None, modified_time=None, time_series_column_id=None, geocode_address_column_id=None, geocode_accuracy_column_id=None, geocode_latitude_column_id=None, geocode_longitude_column_id=None, is_many_table_in_one_to_many_join=None, public_access=None, permissions=None, can_edit=None, disabled=None, is_demo_source=None, is_external=None, optimization_status=None, folder_id=None, layer_id=None, join_id=None):  # noqa: E501
+    def __init__(self, unique_identifier=None, name=None, system_identifier=None, unique_id_data_column=None, owner_name=None, description=None, metadata=None, icon=None, row_count=None, creation_time=None, modified_time=None, time_series_column_id=None, geocode_address_column_id=None, geocode_accuracy_column_id=None, geocode_latitude_column_id=None, geocode_longitude_column_id=None, is_many_table_in_one_to_many_join=None, public_access=None, permissions=None, can_edit=None, disabled=None, is_demo_source=None, is_external=None, optimization_status=None, folder_id=None, layer_id=None, join_id=None, is_layer_locked=None):  # noqa: E501
         """LayerDataTable - a model defined in Swagger"""  # noqa: E501
         self._unique_identifier = None
         self._name = None
@@ -116,6 +118,7 @@ class LayerDataTable(object):
         self._folder_id = None
         self._layer_id = None
         self._join_id = None
+        self._is_layer_locked = None
         self.discriminator = None
         if unique_identifier is not None:
             self.unique_identifier = unique_identifier
@@ -171,6 +174,8 @@ class LayerDataTable(object):
             self.layer_id = layer_id
         if join_id is not None:
             self.join_id = join_id
+        if is_layer_locked is not None:
+            self.is_layer_locked = is_layer_locked
 
     @property
     def unique_identifier(self):
@@ -738,6 +743,27 @@ class LayerDataTable(object):
         """
 
         self._join_id = join_id
+
+    @property
+    def is_layer_locked(self):
+        """Gets the is_layer_locked of this LayerDataTable.  # noqa: E501
+
+
+        :return: The is_layer_locked of this LayerDataTable.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_layer_locked
+
+    @is_layer_locked.setter
+    def is_layer_locked(self, is_layer_locked):
+        """Sets the is_layer_locked of this LayerDataTable.
+
+
+        :param is_layer_locked: The is_layer_locked of this LayerDataTable.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_layer_locked = is_layer_locked
 
     def to_dict(self):
         """Returns the model properties as a dict"""

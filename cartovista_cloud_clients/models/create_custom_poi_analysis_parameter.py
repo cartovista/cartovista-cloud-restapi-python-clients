@@ -28,55 +28,55 @@ class CreateCustomPoiAnalysisParameter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'scenario_and_year_id': 'str',
+        'scenario_id': 'str',
         'feature_id': 'str',
         'value': 'int',
-        'kv_levels': 'list[float]'
+        'kv_values': 'list[str]'
     }
 
     attribute_map = {
-        'scenario_and_year_id': 'scenarioAndYearId',
+        'scenario_id': 'scenarioId',
         'feature_id': 'featureId',
         'value': 'value',
-        'kv_levels': 'kvLevels'
+        'kv_values': 'kvValues'
     }
 
-    def __init__(self, scenario_and_year_id=None, feature_id=None, value=None, kv_levels=None):  # noqa: E501
+    def __init__(self, scenario_id=None, feature_id=None, value=None, kv_values=None):  # noqa: E501
         """CreateCustomPoiAnalysisParameter - a model defined in Swagger"""  # noqa: E501
-        self._scenario_and_year_id = None
+        self._scenario_id = None
         self._feature_id = None
         self._value = None
-        self._kv_levels = None
+        self._kv_values = None
         self.discriminator = None
-        if scenario_and_year_id is not None:
-            self.scenario_and_year_id = scenario_and_year_id
+        if scenario_id is not None:
+            self.scenario_id = scenario_id
         if feature_id is not None:
             self.feature_id = feature_id
         if value is not None:
             self.value = value
-        if kv_levels is not None:
-            self.kv_levels = kv_levels
+        if kv_values is not None:
+            self.kv_values = kv_values
 
     @property
-    def scenario_and_year_id(self):
-        """Gets the scenario_and_year_id of this CreateCustomPoiAnalysisParameter.  # noqa: E501
+    def scenario_id(self):
+        """Gets the scenario_id of this CreateCustomPoiAnalysisParameter.  # noqa: E501
 
 
-        :return: The scenario_and_year_id of this CreateCustomPoiAnalysisParameter.  # noqa: E501
+        :return: The scenario_id of this CreateCustomPoiAnalysisParameter.  # noqa: E501
         :rtype: str
         """
-        return self._scenario_and_year_id
+        return self._scenario_id
 
-    @scenario_and_year_id.setter
-    def scenario_and_year_id(self, scenario_and_year_id):
-        """Sets the scenario_and_year_id of this CreateCustomPoiAnalysisParameter.
+    @scenario_id.setter
+    def scenario_id(self, scenario_id):
+        """Sets the scenario_id of this CreateCustomPoiAnalysisParameter.
 
 
-        :param scenario_and_year_id: The scenario_and_year_id of this CreateCustomPoiAnalysisParameter.  # noqa: E501
+        :param scenario_id: The scenario_id of this CreateCustomPoiAnalysisParameter.  # noqa: E501
         :type: str
         """
 
-        self._scenario_and_year_id = scenario_and_year_id
+        self._scenario_id = scenario_id
 
     @property
     def feature_id(self):
@@ -121,25 +121,25 @@ class CreateCustomPoiAnalysisParameter(object):
         self._value = value
 
     @property
-    def kv_levels(self):
-        """Gets the kv_levels of this CreateCustomPoiAnalysisParameter.  # noqa: E501
+    def kv_values(self):
+        """Gets the kv_values of this CreateCustomPoiAnalysisParameter.  # noqa: E501
 
 
-        :return: The kv_levels of this CreateCustomPoiAnalysisParameter.  # noqa: E501
-        :rtype: list[float]
+        :return: The kv_values of this CreateCustomPoiAnalysisParameter.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._kv_levels
+        return self._kv_values
 
-    @kv_levels.setter
-    def kv_levels(self, kv_levels):
-        """Sets the kv_levels of this CreateCustomPoiAnalysisParameter.
+    @kv_values.setter
+    def kv_values(self, kv_values):
+        """Sets the kv_values of this CreateCustomPoiAnalysisParameter.
 
 
-        :param kv_levels: The kv_levels of this CreateCustomPoiAnalysisParameter.  # noqa: E501
-        :type: list[float]
+        :param kv_values: The kv_values of this CreateCustomPoiAnalysisParameter.  # noqa: E501
+        :type: list[str]
         """
 
-        self._kv_levels = kv_levels
+        self._kv_values = kv_values
 
     def to_dict(self):
         """Returns the model properties as a dict"""

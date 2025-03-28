@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**proj4** | **str** |  | [optional] 
 **feature_type** | [**FeatureType**](FeatureType.md) |  | [optional] 
+**proj4** | **str** |  | [optional] 
 **longitude** | **float** |  | [optional] 
 **latitude** | **float** |  | [optional] 
 

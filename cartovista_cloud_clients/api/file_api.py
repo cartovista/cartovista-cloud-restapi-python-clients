@@ -783,17 +783,17 @@ class FileApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def file_get_poi_analysis_heatmap(self, map_id, scenario_and_year_id, kvs, tenant_url_code, **kwargs):  # noqa: E501
+    def file_get_poi_analysis_heatmap(self, map_id, scenario_id, kvs, tenant_url_code, **kwargs):  # noqa: E501
         """file_get_poi_analysis_heatmap  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.file_get_poi_analysis_heatmap(map_id, scenario_and_year_id, kvs, tenant_url_code, async_req=True)
+        >>> thread = api.file_get_poi_analysis_heatmap(map_id, scenario_id, kvs, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str map_id: (required)
-        :param str scenario_and_year_id: (required)
+        :param str scenario_id: (required)
         :param str kvs: (required)
         :param str tenant_url_code: (required)
         :return: str
@@ -802,22 +802,22 @@ class FileApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.file_get_poi_analysis_heatmap_with_http_info(map_id, scenario_and_year_id, kvs, tenant_url_code, **kwargs)  # noqa: E501
+            return self.file_get_poi_analysis_heatmap_with_http_info(map_id, scenario_id, kvs, tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.file_get_poi_analysis_heatmap_with_http_info(map_id, scenario_and_year_id, kvs, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.file_get_poi_analysis_heatmap_with_http_info(map_id, scenario_id, kvs, tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def file_get_poi_analysis_heatmap_with_http_info(self, map_id, scenario_and_year_id, kvs, tenant_url_code, **kwargs):  # noqa: E501
+    def file_get_poi_analysis_heatmap_with_http_info(self, map_id, scenario_id, kvs, tenant_url_code, **kwargs):  # noqa: E501
         """file_get_poi_analysis_heatmap  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.file_get_poi_analysis_heatmap_with_http_info(map_id, scenario_and_year_id, kvs, tenant_url_code, async_req=True)
+        >>> thread = api.file_get_poi_analysis_heatmap_with_http_info(map_id, scenario_id, kvs, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str map_id: (required)
-        :param str scenario_and_year_id: (required)
+        :param str scenario_id: (required)
         :param str kvs: (required)
         :param str tenant_url_code: (required)
         :return: str
@@ -825,7 +825,7 @@ class FileApi(object):
                  returns the request thread.
         """
 
-        all_params = ['map_id', 'scenario_and_year_id', 'kvs', 'tenant_url_code']  # noqa: E501
+        all_params = ['map_id', 'scenario_id', 'kvs', 'tenant_url_code']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -844,10 +844,10 @@ class FileApi(object):
         if ('map_id' not in params or
                 params['map_id'] is None):
             raise ValueError("Missing the required parameter `map_id` when calling `file_get_poi_analysis_heatmap`")  # noqa: E501
-        # verify the required parameter 'scenario_and_year_id' is set
-        if ('scenario_and_year_id' not in params or
-                params['scenario_and_year_id'] is None):
-            raise ValueError("Missing the required parameter `scenario_and_year_id` when calling `file_get_poi_analysis_heatmap`")  # noqa: E501
+        # verify the required parameter 'scenario_id' is set
+        if ('scenario_id' not in params or
+                params['scenario_id'] is None):
+            raise ValueError("Missing the required parameter `scenario_id` when calling `file_get_poi_analysis_heatmap`")  # noqa: E501
         # verify the required parameter 'kvs' is set
         if ('kvs' not in params or
                 params['kvs'] is None):
@@ -862,8 +862,8 @@ class FileApi(object):
         path_params = {}
         if 'map_id' in params:
             path_params['mapId'] = params['map_id']  # noqa: E501
-        if 'scenario_and_year_id' in params:
-            path_params['scenarioAndYearId'] = params['scenario_and_year_id']  # noqa: E501
+        if 'scenario_id' in params:
+            path_params['scenarioId'] = params['scenario_id']  # noqa: E501
         if 'tenant_url_code' in params:
             path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
 
@@ -885,7 +885,7 @@ class FileApi(object):
         auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
-            '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/heatmap/scenario-year/{scenarioAndYearId}', 'GET',
+            '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/heatmap/scenario-year/{scenarioId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1112,6 +1112,119 @@ class FileApi(object):
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/symbols/{id}/file', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='str',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def file_get_temporary_analysis_heatmap(self, body, map_id, tenant_url_code, **kwargs):  # noqa: E501
+        """file_get_temporary_analysis_heatmap  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.file_get_temporary_analysis_heatmap(body, map_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param TemporaryAnalysisRaster body: (required)
+        :param str map_id: (required)
+        :param str tenant_url_code: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.file_get_temporary_analysis_heatmap_with_http_info(body, map_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.file_get_temporary_analysis_heatmap_with_http_info(body, map_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def file_get_temporary_analysis_heatmap_with_http_info(self, body, map_id, tenant_url_code, **kwargs):  # noqa: E501
+        """file_get_temporary_analysis_heatmap  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.file_get_temporary_analysis_heatmap_with_http_info(body, map_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param TemporaryAnalysisRaster body: (required)
+        :param str map_id: (required)
+        :param str tenant_url_code: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'map_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method file_get_temporary_analysis_heatmap" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `file_get_temporary_analysis_heatmap`")  # noqa: E501
+        # verify the required parameter 'map_id' is set
+        if ('map_id' not in params or
+                params['map_id'] is None):
+            raise ValueError("Missing the required parameter `map_id` when calling `file_get_temporary_analysis_heatmap`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `file_get_temporary_analysis_heatmap`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'map_id' in params:
+            path_params['mapId'] = params['map_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/octet-stream'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/heatmap/custom-analysis', 'POST',
             path_params,
             query_params,
             header_params,

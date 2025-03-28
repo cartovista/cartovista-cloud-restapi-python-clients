@@ -28,6 +28,13 @@ class TestSlideApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_slide_create_slide_folder(self):
+        """Test case for slide_create_slide_folder
+
+        Creates a slide folder.  # noqa: E501
+        """
+        pass
+
     def test_slide_delete_slide(self):
         """Test case for slide_delete_slide
 
@@ -42,6 +49,13 @@ class TestSlideApi(unittest.TestCase):
         """
         pass
 
+    def test_slide_delete_slide_folder(self):
+        """Test case for slide_delete_slide_folder
+
+        Deletes the slide folder.  # noqa: E501
+        """
+        pass
+
     def test_slide_get_slide(self):
         """Test case for slide_get_slide
 
@@ -49,10 +63,17 @@ class TestSlideApi(unittest.TestCase):
         """
         pass
 
-    def test_slide_reorder_slides(self):
-        """Test case for slide_reorder_slides
+    def test_slide_get_slide_folder(self):
+        """Test case for slide_get_slide_folder
 
-        Changes the order of a slide in the slide details view. The order will be the same in the slide ids list.  # noqa: E501
+        Gets a specific folder.  # noqa: E501
+        """
+        pass
+
+    def test_slide_move_slide_item(self):
+        """Test case for slide_move_slide_item
+
+        Moves a slide item to a specified parent folder and position.  # noqa: E501
         """
         pass
 
@@ -74,6 +95,13 @@ class TestSlideApi(unittest.TestCase):
         """Test case for slide_update_slide_extent_from_layers
 
         Updates the slide's extent by combining the layers' extents.  # noqa: E501
+        """
+        pass
+
+    def test_slide_update_slide_folder(self):
+        """Test case for slide_update_slide_folder
+
+        Updates the slide folder.  # noqa: E501
         """
         pass
 

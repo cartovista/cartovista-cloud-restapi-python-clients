@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **map_symbols** | [**list[MapSymbolFont]**](MapSymbolFont.md) |  | [optional] 
 **background_font** | [**MapSymbolFont**](MapSymbolFont.md) |  | [optional] 
 **categories_font_url** | **str** |  | [optional] 
+**demo_maps_img_base_url** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

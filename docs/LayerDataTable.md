@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **folder_id** | **str** |  | [optional] 
 **layer_id** | **str** |  | [optional] 
 **join_id** | **str** |  | [optional] 
+**is_layer_locked** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -32,6 +32,111 @@ class SlideApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def slide_create_slide_folder(self, body, tenant_url_code, **kwargs):  # noqa: E501
+        """Creates a slide folder.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.slide_create_slide_folder(body, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param SlideFolderCreateParam body: (required)
+        :param str tenant_url_code: (required)
+        :return: SlideFolder
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.slide_create_slide_folder_with_http_info(body, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.slide_create_slide_folder_with_http_info(body, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def slide_create_slide_folder_with_http_info(self, body, tenant_url_code, **kwargs):  # noqa: E501
+        """Creates a slide folder.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.slide_create_slide_folder_with_http_info(body, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param SlideFolderCreateParam body: (required)
+        :param str tenant_url_code: (required)
+        :return: SlideFolder
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method slide_create_slide_folder" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `slide_create_slide_folder`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `slide_create_slide_folder`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/slide-folder', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='SlideFolder',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def slide_delete_slide(self, slide_id, tenant_url_code, **kwargs):  # noqa: E501
         """Deletes the slide.  # noqa: E501
 
@@ -43,7 +148,7 @@ class SlideApi(object):
         :param async_req bool
         :param str slide_id: (required)
         :param str tenant_url_code: (required)
-        :return: list[Slide]
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -65,7 +170,7 @@ class SlideApi(object):
         :param async_req bool
         :param str slide_id: (required)
         :param str tenant_url_code: (required)
-        :return: list[Slide]
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -110,10 +215,6 @@ class SlideApi(object):
         local_var_files = {}
 
         body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
         # Authentication setting
         auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
@@ -125,7 +226,7 @@ class SlideApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Slide]',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -242,6 +343,103 @@ class SlideApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def slide_delete_slide_folder(self, slide_folder_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Deletes the slide folder.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.slide_delete_slide_folder(slide_folder_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str slide_folder_id: (required)
+        :param str tenant_url_code: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.slide_delete_slide_folder_with_http_info(slide_folder_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.slide_delete_slide_folder_with_http_info(slide_folder_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def slide_delete_slide_folder_with_http_info(self, slide_folder_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Deletes the slide folder.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.slide_delete_slide_folder_with_http_info(slide_folder_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str slide_folder_id: (required)
+        :param str tenant_url_code: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['slide_folder_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method slide_delete_slide_folder" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'slide_folder_id' is set
+        if ('slide_folder_id' not in params or
+                params['slide_folder_id'] is None):
+            raise ValueError("Missing the required parameter `slide_folder_id` when calling `slide_delete_slide_folder`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `slide_delete_slide_folder`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'slide_folder_id' in params:
+            path_params['slideFolderId'] = params['slide_folder_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/slide-folder/{slideFolderId}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def slide_get_slide(self, slide_id, tenant_url_code, **kwargs):  # noqa: E501
         """Gets a specific slide.  # noqa: E501
 
@@ -343,47 +541,45 @@ class SlideApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def slide_reorder_slides(self, body, map_id, tenant_url_code, **kwargs):  # noqa: E501
-        """Changes the order of a slide in the slide details view. The order will be the same in the slide ids list.  # noqa: E501
+    def slide_get_slide_folder(self, folder_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets a specific folder.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.slide_reorder_slides(body, map_id, tenant_url_code, async_req=True)
+        >>> thread = api.slide_get_slide_folder(folder_id, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[str] body: (required)
-        :param str map_id: (required)
+        :param str folder_id: (required)
         :param str tenant_url_code: (required)
-        :return: list[Slide]
+        :return: SlideFolder
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.slide_reorder_slides_with_http_info(body, map_id, tenant_url_code, **kwargs)  # noqa: E501
+            return self.slide_get_slide_folder_with_http_info(folder_id, tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.slide_reorder_slides_with_http_info(body, map_id, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.slide_get_slide_folder_with_http_info(folder_id, tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def slide_reorder_slides_with_http_info(self, body, map_id, tenant_url_code, **kwargs):  # noqa: E501
-        """Changes the order of a slide in the slide details view. The order will be the same in the slide ids list.  # noqa: E501
+    def slide_get_slide_folder_with_http_info(self, folder_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets a specific folder.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.slide_reorder_slides_with_http_info(body, map_id, tenant_url_code, async_req=True)
+        >>> thread = api.slide_get_slide_folder_with_http_info(folder_id, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[str] body: (required)
-        :param str map_id: (required)
+        :param str folder_id: (required)
         :param str tenant_url_code: (required)
-        :return: list[Slide]
+        :return: SlideFolder
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'map_id', 'tenant_url_code']  # noqa: E501
+        all_params = ['folder_id', 'tenant_url_code']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -394,28 +590,24 @@ class SlideApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method slide_reorder_slides" % key
+                    " to method slide_get_slide_folder" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `slide_reorder_slides`")  # noqa: E501
-        # verify the required parameter 'map_id' is set
-        if ('map_id' not in params or
-                params['map_id'] is None):
-            raise ValueError("Missing the required parameter `map_id` when calling `slide_reorder_slides`")  # noqa: E501
+        # verify the required parameter 'folder_id' is set
+        if ('folder_id' not in params or
+                params['folder_id'] is None):
+            raise ValueError("Missing the required parameter `folder_id` when calling `slide_get_slide_folder`")  # noqa: E501
         # verify the required parameter 'tenant_url_code' is set
         if ('tenant_url_code' not in params or
                 params['tenant_url_code'] is None):
-            raise ValueError("Missing the required parameter `tenant_url_code` when calling `slide_reorder_slides`")  # noqa: E501
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `slide_get_slide_folder`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'map_id' in params:
-            path_params['mapId'] = params['map_id']  # noqa: E501
+        if 'folder_id' in params:
+            path_params['folderId'] = params['folder_id']  # noqa: E501
         if 'tenant_url_code' in params:
             path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
 
@@ -427,28 +619,147 @@ class SlideApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
-            '/{tenantUrlCode}/api/v2/slides/{mapId}/reorderSlides', 'PUT',
+            '/{tenantUrlCode}/api/v2/slide-folder/{folderId}', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Slide]',  # noqa: E501
+            response_type='SlideFolder',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def slide_move_slide_item(self, item_id, is_item_folder, new_parent_folder, preceding_item_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Moves a slide item to a specified parent folder and position.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.slide_move_slide_item(item_id, is_item_folder, new_parent_folder, preceding_item_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str item_id: (required)
+        :param bool is_item_folder: (required)
+        :param str new_parent_folder: (required)
+        :param str preceding_item_id: (required)
+        :param str tenant_url_code: (required)
+        :return: MoveSlideItemResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.slide_move_slide_item_with_http_info(item_id, is_item_folder, new_parent_folder, preceding_item_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.slide_move_slide_item_with_http_info(item_id, is_item_folder, new_parent_folder, preceding_item_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def slide_move_slide_item_with_http_info(self, item_id, is_item_folder, new_parent_folder, preceding_item_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Moves a slide item to a specified parent folder and position.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.slide_move_slide_item_with_http_info(item_id, is_item_folder, new_parent_folder, preceding_item_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str item_id: (required)
+        :param bool is_item_folder: (required)
+        :param str new_parent_folder: (required)
+        :param str preceding_item_id: (required)
+        :param str tenant_url_code: (required)
+        :return: MoveSlideItemResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['item_id', 'is_item_folder', 'new_parent_folder', 'preceding_item_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method slide_move_slide_item" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'item_id' is set
+        if ('item_id' not in params or
+                params['item_id'] is None):
+            raise ValueError("Missing the required parameter `item_id` when calling `slide_move_slide_item`")  # noqa: E501
+        # verify the required parameter 'is_item_folder' is set
+        if ('is_item_folder' not in params or
+                params['is_item_folder'] is None):
+            raise ValueError("Missing the required parameter `is_item_folder` when calling `slide_move_slide_item`")  # noqa: E501
+        # verify the required parameter 'new_parent_folder' is set
+        if ('new_parent_folder' not in params or
+                params['new_parent_folder'] is None):
+            raise ValueError("Missing the required parameter `new_parent_folder` when calling `slide_move_slide_item`")  # noqa: E501
+        # verify the required parameter 'preceding_item_id' is set
+        if ('preceding_item_id' not in params or
+                params['preceding_item_id'] is None):
+            raise ValueError("Missing the required parameter `preceding_item_id` when calling `slide_move_slide_item`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `slide_move_slide_item`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'item_id' in params:
+            path_params['itemId'] = params['item_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+        if 'is_item_folder' in params:
+            query_params.append(('isItemFolder', params['is_item_folder']))  # noqa: E501
+        if 'new_parent_folder' in params:
+            query_params.append(('newParentFolder', params['new_parent_folder']))  # noqa: E501
+        if 'preceding_item_id' in params:
+            query_params.append(('precedingItemId', params['preceding_item_id']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/slides/{itemId}/move', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='MoveSlideItemResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -788,6 +1099,119 @@ class SlideApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Slide',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def slide_update_slide_folder(self, body, slide_folder_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Updates the slide folder.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.slide_update_slide_folder(body, slide_folder_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param SlideFolderUpdateParam body: (required)
+        :param str slide_folder_id: (required)
+        :param str tenant_url_code: (required)
+        :return: SlideFolder
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.slide_update_slide_folder_with_http_info(body, slide_folder_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.slide_update_slide_folder_with_http_info(body, slide_folder_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def slide_update_slide_folder_with_http_info(self, body, slide_folder_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Updates the slide folder.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.slide_update_slide_folder_with_http_info(body, slide_folder_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param SlideFolderUpdateParam body: (required)
+        :param str slide_folder_id: (required)
+        :param str tenant_url_code: (required)
+        :return: SlideFolder
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'slide_folder_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method slide_update_slide_folder" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `slide_update_slide_folder`")  # noqa: E501
+        # verify the required parameter 'slide_folder_id' is set
+        if ('slide_folder_id' not in params or
+                params['slide_folder_id'] is None):
+            raise ValueError("Missing the required parameter `slide_folder_id` when calling `slide_update_slide_folder`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `slide_update_slide_folder`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'slide_folder_id' in params:
+            path_params['slideFolderId'] = params['slide_folder_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/slide-folder/{slideFolderId}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='SlideFolder',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

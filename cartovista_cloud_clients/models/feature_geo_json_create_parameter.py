@@ -30,35 +30,35 @@ class FeatureGeoJSONCreateParameter(object):
     swagger_types = {
         'data_columns_identifiers': 'list[str]',
         'values': 'list[object]',
-        'proj4': 'str',
         'feature_type': 'FeatureType',
+        'proj4': 'str',
         'geo_json': 'str'
     }
 
     attribute_map = {
         'data_columns_identifiers': 'dataColumnsIdentifiers',
         'values': 'values',
-        'proj4': 'proj4',
         'feature_type': 'featureType',
+        'proj4': 'proj4',
         'geo_json': 'geoJSON'
     }
 
-    def __init__(self, data_columns_identifiers=None, values=None, proj4=None, feature_type=None, geo_json=None):  # noqa: E501
+    def __init__(self, data_columns_identifiers=None, values=None, feature_type=None, proj4=None, geo_json=None):  # noqa: E501
         """FeatureGeoJSONCreateParameter - a model defined in Swagger"""  # noqa: E501
         self._data_columns_identifiers = None
         self._values = None
-        self._proj4 = None
         self._feature_type = None
+        self._proj4 = None
         self._geo_json = None
         self.discriminator = None
         if data_columns_identifiers is not None:
             self.data_columns_identifiers = data_columns_identifiers
         if values is not None:
             self.values = values
-        if proj4 is not None:
-            self.proj4 = proj4
         if feature_type is not None:
             self.feature_type = feature_type
+        if proj4 is not None:
+            self.proj4 = proj4
         if geo_json is not None:
             self.geo_json = geo_json
 
@@ -105,27 +105,6 @@ class FeatureGeoJSONCreateParameter(object):
         self._values = values
 
     @property
-    def proj4(self):
-        """Gets the proj4 of this FeatureGeoJSONCreateParameter.  # noqa: E501
-
-
-        :return: The proj4 of this FeatureGeoJSONCreateParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._proj4
-
-    @proj4.setter
-    def proj4(self, proj4):
-        """Sets the proj4 of this FeatureGeoJSONCreateParameter.
-
-
-        :param proj4: The proj4 of this FeatureGeoJSONCreateParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._proj4 = proj4
-
-    @property
     def feature_type(self):
         """Gets the feature_type of this FeatureGeoJSONCreateParameter.  # noqa: E501
 
@@ -145,6 +124,27 @@ class FeatureGeoJSONCreateParameter(object):
         """
 
         self._feature_type = feature_type
+
+    @property
+    def proj4(self):
+        """Gets the proj4 of this FeatureGeoJSONCreateParameter.  # noqa: E501
+
+
+        :return: The proj4 of this FeatureGeoJSONCreateParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._proj4
+
+    @proj4.setter
+    def proj4(self, proj4):
+        """Sets the proj4 of this FeatureGeoJSONCreateParameter.
+
+
+        :param proj4: The proj4 of this FeatureGeoJSONCreateParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._proj4 = proj4
 
     @property
     def geo_json(self):

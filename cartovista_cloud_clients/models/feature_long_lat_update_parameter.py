@@ -28,55 +28,34 @@ class FeatureLongLatUpdateParameter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'proj4': 'str',
         'feature_type': 'FeatureType',
+        'proj4': 'str',
         'longitude': 'float',
         'latitude': 'float'
     }
 
     attribute_map = {
-        'proj4': 'proj4',
         'feature_type': 'featureType',
+        'proj4': 'proj4',
         'longitude': 'longitude',
         'latitude': 'latitude'
     }
 
-    def __init__(self, proj4=None, feature_type=None, longitude=None, latitude=None):  # noqa: E501
+    def __init__(self, feature_type=None, proj4=None, longitude=None, latitude=None):  # noqa: E501
         """FeatureLongLatUpdateParameter - a model defined in Swagger"""  # noqa: E501
-        self._proj4 = None
         self._feature_type = None
+        self._proj4 = None
         self._longitude = None
         self._latitude = None
         self.discriminator = None
-        if proj4 is not None:
-            self.proj4 = proj4
         if feature_type is not None:
             self.feature_type = feature_type
+        if proj4 is not None:
+            self.proj4 = proj4
         if longitude is not None:
             self.longitude = longitude
         if latitude is not None:
             self.latitude = latitude
-
-    @property
-    def proj4(self):
-        """Gets the proj4 of this FeatureLongLatUpdateParameter.  # noqa: E501
-
-
-        :return: The proj4 of this FeatureLongLatUpdateParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._proj4
-
-    @proj4.setter
-    def proj4(self, proj4):
-        """Sets the proj4 of this FeatureLongLatUpdateParameter.
-
-
-        :param proj4: The proj4 of this FeatureLongLatUpdateParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._proj4 = proj4
 
     @property
     def feature_type(self):
@@ -98,6 +77,27 @@ class FeatureLongLatUpdateParameter(object):
         """
 
         self._feature_type = feature_type
+
+    @property
+    def proj4(self):
+        """Gets the proj4 of this FeatureLongLatUpdateParameter.  # noqa: E501
+
+
+        :return: The proj4 of this FeatureLongLatUpdateParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._proj4
+
+    @proj4.setter
+    def proj4(self, proj4):
+        """Sets the proj4 of this FeatureLongLatUpdateParameter.
+
+
+        :param proj4: The proj4 of this FeatureLongLatUpdateParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._proj4 = proj4
 
     @property
     def longitude(self):

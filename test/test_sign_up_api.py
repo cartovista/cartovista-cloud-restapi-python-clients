@@ -35,6 +35,13 @@ class TestSignUpApi(unittest.TestCase):
         """
         pass
 
+    def test_sign_up_get_all_demo_maps(self):
+        """Test case for sign_up_get_all_demo_maps
+
+        Get the basic info of all demo maps available.  # noqa: E501
+        """
+        pass
+
     def test_sign_up_sign_up(self):
         """Test case for sign_up_sign_up
 

@@ -94,6 +94,12 @@ class TestFileApi(unittest.TestCase):
         """
         pass
 
+    def test_file_get_temporary_analysis_heatmap(self):
+        """Test case for file_get_temporary_analysis_heatmap
+
+        """
+        pass
+
     def test_file_get_tile(self):
         """Test case for file_get_tile
 

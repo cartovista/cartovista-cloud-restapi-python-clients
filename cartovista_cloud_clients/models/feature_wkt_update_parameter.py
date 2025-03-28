@@ -28,50 +28,29 @@ class FeatureWKTUpdateParameter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'proj4': 'str',
         'feature_type': 'FeatureType',
+        'proj4': 'str',
         'wkt': 'str'
     }
 
     attribute_map = {
-        'proj4': 'proj4',
         'feature_type': 'featureType',
+        'proj4': 'proj4',
         'wkt': 'wkt'
     }
 
-    def __init__(self, proj4=None, feature_type=None, wkt=None):  # noqa: E501
+    def __init__(self, feature_type=None, proj4=None, wkt=None):  # noqa: E501
         """FeatureWKTUpdateParameter - a model defined in Swagger"""  # noqa: E501
-        self._proj4 = None
         self._feature_type = None
+        self._proj4 = None
         self._wkt = None
         self.discriminator = None
-        if proj4 is not None:
-            self.proj4 = proj4
         if feature_type is not None:
             self.feature_type = feature_type
+        if proj4 is not None:
+            self.proj4 = proj4
         if wkt is not None:
             self.wkt = wkt
-
-    @property
-    def proj4(self):
-        """Gets the proj4 of this FeatureWKTUpdateParameter.  # noqa: E501
-
-
-        :return: The proj4 of this FeatureWKTUpdateParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._proj4
-
-    @proj4.setter
-    def proj4(self, proj4):
-        """Sets the proj4 of this FeatureWKTUpdateParameter.
-
-
-        :param proj4: The proj4 of this FeatureWKTUpdateParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._proj4 = proj4
 
     @property
     def feature_type(self):
@@ -93,6 +72,27 @@ class FeatureWKTUpdateParameter(object):
         """
 
         self._feature_type = feature_type
+
+    @property
+    def proj4(self):
+        """Gets the proj4 of this FeatureWKTUpdateParameter.  # noqa: E501
+
+
+        :return: The proj4 of this FeatureWKTUpdateParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._proj4
+
+    @proj4.setter
+    def proj4(self, proj4):
+        """Sets the proj4 of this FeatureWKTUpdateParameter.
+
+
+        :param proj4: The proj4 of this FeatureWKTUpdateParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._proj4 = proj4
 
     @property
     def wkt(self):

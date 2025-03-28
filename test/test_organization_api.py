@@ -77,6 +77,13 @@ class TestOrganizationApi(unittest.TestCase):
         """
         pass
 
+    def test_organization_update_organization_icon(self):
+        """Test case for organization_update_organization_icon
+
+        Updates the icon used in the organization's map view.  # noqa: E501
+        """
+        pass
+
     def test_organization_update_organization_logo(self):
         """Test case for organization_update_organization_logo
 

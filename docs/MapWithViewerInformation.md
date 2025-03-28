@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **map** | [**Map**](Map.md) |  | [optional] 
-**slides** | [**list[Slide]**](Slide.md) |  | [optional] 
+**slide_items** | [**SlideItems**](SlideItems.md) |  | [optional] 
 **toolbar** | [**MapToolbar**](MapToolbar.md) |  | [optional] 
 **advanced_settings** | [**MapAdvancedSettings**](MapAdvancedSettings.md) |  | [optional] 
 **layers** | [**list[Layer]**](Layer.md) |  | [optional] 

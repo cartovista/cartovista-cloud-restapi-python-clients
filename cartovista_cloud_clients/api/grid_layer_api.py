@@ -146,7 +146,7 @@ class GridLayerApi(object):
             collection_formats=collection_formats)
 
     def grid_layer_add_grid_sources(self, grid_layer_id, tenant_url_code, **kwargs):  # noqa: E501
-        """Add all the bands from a tif file to an existing grid layer.  # noqa: E501
+        """Add all the bands from a tif file to an existing grid layer as distinct grid sources. If the grid layer is an RGB layer and the file has the required bands, a single RGB grid source will be added instead.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -169,7 +169,7 @@ class GridLayerApi(object):
             return data
 
     def grid_layer_add_grid_sources_with_http_info(self, grid_layer_id, tenant_url_code, **kwargs):  # noqa: E501
-        """Add all the bands from a tif file to an existing grid layer.  # noqa: E501
+        """Add all the bands from a tif file to an existing grid layer as distinct grid sources. If the grid layer is an RGB layer and the file has the required bands, a single RGB grid source will be added instead.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True

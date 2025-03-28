@@ -47,8 +47,6 @@ class Layer(object):
         'thumbnail_url': 'str',
         'thumbnail_url_expiry': 'datetime',
         'icon': 'str',
-        'cluster_status': 'ClusterStatusEnum',
-        'is_clusterable': 'bool',
         'vector_tiling': 'bool',
         'vector_tiling_forced': 'bool',
         'vector_quality_type': 'VectorQualityTypeEnum',
@@ -58,6 +56,9 @@ class Layer(object):
         'is_demo_source': 'bool',
         'is_heatmap_source': 'bool',
         'optimization_status': 'ClickHouseStatus',
+        'quad_tree_status': 'QuadTreeStatus',
+        'cluster_status': 'ClusterStatusEnum',
+        'is_clusterable': 'bool',
         'is_view': 'bool',
         'is_external': 'bool',
         'is_live': 'bool',
@@ -87,8 +88,6 @@ class Layer(object):
         'thumbnail_url': 'thumbnailUrl',
         'thumbnail_url_expiry': 'thumbnailUrlExpiry',
         'icon': 'icon',
-        'cluster_status': 'clusterStatus',
-        'is_clusterable': 'isClusterable',
         'vector_tiling': 'vectorTiling',
         'vector_tiling_forced': 'vectorTilingForced',
         'vector_quality_type': 'vectorQualityType',
@@ -98,6 +97,9 @@ class Layer(object):
         'is_demo_source': 'isDemoSource',
         'is_heatmap_source': 'isHeatmapSource',
         'optimization_status': 'optimizationStatus',
+        'quad_tree_status': 'quadTreeStatus',
+        'cluster_status': 'clusterStatus',
+        'is_clusterable': 'isClusterable',
         'is_view': 'isView',
         'is_external': 'isExternal',
         'is_live': 'isLive',
@@ -107,7 +109,7 @@ class Layer(object):
         'folder_id': 'folderId'
     }
 
-    def __init__(self, unique_identifier=None, name=None, creation_time=None, modified_time=None, data_table_unique_identifier=None, description=None, geometry_type=None, metadata=None, owner_name=None, proj4=None, row_count=None, data_usage=None, system_identifier=None, unique_id_data_column=None, precision=None, public_access=None, thumbnail_url=None, thumbnail_url_expiry=None, icon=None, cluster_status=None, is_clusterable=None, vector_tiling=None, vector_tiling_forced=None, vector_quality_type=None, can_edit=None, related_maps=None, is_locked=None, is_demo_source=None, is_heatmap_source=None, optimization_status=None, is_view=None, is_external=None, is_live=None, is_spatial_file=None, external_service_live_feed=None, external_service_type=None, folder_id=None):  # noqa: E501
+    def __init__(self, unique_identifier=None, name=None, creation_time=None, modified_time=None, data_table_unique_identifier=None, description=None, geometry_type=None, metadata=None, owner_name=None, proj4=None, row_count=None, data_usage=None, system_identifier=None, unique_id_data_column=None, precision=None, public_access=None, thumbnail_url=None, thumbnail_url_expiry=None, icon=None, vector_tiling=None, vector_tiling_forced=None, vector_quality_type=None, can_edit=None, related_maps=None, is_locked=None, is_demo_source=None, is_heatmap_source=None, optimization_status=None, quad_tree_status=None, cluster_status=None, is_clusterable=None, is_view=None, is_external=None, is_live=None, is_spatial_file=None, external_service_live_feed=None, external_service_type=None, folder_id=None):  # noqa: E501
         """Layer - a model defined in Swagger"""  # noqa: E501
         self._unique_identifier = None
         self._name = None
@@ -128,8 +130,6 @@ class Layer(object):
         self._thumbnail_url = None
         self._thumbnail_url_expiry = None
         self._icon = None
-        self._cluster_status = None
-        self._is_clusterable = None
         self._vector_tiling = None
         self._vector_tiling_forced = None
         self._vector_quality_type = None
@@ -139,6 +139,9 @@ class Layer(object):
         self._is_demo_source = None
         self._is_heatmap_source = None
         self._optimization_status = None
+        self._quad_tree_status = None
+        self._cluster_status = None
+        self._is_clusterable = None
         self._is_view = None
         self._is_external = None
         self._is_live = None
@@ -185,10 +188,6 @@ class Layer(object):
             self.thumbnail_url_expiry = thumbnail_url_expiry
         if icon is not None:
             self.icon = icon
-        if cluster_status is not None:
-            self.cluster_status = cluster_status
-        if is_clusterable is not None:
-            self.is_clusterable = is_clusterable
         if vector_tiling is not None:
             self.vector_tiling = vector_tiling
         if vector_tiling_forced is not None:
@@ -207,6 +206,12 @@ class Layer(object):
             self.is_heatmap_source = is_heatmap_source
         if optimization_status is not None:
             self.optimization_status = optimization_status
+        if quad_tree_status is not None:
+            self.quad_tree_status = quad_tree_status
+        if cluster_status is not None:
+            self.cluster_status = cluster_status
+        if is_clusterable is not None:
+            self.is_clusterable = is_clusterable
         if is_view is not None:
             self.is_view = is_view
         if is_external is not None:
@@ -622,48 +627,6 @@ class Layer(object):
         self._icon = icon
 
     @property
-    def cluster_status(self):
-        """Gets the cluster_status of this Layer.  # noqa: E501
-
-
-        :return: The cluster_status of this Layer.  # noqa: E501
-        :rtype: ClusterStatusEnum
-        """
-        return self._cluster_status
-
-    @cluster_status.setter
-    def cluster_status(self, cluster_status):
-        """Sets the cluster_status of this Layer.
-
-
-        :param cluster_status: The cluster_status of this Layer.  # noqa: E501
-        :type: ClusterStatusEnum
-        """
-
-        self._cluster_status = cluster_status
-
-    @property
-    def is_clusterable(self):
-        """Gets the is_clusterable of this Layer.  # noqa: E501
-
-
-        :return: The is_clusterable of this Layer.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_clusterable
-
-    @is_clusterable.setter
-    def is_clusterable(self, is_clusterable):
-        """Sets the is_clusterable of this Layer.
-
-
-        :param is_clusterable: The is_clusterable of this Layer.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_clusterable = is_clusterable
-
-    @property
     def vector_tiling(self):
         """Gets the vector_tiling of this Layer.  # noqa: E501
 
@@ -851,6 +814,69 @@ class Layer(object):
         """
 
         self._optimization_status = optimization_status
+
+    @property
+    def quad_tree_status(self):
+        """Gets the quad_tree_status of this Layer.  # noqa: E501
+
+
+        :return: The quad_tree_status of this Layer.  # noqa: E501
+        :rtype: QuadTreeStatus
+        """
+        return self._quad_tree_status
+
+    @quad_tree_status.setter
+    def quad_tree_status(self, quad_tree_status):
+        """Sets the quad_tree_status of this Layer.
+
+
+        :param quad_tree_status: The quad_tree_status of this Layer.  # noqa: E501
+        :type: QuadTreeStatus
+        """
+
+        self._quad_tree_status = quad_tree_status
+
+    @property
+    def cluster_status(self):
+        """Gets the cluster_status of this Layer.  # noqa: E501
+
+
+        :return: The cluster_status of this Layer.  # noqa: E501
+        :rtype: ClusterStatusEnum
+        """
+        return self._cluster_status
+
+    @cluster_status.setter
+    def cluster_status(self, cluster_status):
+        """Sets the cluster_status of this Layer.
+
+
+        :param cluster_status: The cluster_status of this Layer.  # noqa: E501
+        :type: ClusterStatusEnum
+        """
+
+        self._cluster_status = cluster_status
+
+    @property
+    def is_clusterable(self):
+        """Gets the is_clusterable of this Layer.  # noqa: E501
+
+
+        :return: The is_clusterable of this Layer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_clusterable
+
+    @is_clusterable.setter
+    def is_clusterable(self, is_clusterable):
+        """Sets the is_clusterable of this Layer.
+
+
+        :param is_clusterable: The is_clusterable of this Layer.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_clusterable = is_clusterable
 
     @property
     def is_view(self):

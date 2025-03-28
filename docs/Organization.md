@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **primary_color** | **str** |  | [optional] 
 **default_theme** | [**ThemeEnum**](ThemeEnum.md) |  | [optional] 
 **logo_url** | **str** |  | [optional] 
+**logo_icon_url** | **str** |  | [optional] 
 **is_enterprise** | **bool** |  | [optional] 
 **url_code** | **str** |  | [optional] 
 **open_id_providers** | [**list[OpenIdProviderInformation]**](OpenIdProviderInformation.md) |  | [optional] 

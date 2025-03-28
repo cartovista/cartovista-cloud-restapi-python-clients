@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import cartovista_cloud_clients
-from cartovista_cloud_clients.models.poi_analysis_scenario_and_year import PoiAnalysisScenarioAndYear  # noqa: E501
+from cartovista_cloud_clients.models.one_of_get_feature_ids_by_stack_parameters_spatial_filter import OneOfGetFeatureIdsByStackParametersSpatialFilter  # noqa: E501
 from cartovista_cloud_clients.rest import ApiException
 
 
-class TestPoiAnalysisScenarioAndYear(unittest.TestCase):
-    """PoiAnalysisScenarioAndYear unit test stubs"""
+class TestOneOfGetFeatureIdsByStackParametersSpatialFilter(unittest.TestCase):
+    """OneOfGetFeatureIdsByStackParametersSpatialFilter unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestPoiAnalysisScenarioAndYear(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPoiAnalysisScenarioAndYear(self):
-        """Test PoiAnalysisScenarioAndYear"""
+    def testOneOfGetFeatureIdsByStackParametersSpatialFilter(self):
+        """Test OneOfGetFeatureIdsByStackParametersSpatialFilter"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = cartovista_cloud_clients.models.poi_analysis_scenario_and_year.PoiAnalysisScenarioAndYear()  # noqa: E501
+        # model = cartovista_cloud_clients.models.one_of_get_feature_ids_by_stack_parameters_spatial_filter.OneOfGetFeatureIdsByStackParametersSpatialFilter()  # noqa: E501
         pass
 
 

@@ -35,7 +35,8 @@ class PortalConfiguration(object):
         'feature_flags': 'dict(str, bool)',
         'map_symbols': 'list[MapSymbolFont]',
         'background_font': 'MapSymbolFont',
-        'categories_font_url': 'str'
+        'categories_font_url': 'str',
+        'demo_maps_img_base_url': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class PortalConfiguration(object):
         'feature_flags': 'featureFlags',
         'map_symbols': 'mapSymbols',
         'background_font': 'backgroundFont',
-        'categories_font_url': 'categoriesFontUrl'
+        'categories_font_url': 'categoriesFontUrl',
+        'demo_maps_img_base_url': 'demoMapsImgBaseUrl'
     }
 
-    def __init__(self, userflow_token=None, rechaptcha_site_key=None, facebook_app_id=None, google_client_id=None, feature_flags=None, map_symbols=None, background_font=None, categories_font_url=None):  # noqa: E501
+    def __init__(self, userflow_token=None, rechaptcha_site_key=None, facebook_app_id=None, google_client_id=None, feature_flags=None, map_symbols=None, background_font=None, categories_font_url=None, demo_maps_img_base_url=None):  # noqa: E501
         """PortalConfiguration - a model defined in Swagger"""  # noqa: E501
         self._userflow_token = None
         self._rechaptcha_site_key = None
@@ -59,6 +61,7 @@ class PortalConfiguration(object):
         self._map_symbols = None
         self._background_font = None
         self._categories_font_url = None
+        self._demo_maps_img_base_url = None
         self.discriminator = None
         if userflow_token is not None:
             self.userflow_token = userflow_token
@@ -76,6 +79,8 @@ class PortalConfiguration(object):
             self.background_font = background_font
         if categories_font_url is not None:
             self.categories_font_url = categories_font_url
+        if demo_maps_img_base_url is not None:
+            self.demo_maps_img_base_url = demo_maps_img_base_url
 
     @property
     def userflow_token(self):
@@ -244,6 +249,27 @@ class PortalConfiguration(object):
         """
 
         self._categories_font_url = categories_font_url
+
+    @property
+    def demo_maps_img_base_url(self):
+        """Gets the demo_maps_img_base_url of this PortalConfiguration.  # noqa: E501
+
+
+        :return: The demo_maps_img_base_url of this PortalConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._demo_maps_img_base_url
+
+    @demo_maps_img_base_url.setter
+    def demo_maps_img_base_url(self, demo_maps_img_base_url):
+        """Sets the demo_maps_img_base_url of this PortalConfiguration.
+
+
+        :param demo_maps_img_base_url: The demo_maps_img_base_url of this PortalConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._demo_maps_img_base_url = demo_maps_img_base_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

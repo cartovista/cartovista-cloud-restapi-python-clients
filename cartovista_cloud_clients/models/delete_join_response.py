@@ -31,6 +31,7 @@ class DeleteJoinResponse(object):
         'join_id': 'str',
         'object_id': 'str',
         'object_type': 'DataElementType',
+        'is_poi_join': 'bool',
         'did_delete': 'bool',
         'used_in_maps': 'list[SimpleMap]'
     }
@@ -39,15 +40,17 @@ class DeleteJoinResponse(object):
         'join_id': 'joinId',
         'object_id': 'objectId',
         'object_type': 'objectType',
+        'is_poi_join': 'isPoiJoin',
         'did_delete': 'didDelete',
         'used_in_maps': 'usedInMaps'
     }
 
-    def __init__(self, join_id=None, object_id=None, object_type=None, did_delete=None, used_in_maps=None):  # noqa: E501
+    def __init__(self, join_id=None, object_id=None, object_type=None, is_poi_join=None, did_delete=None, used_in_maps=None):  # noqa: E501
         """DeleteJoinResponse - a model defined in Swagger"""  # noqa: E501
         self._join_id = None
         self._object_id = None
         self._object_type = None
+        self._is_poi_join = None
         self._did_delete = None
         self._used_in_maps = None
         self.discriminator = None
@@ -57,6 +60,8 @@ class DeleteJoinResponse(object):
             self.object_id = object_id
         if object_type is not None:
             self.object_type = object_type
+        if is_poi_join is not None:
+            self.is_poi_join = is_poi_join
         if did_delete is not None:
             self.did_delete = did_delete
         if used_in_maps is not None:
@@ -124,6 +129,27 @@ class DeleteJoinResponse(object):
         """
 
         self._object_type = object_type
+
+    @property
+    def is_poi_join(self):
+        """Gets the is_poi_join of this DeleteJoinResponse.  # noqa: E501
+
+
+        :return: The is_poi_join of this DeleteJoinResponse.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_poi_join
+
+    @is_poi_join.setter
+    def is_poi_join(self, is_poi_join):
+        """Sets the is_poi_join of this DeleteJoinResponse.
+
+
+        :param is_poi_join: The is_poi_join of this DeleteJoinResponse.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_poi_join = is_poi_join
 
     @property
     def did_delete(self):

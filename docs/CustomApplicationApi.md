@@ -4,12 +4,14 @@ All URIs are relative to *https://cloud.cartovista.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**custom_application_get_custom_application_settings**](CustomApplicationApi.md#custom_application_get_custom_application_settings) | **GET** /{tenantUrlCode}/api/v2/map/{mapId}/custom-application/{urlCode}/settings | 
-[**custom_application_toggle_custom_application**](CustomApplicationApi.md#custom_application_toggle_custom_application) | **PATCH** /{tenantUrlCode}/api/v2/map/{mapId}/custom-application/{urlCode}/toggle | 
-[**custom_application_update_custom_application_settings**](CustomApplicationApi.md#custom_application_update_custom_application_settings) | **PATCH** /{tenantUrlCode}/api/v2/map/{mapId}/custom-application/{urlCode}/settings | 
+[**custom_application_get_custom_application_map_settings**](CustomApplicationApi.md#custom_application_get_custom_application_map_settings) | **GET** /{tenantUrlCode}/api/v2/custom-application/{urlCode}/map/{mapId}/settings | 
+[**custom_application_get_custom_application_settings**](CustomApplicationApi.md#custom_application_get_custom_application_settings) | **GET** /{tenantUrlCode}/api/v2/custom-application/{urlCode}/settings | 
+[**custom_application_toggle_custom_application**](CustomApplicationApi.md#custom_application_toggle_custom_application) | **PATCH** /{tenantUrlCode}/api/v2/custom-application/{urlCode}/map/{mapId}/toggle | 
+[**custom_application_update_custom_application_map_settings**](CustomApplicationApi.md#custom_application_update_custom_application_map_settings) | **PATCH** /{tenantUrlCode}/api/v2/custom-application/{urlCode}/map/{mapId}/settings | 
+[**custom_application_update_custom_application_settings**](CustomApplicationApi.md#custom_application_update_custom_application_settings) | **PATCH** /{tenantUrlCode}/api/v2/custom-application/{urlCode}/settings | 
 
-# **custom_application_get_custom_application_settings**
-> object custom_application_get_custom_application_settings(map_id, url_code, tenant_url_code)
+# **custom_application_get_custom_application_map_settings**
+> object custom_application_get_custom_application_map_settings(map_id, url_code, tenant_url_code)
 
 
 
@@ -27,7 +29,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -39,7 +40,65 @@ url_code = 'url_code_example' # str |
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
-    api_response = api_instance.custom_application_get_custom_application_settings(map_id, url_code, tenant_url_code)
+    api_response = api_instance.custom_application_get_custom_application_map_settings(map_id, url_code, tenant_url_code)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CustomApplicationApi->custom_application_get_custom_application_map_settings: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **map_id** | **str**|  | 
+ **url_code** | **str**|  | 
+ **tenant_url_code** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **custom_application_get_custom_application_settings**
+> object custom_application_get_custom_application_settings(url_code, tenant_url_code)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cartovista_cloud_clients
+from cartovista_cloud_clients.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cartovista_cloud_clients.CustomApplicationApi(cartovista_cloud_clients.ApiClient(configuration))
+url_code = 'url_code_example' # str | 
+tenant_url_code = 'tenant_url_code_example' # str | 
+
+try:
+    api_response = api_instance.custom_application_get_custom_application_settings(url_code, tenant_url_code)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CustomApplicationApi->custom_application_get_custom_application_settings: %s\n" % e)
@@ -49,7 +108,6 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **map_id** | **str**|  | 
  **url_code** | **str**|  | 
  **tenant_url_code** | **str**|  | 
 
@@ -87,7 +145,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -130,8 +187,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **custom_application_update_custom_application_settings**
-> object custom_application_update_custom_application_settings(body, map_id, url_code, tenant_url_code)
+# **custom_application_update_custom_application_map_settings**
+> object custom_application_update_custom_application_map_settings(body, map_id, url_code, tenant_url_code)
 
 
 
@@ -149,7 +206,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -162,10 +218,10 @@ url_code = 'url_code_example' # str |
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
-    api_response = api_instance.custom_application_update_custom_application_settings(body, map_id, url_code, tenant_url_code)
+    api_response = api_instance.custom_application_update_custom_application_map_settings(body, map_id, url_code, tenant_url_code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CustomApplicationApi->custom_application_update_custom_application_settings: %s\n" % e)
+    print("Exception when calling CustomApplicationApi->custom_application_update_custom_application_map_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -192,4 +248,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **custom_application_update_custom_application_settings**
+> object custom_application_update_custom_application_settings(body, url_code, tenant_url_code)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cartovista_cloud_clients
+from cartovista_cloud_clients.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cartovista_cloud_clients.CustomApplicationApi(cartovista_cloud_clients.ApiClient(configuration))
+body = NULL # object | 
+url_code = 'url_code_example' # str | 
+tenant_url_code = 'tenant_url_code_example' # str | 
+
+try:
+    api_response = api_instance.custom_application_update_custom_application_settings(body, url_code, tenant_url_code)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CustomApplicationApi->custom_application_update_custom_application_settings: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**object**](object.md)|  | 
+ **url_code** | **str**|  | 
+ **tenant_url_code** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

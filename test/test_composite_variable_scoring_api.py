@@ -28,10 +28,10 @@ class TestCompositeVariableScoringApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_composite_variable_scoring_can_modify_analyses(self):
-        """Test case for composite_variable_scoring_can_modify_analyses
+    def test_composite_variable_scoring_can_create_analysis(self):
+        """Test case for composite_variable_scoring_can_create_analysis
 
-        Checks whether or not the current user can modify the analyses of the given map.  # noqa: E501
+        Whether or not a user can create analysis on a map  # noqa: E501
         """
         pass
 

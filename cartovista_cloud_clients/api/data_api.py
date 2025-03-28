@@ -346,6 +346,7 @@ class DataApi(object):
     def data_get_data_elements(self, body, tenant_url_code, **kwargs):  # noqa: E501
         """Gets all the layers, tables and folders the user has access to in a specific folder. If the folder id is omitted, the root folder is used.  # noqa: E501
 
+        This request gets all the layers, tables and folders. Users must use this request in order to retrieve the folder id and use it for the \"folder\" request. Setting `folderId` to null returns the root folder with its id. From there you can go to the Folder section and execute requests using this id.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.data_get_data_elements(body, tenant_url_code, async_req=True)
@@ -368,6 +369,7 @@ class DataApi(object):
     def data_get_data_elements_with_http_info(self, body, tenant_url_code, **kwargs):  # noqa: E501
         """Gets all the layers, tables and folders the user has access to in a specific folder. If the folder id is omitted, the root folder is used.  # noqa: E501
 
+        This request gets all the layers, tables and folders. Users must use this request in order to retrieve the folder id and use it for the \"folder\" request. Setting `folderId` to null returns the root folder with its id. From there you can go to the Folder section and execute requests using this id.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.data_get_data_elements_with_http_info(body, tenant_url_code, async_req=True)

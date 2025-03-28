@@ -29,63 +29,63 @@ class CreatePoiAnalysisParameter(object):
     """
     swagger_types = {
         'name': 'str',
-        'analysis_layer_name': 'str',
-        'results_table_name': 'str',
         'heatmap_layer_name': 'str',
         'layer_id': 'str',
         'table_id': 'str',
-        'kv_levels': 'list[float]',
         'footprint_layer_id': 'str',
         'transmission_lines_layer_id': 'str',
-        'transmission_points_layer_id': 'str'
+        'transmission_points_layer_id': 'str',
+        'power': 'float',
+        'smoothing': 'float',
+        'pixel_size': 'int'
     }
 
     attribute_map = {
         'name': 'name',
-        'analysis_layer_name': 'analysisLayerName',
-        'results_table_name': 'resultsTableName',
         'heatmap_layer_name': 'heatmapLayerName',
         'layer_id': 'layerId',
         'table_id': 'tableId',
-        'kv_levels': 'kvLevels',
         'footprint_layer_id': 'footprintLayerId',
         'transmission_lines_layer_id': 'transmissionLinesLayerId',
-        'transmission_points_layer_id': 'transmissionPointsLayerId'
+        'transmission_points_layer_id': 'transmissionPointsLayerId',
+        'power': 'power',
+        'smoothing': 'smoothing',
+        'pixel_size': 'pixelSize'
     }
 
-    def __init__(self, name=None, analysis_layer_name=None, results_table_name=None, heatmap_layer_name=None, layer_id=None, table_id=None, kv_levels=None, footprint_layer_id=None, transmission_lines_layer_id=None, transmission_points_layer_id=None):  # noqa: E501
+    def __init__(self, name=None, heatmap_layer_name=None, layer_id=None, table_id=None, footprint_layer_id=None, transmission_lines_layer_id=None, transmission_points_layer_id=None, power=None, smoothing=None, pixel_size=None):  # noqa: E501
         """CreatePoiAnalysisParameter - a model defined in Swagger"""  # noqa: E501
         self._name = None
-        self._analysis_layer_name = None
-        self._results_table_name = None
         self._heatmap_layer_name = None
         self._layer_id = None
         self._table_id = None
-        self._kv_levels = None
         self._footprint_layer_id = None
         self._transmission_lines_layer_id = None
         self._transmission_points_layer_id = None
+        self._power = None
+        self._smoothing = None
+        self._pixel_size = None
         self.discriminator = None
         if name is not None:
             self.name = name
-        if analysis_layer_name is not None:
-            self.analysis_layer_name = analysis_layer_name
-        if results_table_name is not None:
-            self.results_table_name = results_table_name
         if heatmap_layer_name is not None:
             self.heatmap_layer_name = heatmap_layer_name
         if layer_id is not None:
             self.layer_id = layer_id
         if table_id is not None:
             self.table_id = table_id
-        if kv_levels is not None:
-            self.kv_levels = kv_levels
         if footprint_layer_id is not None:
             self.footprint_layer_id = footprint_layer_id
         if transmission_lines_layer_id is not None:
             self.transmission_lines_layer_id = transmission_lines_layer_id
         if transmission_points_layer_id is not None:
             self.transmission_points_layer_id = transmission_points_layer_id
+        if power is not None:
+            self.power = power
+        if smoothing is not None:
+            self.smoothing = smoothing
+        if pixel_size is not None:
+            self.pixel_size = pixel_size
 
     @property
     def name(self):
@@ -107,48 +107,6 @@ class CreatePoiAnalysisParameter(object):
         """
 
         self._name = name
-
-    @property
-    def analysis_layer_name(self):
-        """Gets the analysis_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
-
-
-        :return: The analysis_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._analysis_layer_name
-
-    @analysis_layer_name.setter
-    def analysis_layer_name(self, analysis_layer_name):
-        """Sets the analysis_layer_name of this CreatePoiAnalysisParameter.
-
-
-        :param analysis_layer_name: The analysis_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._analysis_layer_name = analysis_layer_name
-
-    @property
-    def results_table_name(self):
-        """Gets the results_table_name of this CreatePoiAnalysisParameter.  # noqa: E501
-
-
-        :return: The results_table_name of this CreatePoiAnalysisParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._results_table_name
-
-    @results_table_name.setter
-    def results_table_name(self, results_table_name):
-        """Sets the results_table_name of this CreatePoiAnalysisParameter.
-
-
-        :param results_table_name: The results_table_name of this CreatePoiAnalysisParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._results_table_name = results_table_name
 
     @property
     def heatmap_layer_name(self):
@@ -214,27 +172,6 @@ class CreatePoiAnalysisParameter(object):
         self._table_id = table_id
 
     @property
-    def kv_levels(self):
-        """Gets the kv_levels of this CreatePoiAnalysisParameter.  # noqa: E501
-
-
-        :return: The kv_levels of this CreatePoiAnalysisParameter.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._kv_levels
-
-    @kv_levels.setter
-    def kv_levels(self, kv_levels):
-        """Sets the kv_levels of this CreatePoiAnalysisParameter.
-
-
-        :param kv_levels: The kv_levels of this CreatePoiAnalysisParameter.  # noqa: E501
-        :type: list[float]
-        """
-
-        self._kv_levels = kv_levels
-
-    @property
     def footprint_layer_id(self):
         """Gets the footprint_layer_id of this CreatePoiAnalysisParameter.  # noqa: E501
 
@@ -296,6 +233,69 @@ class CreatePoiAnalysisParameter(object):
         """
 
         self._transmission_points_layer_id = transmission_points_layer_id
+
+    @property
+    def power(self):
+        """Gets the power of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The power of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: float
+        """
+        return self._power
+
+    @power.setter
+    def power(self, power):
+        """Sets the power of this CreatePoiAnalysisParameter.
+
+
+        :param power: The power of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: float
+        """
+
+        self._power = power
+
+    @property
+    def smoothing(self):
+        """Gets the smoothing of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The smoothing of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: float
+        """
+        return self._smoothing
+
+    @smoothing.setter
+    def smoothing(self, smoothing):
+        """Sets the smoothing of this CreatePoiAnalysisParameter.
+
+
+        :param smoothing: The smoothing of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: float
+        """
+
+        self._smoothing = smoothing
+
+    @property
+    def pixel_size(self):
+        """Gets the pixel_size of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The pixel_size of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: int
+        """
+        return self._pixel_size
+
+    @pixel_size.setter
+    def pixel_size(self, pixel_size):
+        """Sets the pixel_size of this CreatePoiAnalysisParameter.
+
+
+        :param pixel_size: The pixel_size of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: int
+        """
+
+        self._pixel_size = pixel_size
 
     def to_dict(self):
         """Returns the model properties as a dict"""

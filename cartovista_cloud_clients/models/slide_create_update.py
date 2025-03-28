@@ -37,7 +37,8 @@ class SlideCreateUpdate(object):
         'displayed_data_columns_by_layer': 'dict(str, SlideColumns)',
         'layout': 'OneOfSlideCreateUpdateLayout',
         'story': 'str',
-        'order': 'int',
+        'position': 'int',
+        'parent_folder_id': 'str',
         'thumbnail': 'str',
         'analyses': 'list[SlideAnalysisCreateUpdate]'
     }
@@ -52,12 +53,13 @@ class SlideCreateUpdate(object):
         'displayed_data_columns_by_layer': 'displayedDataColumnsByLayer',
         'layout': 'layout',
         'story': 'story',
-        'order': 'order',
+        'position': 'position',
+        'parent_folder_id': 'parentFolderId',
         'thumbnail': 'thumbnail',
         'analyses': 'analyses'
     }
 
-    def __init__(self, name=None, theme_set=None, thematic_schemes=None, extent=None, is_default_slide=None, vector_layers=None, displayed_data_columns_by_layer=None, layout=None, story=None, order=None, thumbnail=None, analyses=None):  # noqa: E501
+    def __init__(self, name=None, theme_set=None, thematic_schemes=None, extent=None, is_default_slide=None, vector_layers=None, displayed_data_columns_by_layer=None, layout=None, story=None, position=None, parent_folder_id=None, thumbnail=None, analyses=None):  # noqa: E501
         """SlideCreateUpdate - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._theme_set = None
@@ -68,7 +70,8 @@ class SlideCreateUpdate(object):
         self._displayed_data_columns_by_layer = None
         self._layout = None
         self._story = None
-        self._order = None
+        self._position = None
+        self._parent_folder_id = None
         self._thumbnail = None
         self._analyses = None
         self.discriminator = None
@@ -90,8 +93,10 @@ class SlideCreateUpdate(object):
             self.layout = layout
         if story is not None:
             self.story = story
-        if order is not None:
-            self.order = order
+        if position is not None:
+            self.position = position
+        if parent_folder_id is not None:
+            self.parent_folder_id = parent_folder_id
         if thumbnail is not None:
             self.thumbnail = thumbnail
         if analyses is not None:
@@ -287,25 +292,46 @@ class SlideCreateUpdate(object):
         self._story = story
 
     @property
-    def order(self):
-        """Gets the order of this SlideCreateUpdate.  # noqa: E501
+    def position(self):
+        """Gets the position of this SlideCreateUpdate.  # noqa: E501
 
 
-        :return: The order of this SlideCreateUpdate.  # noqa: E501
+        :return: The position of this SlideCreateUpdate.  # noqa: E501
         :rtype: int
         """
-        return self._order
+        return self._position
 
-    @order.setter
-    def order(self, order):
-        """Sets the order of this SlideCreateUpdate.
+    @position.setter
+    def position(self, position):
+        """Sets the position of this SlideCreateUpdate.
 
 
-        :param order: The order of this SlideCreateUpdate.  # noqa: E501
+        :param position: The position of this SlideCreateUpdate.  # noqa: E501
         :type: int
         """
 
-        self._order = order
+        self._position = position
+
+    @property
+    def parent_folder_id(self):
+        """Gets the parent_folder_id of this SlideCreateUpdate.  # noqa: E501
+
+
+        :return: The parent_folder_id of this SlideCreateUpdate.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_folder_id
+
+    @parent_folder_id.setter
+    def parent_folder_id(self, parent_folder_id):
+        """Sets the parent_folder_id of this SlideCreateUpdate.
+
+
+        :param parent_folder_id: The parent_folder_id of this SlideCreateUpdate.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_folder_id = parent_folder_id
 
     @property
     def thumbnail(self):

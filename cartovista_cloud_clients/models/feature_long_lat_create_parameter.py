@@ -30,8 +30,8 @@ class FeatureLongLatCreateParameter(object):
     swagger_types = {
         'data_columns_identifiers': 'list[str]',
         'values': 'list[object]',
-        'proj4': 'str',
         'feature_type': 'FeatureType',
+        'proj4': 'str',
         'longitude': 'float',
         'latitude': 'float'
     }
@@ -39,18 +39,18 @@ class FeatureLongLatCreateParameter(object):
     attribute_map = {
         'data_columns_identifiers': 'dataColumnsIdentifiers',
         'values': 'values',
-        'proj4': 'proj4',
         'feature_type': 'featureType',
+        'proj4': 'proj4',
         'longitude': 'longitude',
         'latitude': 'latitude'
     }
 
-    def __init__(self, data_columns_identifiers=None, values=None, proj4=None, feature_type=None, longitude=None, latitude=None):  # noqa: E501
+    def __init__(self, data_columns_identifiers=None, values=None, feature_type=None, proj4=None, longitude=None, latitude=None):  # noqa: E501
         """FeatureLongLatCreateParameter - a model defined in Swagger"""  # noqa: E501
         self._data_columns_identifiers = None
         self._values = None
-        self._proj4 = None
         self._feature_type = None
+        self._proj4 = None
         self._longitude = None
         self._latitude = None
         self.discriminator = None
@@ -58,10 +58,10 @@ class FeatureLongLatCreateParameter(object):
             self.data_columns_identifiers = data_columns_identifiers
         if values is not None:
             self.values = values
-        if proj4 is not None:
-            self.proj4 = proj4
         if feature_type is not None:
             self.feature_type = feature_type
+        if proj4 is not None:
+            self.proj4 = proj4
         if longitude is not None:
             self.longitude = longitude
         if latitude is not None:
@@ -110,27 +110,6 @@ class FeatureLongLatCreateParameter(object):
         self._values = values
 
     @property
-    def proj4(self):
-        """Gets the proj4 of this FeatureLongLatCreateParameter.  # noqa: E501
-
-
-        :return: The proj4 of this FeatureLongLatCreateParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._proj4
-
-    @proj4.setter
-    def proj4(self, proj4):
-        """Sets the proj4 of this FeatureLongLatCreateParameter.
-
-
-        :param proj4: The proj4 of this FeatureLongLatCreateParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._proj4 = proj4
-
-    @property
     def feature_type(self):
         """Gets the feature_type of this FeatureLongLatCreateParameter.  # noqa: E501
 
@@ -150,6 +129,27 @@ class FeatureLongLatCreateParameter(object):
         """
 
         self._feature_type = feature_type
+
+    @property
+    def proj4(self):
+        """Gets the proj4 of this FeatureLongLatCreateParameter.  # noqa: E501
+
+
+        :return: The proj4 of this FeatureLongLatCreateParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._proj4
+
+    @proj4.setter
+    def proj4(self, proj4):
+        """Sets the proj4 of this FeatureLongLatCreateParameter.
+
+
+        :param proj4: The proj4 of this FeatureLongLatCreateParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._proj4 = proj4
 
     @property
     def longitude(self):

@@ -2658,6 +2658,7 @@ class FeatureApi(object):
     def feature_update_values(self, body, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Updates a feature's data. A subset of the columns can be used.  # noqa: E501
 
+        This request needs the layer identifier or id that is retrieved from the get request `/{tenantUrlCode}/api/v2/Layers`.              It also needs the featureIdentifier that is retrieved from both: * the get request `/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/dataTable` and * the post request `/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRows`  For example, the URL `/tenantName/api/v2/Layer/layerId/Feature/267/updateValues` with these parameters will update the feature 267 and replace the fields present in the array dataColumnsIdentifiers. ```json {  \"dataColumnsIdentifiers\": [\"ID\",\"Type\", \"Ville\"],  \"values\": [\"C0090test2\", \"Test\", \"VilleTest\"] } ```  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.feature_update_values(body, layer_identifier, feature_identifier, tenant_url_code, async_req=True)
@@ -2668,7 +2669,7 @@ class FeatureApi(object):
         :param str layer_identifier: The layer to query (required)
         :param str feature_identifier: The feature to query (required)
         :param str tenant_url_code: (required)
-        :return: DataRow
+        :return: FeatureDataRow
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2682,6 +2683,7 @@ class FeatureApi(object):
     def feature_update_values_with_http_info(self, body, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Updates a feature's data. A subset of the columns can be used.  # noqa: E501
 
+        This request needs the layer identifier or id that is retrieved from the get request `/{tenantUrlCode}/api/v2/Layers`.              It also needs the featureIdentifier that is retrieved from both: * the get request `/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/dataTable` and * the post request `/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRows`  For example, the URL `/tenantName/api/v2/Layer/layerId/Feature/267/updateValues` with these parameters will update the feature 267 and replace the fields present in the array dataColumnsIdentifiers. ```json {  \"dataColumnsIdentifiers\": [\"ID\",\"Type\", \"Ville\"],  \"values\": [\"C0090test2\", \"Test\", \"VilleTest\"] } ```  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.feature_update_values_with_http_info(body, layer_identifier, feature_identifier, tenant_url_code, async_req=True)
@@ -2692,7 +2694,7 @@ class FeatureApi(object):
         :param str layer_identifier: The layer to query (required)
         :param str feature_identifier: The feature to query (required)
         :param str tenant_url_code: (required)
-        :return: DataRow
+        :return: FeatureDataRow
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2768,7 +2770,7 @@ class FeatureApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='DataRow',  # noqa: E501
+            response_type='FeatureDataRow',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

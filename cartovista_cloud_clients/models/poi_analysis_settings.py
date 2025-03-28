@@ -28,11 +28,12 @@ class PoiAnalysisSettings(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'layers': 'list[PoiLayer]',
+        'layers': 'list[PoiSourceLayer]',
         'tables': 'dict(str, list[PoiTable])',
         'footprint_layers': 'list[PoiLayer]',
         'transmission_lines_layers': 'list[PoiLayer]',
-        'transmission_points_layers': 'list[PoiLayer]'
+        'transmission_points_layers': 'list[PoiLayer]',
+        'poi_specifications_url': 'str'
     }
 
     attribute_map = {
@@ -40,16 +41,18 @@ class PoiAnalysisSettings(object):
         'tables': 'tables',
         'footprint_layers': 'footprintLayers',
         'transmission_lines_layers': 'transmissionLinesLayers',
-        'transmission_points_layers': 'transmissionPointsLayers'
+        'transmission_points_layers': 'transmissionPointsLayers',
+        'poi_specifications_url': 'poiSpecificationsUrl'
     }
 
-    def __init__(self, layers=None, tables=None, footprint_layers=None, transmission_lines_layers=None, transmission_points_layers=None):  # noqa: E501
+    def __init__(self, layers=None, tables=None, footprint_layers=None, transmission_lines_layers=None, transmission_points_layers=None, poi_specifications_url=None):  # noqa: E501
         """PoiAnalysisSettings - a model defined in Swagger"""  # noqa: E501
         self._layers = None
         self._tables = None
         self._footprint_layers = None
         self._transmission_lines_layers = None
         self._transmission_points_layers = None
+        self._poi_specifications_url = None
         self.discriminator = None
         if layers is not None:
             self.layers = layers
@@ -61,6 +64,8 @@ class PoiAnalysisSettings(object):
             self.transmission_lines_layers = transmission_lines_layers
         if transmission_points_layers is not None:
             self.transmission_points_layers = transmission_points_layers
+        if poi_specifications_url is not None:
+            self.poi_specifications_url = poi_specifications_url
 
     @property
     def layers(self):
@@ -68,7 +73,7 @@ class PoiAnalysisSettings(object):
 
 
         :return: The layers of this PoiAnalysisSettings.  # noqa: E501
-        :rtype: list[PoiLayer]
+        :rtype: list[PoiSourceLayer]
         """
         return self._layers
 
@@ -78,7 +83,7 @@ class PoiAnalysisSettings(object):
 
 
         :param layers: The layers of this PoiAnalysisSettings.  # noqa: E501
-        :type: list[PoiLayer]
+        :type: list[PoiSourceLayer]
         """
 
         self._layers = layers
@@ -166,6 +171,27 @@ class PoiAnalysisSettings(object):
         """
 
         self._transmission_points_layers = transmission_points_layers
+
+    @property
+    def poi_specifications_url(self):
+        """Gets the poi_specifications_url of this PoiAnalysisSettings.  # noqa: E501
+
+
+        :return: The poi_specifications_url of this PoiAnalysisSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._poi_specifications_url
+
+    @poi_specifications_url.setter
+    def poi_specifications_url(self, poi_specifications_url):
+        """Sets the poi_specifications_url of this PoiAnalysisSettings.
+
+
+        :param poi_specifications_url: The poi_specifications_url of this PoiAnalysisSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._poi_specifications_url = poi_specifications_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

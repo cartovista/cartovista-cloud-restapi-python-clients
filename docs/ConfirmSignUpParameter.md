@@ -8,6 +8,9 @@ Name | Type | Description | Notes
 **company** | **str** |  | [optional] 
 **company_role** | **str** |  | [optional] 
 **industry** | [**IndustryEnum**](IndustryEnum.md) |  | [optional] 
+**other_industry_value** | **str** |  | [optional] 
+**goal** | [**GoalEnum**](GoalEnum.md) |  | [optional] 
+**other_goal_value** | **str** |  | [optional] 
 **phone** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

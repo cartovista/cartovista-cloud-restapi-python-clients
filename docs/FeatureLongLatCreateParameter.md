@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data_columns_identifiers** | **list[str]** |  | [optional] 
 **values** | **list[object]** |  | [optional] 
-**proj4** | **str** |  | [optional] 
 **feature_type** | [**FeatureType**](FeatureType.md) |  | [optional] 
+**proj4** | **str** |  | [optional] 
 **longitude** | **float** |  | [optional] 
 **latitude** | **float** |  | [optional] 
 

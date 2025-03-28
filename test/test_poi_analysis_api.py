@@ -49,6 +49,12 @@ class TestPoiAnalysisApi(unittest.TestCase):
         """
         pass
 
+    def test_poi_analysis_get_contingency_loading_max_data(self):
+        """Test case for poi_analysis_get_contingency_loading_max_data
+
+        """
+        pass
+
     def test_poi_analysis_get_poi_analysis(self):
         """Test case for poi_analysis_get_poi_analysis
 
@@ -70,6 +76,13 @@ class TestPoiAnalysisApi(unittest.TestCase):
         """
         pass
 
+    def test_poi_analysis_get_temporary_poi_analysis_data(self):
+        """Test case for poi_analysis_get_temporary_poi_analysis_data
+
+        Gets the data computed for the custom analysis.  # noqa: E501
+        """
+        pass
+
     def test_poi_analysis_pregenerate_rasters(self):
         """Test case for poi_analysis_pregenerate_rasters
 
@@ -81,6 +94,13 @@ class TestPoiAnalysisApi(unittest.TestCase):
         """Test case for poi_analysis_toggle_default_analysis
 
         Toggles the default value of the custom analysis.  # noqa: E501
+        """
+        pass
+
+    def test_poi_analysis_validate_data_for_poi(self):
+        """Test case for poi_analysis_validate_data_for_poi
+
+        Get the errors, if any, of a layer or datatable for a given type.  # noqa: E501
         """
         pass
 

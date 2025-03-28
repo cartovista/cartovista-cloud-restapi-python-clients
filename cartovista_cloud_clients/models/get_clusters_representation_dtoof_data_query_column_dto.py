@@ -37,6 +37,7 @@ class GetClustersRepresentationDTOOfDataQueryColumnDTO(object):
         'gradient_values': 'list[GradientValueDTO]',
         'out_of_range_value': 'OneOfGetClustersRepresentationDTOOfDataQueryColumnDTOOutOfRangeValue',
         'spatial_filter': 'OneOfGetClustersRepresentationDTOOfDataQueryColumnDTOSpatialFilter',
+        'time_range': 'OneOfGetClustersRepresentationDTOOfDataQueryColumnDTOTimeRange',
         'values': 'list[IValueDTO]'
     }
 
@@ -50,10 +51,11 @@ class GetClustersRepresentationDTOOfDataQueryColumnDTO(object):
         'gradient_values': 'gradientValues',
         'out_of_range_value': 'outOfRangeValue',
         'spatial_filter': 'spatialFilter',
+        'time_range': 'timeRange',
         'values': 'values'
     }
 
-    def __init__(self, id=None, cluster_ids=None, color_data_column=None, filter_data_columns=None, range_of_values=None, individual_values=None, gradient_values=None, out_of_range_value=None, spatial_filter=None, values=None):  # noqa: E501
+    def __init__(self, id=None, cluster_ids=None, color_data_column=None, filter_data_columns=None, range_of_values=None, individual_values=None, gradient_values=None, out_of_range_value=None, spatial_filter=None, time_range=None, values=None):  # noqa: E501
         """GetClustersRepresentationDTOOfDataQueryColumnDTO - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._cluster_ids = None
@@ -64,6 +66,7 @@ class GetClustersRepresentationDTOOfDataQueryColumnDTO(object):
         self._gradient_values = None
         self._out_of_range_value = None
         self._spatial_filter = None
+        self._time_range = None
         self._values = None
         self.discriminator = None
         if id is not None:
@@ -84,6 +87,8 @@ class GetClustersRepresentationDTOOfDataQueryColumnDTO(object):
             self.out_of_range_value = out_of_range_value
         if spatial_filter is not None:
             self.spatial_filter = spatial_filter
+        if time_range is not None:
+            self.time_range = time_range
         if values is not None:
             self.values = values
 
@@ -275,6 +280,27 @@ class GetClustersRepresentationDTOOfDataQueryColumnDTO(object):
         """
 
         self._spatial_filter = spatial_filter
+
+    @property
+    def time_range(self):
+        """Gets the time_range of this GetClustersRepresentationDTOOfDataQueryColumnDTO.  # noqa: E501
+
+
+        :return: The time_range of this GetClustersRepresentationDTOOfDataQueryColumnDTO.  # noqa: E501
+        :rtype: OneOfGetClustersRepresentationDTOOfDataQueryColumnDTOTimeRange
+        """
+        return self._time_range
+
+    @time_range.setter
+    def time_range(self, time_range):
+        """Sets the time_range of this GetClustersRepresentationDTOOfDataQueryColumnDTO.
+
+
+        :param time_range: The time_range of this GetClustersRepresentationDTOOfDataQueryColumnDTO.  # noqa: E501
+        :type: OneOfGetClustersRepresentationDTOOfDataQueryColumnDTOTimeRange
+        """
+
+        self._time_range = time_range
 
     @property
     def values(self):

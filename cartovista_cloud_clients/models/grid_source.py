@@ -46,7 +46,8 @@ class GridSource(object):
         'owner_name': 'str',
         'thumbnail_url': 'str',
         'thumbnail_url_expiry': 'datetime',
-        'is_heatmap': 'bool'
+        'is_heatmap': 'bool',
+        'is_demo_source': 'bool'
     }
 
     attribute_map = {
@@ -68,10 +69,11 @@ class GridSource(object):
         'owner_name': 'ownerName',
         'thumbnail_url': 'thumbnailUrl',
         'thumbnail_url_expiry': 'thumbnailUrlExpiry',
-        'is_heatmap': 'isHeatmap'
+        'is_heatmap': 'isHeatmap',
+        'is_demo_source': 'isDemoSource'
     }
 
-    def __init__(self, id=None, grid_layer_id=None, unique_identifier=None, name=None, description=None, file_metadata=None, band_metadata=None, band=None, creation_time=None, modified_time=None, timestamp=None, no_data_enabled=None, no_data_value=None, min_value=None, max_value=None, owner_name=None, thumbnail_url=None, thumbnail_url_expiry=None, is_heatmap=None):  # noqa: E501
+    def __init__(self, id=None, grid_layer_id=None, unique_identifier=None, name=None, description=None, file_metadata=None, band_metadata=None, band=None, creation_time=None, modified_time=None, timestamp=None, no_data_enabled=None, no_data_value=None, min_value=None, max_value=None, owner_name=None, thumbnail_url=None, thumbnail_url_expiry=None, is_heatmap=None, is_demo_source=None):  # noqa: E501
         """GridSource - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._grid_layer_id = None
@@ -92,6 +94,7 @@ class GridSource(object):
         self._thumbnail_url = None
         self._thumbnail_url_expiry = None
         self._is_heatmap = None
+        self._is_demo_source = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -131,6 +134,8 @@ class GridSource(object):
             self.thumbnail_url_expiry = thumbnail_url_expiry
         if is_heatmap is not None:
             self.is_heatmap = is_heatmap
+        if is_demo_source is not None:
+            self.is_demo_source = is_demo_source
 
     @property
     def id(self):
@@ -530,6 +535,27 @@ class GridSource(object):
         """
 
         self._is_heatmap = is_heatmap
+
+    @property
+    def is_demo_source(self):
+        """Gets the is_demo_source of this GridSource.  # noqa: E501
+
+
+        :return: The is_demo_source of this GridSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_demo_source
+
+    @is_demo_source.setter
+    def is_demo_source(self, is_demo_source):
+        """Sets the is_demo_source of this GridSource.
+
+
+        :param is_demo_source: The is_demo_source of this GridSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_demo_source = is_demo_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

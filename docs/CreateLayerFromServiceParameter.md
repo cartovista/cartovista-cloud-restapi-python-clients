@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**name** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **add_to_map_id** | **str** |  | [optional] 
 **folder_id** | **str** |  | [optional] 

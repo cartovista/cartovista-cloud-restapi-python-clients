@@ -46,8 +46,10 @@ class DataQueryDTO(object):
         'sort_orders': 'list[str]',
         'exclude_not_available_value': 'bool',
         'server_cache_enabled': 'bool',
+        'quad_keys': 'list[str]',
         'client_stack_trace': 'str',
-        'data_query_filters': 'list[DataQueryFilterDTOOfDataQueryColumnDTO]'
+        'data_query_filters': 'list[DataQueryFilterDTOOfDataQueryColumnDTO]',
+        'has_quad_keys': 'bool'
     }
 
     attribute_map = {
@@ -69,11 +71,13 @@ class DataQueryDTO(object):
         'sort_orders': 'sortOrders',
         'exclude_not_available_value': 'excludeNotAvailableValue',
         'server_cache_enabled': 'serverCacheEnabled',
+        'quad_keys': 'quadKeys',
         'client_stack_trace': 'clientStackTrace',
-        'data_query_filters': 'dataQueryFilters'
+        'data_query_filters': 'dataQueryFilters',
+        'has_quad_keys': 'hasQuadKeys'
     }
 
-    def __init__(self, linking_ids=None, linking_ids_for_stats=None, sort_data_columns=None, data_columns=None, filter_data_columns=None, group_by=None, selection_stack_parameters=None, spatial_filter=None, time_range=None, start_index=None, max_count=None, data_sampling_count=None, search_criteria=None, statistics=None, statistics_only=None, sort_orders=None, exclude_not_available_value=None, server_cache_enabled=None, client_stack_trace=None, data_query_filters=None):  # noqa: E501
+    def __init__(self, linking_ids=None, linking_ids_for_stats=None, sort_data_columns=None, data_columns=None, filter_data_columns=None, group_by=None, selection_stack_parameters=None, spatial_filter=None, time_range=None, start_index=None, max_count=None, data_sampling_count=None, search_criteria=None, statistics=None, statistics_only=None, sort_orders=None, exclude_not_available_value=None, server_cache_enabled=None, quad_keys=None, client_stack_trace=None, data_query_filters=None, has_quad_keys=None):  # noqa: E501
         """DataQueryDTO - a model defined in Swagger"""  # noqa: E501
         self._linking_ids = None
         self._linking_ids_for_stats = None
@@ -93,8 +97,10 @@ class DataQueryDTO(object):
         self._sort_orders = None
         self._exclude_not_available_value = None
         self._server_cache_enabled = None
+        self._quad_keys = None
         self._client_stack_trace = None
         self._data_query_filters = None
+        self._has_quad_keys = None
         self.discriminator = None
         if linking_ids is not None:
             self.linking_ids = linking_ids
@@ -132,10 +138,14 @@ class DataQueryDTO(object):
             self.exclude_not_available_value = exclude_not_available_value
         if server_cache_enabled is not None:
             self.server_cache_enabled = server_cache_enabled
+        if quad_keys is not None:
+            self.quad_keys = quad_keys
         if client_stack_trace is not None:
             self.client_stack_trace = client_stack_trace
         if data_query_filters is not None:
             self.data_query_filters = data_query_filters
+        if has_quad_keys is not None:
+            self.has_quad_keys = has_quad_keys
 
     @property
     def linking_ids(self):
@@ -516,6 +526,27 @@ class DataQueryDTO(object):
         self._server_cache_enabled = server_cache_enabled
 
     @property
+    def quad_keys(self):
+        """Gets the quad_keys of this DataQueryDTO.  # noqa: E501
+
+
+        :return: The quad_keys of this DataQueryDTO.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._quad_keys
+
+    @quad_keys.setter
+    def quad_keys(self, quad_keys):
+        """Sets the quad_keys of this DataQueryDTO.
+
+
+        :param quad_keys: The quad_keys of this DataQueryDTO.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._quad_keys = quad_keys
+
+    @property
     def client_stack_trace(self):
         """Gets the client_stack_trace of this DataQueryDTO.  # noqa: E501
 
@@ -556,6 +587,27 @@ class DataQueryDTO(object):
         """
 
         self._data_query_filters = data_query_filters
+
+    @property
+    def has_quad_keys(self):
+        """Gets the has_quad_keys of this DataQueryDTO.  # noqa: E501
+
+
+        :return: The has_quad_keys of this DataQueryDTO.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_quad_keys
+
+    @has_quad_keys.setter
+    def has_quad_keys(self, has_quad_keys):
+        """Sets the has_quad_keys of this DataQueryDTO.
+
+
+        :param has_quad_keys: The has_quad_keys of this DataQueryDTO.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_quad_keys = has_quad_keys
 
     def to_dict(self):
         """Returns the model properties as a dict"""

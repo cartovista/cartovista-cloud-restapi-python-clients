@@ -32,12 +32,12 @@ class CompositeVariableScoringApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def composite_variable_scoring_can_modify_analyses(self, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
-        """Checks whether or not the current user can modify the analyses of the given map.  # noqa: E501
+    def composite_variable_scoring_can_create_analysis(self, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Whether or not a user can create analysis on a map  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.composite_variable_scoring_can_modify_analyses(map_identifier, tenant_url_code, async_req=True)
+        >>> thread = api.composite_variable_scoring_can_create_analysis(map_identifier, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,17 +49,17 @@ class CompositeVariableScoringApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.composite_variable_scoring_can_modify_analyses_with_http_info(map_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return self.composite_variable_scoring_can_create_analysis_with_http_info(map_identifier, tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.composite_variable_scoring_can_modify_analyses_with_http_info(map_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.composite_variable_scoring_can_create_analysis_with_http_info(map_identifier, tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def composite_variable_scoring_can_modify_analyses_with_http_info(self, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
-        """Checks whether or not the current user can modify the analyses of the given map.  # noqa: E501
+    def composite_variable_scoring_can_create_analysis_with_http_info(self, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Whether or not a user can create analysis on a map  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.composite_variable_scoring_can_modify_analyses_with_http_info(map_identifier, tenant_url_code, async_req=True)
+        >>> thread = api.composite_variable_scoring_can_create_analysis_with_http_info(map_identifier, tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -81,18 +81,18 @@ class CompositeVariableScoringApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method composite_variable_scoring_can_modify_analyses" % key
+                    " to method composite_variable_scoring_can_create_analysis" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'map_identifier' is set
         if ('map_identifier' not in params or
                 params['map_identifier'] is None):
-            raise ValueError("Missing the required parameter `map_identifier` when calling `composite_variable_scoring_can_modify_analyses`")  # noqa: E501
+            raise ValueError("Missing the required parameter `map_identifier` when calling `composite_variable_scoring_can_create_analysis`")  # noqa: E501
         # verify the required parameter 'tenant_url_code' is set
         if ('tenant_url_code' not in params or
                 params['tenant_url_code'] is None):
-            raise ValueError("Missing the required parameter `tenant_url_code` when calling `composite_variable_scoring_can_modify_analyses`")  # noqa: E501
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `composite_variable_scoring_can_create_analysis`")  # noqa: E501
 
         collection_formats = {}
 
@@ -118,7 +118,7 @@ class CompositeVariableScoringApi(object):
         auth_settings = ['apiKey', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
-            '/{tenantUrlCode}/api/v2/score-analysis/{mapIdentifier}/canModifyAnalyses', 'GET',
+            '/{tenantUrlCode}/api/v2/score-analysis/{mapIdentifier}/canCreateAnalysis', 'GET',
             path_params,
             query_params,
             header_params,

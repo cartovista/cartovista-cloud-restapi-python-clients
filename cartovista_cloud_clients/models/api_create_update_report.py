@@ -33,7 +33,8 @@ class ApiCreateUpdateReport(object):
         'error_count': 'int',
         'error_details': 'list[ErrorDetail]',
         'update_count': 'int',
-        'updated_identifiers': 'list[str]'
+        'updated_identifiers': 'list[str]',
+        'updated_ids': 'list[UpdatedFeatureId]'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class ApiCreateUpdateReport(object):
         'error_count': 'errorCount',
         'error_details': 'errorDetails',
         'update_count': 'updateCount',
-        'updated_identifiers': 'updatedIdentifiers'
+        'updated_identifiers': 'updatedIdentifiers',
+        'updated_ids': 'updatedIds'
     }
 
-    def __init__(self, create_count=None, inserted_identifiers=None, error_count=None, error_details=None, update_count=None, updated_identifiers=None):  # noqa: E501
+    def __init__(self, create_count=None, inserted_identifiers=None, error_count=None, error_details=None, update_count=None, updated_identifiers=None, updated_ids=None):  # noqa: E501
         """ApiCreateUpdateReport - a model defined in Swagger"""  # noqa: E501
         self._create_count = None
         self._inserted_identifiers = None
@@ -53,6 +55,7 @@ class ApiCreateUpdateReport(object):
         self._error_details = None
         self._update_count = None
         self._updated_identifiers = None
+        self._updated_ids = None
         self.discriminator = None
         if create_count is not None:
             self.create_count = create_count
@@ -66,6 +69,8 @@ class ApiCreateUpdateReport(object):
             self.update_count = update_count
         if updated_identifiers is not None:
             self.updated_identifiers = updated_identifiers
+        if updated_ids is not None:
+            self.updated_ids = updated_ids
 
     @property
     def create_count(self):
@@ -192,6 +197,27 @@ class ApiCreateUpdateReport(object):
         """
 
         self._updated_identifiers = updated_identifiers
+
+    @property
+    def updated_ids(self):
+        """Gets the updated_ids of this ApiCreateUpdateReport.  # noqa: E501
+
+
+        :return: The updated_ids of this ApiCreateUpdateReport.  # noqa: E501
+        :rtype: list[UpdatedFeatureId]
+        """
+        return self._updated_ids
+
+    @updated_ids.setter
+    def updated_ids(self, updated_ids):
+        """Sets the updated_ids of this ApiCreateUpdateReport.
+
+
+        :param updated_ids: The updated_ids of this ApiCreateUpdateReport.  # noqa: E501
+        :type: list[UpdatedFeatureId]
+        """
+
+        self._updated_ids = updated_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

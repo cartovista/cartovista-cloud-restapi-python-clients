@@ -28,6 +28,12 @@ class TestCustomApplicationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_custom_application_get_custom_application_map_settings(self):
+        """Test case for custom_application_get_custom_application_map_settings
+
+        """
+        pass
+
     def test_custom_application_get_custom_application_settings(self):
         """Test case for custom_application_get_custom_application_settings
 
@@ -36,6 +42,12 @@ class TestCustomApplicationApi(unittest.TestCase):
 
     def test_custom_application_toggle_custom_application(self):
         """Test case for custom_application_toggle_custom_application
+
+        """
+        pass
+
+    def test_custom_application_update_custom_application_map_settings(self):
+        """Test case for custom_application_update_custom_application_map_settings
 
         """
         pass

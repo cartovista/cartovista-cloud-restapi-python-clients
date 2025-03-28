@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **gradient_values** | [**list[GradientValueDTO]**](GradientValueDTO.md) |  | [optional] 
 **out_of_range_value** | **OneOfGetClustersRepresentationDTOOfDataQueryColumnDTOOutOfRangeValue** |  | [optional] 
 **spatial_filter** | **OneOfGetClustersRepresentationDTOOfDataQueryColumnDTOSpatialFilter** |  | [optional] 
+**time_range** | **OneOfGetClustersRepresentationDTOOfDataQueryColumnDTOTimeRange** |  | [optional] 
 **values** | [**list[IValueDTO]**](IValueDTO.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

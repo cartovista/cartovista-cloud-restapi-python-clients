@@ -189,6 +189,13 @@ class TestMapApi(unittest.TestCase):
         """
         pass
 
+    def test_map_get_slide_items(self):
+        """Test case for map_get_slide_items
+
+        Gets the map's slides.  # noqa: E501
+        """
+        pass
+
     def test_map_get_slides(self):
         """Test case for map_get_slides
 

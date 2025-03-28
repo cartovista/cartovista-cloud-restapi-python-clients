@@ -41,7 +41,8 @@ class SubscriptionAndUser(object):
         'grace_period_end_date': 'datetime',
         'license_expired': 'bool',
         'composite_scoring': 'bool',
-        'poi_analysis': 'bool'
+        'poi_analysis': 'bool',
+        'quad_tree_tiling': 'bool'
     }
 
     attribute_map = {
@@ -58,10 +59,11 @@ class SubscriptionAndUser(object):
         'grace_period_end_date': 'gracePeriodEndDate',
         'license_expired': 'licenseExpired',
         'composite_scoring': 'compositeScoring',
-        'poi_analysis': 'poiAnalysis'
+        'poi_analysis': 'poiAnalysis',
+        'quad_tree_tiling': 'quadTreeTiling'
     }
 
-    def __init__(self, current_user=None, subscription=None, subscription_summary=None, maximum_number_of_users=None, public_maps=None, rest_api=None, live_layers=None, content_count=None, query_optimizer=None, heatmap_generation=None, grace_period_end_date=None, license_expired=None, composite_scoring=None, poi_analysis=None):  # noqa: E501
+    def __init__(self, current_user=None, subscription=None, subscription_summary=None, maximum_number_of_users=None, public_maps=None, rest_api=None, live_layers=None, content_count=None, query_optimizer=None, heatmap_generation=None, grace_period_end_date=None, license_expired=None, composite_scoring=None, poi_analysis=None, quad_tree_tiling=None):  # noqa: E501
         """SubscriptionAndUser - a model defined in Swagger"""  # noqa: E501
         self._current_user = None
         self._subscription = None
@@ -77,6 +79,7 @@ class SubscriptionAndUser(object):
         self._license_expired = None
         self._composite_scoring = None
         self._poi_analysis = None
+        self._quad_tree_tiling = None
         self.discriminator = None
         if current_user is not None:
             self.current_user = current_user
@@ -106,6 +109,8 @@ class SubscriptionAndUser(object):
             self.composite_scoring = composite_scoring
         if poi_analysis is not None:
             self.poi_analysis = poi_analysis
+        if quad_tree_tiling is not None:
+            self.quad_tree_tiling = quad_tree_tiling
 
     @property
     def current_user(self):
@@ -400,6 +405,27 @@ class SubscriptionAndUser(object):
         """
 
         self._poi_analysis = poi_analysis
+
+    @property
+    def quad_tree_tiling(self):
+        """Gets the quad_tree_tiling of this SubscriptionAndUser.  # noqa: E501
+
+
+        :return: The quad_tree_tiling of this SubscriptionAndUser.  # noqa: E501
+        :rtype: bool
+        """
+        return self._quad_tree_tiling
+
+    @quad_tree_tiling.setter
+    def quad_tree_tiling(self, quad_tree_tiling):
+        """Sets the quad_tree_tiling of this SubscriptionAndUser.
+
+
+        :param quad_tree_tiling: The quad_tree_tiling of this SubscriptionAndUser.  # noqa: E501
+        :type: bool
+        """
+
+        self._quad_tree_tiling = quad_tree_tiling
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -29,36 +29,41 @@ class PoiTransmission(object):
     """
     swagger_types = {
         'layer_id': 'str',
-        'transmission_id_column_id': 'str',
-        'contingency_column_id': 'str',
-        'from_kv_column_id': 'str',
+        'table_transmission_id': 'str',
+        'transmission_id': 'str',
+        'from_kv': 'str',
+        'contingency_loading_max_percent': 'str',
         'points': 'OneOfPoiTransmissionPoints'
     }
 
     attribute_map = {
         'layer_id': 'layerId',
-        'transmission_id_column_id': 'transmissionIdColumnId',
-        'contingency_column_id': 'contingencyColumnId',
-        'from_kv_column_id': 'fromKvColumnId',
+        'table_transmission_id': 'tableTransmissionId',
+        'transmission_id': 'transmissionId',
+        'from_kv': 'fromKv',
+        'contingency_loading_max_percent': 'contingencyLoadingMaxPercent',
         'points': 'points'
     }
 
-    def __init__(self, layer_id=None, transmission_id_column_id=None, contingency_column_id=None, from_kv_column_id=None, points=None):  # noqa: E501
+    def __init__(self, layer_id=None, table_transmission_id=None, transmission_id=None, from_kv=None, contingency_loading_max_percent=None, points=None):  # noqa: E501
         """PoiTransmission - a model defined in Swagger"""  # noqa: E501
         self._layer_id = None
-        self._transmission_id_column_id = None
-        self._contingency_column_id = None
-        self._from_kv_column_id = None
+        self._table_transmission_id = None
+        self._transmission_id = None
+        self._from_kv = None
+        self._contingency_loading_max_percent = None
         self._points = None
         self.discriminator = None
         if layer_id is not None:
             self.layer_id = layer_id
-        if transmission_id_column_id is not None:
-            self.transmission_id_column_id = transmission_id_column_id
-        if contingency_column_id is not None:
-            self.contingency_column_id = contingency_column_id
-        if from_kv_column_id is not None:
-            self.from_kv_column_id = from_kv_column_id
+        if table_transmission_id is not None:
+            self.table_transmission_id = table_transmission_id
+        if transmission_id is not None:
+            self.transmission_id = transmission_id
+        if from_kv is not None:
+            self.from_kv = from_kv
+        if contingency_loading_max_percent is not None:
+            self.contingency_loading_max_percent = contingency_loading_max_percent
         if points is not None:
             self.points = points
 
@@ -84,67 +89,88 @@ class PoiTransmission(object):
         self._layer_id = layer_id
 
     @property
-    def transmission_id_column_id(self):
-        """Gets the transmission_id_column_id of this PoiTransmission.  # noqa: E501
+    def table_transmission_id(self):
+        """Gets the table_transmission_id of this PoiTransmission.  # noqa: E501
 
 
-        :return: The transmission_id_column_id of this PoiTransmission.  # noqa: E501
+        :return: The table_transmission_id of this PoiTransmission.  # noqa: E501
         :rtype: str
         """
-        return self._transmission_id_column_id
+        return self._table_transmission_id
 
-    @transmission_id_column_id.setter
-    def transmission_id_column_id(self, transmission_id_column_id):
-        """Sets the transmission_id_column_id of this PoiTransmission.
+    @table_transmission_id.setter
+    def table_transmission_id(self, table_transmission_id):
+        """Sets the table_transmission_id of this PoiTransmission.
 
 
-        :param transmission_id_column_id: The transmission_id_column_id of this PoiTransmission.  # noqa: E501
+        :param table_transmission_id: The table_transmission_id of this PoiTransmission.  # noqa: E501
         :type: str
         """
 
-        self._transmission_id_column_id = transmission_id_column_id
+        self._table_transmission_id = table_transmission_id
 
     @property
-    def contingency_column_id(self):
-        """Gets the contingency_column_id of this PoiTransmission.  # noqa: E501
+    def transmission_id(self):
+        """Gets the transmission_id of this PoiTransmission.  # noqa: E501
 
 
-        :return: The contingency_column_id of this PoiTransmission.  # noqa: E501
+        :return: The transmission_id of this PoiTransmission.  # noqa: E501
         :rtype: str
         """
-        return self._contingency_column_id
+        return self._transmission_id
 
-    @contingency_column_id.setter
-    def contingency_column_id(self, contingency_column_id):
-        """Sets the contingency_column_id of this PoiTransmission.
+    @transmission_id.setter
+    def transmission_id(self, transmission_id):
+        """Sets the transmission_id of this PoiTransmission.
 
 
-        :param contingency_column_id: The contingency_column_id of this PoiTransmission.  # noqa: E501
+        :param transmission_id: The transmission_id of this PoiTransmission.  # noqa: E501
         :type: str
         """
 
-        self._contingency_column_id = contingency_column_id
+        self._transmission_id = transmission_id
 
     @property
-    def from_kv_column_id(self):
-        """Gets the from_kv_column_id of this PoiTransmission.  # noqa: E501
+    def from_kv(self):
+        """Gets the from_kv of this PoiTransmission.  # noqa: E501
 
 
-        :return: The from_kv_column_id of this PoiTransmission.  # noqa: E501
+        :return: The from_kv of this PoiTransmission.  # noqa: E501
         :rtype: str
         """
-        return self._from_kv_column_id
+        return self._from_kv
 
-    @from_kv_column_id.setter
-    def from_kv_column_id(self, from_kv_column_id):
-        """Sets the from_kv_column_id of this PoiTransmission.
+    @from_kv.setter
+    def from_kv(self, from_kv):
+        """Sets the from_kv of this PoiTransmission.
 
 
-        :param from_kv_column_id: The from_kv_column_id of this PoiTransmission.  # noqa: E501
+        :param from_kv: The from_kv of this PoiTransmission.  # noqa: E501
         :type: str
         """
 
-        self._from_kv_column_id = from_kv_column_id
+        self._from_kv = from_kv
+
+    @property
+    def contingency_loading_max_percent(self):
+        """Gets the contingency_loading_max_percent of this PoiTransmission.  # noqa: E501
+
+
+        :return: The contingency_loading_max_percent of this PoiTransmission.  # noqa: E501
+        :rtype: str
+        """
+        return self._contingency_loading_max_percent
+
+    @contingency_loading_max_percent.setter
+    def contingency_loading_max_percent(self, contingency_loading_max_percent):
+        """Sets the contingency_loading_max_percent of this PoiTransmission.
+
+
+        :param contingency_loading_max_percent: The contingency_loading_max_percent of this PoiTransmission.  # noqa: E501
+        :type: str
+        """
+
+        self._contingency_loading_max_percent = contingency_loading_max_percent
 
     @property
     def points(self):

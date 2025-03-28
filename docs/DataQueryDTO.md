@@ -21,8 +21,10 @@ Name | Type | Description | Notes
 **sort_orders** | **list[str]** |  | [optional] 
 **exclude_not_available_value** | **bool** |  | [optional] 
 **server_cache_enabled** | **bool** |  | [optional] 
+**quad_keys** | **list[str]** |  | [optional] 
 **client_stack_trace** | **str** |  | [optional] 
 **data_query_filters** | [**list[DataQueryFilterDTOOfDataQueryColumnDTO]**](DataQueryFilterDTOOfDataQueryColumnDTO.md) |  | [optional] 
+**has_quad_keys** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

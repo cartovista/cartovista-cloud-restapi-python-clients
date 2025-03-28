@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **error_details** | [**list[ErrorDetail]**](ErrorDetail.md) |  | [optional] 
 **update_count** | **int** |  | [optional] 
 **updated_identifiers** | **list[str]** |  | [optional] 
+**updated_ids** | [**list[UpdatedFeatureId]**](UpdatedFeatureId.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

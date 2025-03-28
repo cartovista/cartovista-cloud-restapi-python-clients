@@ -30,12 +30,12 @@ class CustomPoiAnalysis(object):
     swagger_types = {
         'id': 'str',
         'poi_analysis_id': 'str',
-        'scenario_and_year_id': 'str',
+        'scenario_id': 'str',
         'feature_id': 'str',
         'value': 'int',
         'scenario': 'str',
         'year': 'float',
-        'kv_levels': 'list[float]',
+        'kv_values': 'list[str]',
         'is_default': 'bool',
         'is_overloaded': 'bool',
         'x': 'float',
@@ -46,12 +46,12 @@ class CustomPoiAnalysis(object):
     attribute_map = {
         'id': 'id',
         'poi_analysis_id': 'poiAnalysisId',
-        'scenario_and_year_id': 'scenarioAndYearId',
+        'scenario_id': 'scenarioId',
         'feature_id': 'featureId',
         'value': 'value',
         'scenario': 'scenario',
         'year': 'year',
-        'kv_levels': 'kvLevels',
+        'kv_values': 'kvValues',
         'is_default': 'isDefault',
         'is_overloaded': 'isOverloaded',
         'x': 'x',
@@ -59,16 +59,16 @@ class CustomPoiAnalysis(object):
         'name': 'name'
     }
 
-    def __init__(self, id=None, poi_analysis_id=None, scenario_and_year_id=None, feature_id=None, value=None, scenario=None, year=None, kv_levels=None, is_default=None, is_overloaded=None, x=None, y=None, name=None):  # noqa: E501
+    def __init__(self, id=None, poi_analysis_id=None, scenario_id=None, feature_id=None, value=None, scenario=None, year=None, kv_values=None, is_default=None, is_overloaded=None, x=None, y=None, name=None):  # noqa: E501
         """CustomPoiAnalysis - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._poi_analysis_id = None
-        self._scenario_and_year_id = None
+        self._scenario_id = None
         self._feature_id = None
         self._value = None
         self._scenario = None
         self._year = None
-        self._kv_levels = None
+        self._kv_values = None
         self._is_default = None
         self._is_overloaded = None
         self._x = None
@@ -79,8 +79,8 @@ class CustomPoiAnalysis(object):
             self.id = id
         if poi_analysis_id is not None:
             self.poi_analysis_id = poi_analysis_id
-        if scenario_and_year_id is not None:
-            self.scenario_and_year_id = scenario_and_year_id
+        if scenario_id is not None:
+            self.scenario_id = scenario_id
         if feature_id is not None:
             self.feature_id = feature_id
         if value is not None:
@@ -89,8 +89,8 @@ class CustomPoiAnalysis(object):
             self.scenario = scenario
         if year is not None:
             self.year = year
-        if kv_levels is not None:
-            self.kv_levels = kv_levels
+        if kv_values is not None:
+            self.kv_values = kv_values
         if is_default is not None:
             self.is_default = is_default
         if is_overloaded is not None:
@@ -145,25 +145,25 @@ class CustomPoiAnalysis(object):
         self._poi_analysis_id = poi_analysis_id
 
     @property
-    def scenario_and_year_id(self):
-        """Gets the scenario_and_year_id of this CustomPoiAnalysis.  # noqa: E501
+    def scenario_id(self):
+        """Gets the scenario_id of this CustomPoiAnalysis.  # noqa: E501
 
 
-        :return: The scenario_and_year_id of this CustomPoiAnalysis.  # noqa: E501
+        :return: The scenario_id of this CustomPoiAnalysis.  # noqa: E501
         :rtype: str
         """
-        return self._scenario_and_year_id
+        return self._scenario_id
 
-    @scenario_and_year_id.setter
-    def scenario_and_year_id(self, scenario_and_year_id):
-        """Sets the scenario_and_year_id of this CustomPoiAnalysis.
+    @scenario_id.setter
+    def scenario_id(self, scenario_id):
+        """Sets the scenario_id of this CustomPoiAnalysis.
 
 
-        :param scenario_and_year_id: The scenario_and_year_id of this CustomPoiAnalysis.  # noqa: E501
+        :param scenario_id: The scenario_id of this CustomPoiAnalysis.  # noqa: E501
         :type: str
         """
 
-        self._scenario_and_year_id = scenario_and_year_id
+        self._scenario_id = scenario_id
 
     @property
     def feature_id(self):
@@ -250,25 +250,25 @@ class CustomPoiAnalysis(object):
         self._year = year
 
     @property
-    def kv_levels(self):
-        """Gets the kv_levels of this CustomPoiAnalysis.  # noqa: E501
+    def kv_values(self):
+        """Gets the kv_values of this CustomPoiAnalysis.  # noqa: E501
 
 
-        :return: The kv_levels of this CustomPoiAnalysis.  # noqa: E501
-        :rtype: list[float]
+        :return: The kv_values of this CustomPoiAnalysis.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._kv_levels
+        return self._kv_values
 
-    @kv_levels.setter
-    def kv_levels(self, kv_levels):
-        """Sets the kv_levels of this CustomPoiAnalysis.
+    @kv_values.setter
+    def kv_values(self, kv_values):
+        """Sets the kv_values of this CustomPoiAnalysis.
 
 
-        :param kv_levels: The kv_levels of this CustomPoiAnalysis.  # noqa: E501
-        :type: list[float]
+        :param kv_values: The kv_values of this CustomPoiAnalysis.  # noqa: E501
+        :type: list[str]
         """
 
-        self._kv_levels = kv_levels
+        self._kv_values = kv_values
 
     @property
     def is_default(self):

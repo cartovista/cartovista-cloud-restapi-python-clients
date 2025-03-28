@@ -28,6 +28,7 @@ class CreateLayerFromServiceParameter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'name': 'str',
         'url': 'str',
         'add_to_map_id': 'str',
         'folder_id': 'str',
@@ -37,6 +38,7 @@ class CreateLayerFromServiceParameter(object):
     }
 
     attribute_map = {
+        'name': 'name',
         'url': 'url',
         'add_to_map_id': 'addToMapId',
         'folder_id': 'folderId',
@@ -45,8 +47,9 @@ class CreateLayerFromServiceParameter(object):
         'authorization_token': 'authorizationToken'
     }
 
-    def __init__(self, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, service=None, authorization_token=None):  # noqa: E501
+    def __init__(self, name=None, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, service=None, authorization_token=None):  # noqa: E501
         """CreateLayerFromServiceParameter - a model defined in Swagger"""  # noqa: E501
+        self._name = None
         self._url = None
         self._add_to_map_id = None
         self._folder_id = None
@@ -54,6 +57,8 @@ class CreateLayerFromServiceParameter(object):
         self._service = None
         self._authorization_token = None
         self.discriminator = None
+        if name is not None:
+            self.name = name
         if url is not None:
             self.url = url
         if add_to_map_id is not None:
@@ -66,6 +71,27 @@ class CreateLayerFromServiceParameter(object):
             self.service = service
         if authorization_token is not None:
             self.authorization_token = authorization_token
+
+    @property
+    def name(self):
+        """Gets the name of this CreateLayerFromServiceParameter.  # noqa: E501
+
+
+        :return: The name of this CreateLayerFromServiceParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this CreateLayerFromServiceParameter.
+
+
+        :param name: The name of this CreateLayerFromServiceParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     @property
     def url(self):

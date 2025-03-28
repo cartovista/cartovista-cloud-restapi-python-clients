@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**data_row_delete_datarows**](DataRowApi.md#data_row_delete_datarows) | **DELETE** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRows | Deletes the rows in the table by identifier. Invalid identifiers are ignored.
 [**data_row_get_data_row**](DataRowApi.md#data_row_get_data_row) | **GET** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRow/{dataRowIdentifier} | Gets a specific row in the table. The geometry column is ignored if the table belongs to a layer.
 [**data_row_get_data_rows**](DataRowApi.md#data_row_get_data_rows) | **POST** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRows | Gets the rows in the table.
+[**data_row_get_data_rows_with_total**](DataRowApi.md#data_row_get_data_rows_with_total) | **POST** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRowsWithTotal | 
 [**data_row_update_data_row**](DataRowApi.md#data_row_update_data_row) | **POST** /{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRow/{dataRowIdentifier}/update | Updates a specific row in the table. A subset of the columns can be used. A layer&#x27;s table can be used.
 
 # **data_row_create_data_rows**
@@ -31,7 +32,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -92,7 +92,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -153,7 +152,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -214,7 +212,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -275,7 +272,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -336,7 +332,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -378,6 +373,65 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **data_row_get_data_rows_with_total**
+> DataRowsWithTotal data_row_get_data_rows_with_total(body, data_table_identifier, tenant_url_code)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cartovista_cloud_clients
+from cartovista_cloud_clients.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cartovista_cloud_clients.DataRowApi(cartovista_cloud_clients.ApiClient(configuration))
+body = cartovista_cloud_clients.DataRowsGetParameters() # DataRowsGetParameters | 
+data_table_identifier = 'data_table_identifier_example' # str | 
+tenant_url_code = 'tenant_url_code_example' # str | 
+
+try:
+    api_response = api_instance.data_row_get_data_rows_with_total(body, data_table_identifier, tenant_url_code)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DataRowApi->data_row_get_data_rows_with_total: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DataRowsGetParameters**](DataRowsGetParameters.md)|  | 
+ **data_table_identifier** | **str**|  | 
+ **tenant_url_code** | **str**|  | 
+
+### Return type
+
+[**DataRowsWithTotal**](DataRowsWithTotal.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **data_row_update_data_row**
 > DataRow data_row_update_data_row(body, data_table_identifier, data_row_identifier, tenant_url_code)
 
@@ -397,7 +451,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -440,5 +493,4 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 

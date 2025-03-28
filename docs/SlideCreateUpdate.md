@@ -12,7 +12,8 @@ Name | Type | Description | Notes
 **displayed_data_columns_by_layer** | [**dict(str, SlideColumns)**](SlideColumns.md) |  | [optional] 
 **layout** | **OneOfSlideCreateUpdateLayout** |  | [optional] 
 **story** | **str** |  | [optional] 
-**order** | **int** |  | [optional] 
+**position** | **int** |  | [optional] 
+**parent_folder_id** | **str** |  | [optional] 
 **thumbnail** | **str** |  | [optional] 
 **analyses** | [**list[SlideAnalysisCreateUpdate]**](SlideAnalysisCreateUpdate.md) |  | [optional] 
 

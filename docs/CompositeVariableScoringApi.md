@@ -4,7 +4,7 @@ All URIs are relative to *https://cloud.cartovista.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**composite_variable_scoring_can_modify_analyses**](CompositeVariableScoringApi.md#composite_variable_scoring_can_modify_analyses) | **GET** /{tenantUrlCode}/api/v2/score-analysis/{mapIdentifier}/canModifyAnalyses | Checks whether or not the current user can modify the analyses of the given map.
+[**composite_variable_scoring_can_create_analysis**](CompositeVariableScoringApi.md#composite_variable_scoring_can_create_analysis) | **GET** /{tenantUrlCode}/api/v2/score-analysis/{mapIdentifier}/canCreateAnalysis | Whether or not a user can create analysis on a map
 [**composite_variable_scoring_create_composite_scoring_analysis**](CompositeVariableScoringApi.md#composite_variable_scoring_create_composite_scoring_analysis) | **POST** /{tenantUrlCode}/api/v2/score-analysis/{mapId}/layer/{layerId} | Creates a scoring analysis for a map and a layer.
 [**composite_variable_scoring_create_variable**](CompositeVariableScoringApi.md#composite_variable_scoring_create_variable) | **POST** /{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables | Creates a variable for a given analysis. The scores are recomputed.
 [**composite_variable_scoring_delete_analysis**](CompositeVariableScoringApi.md#composite_variable_scoring_delete_analysis) | **DELETE** /{tenantUrlCode}/api/v2/score-analysis/{analysisId} | Deletes an analysis. The scores are recomputed
@@ -16,10 +16,10 @@ Method | HTTP request | Description
 [**composite_variable_scoring_update_analysis_properties**](CompositeVariableScoringApi.md#composite_variable_scoring_update_analysis_properties) | **PATCH** /{tenantUrlCode}/api/v2/score-analysis/{analysisId} | Updates a variable. The scores are recomputed.
 [**composite_variable_scoring_update_variable**](CompositeVariableScoringApi.md#composite_variable_scoring_update_variable) | **PATCH** /{tenantUrlCode}/api/v2/score-analysis/{variableId}/variables | Updates a variable. The scores are recomputed.
 
-# **composite_variable_scoring_can_modify_analyses**
-> bool composite_variable_scoring_can_modify_analyses(map_identifier, tenant_url_code)
+# **composite_variable_scoring_can_create_analysis**
+> bool composite_variable_scoring_can_create_analysis(map_identifier, tenant_url_code)
 
-Checks whether or not the current user can modify the analyses of the given map.
+Whether or not a user can create analysis on a map
 
 ### Example
 ```python
@@ -35,7 +35,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -46,11 +45,11 @@ map_identifier = 'map_identifier_example' # str |
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
-    # Checks whether or not the current user can modify the analyses of the given map.
-    api_response = api_instance.composite_variable_scoring_can_modify_analyses(map_identifier, tenant_url_code)
+    # Whether or not a user can create analysis on a map
+    api_response = api_instance.composite_variable_scoring_can_create_analysis(map_identifier, tenant_url_code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CompositeVariableScoringApi->composite_variable_scoring_can_modify_analyses: %s\n" % e)
+    print("Exception when calling CompositeVariableScoringApi->composite_variable_scoring_can_create_analysis: %s\n" % e)
 ```
 
 ### Parameters
@@ -94,7 +93,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -157,7 +155,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -218,7 +215,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -276,7 +272,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -337,7 +332,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -396,7 +390,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -455,7 +448,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -516,7 +508,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -575,7 +566,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -636,7 +626,6 @@ configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
 # Configure API key authorization: secretKey
-configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['secretKey'] = 'Bearer'
@@ -677,5 +666,4 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 

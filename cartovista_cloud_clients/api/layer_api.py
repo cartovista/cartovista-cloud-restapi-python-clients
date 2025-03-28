@@ -1462,6 +1462,224 @@ class LayerApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def layer_get_data_tables_by_layer_identifiers(self, body, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets the list of DataTables which are linked to any of the layers whose identifiers passed in argument.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_get_data_tables_by_layer_identifiers(body, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param list[str] body: (required)
+        :param str tenant_url_code: (required)
+        :return: list[LayerDataTable]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.layer_get_data_tables_by_layer_identifiers_with_http_info(body, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.layer_get_data_tables_by_layer_identifiers_with_http_info(body, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def layer_get_data_tables_by_layer_identifiers_with_http_info(self, body, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets the list of DataTables which are linked to any of the layers whose identifiers passed in argument.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_get_data_tables_by_layer_identifiers_with_http_info(body, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param list[str] body: (required)
+        :param str tenant_url_code: (required)
+        :return: list[LayerDataTable]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method layer_get_data_tables_by_layer_identifiers" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `layer_get_data_tables_by_layer_identifiers`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `layer_get_data_tables_by_layer_identifiers`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/allDataTablesByLayers', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[LayerDataTable]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def layer_get_feature_ids_for_selection_stacks(self, body, layer_id, tenant_url_code, **kwargs):  # noqa: E501
+        """layer_get_feature_ids_for_selection_stacks  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_get_feature_ids_for_selection_stacks(body, layer_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param GetFeatureIdsByStackParameters body: (required)
+        :param str layer_id: (required)
+        :param str tenant_url_code: (required)
+        :return: list[list[str]]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.layer_get_feature_ids_for_selection_stacks_with_http_info(body, layer_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.layer_get_feature_ids_for_selection_stacks_with_http_info(body, layer_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def layer_get_feature_ids_for_selection_stacks_with_http_info(self, body, layer_id, tenant_url_code, **kwargs):  # noqa: E501
+        """layer_get_feature_ids_for_selection_stacks  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_get_feature_ids_for_selection_stacks_with_http_info(body, layer_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param GetFeatureIdsByStackParameters body: (required)
+        :param str layer_id: (required)
+        :param str tenant_url_code: (required)
+        :return: list[list[str]]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'layer_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method layer_get_feature_ids_for_selection_stacks" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `layer_get_feature_ids_for_selection_stacks`")  # noqa: E501
+        # verify the required parameter 'layer_id' is set
+        if ('layer_id' not in params or
+                params['layer_id'] is None):
+            raise ValueError("Missing the required parameter `layer_id` when calling `layer_get_feature_ids_for_selection_stacks`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `layer_get_feature_ids_for_selection_stacks`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'layer_id' in params:
+            path_params['layerId'] = params['layer_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/{layerId}/selection-by-stack', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[list[str]]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def layer_get_file_description(self, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Stores a temporary file for an upcoming data insert or update and returns a description of the file's content.  # noqa: E501
 
@@ -2726,6 +2944,103 @@ class LayerApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def layer_regenerate_tile_cache(self, layer_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Regenerates the tile cache for the layer.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_regenerate_tile_cache(layer_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str layer_id: (required)
+        :param str tenant_url_code: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.layer_regenerate_tile_cache_with_http_info(layer_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.layer_regenerate_tile_cache_with_http_info(layer_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def layer_regenerate_tile_cache_with_http_info(self, layer_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Regenerates the tile cache for the layer.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_regenerate_tile_cache_with_http_info(layer_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str layer_id: (required)
+        :param str tenant_url_code: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['layer_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method layer_regenerate_tile_cache" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'layer_id' is set
+        if ('layer_id' not in params or
+                params['layer_id'] is None):
+            raise ValueError("Missing the required parameter `layer_id` when calling `layer_regenerate_tile_cache`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `layer_regenerate_tile_cache`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'layer_id' in params:
+            path_params['layerId'] = params['layer_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/{layerId}/regenerateTileCache', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def layer_set_data_column_unique_id(self, layer_identifier, data_column_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Sets the layer's unique identifier column. The column becomes the primary way to identify its rows.  # noqa: E501
 
@@ -3253,6 +3568,119 @@ class LayerApi(object):
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/update', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Layer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def layer_update_layer_external_service_url(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Update a layer's external data provider url. The url isn't validated. Use synchronize API to import data to CartoVista server after changing the URL.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_update_layer_external_service_url(body, layer_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UpdateServiceUrl body: (required)
+        :param str layer_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: Layer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.layer_update_layer_external_service_url_with_http_info(body, layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.layer_update_layer_external_service_url_with_http_info(body, layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def layer_update_layer_external_service_url_with_http_info(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Update a layer's external data provider url. The url isn't validated. Use synchronize API to import data to CartoVista server after changing the URL.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_update_layer_external_service_url_with_http_info(body, layer_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UpdateServiceUrl body: (required)
+        :param str layer_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: Layer
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'layer_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method layer_update_layer_external_service_url" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `layer_update_layer_external_service_url`")  # noqa: E501
+        # verify the required parameter 'layer_identifier' is set
+        if ('layer_identifier' not in params or
+                params['layer_identifier'] is None):
+            raise ValueError("Missing the required parameter `layer_identifier` when calling `layer_update_layer_external_service_url`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `layer_update_layer_external_service_url`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'layer_identifier' in params:
+            path_params['layerIdentifier'] = params['layer_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/update-layer-external-service-url', 'POST',
             path_params,
             query_params,
             header_params,

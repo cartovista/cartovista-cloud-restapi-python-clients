@@ -37,7 +37,8 @@ class Slide(object):
         'displayed_data_columns_by_layer': 'dict(str, SlideColumns)',
         'layout': 'OneOfSlideLayout',
         'story': 'str',
-        'order': 'int',
+        'position': 'int',
+        'parent_folder_id': 'str',
         'id': 'str',
         'map_id': 'str',
         'thumbnail_url': 'str',
@@ -55,7 +56,8 @@ class Slide(object):
         'displayed_data_columns_by_layer': 'displayedDataColumnsByLayer',
         'layout': 'layout',
         'story': 'story',
-        'order': 'order',
+        'position': 'position',
+        'parent_folder_id': 'parentFolderId',
         'id': 'id',
         'map_id': 'mapId',
         'thumbnail_url': 'thumbnailUrl',
@@ -63,7 +65,7 @@ class Slide(object):
         'analyses': 'analyses'
     }
 
-    def __init__(self, name=None, theme_set=None, thematic_schemes=None, extent=None, is_default_slide=None, vector_layers=None, displayed_data_columns_by_layer=None, layout=None, story=None, order=None, id=None, map_id=None, thumbnail_url=None, last_update=None, analyses=None):  # noqa: E501
+    def __init__(self, name=None, theme_set=None, thematic_schemes=None, extent=None, is_default_slide=None, vector_layers=None, displayed_data_columns_by_layer=None, layout=None, story=None, position=None, parent_folder_id=None, id=None, map_id=None, thumbnail_url=None, last_update=None, analyses=None):  # noqa: E501
         """Slide - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._theme_set = None
@@ -74,7 +76,8 @@ class Slide(object):
         self._displayed_data_columns_by_layer = None
         self._layout = None
         self._story = None
-        self._order = None
+        self._position = None
+        self._parent_folder_id = None
         self._id = None
         self._map_id = None
         self._thumbnail_url = None
@@ -99,8 +102,10 @@ class Slide(object):
             self.layout = layout
         if story is not None:
             self.story = story
-        if order is not None:
-            self.order = order
+        if position is not None:
+            self.position = position
+        if parent_folder_id is not None:
+            self.parent_folder_id = parent_folder_id
         if id is not None:
             self.id = id
         if map_id is not None:
@@ -302,25 +307,46 @@ class Slide(object):
         self._story = story
 
     @property
-    def order(self):
-        """Gets the order of this Slide.  # noqa: E501
+    def position(self):
+        """Gets the position of this Slide.  # noqa: E501
 
 
-        :return: The order of this Slide.  # noqa: E501
+        :return: The position of this Slide.  # noqa: E501
         :rtype: int
         """
-        return self._order
+        return self._position
 
-    @order.setter
-    def order(self, order):
-        """Sets the order of this Slide.
+    @position.setter
+    def position(self, position):
+        """Sets the position of this Slide.
 
 
-        :param order: The order of this Slide.  # noqa: E501
+        :param position: The position of this Slide.  # noqa: E501
         :type: int
         """
 
-        self._order = order
+        self._position = position
+
+    @property
+    def parent_folder_id(self):
+        """Gets the parent_folder_id of this Slide.  # noqa: E501
+
+
+        :return: The parent_folder_id of this Slide.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_folder_id
+
+    @parent_folder_id.setter
+    def parent_folder_id(self, parent_folder_id):
+        """Sets the parent_folder_id of this Slide.
+
+
+        :param parent_folder_id: The parent_folder_id of this Slide.  # noqa: E501
+        :type: str
+        """
+
+        self._parent_folder_id = parent_folder_id
 
     @property
     def id(self):

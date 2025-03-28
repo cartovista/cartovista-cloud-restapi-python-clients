@@ -24,10 +24,10 @@ class FeatureType(object):
     """
     allowed enum values
     """
-    _0 = "0"
-    _1 = "1"
-    _2 = "2"
-    _3 = "3"
+    NONE = "None"
+    WKT = "WKT"
+    GEOJSON = "GeoJSON"
+    LONGLAT = "LongLat"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

@@ -33,6 +33,9 @@ class ConfirmSignUpParameter(object):
         'company': 'str',
         'company_role': 'str',
         'industry': 'IndustryEnum',
+        'other_industry_value': 'str',
+        'goal': 'GoalEnum',
+        'other_goal_value': 'str',
         'phone': 'str'
     }
 
@@ -42,16 +45,22 @@ class ConfirmSignUpParameter(object):
         'company': 'company',
         'company_role': 'companyRole',
         'industry': 'industry',
+        'other_industry_value': 'otherIndustryValue',
+        'goal': 'goal',
+        'other_goal_value': 'otherGoalValue',
         'phone': 'phone'
     }
 
-    def __init__(self, firstname=None, lastname=None, company=None, company_role=None, industry=None, phone=None):  # noqa: E501
+    def __init__(self, firstname=None, lastname=None, company=None, company_role=None, industry=None, other_industry_value=None, goal=None, other_goal_value=None, phone=None):  # noqa: E501
         """ConfirmSignUpParameter - a model defined in Swagger"""  # noqa: E501
         self._firstname = None
         self._lastname = None
         self._company = None
         self._company_role = None
         self._industry = None
+        self._other_industry_value = None
+        self._goal = None
+        self._other_goal_value = None
         self._phone = None
         self.discriminator = None
         if firstname is not None:
@@ -64,6 +73,12 @@ class ConfirmSignUpParameter(object):
             self.company_role = company_role
         if industry is not None:
             self.industry = industry
+        if other_industry_value is not None:
+            self.other_industry_value = other_industry_value
+        if goal is not None:
+            self.goal = goal
+        if other_goal_value is not None:
+            self.other_goal_value = other_goal_value
         if phone is not None:
             self.phone = phone
 
@@ -171,6 +186,69 @@ class ConfirmSignUpParameter(object):
         """
 
         self._industry = industry
+
+    @property
+    def other_industry_value(self):
+        """Gets the other_industry_value of this ConfirmSignUpParameter.  # noqa: E501
+
+
+        :return: The other_industry_value of this ConfirmSignUpParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._other_industry_value
+
+    @other_industry_value.setter
+    def other_industry_value(self, other_industry_value):
+        """Sets the other_industry_value of this ConfirmSignUpParameter.
+
+
+        :param other_industry_value: The other_industry_value of this ConfirmSignUpParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._other_industry_value = other_industry_value
+
+    @property
+    def goal(self):
+        """Gets the goal of this ConfirmSignUpParameter.  # noqa: E501
+
+
+        :return: The goal of this ConfirmSignUpParameter.  # noqa: E501
+        :rtype: GoalEnum
+        """
+        return self._goal
+
+    @goal.setter
+    def goal(self, goal):
+        """Sets the goal of this ConfirmSignUpParameter.
+
+
+        :param goal: The goal of this ConfirmSignUpParameter.  # noqa: E501
+        :type: GoalEnum
+        """
+
+        self._goal = goal
+
+    @property
+    def other_goal_value(self):
+        """Gets the other_goal_value of this ConfirmSignUpParameter.  # noqa: E501
+
+
+        :return: The other_goal_value of this ConfirmSignUpParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._other_goal_value
+
+    @other_goal_value.setter
+    def other_goal_value(self, other_goal_value):
+        """Sets the other_goal_value of this ConfirmSignUpParameter.
+
+
+        :param other_goal_value: The other_goal_value of this ConfirmSignUpParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._other_goal_value = other_goal_value
 
     @property
     def phone(self):
