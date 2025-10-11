@@ -96,6 +96,7 @@ class FlatFileSheetDTO(object):
     def id(self):
         """Gets the id of this FlatFileSheetDTO.  # noqa: E501
 
+        Id that CVWP_DataTable will be assign. If we are updating a DataTable or SpatialMetadata that already exists, this will be assigned to it. For GridLayers, this is the GridLayerId  # noqa: E501
 
         :return: The id of this FlatFileSheetDTO.  # noqa: E501
         :rtype: str
@@ -106,6 +107,7 @@ class FlatFileSheetDTO(object):
     def id(self, id):
         """Sets the id of this FlatFileSheetDTO.
 
+        Id that CVWP_DataTable will be assign. If we are updating a DataTable or SpatialMetadata that already exists, this will be assigned to it. For GridLayers, this is the GridLayerId  # noqa: E501
 
         :param id: The id of this FlatFileSheetDTO.  # noqa: E501
         :type: str

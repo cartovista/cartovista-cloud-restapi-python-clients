@@ -34,7 +34,8 @@ class GridLayerSettings(object):
         'alias': 'str',
         'style': 'GridLayerSettingsStyle',
         'rendering': 'LayerSettingsRendering',
-        'visibility_ranges': 'GridLayerSettingsVisibilityRanges'
+        'visibility_ranges': 'GridLayerSettingsVisibilityRanges',
+        'legend': 'LayerSettingsLegend'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class GridLayerSettings(object):
         'alias': 'alias',
         'style': 'style',
         'rendering': 'rendering',
-        'visibility_ranges': 'visibilityRanges'
+        'visibility_ranges': 'visibilityRanges',
+        'legend': 'legend'
     }
 
-    def __init__(self, id=None, grid_layer_id=None, map_id=None, alias=None, style=None, rendering=None, visibility_ranges=None):  # noqa: E501
+    def __init__(self, id=None, grid_layer_id=None, map_id=None, alias=None, style=None, rendering=None, visibility_ranges=None, legend=None):  # noqa: E501
         """GridLayerSettings - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._grid_layer_id = None
@@ -56,6 +58,7 @@ class GridLayerSettings(object):
         self._style = None
         self._rendering = None
         self._visibility_ranges = None
+        self._legend = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -71,6 +74,8 @@ class GridLayerSettings(object):
             self.rendering = rendering
         if visibility_ranges is not None:
             self.visibility_ranges = visibility_ranges
+        if legend is not None:
+            self.legend = legend
 
     @property
     def id(self):
@@ -218,6 +223,27 @@ class GridLayerSettings(object):
         """
 
         self._visibility_ranges = visibility_ranges
+
+    @property
+    def legend(self):
+        """Gets the legend of this GridLayerSettings.  # noqa: E501
+
+
+        :return: The legend of this GridLayerSettings.  # noqa: E501
+        :rtype: LayerSettingsLegend
+        """
+        return self._legend
+
+    @legend.setter
+    def legend(self, legend):
+        """Sets the legend of this GridLayerSettings.
+
+
+        :param legend: The legend of this GridLayerSettings.  # noqa: E501
+        :type: LayerSettingsLegend
+        """
+
+        self._legend = legend
 
     def to_dict(self):
         """Returns the model properties as a dict"""

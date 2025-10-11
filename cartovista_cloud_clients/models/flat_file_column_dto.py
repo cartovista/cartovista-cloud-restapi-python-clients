@@ -141,6 +141,7 @@ class FlatFileColumnDTO(object):
     def id(self):
         """Gets the id of this FlatFileColumnDTO.  # noqa: E501
 
+        Id that CVWP_DataColumn will be assign.  # noqa: E501
 
         :return: The id of this FlatFileColumnDTO.  # noqa: E501
         :rtype: str
@@ -151,6 +152,7 @@ class FlatFileColumnDTO(object):
     def id(self, id):
         """Sets the id of this FlatFileColumnDTO.
 
+        Id that CVWP_DataColumn will be assign.  # noqa: E501
 
         :param id: The id of this FlatFileColumnDTO.  # noqa: E501
         :type: str
@@ -351,6 +353,7 @@ class FlatFileColumnDTO(object):
     def column_number(self):
         """Gets the column_number of this FlatFileColumnDTO.  # noqa: E501
 
+        Represents the index of the column in the file.  # noqa: E501
 
         :return: The column_number of this FlatFileColumnDTO.  # noqa: E501
         :rtype: int
@@ -361,6 +364,7 @@ class FlatFileColumnDTO(object):
     def column_number(self, column_number):
         """Sets the column_number of this FlatFileColumnDTO.
 
+        Represents the index of the column in the file.  # noqa: E501
 
         :param column_number: The column_number of this FlatFileColumnDTO.  # noqa: E501
         :type: int
@@ -393,6 +397,7 @@ class FlatFileColumnDTO(object):
     def unremovable(self):
         """Gets the unremovable of this FlatFileColumnDTO.  # noqa: E501
 
+        If true, the user won't be able to remove this column when uploading the file. It is normally false except when updating a DataTable or layer. Columns that already exists can't be unchecked.  # noqa: E501
 
         :return: The unremovable of this FlatFileColumnDTO.  # noqa: E501
         :rtype: bool
@@ -403,6 +408,7 @@ class FlatFileColumnDTO(object):
     def unremovable(self, unremovable):
         """Sets the unremovable of this FlatFileColumnDTO.
 
+        If true, the user won't be able to remove this column when uploading the file. It is normally false except when updating a DataTable or layer. Columns that already exists can't be unchecked.  # noqa: E501
 
         :param unremovable: The unremovable of this FlatFileColumnDTO.  # noqa: E501
         :type: bool
@@ -540,6 +546,7 @@ class FlatFileColumnDTO(object):
     def format_data_type(self):
         """Gets the format_data_type of this FlatFileColumnDTO.  # noqa: E501
 
+        The datatype defined by the user in the file.  If it has a value, the user has defined one.  Currently only excel files can have a Format set by the user.  # noqa: E501
 
         :return: The format_data_type of this FlatFileColumnDTO.  # noqa: E501
         :rtype: OneOfFlatFileColumnDTOFormatDataType
@@ -550,6 +557,7 @@ class FlatFileColumnDTO(object):
     def format_data_type(self, format_data_type):
         """Sets the format_data_type of this FlatFileColumnDTO.
 
+        The datatype defined by the user in the file.  If it has a value, the user has defined one.  Currently only excel files can have a Format set by the user.  # noqa: E501
 
         :param format_data_type: The format_data_type of this FlatFileColumnDTO.  # noqa: E501
         :type: OneOfFlatFileColumnDTOFormatDataType

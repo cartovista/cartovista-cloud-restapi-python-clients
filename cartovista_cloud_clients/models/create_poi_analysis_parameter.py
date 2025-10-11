@@ -30,46 +30,68 @@ class CreatePoiAnalysisParameter(object):
     swagger_types = {
         'name': 'str',
         'heatmap_layer_name': 'str',
+        'injection_area_mask_layer_name': 'str',
+        'harmers_layer_name': 'str',
         'layer_id': 'str',
         'table_id': 'str',
         'footprint_layer_id': 'str',
         'transmission_lines_layer_id': 'str',
         'transmission_points_layer_id': 'str',
+        'harmer_table_id': 'str',
+        'stress_gen_layer_id': 'str',
         'power': 'float',
         'smoothing': 'float',
-        'pixel_size': 'int'
+        'pixel_size': 'int',
+        'buffer_size': 'int',
+        'show_injection_area_mask': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
         'heatmap_layer_name': 'heatmapLayerName',
+        'injection_area_mask_layer_name': 'injectionAreaMaskLayerName',
+        'harmers_layer_name': 'harmersLayerName',
         'layer_id': 'layerId',
         'table_id': 'tableId',
         'footprint_layer_id': 'footprintLayerId',
         'transmission_lines_layer_id': 'transmissionLinesLayerId',
         'transmission_points_layer_id': 'transmissionPointsLayerId',
+        'harmer_table_id': 'harmerTableId',
+        'stress_gen_layer_id': 'stressGenLayerId',
         'power': 'power',
         'smoothing': 'smoothing',
-        'pixel_size': 'pixelSize'
+        'pixel_size': 'pixelSize',
+        'buffer_size': 'bufferSize',
+        'show_injection_area_mask': 'showInjectionAreaMask'
     }
 
-    def __init__(self, name=None, heatmap_layer_name=None, layer_id=None, table_id=None, footprint_layer_id=None, transmission_lines_layer_id=None, transmission_points_layer_id=None, power=None, smoothing=None, pixel_size=None):  # noqa: E501
+    def __init__(self, name=None, heatmap_layer_name=None, injection_area_mask_layer_name=None, harmers_layer_name=None, layer_id=None, table_id=None, footprint_layer_id=None, transmission_lines_layer_id=None, transmission_points_layer_id=None, harmer_table_id=None, stress_gen_layer_id=None, power=None, smoothing=None, pixel_size=None, buffer_size=None, show_injection_area_mask=None):  # noqa: E501
         """CreatePoiAnalysisParameter - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._heatmap_layer_name = None
+        self._injection_area_mask_layer_name = None
+        self._harmers_layer_name = None
         self._layer_id = None
         self._table_id = None
         self._footprint_layer_id = None
         self._transmission_lines_layer_id = None
         self._transmission_points_layer_id = None
+        self._harmer_table_id = None
+        self._stress_gen_layer_id = None
         self._power = None
         self._smoothing = None
         self._pixel_size = None
+        self._buffer_size = None
+        self._show_injection_area_mask = None
         self.discriminator = None
         if name is not None:
             self.name = name
         if heatmap_layer_name is not None:
             self.heatmap_layer_name = heatmap_layer_name
+        if injection_area_mask_layer_name is not None:
+            self.injection_area_mask_layer_name = injection_area_mask_layer_name
+        if harmers_layer_name is not None:
+            self.harmers_layer_name = harmers_layer_name
         if layer_id is not None:
             self.layer_id = layer_id
         if table_id is not None:
@@ -80,12 +102,20 @@ class CreatePoiAnalysisParameter(object):
             self.transmission_lines_layer_id = transmission_lines_layer_id
         if transmission_points_layer_id is not None:
             self.transmission_points_layer_id = transmission_points_layer_id
+        if harmer_table_id is not None:
+            self.harmer_table_id = harmer_table_id
+        if stress_gen_layer_id is not None:
+            self.stress_gen_layer_id = stress_gen_layer_id
         if power is not None:
             self.power = power
         if smoothing is not None:
             self.smoothing = smoothing
         if pixel_size is not None:
             self.pixel_size = pixel_size
+        if buffer_size is not None:
+            self.buffer_size = buffer_size
+        if show_injection_area_mask is not None:
+            self.show_injection_area_mask = show_injection_area_mask
 
     @property
     def name(self):
@@ -128,6 +158,48 @@ class CreatePoiAnalysisParameter(object):
         """
 
         self._heatmap_layer_name = heatmap_layer_name
+
+    @property
+    def injection_area_mask_layer_name(self):
+        """Gets the injection_area_mask_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The injection_area_mask_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._injection_area_mask_layer_name
+
+    @injection_area_mask_layer_name.setter
+    def injection_area_mask_layer_name(self, injection_area_mask_layer_name):
+        """Sets the injection_area_mask_layer_name of this CreatePoiAnalysisParameter.
+
+
+        :param injection_area_mask_layer_name: The injection_area_mask_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._injection_area_mask_layer_name = injection_area_mask_layer_name
+
+    @property
+    def harmers_layer_name(self):
+        """Gets the harmers_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The harmers_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._harmers_layer_name
+
+    @harmers_layer_name.setter
+    def harmers_layer_name(self, harmers_layer_name):
+        """Sets the harmers_layer_name of this CreatePoiAnalysisParameter.
+
+
+        :param harmers_layer_name: The harmers_layer_name of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._harmers_layer_name = harmers_layer_name
 
     @property
     def layer_id(self):
@@ -235,6 +307,48 @@ class CreatePoiAnalysisParameter(object):
         self._transmission_points_layer_id = transmission_points_layer_id
 
     @property
+    def harmer_table_id(self):
+        """Gets the harmer_table_id of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The harmer_table_id of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._harmer_table_id
+
+    @harmer_table_id.setter
+    def harmer_table_id(self, harmer_table_id):
+        """Sets the harmer_table_id of this CreatePoiAnalysisParameter.
+
+
+        :param harmer_table_id: The harmer_table_id of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._harmer_table_id = harmer_table_id
+
+    @property
+    def stress_gen_layer_id(self):
+        """Gets the stress_gen_layer_id of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The stress_gen_layer_id of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: str
+        """
+        return self._stress_gen_layer_id
+
+    @stress_gen_layer_id.setter
+    def stress_gen_layer_id(self, stress_gen_layer_id):
+        """Sets the stress_gen_layer_id of this CreatePoiAnalysisParameter.
+
+
+        :param stress_gen_layer_id: The stress_gen_layer_id of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: str
+        """
+
+        self._stress_gen_layer_id = stress_gen_layer_id
+
+    @property
     def power(self):
         """Gets the power of this CreatePoiAnalysisParameter.  # noqa: E501
 
@@ -296,6 +410,48 @@ class CreatePoiAnalysisParameter(object):
         """
 
         self._pixel_size = pixel_size
+
+    @property
+    def buffer_size(self):
+        """Gets the buffer_size of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The buffer_size of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: int
+        """
+        return self._buffer_size
+
+    @buffer_size.setter
+    def buffer_size(self, buffer_size):
+        """Sets the buffer_size of this CreatePoiAnalysisParameter.
+
+
+        :param buffer_size: The buffer_size of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: int
+        """
+
+        self._buffer_size = buffer_size
+
+    @property
+    def show_injection_area_mask(self):
+        """Gets the show_injection_area_mask of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The show_injection_area_mask of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_injection_area_mask
+
+    @show_injection_area_mask.setter
+    def show_injection_area_mask(self, show_injection_area_mask):
+        """Sets the show_injection_area_mask of this CreatePoiAnalysisParameter.
+
+
+        :param show_injection_area_mask: The show_injection_area_mask of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_injection_area_mask = show_injection_area_mask
 
     def to_dict(self):
         """Returns the model properties as a dict"""

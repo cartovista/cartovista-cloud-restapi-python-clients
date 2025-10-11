@@ -30,20 +30,23 @@ class UpdateTableFromFileParameter(object):
     swagger_types = {
         'column_numbers_to_keep': 'list[int]',
         'uploaded_path': 'str',
-        'sheet_name': 'str'
+        'sheet_name': 'str',
+        'is_append': 'bool'
     }
 
     attribute_map = {
         'column_numbers_to_keep': 'columnNumbersToKeep',
         'uploaded_path': 'uploadedPath',
-        'sheet_name': 'sheetName'
+        'sheet_name': 'sheetName',
+        'is_append': 'isAppend'
     }
 
-    def __init__(self, column_numbers_to_keep=None, uploaded_path=None, sheet_name=None):  # noqa: E501
+    def __init__(self, column_numbers_to_keep=None, uploaded_path=None, sheet_name=None, is_append=None):  # noqa: E501
         """UpdateTableFromFileParameter - a model defined in Swagger"""  # noqa: E501
         self._column_numbers_to_keep = None
         self._uploaded_path = None
         self._sheet_name = None
+        self._is_append = None
         self.discriminator = None
         if column_numbers_to_keep is not None:
             self.column_numbers_to_keep = column_numbers_to_keep
@@ -51,6 +54,8 @@ class UpdateTableFromFileParameter(object):
             self.uploaded_path = uploaded_path
         if sheet_name is not None:
             self.sheet_name = sheet_name
+        if is_append is not None:
+            self.is_append = is_append
 
     @property
     def column_numbers_to_keep(self):
@@ -114,6 +119,27 @@ class UpdateTableFromFileParameter(object):
         """
 
         self._sheet_name = sheet_name
+
+    @property
+    def is_append(self):
+        """Gets the is_append of this UpdateTableFromFileParameter.  # noqa: E501
+
+
+        :return: The is_append of this UpdateTableFromFileParameter.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_append
+
+    @is_append.setter
+    def is_append(self, is_append):
+        """Sets the is_append of this UpdateTableFromFileParameter.
+
+
+        :param is_append: The is_append of this UpdateTableFromFileParameter.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_append = is_append
 
     def to_dict(self):
         """Returns the model properties as a dict"""

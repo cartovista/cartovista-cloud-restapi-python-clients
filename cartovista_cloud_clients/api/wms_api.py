@@ -119,7 +119,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms', 'POST',
@@ -220,7 +220,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}', 'DELETE',
@@ -325,7 +325,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/GetExtents', 'POST',
@@ -426,7 +426,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}', 'GET',
@@ -527,7 +527,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}/details', 'GET',
@@ -620,7 +620,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms', 'GET',
@@ -733,7 +733,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}', 'PATCH',
@@ -846,7 +846,7 @@ class WmsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/wms/{identifier}/permissions', 'PATCH',

@@ -31,22 +31,25 @@ class DataTableUpdateParameter(object):
         'name': 'str',
         'metadata': 'str',
         'description': 'str',
-        'data_columns': 'list[DataColumnUpdateParameterExtended]'
+        'data_columns': 'list[DataColumnUpdateParameterExtended]',
+        'is_encrypted': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
         'metadata': 'metadata',
         'description': 'description',
-        'data_columns': 'dataColumns'
+        'data_columns': 'dataColumns',
+        'is_encrypted': 'isEncrypted'
     }
 
-    def __init__(self, name=None, metadata=None, description=None, data_columns=None):  # noqa: E501
+    def __init__(self, name=None, metadata=None, description=None, data_columns=None, is_encrypted=None):  # noqa: E501
         """DataTableUpdateParameter - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._metadata = None
         self._description = None
         self._data_columns = None
+        self._is_encrypted = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -56,6 +59,8 @@ class DataTableUpdateParameter(object):
             self.description = description
         if data_columns is not None:
             self.data_columns = data_columns
+        if is_encrypted is not None:
+            self.is_encrypted = is_encrypted
 
     @property
     def name(self):
@@ -140,6 +145,27 @@ class DataTableUpdateParameter(object):
         """
 
         self._data_columns = data_columns
+
+    @property
+    def is_encrypted(self):
+        """Gets the is_encrypted of this DataTableUpdateParameter.  # noqa: E501
+
+
+        :return: The is_encrypted of this DataTableUpdateParameter.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_encrypted
+
+    @is_encrypted.setter
+    def is_encrypted(self, is_encrypted):
+        """Sets the is_encrypted of this DataTableUpdateParameter.
+
+
+        :param is_encrypted: The is_encrypted of this DataTableUpdateParameter.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_encrypted = is_encrypted
 
     def to_dict(self):
         """Returns the model properties as a dict"""

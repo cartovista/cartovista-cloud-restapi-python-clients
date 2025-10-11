@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**date_format** | [**DateFormat**](DateFormat.md) |  | [optional] 
 **internal_sys_column** | **bool** |  | [optional] 
 **name** | **str** |  | [optional] 
 **data_type** | [**CartoVistaPortalDataType**](CartoVistaPortalDataType.md) |  | [optional] 
@@ -22,12 +23,11 @@ Name | Type | Description | Notes
 **column_number** | **int** |  | [optional] 
 **original_name** | **str** |  | [optional] 
 **is_used_in_data_table_join** | **bool** |  | [optional] 
+**is_used_in_poi_analysis** | **bool** |  | [optional] 
+**is_used_in_cvs** | **bool** |  | [optional] 
 **only_has_unique_values** | **bool** |  | [optional] 
-**domain_type** | [**DataColumnDomainEnum**](DataColumnDomainEnum.md) |  | [optional] 
 **not_available_values** | **bool** |  | [optional] 
 **value_to_convert** | **float** |  | [optional] 
-**domain_type_string** | **str** |  | [optional] 
-**column_domain** | [**DataColumnDomainDTO**](DataColumnDomainDTO.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

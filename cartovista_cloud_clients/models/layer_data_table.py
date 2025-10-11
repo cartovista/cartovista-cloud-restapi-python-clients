@@ -37,6 +37,7 @@ class LayerDataTable(object):
         'metadata': 'str',
         'icon': 'str',
         'row_count': 'int',
+        'data_usage': 'int',
         'creation_time': 'datetime',
         'modified_time': 'datetime',
         'time_series_column_id': 'str',
@@ -51,6 +52,8 @@ class LayerDataTable(object):
         'disabled': 'bool',
         'is_demo_source': 'bool',
         'is_external': 'bool',
+        'is_managed': 'bool',
+        'is_encrypted': 'bool',
         'optimization_status': 'ClickHouseStatus',
         'folder_id': 'str',
         'layer_id': 'str',
@@ -68,6 +71,7 @@ class LayerDataTable(object):
         'metadata': 'metadata',
         'icon': 'icon',
         'row_count': 'rowCount',
+        'data_usage': 'dataUsage',
         'creation_time': 'creationTime',
         'modified_time': 'modifiedTime',
         'time_series_column_id': 'timeSeriesColumnId',
@@ -82,6 +86,8 @@ class LayerDataTable(object):
         'disabled': 'disabled',
         'is_demo_source': 'isDemoSource',
         'is_external': 'isExternal',
+        'is_managed': 'isManaged',
+        'is_encrypted': 'isEncrypted',
         'optimization_status': 'optimizationStatus',
         'folder_id': 'folderId',
         'layer_id': 'layerId',
@@ -89,7 +95,7 @@ class LayerDataTable(object):
         'is_layer_locked': 'isLayerLocked'
     }
 
-    def __init__(self, unique_identifier=None, name=None, system_identifier=None, unique_id_data_column=None, owner_name=None, description=None, metadata=None, icon=None, row_count=None, creation_time=None, modified_time=None, time_series_column_id=None, geocode_address_column_id=None, geocode_accuracy_column_id=None, geocode_latitude_column_id=None, geocode_longitude_column_id=None, is_many_table_in_one_to_many_join=None, public_access=None, permissions=None, can_edit=None, disabled=None, is_demo_source=None, is_external=None, optimization_status=None, folder_id=None, layer_id=None, join_id=None, is_layer_locked=None):  # noqa: E501
+    def __init__(self, unique_identifier=None, name=None, system_identifier=None, unique_id_data_column=None, owner_name=None, description=None, metadata=None, icon=None, row_count=None, data_usage=None, creation_time=None, modified_time=None, time_series_column_id=None, geocode_address_column_id=None, geocode_accuracy_column_id=None, geocode_latitude_column_id=None, geocode_longitude_column_id=None, is_many_table_in_one_to_many_join=None, public_access=None, permissions=None, can_edit=None, disabled=None, is_demo_source=None, is_external=None, is_managed=None, is_encrypted=None, optimization_status=None, folder_id=None, layer_id=None, join_id=None, is_layer_locked=None):  # noqa: E501
         """LayerDataTable - a model defined in Swagger"""  # noqa: E501
         self._unique_identifier = None
         self._name = None
@@ -100,6 +106,7 @@ class LayerDataTable(object):
         self._metadata = None
         self._icon = None
         self._row_count = None
+        self._data_usage = None
         self._creation_time = None
         self._modified_time = None
         self._time_series_column_id = None
@@ -114,6 +121,8 @@ class LayerDataTable(object):
         self._disabled = None
         self._is_demo_source = None
         self._is_external = None
+        self._is_managed = None
+        self._is_encrypted = None
         self._optimization_status = None
         self._folder_id = None
         self._layer_id = None
@@ -138,6 +147,8 @@ class LayerDataTable(object):
             self.icon = icon
         if row_count is not None:
             self.row_count = row_count
+        if data_usage is not None:
+            self.data_usage = data_usage
         if creation_time is not None:
             self.creation_time = creation_time
         if modified_time is not None:
@@ -166,6 +177,10 @@ class LayerDataTable(object):
             self.is_demo_source = is_demo_source
         if is_external is not None:
             self.is_external = is_external
+        if is_managed is not None:
+            self.is_managed = is_managed
+        if is_encrypted is not None:
+            self.is_encrypted = is_encrypted
         if optimization_status is not None:
             self.optimization_status = optimization_status
         if folder_id is not None:
@@ -365,6 +380,27 @@ class LayerDataTable(object):
         """
 
         self._row_count = row_count
+
+    @property
+    def data_usage(self):
+        """Gets the data_usage of this LayerDataTable.  # noqa: E501
+
+
+        :return: The data_usage of this LayerDataTable.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_usage
+
+    @data_usage.setter
+    def data_usage(self, data_usage):
+        """Sets the data_usage of this LayerDataTable.
+
+
+        :param data_usage: The data_usage of this LayerDataTable.  # noqa: E501
+        :type: int
+        """
+
+        self._data_usage = data_usage
 
     @property
     def creation_time(self):
@@ -659,6 +695,48 @@ class LayerDataTable(object):
         """
 
         self._is_external = is_external
+
+    @property
+    def is_managed(self):
+        """Gets the is_managed of this LayerDataTable.  # noqa: E501
+
+
+        :return: The is_managed of this LayerDataTable.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_managed
+
+    @is_managed.setter
+    def is_managed(self, is_managed):
+        """Sets the is_managed of this LayerDataTable.
+
+
+        :param is_managed: The is_managed of this LayerDataTable.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_managed = is_managed
+
+    @property
+    def is_encrypted(self):
+        """Gets the is_encrypted of this LayerDataTable.  # noqa: E501
+
+
+        :return: The is_encrypted of this LayerDataTable.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_encrypted
+
+    @is_encrypted.setter
+    def is_encrypted(self, is_encrypted):
+        """Sets the is_encrypted of this LayerDataTable.
+
+
+        :param is_encrypted: The is_encrypted of this LayerDataTable.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_encrypted = is_encrypted
 
     @property
     def optimization_status(self):

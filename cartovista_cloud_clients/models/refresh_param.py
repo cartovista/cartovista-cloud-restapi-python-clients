@@ -46,6 +46,7 @@ class RefreshParam(object):
     def device_id(self):
         """Gets the device_id of this RefreshParam.  # noqa: E501
 
+        Device that this refresh token belongs to. This allows us to have multiple refresh tokens for the same user if he is logged-in on multiple browsers or device. We would not want to have the refresh token be invalidated by another device.  # noqa: E501
 
         :return: The device_id of this RefreshParam.  # noqa: E501
         :rtype: str
@@ -56,6 +57,7 @@ class RefreshParam(object):
     def device_id(self, device_id):
         """Sets the device_id of this RefreshParam.
 
+        Device that this refresh token belongs to. This allows us to have multiple refresh tokens for the same user if he is logged-in on multiple browsers or device. We would not want to have the refresh token be invalidated by another device.  # noqa: E501
 
         :param device_id: The device_id of this RefreshParam.  # noqa: E501
         :type: str

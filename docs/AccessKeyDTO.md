@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **access_key** | **str** |  | [optional] 
 **access_key_string** | **str** |  | [optional] 
 **has_access_key** | **bool** |  | [optional] 
+**has_secret_key** | **bool** |  | [optional] 
 **mode** | [**ApiModeEnum**](ApiModeEnum.md) |  | [optional] 
 **enabled** | **bool** |  | [optional] 
 **user_id** | **str** |  | [optional] 

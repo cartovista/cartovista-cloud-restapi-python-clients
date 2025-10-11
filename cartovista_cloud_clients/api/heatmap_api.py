@@ -123,7 +123,7 @@ class HeatmapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}', 'POST',
@@ -224,7 +224,7 @@ class HeatmapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}', 'GET',
@@ -325,7 +325,7 @@ class HeatmapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}/details', 'GET',
@@ -434,7 +434,7 @@ class HeatmapApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/heatmap/{layerIdentifier}', 'PATCH',

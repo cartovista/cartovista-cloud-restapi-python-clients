@@ -34,8 +34,10 @@ class PoiAnalysis(object):
         'heatmap_layer_id': 'str',
         'name_column_id': 'str',
         'kv_values_column_id': 'str',
+        'bus_id_column_id': 'str',
         'name': 'str',
         'kv_values': 'list[str]',
+        'kv_classes_to_levels': 'dict(str, list[float])',
         'scenarios': 'list[PoiAnalysisScenario]',
         'has_footprint_polygon': 'bool',
         'is_pregenerating': 'bool',
@@ -44,7 +46,10 @@ class PoiAnalysis(object):
         'extent': 'OneOfPoiAnalysisExtent',
         'custom_poi_analyses': 'list[CustomPoiAnalysis]',
         'initial_contingency_loading_max_data': 'OneOfPoiAnalysisInitialContingencyLoadingMaxData',
-        'transmission': 'OneOfPoiAnalysisTransmission'
+        'transmission': 'OneOfPoiAnalysisTransmission',
+        'mask': 'OneOfPoiAnalysisMask',
+        'harmer_and_stress_gen': 'OneOfPoiAnalysisHarmerAndStressGen',
+        'harmer_layer': 'OneOfPoiAnalysisHarmerLayer'
     }
 
     attribute_map = {
@@ -54,8 +59,10 @@ class PoiAnalysis(object):
         'heatmap_layer_id': 'heatmapLayerId',
         'name_column_id': 'nameColumnId',
         'kv_values_column_id': 'kvValuesColumnId',
+        'bus_id_column_id': 'busIdColumnId',
         'name': 'name',
         'kv_values': 'kvValues',
+        'kv_classes_to_levels': 'kvClassesToLevels',
         'scenarios': 'scenarios',
         'has_footprint_polygon': 'hasFootprintPolygon',
         'is_pregenerating': 'isPregenerating',
@@ -64,10 +71,13 @@ class PoiAnalysis(object):
         'extent': 'extent',
         'custom_poi_analyses': 'customPoiAnalyses',
         'initial_contingency_loading_max_data': 'initialContingencyLoadingMaxData',
-        'transmission': 'transmission'
+        'transmission': 'transmission',
+        'mask': 'mask',
+        'harmer_and_stress_gen': 'harmerAndStressGen',
+        'harmer_layer': 'harmerLayer'
     }
 
-    def __init__(self, map_id=None, layer_id=None, table_id=None, heatmap_layer_id=None, name_column_id=None, kv_values_column_id=None, name=None, kv_values=None, scenarios=None, has_footprint_polygon=None, is_pregenerating=None, can_use_worst_dispatch=None, generating_scenario_id=None, extent=None, custom_poi_analyses=None, initial_contingency_loading_max_data=None, transmission=None):  # noqa: E501
+    def __init__(self, map_id=None, layer_id=None, table_id=None, heatmap_layer_id=None, name_column_id=None, kv_values_column_id=None, bus_id_column_id=None, name=None, kv_values=None, kv_classes_to_levels=None, scenarios=None, has_footprint_polygon=None, is_pregenerating=None, can_use_worst_dispatch=None, generating_scenario_id=None, extent=None, custom_poi_analyses=None, initial_contingency_loading_max_data=None, transmission=None, mask=None, harmer_and_stress_gen=None, harmer_layer=None):  # noqa: E501
         """PoiAnalysis - a model defined in Swagger"""  # noqa: E501
         self._map_id = None
         self._layer_id = None
@@ -75,8 +85,10 @@ class PoiAnalysis(object):
         self._heatmap_layer_id = None
         self._name_column_id = None
         self._kv_values_column_id = None
+        self._bus_id_column_id = None
         self._name = None
         self._kv_values = None
+        self._kv_classes_to_levels = None
         self._scenarios = None
         self._has_footprint_polygon = None
         self._is_pregenerating = None
@@ -86,6 +98,9 @@ class PoiAnalysis(object):
         self._custom_poi_analyses = None
         self._initial_contingency_loading_max_data = None
         self._transmission = None
+        self._mask = None
+        self._harmer_and_stress_gen = None
+        self._harmer_layer = None
         self.discriminator = None
         if map_id is not None:
             self.map_id = map_id
@@ -99,10 +114,14 @@ class PoiAnalysis(object):
             self.name_column_id = name_column_id
         if kv_values_column_id is not None:
             self.kv_values_column_id = kv_values_column_id
+        if bus_id_column_id is not None:
+            self.bus_id_column_id = bus_id_column_id
         if name is not None:
             self.name = name
         if kv_values is not None:
             self.kv_values = kv_values
+        if kv_classes_to_levels is not None:
+            self.kv_classes_to_levels = kv_classes_to_levels
         if scenarios is not None:
             self.scenarios = scenarios
         if has_footprint_polygon is not None:
@@ -121,6 +140,12 @@ class PoiAnalysis(object):
             self.initial_contingency_loading_max_data = initial_contingency_loading_max_data
         if transmission is not None:
             self.transmission = transmission
+        if mask is not None:
+            self.mask = mask
+        if harmer_and_stress_gen is not None:
+            self.harmer_and_stress_gen = harmer_and_stress_gen
+        if harmer_layer is not None:
+            self.harmer_layer = harmer_layer
 
     @property
     def map_id(self):
@@ -249,6 +274,27 @@ class PoiAnalysis(object):
         self._kv_values_column_id = kv_values_column_id
 
     @property
+    def bus_id_column_id(self):
+        """Gets the bus_id_column_id of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The bus_id_column_id of this PoiAnalysis.  # noqa: E501
+        :rtype: str
+        """
+        return self._bus_id_column_id
+
+    @bus_id_column_id.setter
+    def bus_id_column_id(self, bus_id_column_id):
+        """Sets the bus_id_column_id of this PoiAnalysis.
+
+
+        :param bus_id_column_id: The bus_id_column_id of this PoiAnalysis.  # noqa: E501
+        :type: str
+        """
+
+        self._bus_id_column_id = bus_id_column_id
+
+    @property
     def name(self):
         """Gets the name of this PoiAnalysis.  # noqa: E501
 
@@ -289,6 +335,27 @@ class PoiAnalysis(object):
         """
 
         self._kv_values = kv_values
+
+    @property
+    def kv_classes_to_levels(self):
+        """Gets the kv_classes_to_levels of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The kv_classes_to_levels of this PoiAnalysis.  # noqa: E501
+        :rtype: dict(str, list[float])
+        """
+        return self._kv_classes_to_levels
+
+    @kv_classes_to_levels.setter
+    def kv_classes_to_levels(self, kv_classes_to_levels):
+        """Sets the kv_classes_to_levels of this PoiAnalysis.
+
+
+        :param kv_classes_to_levels: The kv_classes_to_levels of this PoiAnalysis.  # noqa: E501
+        :type: dict(str, list[float])
+        """
+
+        self._kv_classes_to_levels = kv_classes_to_levels
 
     @property
     def scenarios(self):
@@ -478,6 +545,69 @@ class PoiAnalysis(object):
         """
 
         self._transmission = transmission
+
+    @property
+    def mask(self):
+        """Gets the mask of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The mask of this PoiAnalysis.  # noqa: E501
+        :rtype: OneOfPoiAnalysisMask
+        """
+        return self._mask
+
+    @mask.setter
+    def mask(self, mask):
+        """Sets the mask of this PoiAnalysis.
+
+
+        :param mask: The mask of this PoiAnalysis.  # noqa: E501
+        :type: OneOfPoiAnalysisMask
+        """
+
+        self._mask = mask
+
+    @property
+    def harmer_and_stress_gen(self):
+        """Gets the harmer_and_stress_gen of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The harmer_and_stress_gen of this PoiAnalysis.  # noqa: E501
+        :rtype: OneOfPoiAnalysisHarmerAndStressGen
+        """
+        return self._harmer_and_stress_gen
+
+    @harmer_and_stress_gen.setter
+    def harmer_and_stress_gen(self, harmer_and_stress_gen):
+        """Sets the harmer_and_stress_gen of this PoiAnalysis.
+
+
+        :param harmer_and_stress_gen: The harmer_and_stress_gen of this PoiAnalysis.  # noqa: E501
+        :type: OneOfPoiAnalysisHarmerAndStressGen
+        """
+
+        self._harmer_and_stress_gen = harmer_and_stress_gen
+
+    @property
+    def harmer_layer(self):
+        """Gets the harmer_layer of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The harmer_layer of this PoiAnalysis.  # noqa: E501
+        :rtype: OneOfPoiAnalysisHarmerLayer
+        """
+        return self._harmer_layer
+
+    @harmer_layer.setter
+    def harmer_layer(self, harmer_layer):
+        """Sets the harmer_layer of this PoiAnalysis.
+
+
+        :param harmer_layer: The harmer_layer of this PoiAnalysis.  # noqa: E501
+        :type: OneOfPoiAnalysisHarmerLayer
+        """
+
+        self._harmer_layer = harmer_layer
 
     def to_dict(self):
         """Returns the model properties as a dict"""

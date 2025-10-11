@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **unique_identifier** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **language** | [**LanguageEnum**](LanguageEnum.md) |  | [optional] 
-**type** | [**MapTypeEnum**](MapTypeEnum.md) |  | [optional] 
-**is_territory_manager** | **bool** |  | [optional] 
 **editable** | **bool** |  | [optional] 
 **seo_title** | **str** |  | [optional] 
 **seo_description** | **str** |  | [optional] 

@@ -115,7 +115,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{mapIdentifier}/canCreateAnalysis', 'GET',
@@ -232,7 +232,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{mapId}/layer/{layerId}', 'POST',
@@ -345,7 +345,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables', 'POST',
@@ -442,7 +442,7 @@ class CompositeVariableScoringApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}', 'DELETE',
@@ -551,7 +551,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables/{variableId}', 'DELETE',
@@ -652,7 +652,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{mapId}', 'GET',
@@ -753,7 +753,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/datatable', 'GET',
@@ -862,7 +862,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables/{variableId}', 'GET',
@@ -963,7 +963,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}/variables', 'GET',
@@ -1076,7 +1076,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{analysisId}', 'PATCH',
@@ -1189,7 +1189,7 @@ class CompositeVariableScoringApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/score-analysis/{variableId}/variables', 'PATCH',

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**feature_type** | [**FeatureType**](FeatureType.md) |  | [optional] 
+**feature_type** | **OneOfFeatureLongLatUpdateParameterFeatureType** |  | [optional] 
 **proj4** | **str** |  | [optional] 
 **longitude** | **float** |  | [optional] 
 **latitude** | **float** |  | [optional] 

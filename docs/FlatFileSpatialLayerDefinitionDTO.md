@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**file_id** | **str** |  | [optional] 
-**uploaded_file_path** | **str** |  | [optional] 
-**file_name** | **str** |  | [optional] 
+**file_id** | **str** | Id of the folder where the file is saved | [optional] 
+**uploaded_file_path** | **str** | Path of the file after the upload. (will be in a Guid named folder) | [optional] 
+**file_name** | **str** | The initial filename | [optional] 
 **name** | **str** |  | [optional] 
 **type_string** | **str** |  | [optional] 
 **sheets** | [**list[FlatFileSheetDTO]**](FlatFileSheetDTO.md) |  | [optional] 

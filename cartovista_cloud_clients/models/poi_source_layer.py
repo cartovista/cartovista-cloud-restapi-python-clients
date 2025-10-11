@@ -31,22 +31,25 @@ class PoiSourceLayer(object):
         'id': 'str',
         'name': 'str',
         'thumbnail_url': 'str',
-        'settings': 'DefaultHeatmapSettings'
+        'settings': 'DefaultHeatmapSettings',
+        'num_kvs': 'int'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
         'thumbnail_url': 'thumbnailUrl',
-        'settings': 'settings'
+        'settings': 'settings',
+        'num_kvs': 'numKvs'
     }
 
-    def __init__(self, id=None, name=None, thumbnail_url=None, settings=None):  # noqa: E501
+    def __init__(self, id=None, name=None, thumbnail_url=None, settings=None, num_kvs=None):  # noqa: E501
         """PoiSourceLayer - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._thumbnail_url = None
         self._settings = None
+        self._num_kvs = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -56,6 +59,8 @@ class PoiSourceLayer(object):
             self.thumbnail_url = thumbnail_url
         if settings is not None:
             self.settings = settings
+        if num_kvs is not None:
+            self.num_kvs = num_kvs
 
     @property
     def id(self):
@@ -140,6 +145,27 @@ class PoiSourceLayer(object):
         """
 
         self._settings = settings
+
+    @property
+    def num_kvs(self):
+        """Gets the num_kvs of this PoiSourceLayer.  # noqa: E501
+
+
+        :return: The num_kvs of this PoiSourceLayer.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_kvs
+
+    @num_kvs.setter
+    def num_kvs(self, num_kvs):
+        """Sets the num_kvs of this PoiSourceLayer.
+
+
+        :param num_kvs: The num_kvs of this PoiSourceLayer.  # noqa: E501
+        :type: int
+        """
+
+        self._num_kvs = num_kvs
 
     def to_dict(self):
         """Returns the model properties as a dict"""

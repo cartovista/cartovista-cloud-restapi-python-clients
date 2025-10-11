@@ -30,20 +30,26 @@ class MapSettings(object):
     swagger_types = {
         'distance_unit': 'str',
         'area_unit': 'str',
-        'zoom_on_map_load': 'bool'
+        'zoom_on_map_load': 'bool',
+        'lazy_loading': 'bool',
+        'zoom_restrictions': 'ZoomRestrictionSettings'
     }
 
     attribute_map = {
         'distance_unit': 'distanceUnit',
         'area_unit': 'areaUnit',
-        'zoom_on_map_load': 'zoomOnMapLoad'
+        'zoom_on_map_load': 'zoomOnMapLoad',
+        'lazy_loading': 'lazyLoading',
+        'zoom_restrictions': 'zoomRestrictions'
     }
 
-    def __init__(self, distance_unit=None, area_unit=None, zoom_on_map_load=None):  # noqa: E501
+    def __init__(self, distance_unit=None, area_unit=None, zoom_on_map_load=None, lazy_loading=None, zoom_restrictions=None):  # noqa: E501
         """MapSettings - a model defined in Swagger"""  # noqa: E501
         self._distance_unit = None
         self._area_unit = None
         self._zoom_on_map_load = None
+        self._lazy_loading = None
+        self._zoom_restrictions = None
         self.discriminator = None
         if distance_unit is not None:
             self.distance_unit = distance_unit
@@ -51,6 +57,10 @@ class MapSettings(object):
             self.area_unit = area_unit
         if zoom_on_map_load is not None:
             self.zoom_on_map_load = zoom_on_map_load
+        if lazy_loading is not None:
+            self.lazy_loading = lazy_loading
+        if zoom_restrictions is not None:
+            self.zoom_restrictions = zoom_restrictions
 
     @property
     def distance_unit(self):
@@ -114,6 +124,48 @@ class MapSettings(object):
         """
 
         self._zoom_on_map_load = zoom_on_map_load
+
+    @property
+    def lazy_loading(self):
+        """Gets the lazy_loading of this MapSettings.  # noqa: E501
+
+
+        :return: The lazy_loading of this MapSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._lazy_loading
+
+    @lazy_loading.setter
+    def lazy_loading(self, lazy_loading):
+        """Sets the lazy_loading of this MapSettings.
+
+
+        :param lazy_loading: The lazy_loading of this MapSettings.  # noqa: E501
+        :type: bool
+        """
+
+        self._lazy_loading = lazy_loading
+
+    @property
+    def zoom_restrictions(self):
+        """Gets the zoom_restrictions of this MapSettings.  # noqa: E501
+
+
+        :return: The zoom_restrictions of this MapSettings.  # noqa: E501
+        :rtype: ZoomRestrictionSettings
+        """
+        return self._zoom_restrictions
+
+    @zoom_restrictions.setter
+    def zoom_restrictions(self, zoom_restrictions):
+        """Sets the zoom_restrictions of this MapSettings.
+
+
+        :param zoom_restrictions: The zoom_restrictions of this MapSettings.  # noqa: E501
+        :type: ZoomRestrictionSettings
+        """
+
+        self._zoom_restrictions = zoom_restrictions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -107,7 +107,7 @@ class OrganizationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/organization/disclaimer/accept', 'POST',
@@ -208,7 +208,7 @@ class OrganizationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/organization', 'DELETE',
@@ -226,43 +226,41 @@ class OrganizationApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def organization_get_organization(self, tenant_url_code, **kwargs):  # noqa: E501
+    def organization_get_organization(self, **kwargs):  # noqa: E501
         """Gets the current organization.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.organization_get_organization(tenant_url_code, async_req=True)
+        >>> thread = api.organization_get_organization(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str tenant_url_code: (required)
         :return: Organization
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.organization_get_organization_with_http_info(tenant_url_code, **kwargs)  # noqa: E501
+            return self.organization_get_organization_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.organization_get_organization_with_http_info(tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.organization_get_organization_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def organization_get_organization_with_http_info(self, tenant_url_code, **kwargs):  # noqa: E501
+    def organization_get_organization_with_http_info(self, **kwargs):  # noqa: E501
         """Gets the current organization.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.organization_get_organization_with_http_info(tenant_url_code, async_req=True)
+        >>> thread = api.organization_get_organization_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str tenant_url_code: (required)
         :return: Organization
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['tenant_url_code']  # noqa: E501
+        all_params = []  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -277,16 +275,10 @@ class OrganizationApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'tenant_url_code' is set
-        if ('tenant_url_code' not in params or
-                params['tenant_url_code'] is None):
-            raise ValueError("Missing the required parameter `tenant_url_code` when calling `organization_get_organization`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'tenant_url_code' in params:
-            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
 
         query_params = []
 
@@ -301,10 +293,10 @@ class OrganizationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
-            '/{tenantUrlCode}/api/v2/organization', 'GET',
+            '/api/v2/organization', 'GET',
             path_params,
             query_params,
             header_params,
@@ -394,7 +386,7 @@ class OrganizationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/organization/disclaimer', 'GET',
@@ -405,6 +397,99 @@ class OrganizationApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[TenantDisclaimer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def organization_get_organization_with_tenant_url(self, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets the current organization.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.organization_get_organization_with_tenant_url(tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str tenant_url_code: (required)
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.organization_get_organization_with_tenant_url_with_http_info(tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.organization_get_organization_with_tenant_url_with_http_info(tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def organization_get_organization_with_tenant_url_with_http_info(self, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets the current organization.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.organization_get_organization_with_tenant_url_with_http_info(tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str tenant_url_code: (required)
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method organization_get_organization_with_tenant_url" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `organization_get_organization_with_tenant_url`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/organization', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2001',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -503,7 +588,7 @@ class OrganizationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/organization/disclaimer', 'POST',
@@ -604,7 +689,7 @@ class OrganizationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/organization/license', 'POST',
@@ -709,7 +794,7 @@ class OrganizationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/organization', 'PATCH',
@@ -810,7 +895,7 @@ class OrganizationApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/organization/icon', 'PATCH',
@@ -911,7 +996,7 @@ class OrganizationApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/organization/logo', 'PATCH',

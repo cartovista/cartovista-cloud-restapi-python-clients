@@ -55,6 +55,12 @@ class TestPoiAnalysisApi(unittest.TestCase):
         """
         pass
 
+    def test_poi_analysis_get_harmers(self):
+        """Test case for poi_analysis_get_harmers
+
+        """
+        pass
+
     def test_poi_analysis_get_poi_analysis(self):
         """Test case for poi_analysis_get_poi_analysis
 
@@ -76,6 +82,13 @@ class TestPoiAnalysisApi(unittest.TestCase):
         """
         pass
 
+    def test_poi_analysis_get_poi_settings_poi_tables(self):
+        """Test case for poi_analysis_get_poi_settings_poi_tables
+
+        Gets the new dropdown table options after a table was linked when creating a new POI analysis.  # noqa: E501
+        """
+        pass
+
     def test_poi_analysis_get_temporary_poi_analysis_data(self):
         """Test case for poi_analysis_get_temporary_poi_analysis_data
 
@@ -83,10 +96,23 @@ class TestPoiAnalysisApi(unittest.TestCase):
         """
         pass
 
+    def test_poi_analysis_get_temporary_poi_analysis_mask(self):
+        """Test case for poi_analysis_get_temporary_poi_analysis_mask
+
+        """
+        pass
+
     def test_poi_analysis_pregenerate_rasters(self):
         """Test case for poi_analysis_pregenerate_rasters
 
         Generates all the missing raster for each scenario, year and kV level.  # noqa: E501
+        """
+        pass
+
+    def test_poi_analysis_regenerate_rasters(self):
+        """Test case for poi_analysis_regenerate_rasters
+
+        Regenerate all rasters of the poi associated with the map.  # noqa: E501
         """
         pass
 

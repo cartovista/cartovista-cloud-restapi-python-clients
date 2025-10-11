@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **style** | [**GridLayerSettingsStyle**](GridLayerSettingsStyle.md) |  | [optional] 
 **rendering** | [**LayerSettingsRendering**](LayerSettingsRendering.md) |  | [optional] 
 **visibility_ranges** | [**GridLayerSettingsVisibilityRanges**](GridLayerSettingsVisibilityRanges.md) |  | [optional] 
+**legend** | [**LayerSettingsLegend**](LayerSettingsLegend.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -47,7 +47,12 @@ class DataColumn(object):
         'not_available_values': 'bool',
         'value_to_convert': 'float',
         'only_has_unique_values': 'bool',
-        'internal_system_column': 'bool'
+        'is_used_in_data_table_join': 'bool',
+        'is_used_in_poi_analysis': 'bool',
+        'is_used_in_cvs': 'bool',
+        'internal_system_column': 'bool',
+        'editor_settings': 'EditorSettings',
+        'date_format': 'DateFormat'
     }
 
     attribute_map = {
@@ -70,10 +75,15 @@ class DataColumn(object):
         'not_available_values': 'notAvailableValues',
         'value_to_convert': 'valueToConvert',
         'only_has_unique_values': 'onlyHasUniqueValues',
-        'internal_system_column': 'internalSystemColumn'
+        'is_used_in_data_table_join': 'isUsedInDataTableJoin',
+        'is_used_in_poi_analysis': 'isUsedInPOIAnalysis',
+        'is_used_in_cvs': 'isUsedInCVS',
+        'internal_system_column': 'internalSystemColumn',
+        'editor_settings': 'editorSettings',
+        'date_format': 'dateFormat'
     }
 
-    def __init__(self, system_identifier=None, unique_identifier=None, data_table_identifier=None, carto_vista_data_type=None, name=None, original_name=None, description=None, metadata=None, units=None, unit_placement=None, aggregation_type=None, mappable=None, precision=None, round_to_precision=None, time_stamp=None, time_stamp_accuracy=None, not_available_values=None, value_to_convert=None, only_has_unique_values=None, internal_system_column=None):  # noqa: E501
+    def __init__(self, system_identifier=None, unique_identifier=None, data_table_identifier=None, carto_vista_data_type=None, name=None, original_name=None, description=None, metadata=None, units=None, unit_placement=None, aggregation_type=None, mappable=None, precision=None, round_to_precision=None, time_stamp=None, time_stamp_accuracy=None, not_available_values=None, value_to_convert=None, only_has_unique_values=None, is_used_in_data_table_join=None, is_used_in_poi_analysis=None, is_used_in_cvs=None, internal_system_column=None, editor_settings=None, date_format=None):  # noqa: E501
         """DataColumn - a model defined in Swagger"""  # noqa: E501
         self._system_identifier = None
         self._unique_identifier = None
@@ -94,7 +104,12 @@ class DataColumn(object):
         self._not_available_values = None
         self._value_to_convert = None
         self._only_has_unique_values = None
+        self._is_used_in_data_table_join = None
+        self._is_used_in_poi_analysis = None
+        self._is_used_in_cvs = None
         self._internal_system_column = None
+        self._editor_settings = None
+        self._date_format = None
         self.discriminator = None
         if system_identifier is not None:
             self.system_identifier = system_identifier
@@ -134,8 +149,18 @@ class DataColumn(object):
             self.value_to_convert = value_to_convert
         if only_has_unique_values is not None:
             self.only_has_unique_values = only_has_unique_values
+        if is_used_in_data_table_join is not None:
+            self.is_used_in_data_table_join = is_used_in_data_table_join
+        if is_used_in_poi_analysis is not None:
+            self.is_used_in_poi_analysis = is_used_in_poi_analysis
+        if is_used_in_cvs is not None:
+            self.is_used_in_cvs = is_used_in_cvs
         if internal_system_column is not None:
             self.internal_system_column = internal_system_column
+        if editor_settings is not None:
+            self.editor_settings = editor_settings
+        if date_format is not None:
+            self.date_format = date_format
 
     @property
     def system_identifier(self):
@@ -537,6 +562,69 @@ class DataColumn(object):
         self._only_has_unique_values = only_has_unique_values
 
     @property
+    def is_used_in_data_table_join(self):
+        """Gets the is_used_in_data_table_join of this DataColumn.  # noqa: E501
+
+
+        :return: The is_used_in_data_table_join of this DataColumn.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_used_in_data_table_join
+
+    @is_used_in_data_table_join.setter
+    def is_used_in_data_table_join(self, is_used_in_data_table_join):
+        """Sets the is_used_in_data_table_join of this DataColumn.
+
+
+        :param is_used_in_data_table_join: The is_used_in_data_table_join of this DataColumn.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_used_in_data_table_join = is_used_in_data_table_join
+
+    @property
+    def is_used_in_poi_analysis(self):
+        """Gets the is_used_in_poi_analysis of this DataColumn.  # noqa: E501
+
+
+        :return: The is_used_in_poi_analysis of this DataColumn.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_used_in_poi_analysis
+
+    @is_used_in_poi_analysis.setter
+    def is_used_in_poi_analysis(self, is_used_in_poi_analysis):
+        """Sets the is_used_in_poi_analysis of this DataColumn.
+
+
+        :param is_used_in_poi_analysis: The is_used_in_poi_analysis of this DataColumn.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_used_in_poi_analysis = is_used_in_poi_analysis
+
+    @property
+    def is_used_in_cvs(self):
+        """Gets the is_used_in_cvs of this DataColumn.  # noqa: E501
+
+
+        :return: The is_used_in_cvs of this DataColumn.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_used_in_cvs
+
+    @is_used_in_cvs.setter
+    def is_used_in_cvs(self, is_used_in_cvs):
+        """Sets the is_used_in_cvs of this DataColumn.
+
+
+        :param is_used_in_cvs: The is_used_in_cvs of this DataColumn.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_used_in_cvs = is_used_in_cvs
+
+    @property
     def internal_system_column(self):
         """Gets the internal_system_column of this DataColumn.  # noqa: E501
 
@@ -556,6 +644,48 @@ class DataColumn(object):
         """
 
         self._internal_system_column = internal_system_column
+
+    @property
+    def editor_settings(self):
+        """Gets the editor_settings of this DataColumn.  # noqa: E501
+
+
+        :return: The editor_settings of this DataColumn.  # noqa: E501
+        :rtype: EditorSettings
+        """
+        return self._editor_settings
+
+    @editor_settings.setter
+    def editor_settings(self, editor_settings):
+        """Sets the editor_settings of this DataColumn.
+
+
+        :param editor_settings: The editor_settings of this DataColumn.  # noqa: E501
+        :type: EditorSettings
+        """
+
+        self._editor_settings = editor_settings
+
+    @property
+    def date_format(self):
+        """Gets the date_format of this DataColumn.  # noqa: E501
+
+
+        :return: The date_format of this DataColumn.  # noqa: E501
+        :rtype: DateFormat
+        """
+        return self._date_format
+
+    @date_format.setter
+    def date_format(self, date_format):
+        """Sets the date_format of this DataColumn.
+
+
+        :param date_format: The date_format of this DataColumn.  # noqa: E501
+        :type: DateFormat
+        """
+
+        self._date_format = date_format
 
     def to_dict(self):
         """Returns the model properties as a dict"""

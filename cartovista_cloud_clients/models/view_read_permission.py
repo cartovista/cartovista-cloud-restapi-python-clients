@@ -28,29 +28,50 @@ class ViewReadPermission(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'view_id': 'str',
         'identity_id': 'str',
-        'is_group': 'bool',
-        'view_id': 'str'
+        'is_group': 'bool'
     }
 
     attribute_map = {
+        'view_id': 'viewId',
         'identity_id': 'identityId',
-        'is_group': 'isGroup',
-        'view_id': 'viewId'
+        'is_group': 'isGroup'
     }
 
-    def __init__(self, identity_id=None, is_group=None, view_id=None):  # noqa: E501
+    def __init__(self, view_id=None, identity_id=None, is_group=None):  # noqa: E501
         """ViewReadPermission - a model defined in Swagger"""  # noqa: E501
+        self._view_id = None
         self._identity_id = None
         self._is_group = None
-        self._view_id = None
         self.discriminator = None
+        if view_id is not None:
+            self.view_id = view_id
         if identity_id is not None:
             self.identity_id = identity_id
         if is_group is not None:
             self.is_group = is_group
-        if view_id is not None:
-            self.view_id = view_id
+
+    @property
+    def view_id(self):
+        """Gets the view_id of this ViewReadPermission.  # noqa: E501
+
+
+        :return: The view_id of this ViewReadPermission.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_id
+
+    @view_id.setter
+    def view_id(self, view_id):
+        """Sets the view_id of this ViewReadPermission.
+
+
+        :param view_id: The view_id of this ViewReadPermission.  # noqa: E501
+        :type: str
+        """
+
+        self._view_id = view_id
 
     @property
     def identity_id(self):
@@ -93,27 +114,6 @@ class ViewReadPermission(object):
         """
 
         self._is_group = is_group
-
-    @property
-    def view_id(self):
-        """Gets the view_id of this ViewReadPermission.  # noqa: E501
-
-
-        :return: The view_id of this ViewReadPermission.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_id
-
-    @view_id.setter
-    def view_id(self, view_id):
-        """Sets the view_id of this ViewReadPermission.
-
-
-        :param view_id: The view_id of this ViewReadPermission.  # noqa: E501
-        :type: str
-        """
-
-        self._view_id = view_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

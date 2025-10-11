@@ -35,8 +35,6 @@ class PermissionDTO(object):
     ALLMAPCREATORUSER_MODIFY = "AllMapCreatorUser.Modify"
     SECUREOBJECTS_SHARED = "SecureObjects.Shared"
     SECUREOBJECTS_MODIFY = "SecureObjects.Modify"
-    SECUREOBJECTS_TMCONTRIBUTOR = "SecureObjects.TMContributor"
-    SECUREOBJECTS_TMMANAGER = "SecureObjects.TMManager"
     SCORINGACCESS = "ScoringAccess"
     SCORINGMODIFY = "ScoringModify"
     MAPGALLERY = "MapGallery"

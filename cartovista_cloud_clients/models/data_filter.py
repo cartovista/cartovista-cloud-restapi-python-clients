@@ -29,7 +29,7 @@ class DataFilter(object):
     """
     swagger_types = {
         'value': 'str',
-        'filter_operator': 'DataFilterOperator'
+        'filter_operator': 'OneOfDataFilterFilterOperator'
     }
 
     attribute_map = {
@@ -74,7 +74,7 @@ class DataFilter(object):
 
 
         :return: The filter_operator of this DataFilter.  # noqa: E501
-        :rtype: DataFilterOperator
+        :rtype: OneOfDataFilterFilterOperator
         """
         return self._filter_operator
 
@@ -84,7 +84,7 @@ class DataFilter(object):
 
 
         :param filter_operator: The filter_operator of this DataFilter.  # noqa: E501
-        :type: DataFilterOperator
+        :type: OneOfDataFilterFilterOperator
         """
 
         self._filter_operator = filter_operator

@@ -42,6 +42,9 @@ class DataColumnUpdateParameterExtended(object):
         'time_stamp_accuracy': 'object',
         'not_available_values': 'bool',
         'value_to_convert': 'float',
+        'date_format': 'OneOfDataColumnUpdateParameterExtendedDateFormat',
+        'editor_visible': 'bool',
+        'editor_mode': 'EditorMode',
         'column_identifier': 'str'
     }
 
@@ -60,10 +63,13 @@ class DataColumnUpdateParameterExtended(object):
         'time_stamp_accuracy': 'timeStampAccuracy',
         'not_available_values': 'notAvailableValues',
         'value_to_convert': 'valueToConvert',
+        'date_format': 'dateFormat',
+        'editor_visible': 'editorVisible',
+        'editor_mode': 'editorMode',
         'column_identifier': 'columnIdentifier'
     }
 
-    def __init__(self, unit_placement=None, carto_vista_data_type=None, name=None, description=None, metadata=None, units=None, aggregation_type=None, mappable=None, precision=None, round_to_precision=None, time_stamp=None, time_stamp_accuracy=None, not_available_values=None, value_to_convert=None, column_identifier=None):  # noqa: E501
+    def __init__(self, unit_placement=None, carto_vista_data_type=None, name=None, description=None, metadata=None, units=None, aggregation_type=None, mappable=None, precision=None, round_to_precision=None, time_stamp=None, time_stamp_accuracy=None, not_available_values=None, value_to_convert=None, date_format=None, editor_visible=None, editor_mode=None, column_identifier=None):  # noqa: E501
         """DataColumnUpdateParameterExtended - a model defined in Swagger"""  # noqa: E501
         self._unit_placement = None
         self._carto_vista_data_type = None
@@ -79,6 +85,9 @@ class DataColumnUpdateParameterExtended(object):
         self._time_stamp_accuracy = None
         self._not_available_values = None
         self._value_to_convert = None
+        self._date_format = None
+        self._editor_visible = None
+        self._editor_mode = None
         self._column_identifier = None
         self.discriminator = None
         if unit_placement is not None:
@@ -109,6 +118,12 @@ class DataColumnUpdateParameterExtended(object):
             self.not_available_values = not_available_values
         if value_to_convert is not None:
             self.value_to_convert = value_to_convert
+        if date_format is not None:
+            self.date_format = date_format
+        if editor_visible is not None:
+            self.editor_visible = editor_visible
+        if editor_mode is not None:
+            self.editor_mode = editor_mode
         if column_identifier is not None:
             self.column_identifier = column_identifier
 
@@ -405,6 +420,69 @@ class DataColumnUpdateParameterExtended(object):
         """
 
         self._value_to_convert = value_to_convert
+
+    @property
+    def date_format(self):
+        """Gets the date_format of this DataColumnUpdateParameterExtended.  # noqa: E501
+
+
+        :return: The date_format of this DataColumnUpdateParameterExtended.  # noqa: E501
+        :rtype: OneOfDataColumnUpdateParameterExtendedDateFormat
+        """
+        return self._date_format
+
+    @date_format.setter
+    def date_format(self, date_format):
+        """Sets the date_format of this DataColumnUpdateParameterExtended.
+
+
+        :param date_format: The date_format of this DataColumnUpdateParameterExtended.  # noqa: E501
+        :type: OneOfDataColumnUpdateParameterExtendedDateFormat
+        """
+
+        self._date_format = date_format
+
+    @property
+    def editor_visible(self):
+        """Gets the editor_visible of this DataColumnUpdateParameterExtended.  # noqa: E501
+
+
+        :return: The editor_visible of this DataColumnUpdateParameterExtended.  # noqa: E501
+        :rtype: bool
+        """
+        return self._editor_visible
+
+    @editor_visible.setter
+    def editor_visible(self, editor_visible):
+        """Sets the editor_visible of this DataColumnUpdateParameterExtended.
+
+
+        :param editor_visible: The editor_visible of this DataColumnUpdateParameterExtended.  # noqa: E501
+        :type: bool
+        """
+
+        self._editor_visible = editor_visible
+
+    @property
+    def editor_mode(self):
+        """Gets the editor_mode of this DataColumnUpdateParameterExtended.  # noqa: E501
+
+
+        :return: The editor_mode of this DataColumnUpdateParameterExtended.  # noqa: E501
+        :rtype: EditorMode
+        """
+        return self._editor_mode
+
+    @editor_mode.setter
+    def editor_mode(self, editor_mode):
+        """Sets the editor_mode of this DataColumnUpdateParameterExtended.
+
+
+        :param editor_mode: The editor_mode of this DataColumnUpdateParameterExtended.  # noqa: E501
+        :type: EditorMode
+        """
+
+        self._editor_mode = editor_mode
 
     @property
     def column_identifier(self):

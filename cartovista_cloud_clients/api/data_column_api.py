@@ -32,6 +32,127 @@ class DataColumnApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def data_column_create_data_column(self, body, is_spatial_layer, identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Creates a new data column for a layer or datatable.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_create_data_column(body, is_spatial_layer, identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DataColumnCreateParameter body: (required)
+        :param bool is_spatial_layer: (required)
+        :param str identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_column_create_data_column_with_http_info(body, is_spatial_layer, identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_column_create_data_column_with_http_info(body, is_spatial_layer, identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_column_create_data_column_with_http_info(self, body, is_spatial_layer, identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Creates a new data column for a layer or datatable.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_create_data_column_with_http_info(body, is_spatial_layer, identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DataColumnCreateParameter body: (required)
+        :param bool is_spatial_layer: (required)
+        :param str identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'is_spatial_layer', 'identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_column_create_data_column" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `data_column_create_data_column`")  # noqa: E501
+        # verify the required parameter 'is_spatial_layer' is set
+        if ('is_spatial_layer' not in params or
+                params['is_spatial_layer'] is None):
+            raise ValueError("Missing the required parameter `is_spatial_layer` when calling `data_column_create_data_column`")  # noqa: E501
+        # verify the required parameter 'identifier' is set
+        if ('identifier' not in params or
+                params['identifier'] is None):
+            raise ValueError("Missing the required parameter `identifier` when calling `data_column_create_data_column`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_column_create_data_column`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'identifier' in params:
+            path_params['identifier'] = params['identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+        if 'is_spatial_layer' in params:
+            query_params.append(('isSpatialLayer', params['is_spatial_layer']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/{identifier}/createDataColumn', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DataColumn',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def data_column_create_data_table_data_columns(self, body, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Creates new data columns in a data table. A layer's table can be used.  # noqa: E501
 
@@ -127,7 +248,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/createDataColumns', 'POST',
@@ -240,7 +361,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/createDataColumns', 'POST',
@@ -345,7 +466,7 @@ class DataColumnApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumn/{dataColumnIdentifier}', 'DELETE',
@@ -450,7 +571,7 @@ class DataColumnApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumn/{dataColumnIdentifier}', 'DELETE',
@@ -461,6 +582,107 @@ class DataColumnApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def data_column_get_bulk_edit_layer_data_columns(self, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets all the data columns usable in the bulk editor in the layer.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_get_bulk_edit_layer_data_columns(layer_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str layer_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: list[DataColumn]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_column_get_bulk_edit_layer_data_columns_with_http_info(layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_column_get_bulk_edit_layer_data_columns_with_http_info(layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_column_get_bulk_edit_layer_data_columns_with_http_info(self, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets all the data columns usable in the bulk editor in the layer.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_get_bulk_edit_layer_data_columns_with_http_info(layer_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str layer_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: list[DataColumn]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['layer_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_column_get_bulk_edit_layer_data_columns" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'layer_identifier' is set
+        if ('layer_identifier' not in params or
+                params['layer_identifier'] is None):
+            raise ValueError("Missing the required parameter `layer_identifier` when calling `data_column_get_bulk_edit_layer_data_columns`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_column_get_bulk_edit_layer_data_columns`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'layer_identifier' in params:
+            path_params['layerIdentifier'] = params['layer_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/BulkEditDataColumns', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[DataColumn]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -559,7 +781,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumn/{dataColumnIdentifier}', 'GET',
@@ -660,7 +882,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumns', 'GET',
@@ -769,7 +991,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumn/{dataColumnIdentifier}', 'GET',
@@ -870,7 +1092,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumns', 'GET',
@@ -881,6 +1103,107 @@ class DataColumnApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[DataColumn]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def data_column_recompute_calculated_values(self, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_recompute_calculated_values  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_recompute_calculated_values(data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_column_recompute_calculated_values_with_http_info(data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_column_recompute_calculated_values_with_http_info(data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_column_recompute_calculated_values_with_http_info(self, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_recompute_calculated_values  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_recompute_calculated_values_with_http_info(data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data_column_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_column_recompute_calculated_values" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data_column_id' is set
+        if ('data_column_id' not in params or
+                params['data_column_id'] is None):
+            raise ValueError("Missing the required parameter `data_column_id` when calling `data_column_recompute_calculated_values`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_column_recompute_calculated_values`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'data_column_id' in params:
+            path_params['dataColumnId'] = params['data_column_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/DataColumn/{dataColumnId}/recompute-calculated-values', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DataColumn',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -987,7 +1310,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumn/{dataColumnIdentifier}/setUniqueIdentifier', 'POST',
@@ -1104,7 +1427,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumn/{dataColumnIdentifier}/setUniqueIdentifier', 'POST',
@@ -1115,6 +1438,119 @@ class DataColumnApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='DataColumn',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def data_column_update_calculated_values(self, body, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_update_calculated_values  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_update_calculated_values(body, data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param CalculatedValuesUpdateParameter body: (required)
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: CalculatedValuesUpdateResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_column_update_calculated_values_with_http_info(body, data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_column_update_calculated_values_with_http_info(body, data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_column_update_calculated_values_with_http_info(self, body, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_update_calculated_values  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_update_calculated_values_with_http_info(body, data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param CalculatedValuesUpdateParameter body: (required)
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: CalculatedValuesUpdateResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'data_column_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_column_update_calculated_values" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `data_column_update_calculated_values`")  # noqa: E501
+        # verify the required parameter 'data_column_id' is set
+        if ('data_column_id' not in params or
+                params['data_column_id'] is None):
+            raise ValueError("Missing the required parameter `data_column_id` when calling `data_column_update_calculated_values`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_column_update_calculated_values`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'data_column_id' in params:
+            path_params['dataColumnId'] = params['data_column_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/DataColumn/{dataColumnId}/calculated-values', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='CalculatedValuesUpdateResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1225,10 +1661,349 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataColumn/{dataColumnIdentifier}/update', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DataColumn',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def data_column_update_domain_of_values_date_time(self, body, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_update_domain_of_values_date_time  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_update_domain_of_values_date_time(body, data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DomainOfValuesDateTime body: (required)
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_column_update_domain_of_values_date_time_with_http_info(body, data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_column_update_domain_of_values_date_time_with_http_info(body, data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_column_update_domain_of_values_date_time_with_http_info(self, body, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_update_domain_of_values_date_time  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_update_domain_of_values_date_time_with_http_info(body, data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DomainOfValuesDateTime body: (required)
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'data_column_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_column_update_domain_of_values_date_time" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `data_column_update_domain_of_values_date_time`")  # noqa: E501
+        # verify the required parameter 'data_column_id' is set
+        if ('data_column_id' not in params or
+                params['data_column_id'] is None):
+            raise ValueError("Missing the required parameter `data_column_id` when calling `data_column_update_domain_of_values_date_time`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_column_update_domain_of_values_date_time`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'data_column_id' in params:
+            path_params['dataColumnId'] = params['data_column_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/DataColumn/{dataColumnId}/domain-of-values-datetime', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DataColumn',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def data_column_update_domain_of_values_numeric(self, body, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_update_domain_of_values_numeric  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_update_domain_of_values_numeric(body, data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DomainOfValuesNumeric body: (required)
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_column_update_domain_of_values_numeric_with_http_info(body, data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_column_update_domain_of_values_numeric_with_http_info(body, data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_column_update_domain_of_values_numeric_with_http_info(self, body, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_update_domain_of_values_numeric  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_update_domain_of_values_numeric_with_http_info(body, data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DomainOfValuesNumeric body: (required)
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'data_column_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_column_update_domain_of_values_numeric" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `data_column_update_domain_of_values_numeric`")  # noqa: E501
+        # verify the required parameter 'data_column_id' is set
+        if ('data_column_id' not in params or
+                params['data_column_id'] is None):
+            raise ValueError("Missing the required parameter `data_column_id` when calling `data_column_update_domain_of_values_numeric`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_column_update_domain_of_values_numeric`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'data_column_id' in params:
+            path_params['dataColumnId'] = params['data_column_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/DataColumn/{dataColumnId}/domain-of-values-numeric', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DataColumn',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def data_column_update_domain_of_values_string(self, body, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_update_domain_of_values_string  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_update_domain_of_values_string(body, data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DomainOfValuesString body: (required)
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.data_column_update_domain_of_values_string_with_http_info(body, data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.data_column_update_domain_of_values_string_with_http_info(body, data_column_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def data_column_update_domain_of_values_string_with_http_info(self, body, data_column_id, tenant_url_code, **kwargs):  # noqa: E501
+        """data_column_update_domain_of_values_string  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.data_column_update_domain_of_values_string_with_http_info(body, data_column_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DomainOfValuesString body: (required)
+        :param str data_column_id: (required)
+        :param str tenant_url_code: (required)
+        :return: DataColumn
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'data_column_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method data_column_update_domain_of_values_string" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `data_column_update_domain_of_values_string`")  # noqa: E501
+        # verify the required parameter 'data_column_id' is set
+        if ('data_column_id' not in params or
+                params['data_column_id'] is None):
+            raise ValueError("Missing the required parameter `data_column_id` when calling `data_column_update_domain_of_values_string`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `data_column_update_domain_of_values_string`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'data_column_id' in params:
+            path_params['dataColumnId'] = params['data_column_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/DataColumn/{dataColumnId}/domain-of-values-string', 'PATCH',
             path_params,
             query_params,
             header_params,
@@ -1346,7 +2121,7 @@ class DataColumnApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/DataColumn/{dataColumnIdentifier}/update', 'POST',

@@ -6,8 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**organization_accept_organization_disclaimer**](OrganizationApi.md#organization_accept_organization_disclaimer) | **POST** /{tenantUrlCode}/api/v2/organization/disclaimer/accept | Marks the organization&#x27;s disclaimer as seen for the current user.
 [**organization_delete_organization**](OrganizationApi.md#organization_delete_organization) | **DELETE** /{tenantUrlCode}/api/v2/organization | Deletes the current organization.
-[**organization_get_organization**](OrganizationApi.md#organization_get_organization) | **GET** /{tenantUrlCode}/api/v2/organization | Gets the current organization.
+[**organization_get_organization**](OrganizationApi.md#organization_get_organization) | **GET** /api/v2/organization | Gets the current organization.
 [**organization_get_organization_disclaimers**](OrganizationApi.md#organization_get_organization_disclaimers) | **GET** /{tenantUrlCode}/api/v2/organization/disclaimer | Gets the current organization&#x27;s disclaimer.
+[**organization_get_organization_with_tenant_url**](OrganizationApi.md#organization_get_organization_with_tenant_url) | **GET** /{tenantUrlCode}/api/v2/organization | Gets the current organization.
 [**organization_set_organization_disclaimers**](OrganizationApi.md#organization_set_organization_disclaimers) | **POST** /{tenantUrlCode}/api/v2/organization/disclaimer | Updates the current organization&#x27;s disclaimer.
 [**organization_update_license**](OrganizationApi.md#organization_update_license) | **POST** /{tenantUrlCode}/api/v2/organization/license | Updates the current organization&#x27;s license.
 [**organization_update_organization**](OrganizationApi.md#organization_update_organization) | **PATCH** /{tenantUrlCode}/api/v2/organization | Updates the current organization.
@@ -32,6 +33,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -61,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -88,6 +93,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -118,7 +127,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -128,7 +137,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **organization_get_organization**
-> Organization organization_get_organization(tenant_url_code)
+> Organization organization_get_organization()
 
 Gets the current organization.
 
@@ -145,6 +154,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -152,21 +165,17 @@ configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.OrganizationApi(cartovista_cloud_clients.ApiClient(configuration))
-tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
     # Gets the current organization.
-    api_response = api_instance.organization_get_organization(tenant_url_code)
+    api_response = api_instance.organization_get_organization()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling OrganizationApi->organization_get_organization: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tenant_url_code** | **str**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -174,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -201,6 +210,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -230,7 +243,67 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **organization_get_organization_with_tenant_url**
+> InlineResponse2001 organization_get_organization_with_tenant_url(tenant_url_code)
+
+Gets the current organization.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cartovista_cloud_clients
+from cartovista_cloud_clients.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cartovista_cloud_clients.OrganizationApi(cartovista_cloud_clients.ApiClient(configuration))
+tenant_url_code = 'tenant_url_code_example' # str | 
+
+try:
+    # Gets the current organization.
+    api_response = api_instance.organization_get_organization_with_tenant_url(tenant_url_code)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling OrganizationApi->organization_get_organization_with_tenant_url: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenant_url_code** | **str**|  | 
+
+### Return type
+
+[**InlineResponse2001**](InlineResponse2001.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -257,6 +330,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -290,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -317,6 +394,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -347,7 +428,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -374,6 +455,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -405,7 +490,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -432,6 +517,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -463,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -490,6 +579,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -521,7 +614,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -529,4 +622,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+
+
+
 

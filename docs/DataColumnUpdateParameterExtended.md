@@ -17,6 +17,9 @@ Name | Type | Description | Notes
 **time_stamp_accuracy** | **object** |  | [optional] 
 **not_available_values** | **bool** |  | [optional] 
 **value_to_convert** | **float** |  | [optional] 
+**date_format** | **OneOfDataColumnUpdateParameterExtendedDateFormat** |  | [optional] 
+**editor_visible** | **bool** |  | [optional] 
+**editor_mode** | [**EditorMode**](EditorMode.md) |  | [optional] 
 **column_identifier** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

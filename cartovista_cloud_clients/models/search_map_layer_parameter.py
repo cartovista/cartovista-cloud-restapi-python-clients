@@ -30,20 +30,23 @@ class SearchMapLayerParameter(object):
     swagger_types = {
         'search': 'str',
         'offset': 'int',
-        'page_size': 'int'
+        'page_size': 'int',
+        'language': 'OneOfSearchMapLayerParameterLanguage'
     }
 
     attribute_map = {
         'search': 'search',
         'offset': 'offset',
-        'page_size': 'pageSize'
+        'page_size': 'pageSize',
+        'language': 'language'
     }
 
-    def __init__(self, search=None, offset=None, page_size=None):  # noqa: E501
+    def __init__(self, search=None, offset=None, page_size=None, language=None):  # noqa: E501
         """SearchMapLayerParameter - a model defined in Swagger"""  # noqa: E501
         self._search = None
         self._offset = None
         self._page_size = None
+        self._language = None
         self.discriminator = None
         if search is not None:
             self.search = search
@@ -51,6 +54,8 @@ class SearchMapLayerParameter(object):
             self.offset = offset
         if page_size is not None:
             self.page_size = page_size
+        if language is not None:
+            self.language = language
 
     @property
     def search(self):
@@ -114,6 +119,27 @@ class SearchMapLayerParameter(object):
         """
 
         self._page_size = page_size
+
+    @property
+    def language(self):
+        """Gets the language of this SearchMapLayerParameter.  # noqa: E501
+
+
+        :return: The language of this SearchMapLayerParameter.  # noqa: E501
+        :rtype: OneOfSearchMapLayerParameterLanguage
+        """
+        return self._language
+
+    @language.setter
+    def language(self, language):
+        """Sets the language of this SearchMapLayerParameter.
+
+
+        :param language: The language of this SearchMapLayerParameter.  # noqa: E501
+        :type: OneOfSearchMapLayerParameterLanguage
+        """
+
+        self._language = language
 
     def to_dict(self):
         """Returns the model properties as a dict"""

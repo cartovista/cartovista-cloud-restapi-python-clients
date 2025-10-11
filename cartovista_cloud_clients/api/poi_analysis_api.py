@@ -127,7 +127,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/analysis', 'POST',
@@ -236,7 +236,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}', 'POST',
@@ -345,7 +345,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/analysis/{analysisId}', 'DELETE',
@@ -454,7 +454,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/contingency-loading-max/{scenarioId}', 'GET',
@@ -465,6 +465,119 @@ class PoiAnalysisApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='PoiContingencyLoadingMaxData',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def poi_analysis_get_harmers(self, body, map_id, tenant_url_code, **kwargs):  # noqa: E501
+        """poi_analysis_get_harmers  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.poi_analysis_get_harmers(body, map_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str body: (required)
+        :param str map_id: (required)
+        :param str tenant_url_code: (required)
+        :return: list[PoiHarmerData]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.poi_analysis_get_harmers_with_http_info(body, map_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.poi_analysis_get_harmers_with_http_info(body, map_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def poi_analysis_get_harmers_with_http_info(self, body, map_id, tenant_url_code, **kwargs):  # noqa: E501
+        """poi_analysis_get_harmers  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.poi_analysis_get_harmers_with_http_info(body, map_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str body: (required)
+        :param str map_id: (required)
+        :param str tenant_url_code: (required)
+        :return: list[PoiHarmerData]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'map_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method poi_analysis_get_harmers" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `poi_analysis_get_harmers`")  # noqa: E501
+        # verify the required parameter 'map_id' is set
+        if ('map_id' not in params or
+                params['map_id'] is None):
+            raise ValueError("Missing the required parameter `map_id` when calling `poi_analysis_get_harmers`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `poi_analysis_get_harmers`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'map_id' in params:
+            path_params['mapId'] = params['map_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/harmers', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[PoiHarmerData]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -555,7 +668,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}', 'GET',
@@ -664,7 +777,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/analysis/{analysisId}/data', 'GET',
@@ -757,7 +870,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/settings', 'GET',
@@ -768,6 +881,99 @@ class PoiAnalysisApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='PoiAnalysisSettings',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def poi_analysis_get_poi_settings_poi_tables(self, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets the new dropdown table options after a table was linked when creating a new POI analysis.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.poi_analysis_get_poi_settings_poi_tables(tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str tenant_url_code: (required)
+        :return: dict(str, list[PoiSourceTable])
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.poi_analysis_get_poi_settings_poi_tables_with_http_info(tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.poi_analysis_get_poi_settings_poi_tables_with_http_info(tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def poi_analysis_get_poi_settings_poi_tables_with_http_info(self, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets the new dropdown table options after a table was linked when creating a new POI analysis.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.poi_analysis_get_poi_settings_poi_tables_with_http_info(tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str tenant_url_code: (required)
+        :return: dict(str, list[PoiSourceTable])
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method poi_analysis_get_poi_settings_poi_tables" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `poi_analysis_get_poi_settings_poi_tables`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/poi-analysis/updateSettings', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='dict(str, list[PoiSourceTable])',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -870,7 +1076,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/analysis/data', 'POST',
@@ -881,6 +1087,119 @@ class PoiAnalysisApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[PoiAnalysisData]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def poi_analysis_get_temporary_poi_analysis_mask(self, body, map_id, tenant_url_code, **kwargs):  # noqa: E501
+        """poi_analysis_get_temporary_poi_analysis_mask  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.poi_analysis_get_temporary_poi_analysis_mask(body, map_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param TemporaryAnalysisMask body: (required)
+        :param str map_id: (required)
+        :param str tenant_url_code: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.poi_analysis_get_temporary_poi_analysis_mask_with_http_info(body, map_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.poi_analysis_get_temporary_poi_analysis_mask_with_http_info(body, map_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def poi_analysis_get_temporary_poi_analysis_mask_with_http_info(self, body, map_id, tenant_url_code, **kwargs):  # noqa: E501
+        """poi_analysis_get_temporary_poi_analysis_mask  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.poi_analysis_get_temporary_poi_analysis_mask_with_http_info(body, map_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param TemporaryAnalysisMask body: (required)
+        :param str map_id: (required)
+        :param str tenant_url_code: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'map_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method poi_analysis_get_temporary_poi_analysis_mask" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `poi_analysis_get_temporary_poi_analysis_mask`")  # noqa: E501
+        # verify the required parameter 'map_id' is set
+        if ('map_id' not in params or
+                params['map_id'] is None):
+            raise ValueError("Missing the required parameter `map_id` when calling `poi_analysis_get_temporary_poi_analysis_mask`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `poi_analysis_get_temporary_poi_analysis_mask`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'map_id' in params:
+            path_params['mapId'] = params['map_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/analysis/mask', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='str',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -967,10 +1286,107 @@ class PoiAnalysisApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/pregenerate', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def poi_analysis_regenerate_rasters(self, map_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Regenerate all rasters of the poi associated with the map.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.poi_analysis_regenerate_rasters(map_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str map_id: (required)
+        :param str tenant_url_code: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.poi_analysis_regenerate_rasters_with_http_info(map_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.poi_analysis_regenerate_rasters_with_http_info(map_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def poi_analysis_regenerate_rasters_with_http_info(self, map_id, tenant_url_code, **kwargs):  # noqa: E501
+        """Regenerate all rasters of the poi associated with the map.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.poi_analysis_regenerate_rasters_with_http_info(map_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str map_id: (required)
+        :param str tenant_url_code: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['map_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method poi_analysis_regenerate_rasters" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'map_id' is set
+        if ('map_id' not in params or
+                params['map_id'] is None):
+            raise ValueError("Missing the required parameter `map_id` when calling `poi_analysis_regenerate_rasters`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `poi_analysis_regenerate_rasters`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'map_id' in params:
+            path_params['mapId'] = params['map_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/regenerate', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1088,7 +1504,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{mapId}/analysis/{analysisId}/default', 'PATCH',
@@ -1197,7 +1613,7 @@ class PoiAnalysisApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/poi-analysis/{dataId}/validate-data', 'GET',

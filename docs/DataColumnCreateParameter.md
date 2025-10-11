@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identifier** | **str** |  | [optional] 
-**carto_vista_data_type** | [**CartoVistaPortalDataType**](CartoVistaPortalDataType.md) |  | [optional] 
+**carto_vista_data_type** | **OneOfDataColumnCreateParameterCartoVistaDataType** |  | [optional] 
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **metadata** | **str** |  | [optional] 
@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **not_available_values** | **bool** |  | [optional] 
 **value_to_convert** | **float** |  | [optional] 
 **system_identifier** | **str** |  | [optional] 
+**date_format** | **OneOfDataColumnCreateParameterDateFormat** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

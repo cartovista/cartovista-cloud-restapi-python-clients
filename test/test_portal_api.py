@@ -59,7 +59,7 @@ class TestPortalApi(unittest.TestCase):
     def test_portal_upload(self):
         """Test case for portal_upload
 
-        Uploads a temporary file for layer use.  # noqa: E501
+        Uploads a temporary file for layer use.  This will return an uploadId that can be used with /definition to get details on the file uploaded. Then use /finalize to complete the upload of the layer.  # noqa: E501
         """
         pass
 

@@ -30,7 +30,7 @@ class FeatureGeoJSONCreateParameter(object):
     swagger_types = {
         'data_columns_identifiers': 'list[str]',
         'values': 'list[object]',
-        'feature_type': 'FeatureType',
+        'feature_type': 'OneOfFeatureGeoJSONCreateParameterFeatureType',
         'proj4': 'str',
         'geo_json': 'str'
     }
@@ -110,7 +110,7 @@ class FeatureGeoJSONCreateParameter(object):
 
 
         :return: The feature_type of this FeatureGeoJSONCreateParameter.  # noqa: E501
-        :rtype: FeatureType
+        :rtype: OneOfFeatureGeoJSONCreateParameterFeatureType
         """
         return self._feature_type
 
@@ -120,7 +120,7 @@ class FeatureGeoJSONCreateParameter(object):
 
 
         :param feature_type: The feature_type of this FeatureGeoJSONCreateParameter.  # noqa: E501
-        :type: FeatureType
+        :type: OneOfFeatureGeoJSONCreateParameterFeatureType
         """
 
         self._feature_type = feature_type

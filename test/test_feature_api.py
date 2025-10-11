@@ -91,6 +91,13 @@ class TestFeatureApi(unittest.TestCase):
         """
         pass
 
+    def test_feature_get_editable_feature_data(self):
+        """Test case for feature_get_editable_feature_data
+
+        Gets a feature's data including the editable joined tables.  # noqa: E501
+        """
+        pass
+
     def test_feature_get_feature_data(self):
         """Test case for feature_get_feature_data
 
@@ -189,10 +196,23 @@ class TestFeatureApi(unittest.TestCase):
         """
         pass
 
+    def test_feature_update_many_values(self):
+        """Test case for feature_update_many_values
+
+        Updates a feature's data. A subset of the columns can be used.  # noqa: E501
+        """
+        pass
+
     def test_feature_update_values(self):
         """Test case for feature_update_values
 
         Updates a feature's data. A subset of the columns can be used.  # noqa: E501
+        """
+        pass
+
+    def test_feature_update_values_and_joins(self):
+        """Test case for feature_update_values_and_joins
+
         """
         pass
 

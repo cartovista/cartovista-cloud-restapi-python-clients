@@ -31,8 +31,8 @@ class IsochroneParams(object):
         'longitude': 'float',
         'latitude': 'float',
         'range': 'float',
-        'range_type': 'TerritoryAreaByEnum',
-        'mode': 'TerritoryTransportTypeEnum',
+        'range_type': 'IsochroneRangeType',
+        'mode': 'TransportTypeEnum',
         'departure_time': 'str'
     }
 
@@ -136,7 +136,7 @@ class IsochroneParams(object):
 
 
         :return: The range_type of this IsochroneParams.  # noqa: E501
-        :rtype: TerritoryAreaByEnum
+        :rtype: IsochroneRangeType
         """
         return self._range_type
 
@@ -146,7 +146,7 @@ class IsochroneParams(object):
 
 
         :param range_type: The range_type of this IsochroneParams.  # noqa: E501
-        :type: TerritoryAreaByEnum
+        :type: IsochroneRangeType
         """
 
         self._range_type = range_type
@@ -157,7 +157,7 @@ class IsochroneParams(object):
 
 
         :return: The mode of this IsochroneParams.  # noqa: E501
-        :rtype: TerritoryTransportTypeEnum
+        :rtype: TransportTypeEnum
         """
         return self._mode
 
@@ -167,7 +167,7 @@ class IsochroneParams(object):
 
 
         :param mode: The mode of this IsochroneParams.  # noqa: E501
-        :type: TerritoryTransportTypeEnum
+        :type: TransportTypeEnum
         """
 
         self._mode = mode

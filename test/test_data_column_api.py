@@ -28,6 +28,13 @@ class TestDataColumnApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_data_column_create_data_column(self):
+        """Test case for data_column_create_data_column
+
+        Creates a new data column for a layer or datatable.  # noqa: E501
+        """
+        pass
+
     def test_data_column_create_data_table_data_columns(self):
         """Test case for data_column_create_data_table_data_columns
 
@@ -53,6 +60,13 @@ class TestDataColumnApi(unittest.TestCase):
         """Test case for data_column_delete_layer_data_column
 
         Deletes a column in the layer.  # noqa: E501
+        """
+        pass
+
+    def test_data_column_get_bulk_edit_layer_data_columns(self):
+        """Test case for data_column_get_bulk_edit_layer_data_columns
+
+        Gets all the data columns usable in the bulk editor in the layer.  # noqa: E501
         """
         pass
 
@@ -84,6 +98,12 @@ class TestDataColumnApi(unittest.TestCase):
         """
         pass
 
+    def test_data_column_recompute_calculated_values(self):
+        """Test case for data_column_recompute_calculated_values
+
+        """
+        pass
+
     def test_data_column_set_data_table_column_unique_identifier(self):
         """Test case for data_column_set_data_table_column_unique_identifier
 
@@ -98,10 +118,34 @@ class TestDataColumnApi(unittest.TestCase):
         """
         pass
 
+    def test_data_column_update_calculated_values(self):
+        """Test case for data_column_update_calculated_values
+
+        """
+        pass
+
     def test_data_column_update_data_table_data_column(self):
         """Test case for data_column_update_data_table_data_column
 
         Updates a column in the table. A layer's table can be used.  # noqa: E501
+        """
+        pass
+
+    def test_data_column_update_domain_of_values_date_time(self):
+        """Test case for data_column_update_domain_of_values_date_time
+
+        """
+        pass
+
+    def test_data_column_update_domain_of_values_numeric(self):
+        """Test case for data_column_update_domain_of_values_numeric
+
+        """
+        pass
+
+    def test_data_column_update_domain_of_values_string(self):
+        """Test case for data_column_update_domain_of_values_string
+
         """
         pass
 

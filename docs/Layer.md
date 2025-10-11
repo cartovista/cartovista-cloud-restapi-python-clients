@@ -38,6 +38,8 @@ Name | Type | Description | Notes
 **is_external** | **bool** |  | [optional] 
 **is_live** | **bool** |  | [optional] 
 **is_spatial_file** | **bool** |  | [optional] 
+**is_managed** | **bool** |  | [optional] 
+**is_encrypted** | **bool** |  | [optional] 
 **external_service_live_feed** | **bool** |  | [optional] 
 **external_service_type** | **OneOfLayerExternalServiceType** |  | [optional] 
 **folder_id** | **str** |  | [optional] 

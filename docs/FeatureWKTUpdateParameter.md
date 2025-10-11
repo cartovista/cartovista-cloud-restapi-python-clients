@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**feature_type** | [**FeatureType**](FeatureType.md) |  | [optional] 
+**feature_type** | **OneOfFeatureWKTUpdateParameterFeatureType** |  | [optional] 
 **proj4** | **str** |  | [optional] 
 **wkt** | **str** |  | [optional] 
 

@@ -49,7 +49,8 @@ class PoiAnalysisData(object):
         'post_project_loading': 'float',
         'post_project_loading_percent': 'float',
         'worst_post_project_loading': 'float',
-        'worst_post_project_loading_percent': 'float'
+        'worst_post_project_loading_percent': 'float',
+        'constraint_id': 'str'
     }
 
     attribute_map = {
@@ -74,10 +75,11 @@ class PoiAnalysisData(object):
         'post_project_loading': 'postProjectLoading',
         'post_project_loading_percent': 'postProjectLoadingPercent',
         'worst_post_project_loading': 'worstPostProjectLoading',
-        'worst_post_project_loading_percent': 'worstPostProjectLoadingPercent'
+        'worst_post_project_loading_percent': 'worstPostProjectLoadingPercent',
+        'constraint_id': 'constraintId'
     }
 
-    def __init__(self, scenario=None, year=None, name=None, constraint=None, contingency=None, mw_available=None, dfax_percent=None, mw_impact=None, impact_percent=None, loading_before_percent=None, loading_after_percent=None, initial_loading=None, rating=None, fcitc=None, transmission_id=None, worst_dispatch_capacity=None, worst_dispatch_loading=None, worst_dispatch_loading_percent=None, post_project_loading=None, post_project_loading_percent=None, worst_post_project_loading=None, worst_post_project_loading_percent=None):  # noqa: E501
+    def __init__(self, scenario=None, year=None, name=None, constraint=None, contingency=None, mw_available=None, dfax_percent=None, mw_impact=None, impact_percent=None, loading_before_percent=None, loading_after_percent=None, initial_loading=None, rating=None, fcitc=None, transmission_id=None, worst_dispatch_capacity=None, worst_dispatch_loading=None, worst_dispatch_loading_percent=None, post_project_loading=None, post_project_loading_percent=None, worst_post_project_loading=None, worst_post_project_loading_percent=None, constraint_id=None):  # noqa: E501
         """PoiAnalysisData - a model defined in Swagger"""  # noqa: E501
         self._scenario = None
         self._year = None
@@ -101,6 +103,7 @@ class PoiAnalysisData(object):
         self._post_project_loading_percent = None
         self._worst_post_project_loading = None
         self._worst_post_project_loading_percent = None
+        self._constraint_id = None
         self.discriminator = None
         if scenario is not None:
             self.scenario = scenario
@@ -146,6 +149,8 @@ class PoiAnalysisData(object):
             self.worst_post_project_loading = worst_post_project_loading
         if worst_post_project_loading_percent is not None:
             self.worst_post_project_loading_percent = worst_post_project_loading_percent
+        if constraint_id is not None:
+            self.constraint_id = constraint_id
 
     @property
     def scenario(self):
@@ -608,6 +613,27 @@ class PoiAnalysisData(object):
         """
 
         self._worst_post_project_loading_percent = worst_post_project_loading_percent
+
+    @property
+    def constraint_id(self):
+        """Gets the constraint_id of this PoiAnalysisData.  # noqa: E501
+
+
+        :return: The constraint_id of this PoiAnalysisData.  # noqa: E501
+        :rtype: str
+        """
+        return self._constraint_id
+
+    @constraint_id.setter
+    def constraint_id(self, constraint_id):
+        """Sets the constraint_id of this PoiAnalysisData.
+
+
+        :param constraint_id: The constraint_id of this PoiAnalysisData.  # noqa: E501
+        :type: str
+        """
+
+        self._constraint_id = constraint_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

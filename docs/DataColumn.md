@@ -22,7 +22,12 @@ Name | Type | Description | Notes
 **not_available_values** | **bool** |  | [optional] 
 **value_to_convert** | **float** |  | [optional] 
 **only_has_unique_values** | **bool** |  | [optional] 
+**is_used_in_data_table_join** | **bool** |  | [optional] 
+**is_used_in_poi_analysis** | **bool** |  | [optional] 
+**is_used_in_cvs** | **bool** |  | [optional] 
 **internal_system_column** | **bool** |  | [optional] 
+**editor_settings** | [**EditorSettings**](EditorSettings.md) |  | [optional] 
+**date_format** | [**DateFormat**](DateFormat.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

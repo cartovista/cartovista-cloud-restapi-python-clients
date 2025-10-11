@@ -28,6 +28,7 @@ class DataTableColumnDTO(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'date_format': 'DateFormat',
         'internal_sys_column': 'bool',
         'name': 'str',
         'data_type': 'CartoVistaPortalDataType',
@@ -47,15 +48,15 @@ class DataTableColumnDTO(object):
         'column_number': 'int',
         'original_name': 'str',
         'is_used_in_data_table_join': 'bool',
+        'is_used_in_poi_analysis': 'bool',
+        'is_used_in_cvs': 'bool',
         'only_has_unique_values': 'bool',
-        'domain_type': 'DataColumnDomainEnum',
         'not_available_values': 'bool',
-        'value_to_convert': 'float',
-        'domain_type_string': 'str',
-        'column_domain': 'DataColumnDomainDTO'
+        'value_to_convert': 'float'
     }
 
     attribute_map = {
+        'date_format': 'dateFormat',
         'internal_sys_column': 'internalSysColumn',
         'name': 'name',
         'data_type': 'dataType',
@@ -75,16 +76,16 @@ class DataTableColumnDTO(object):
         'column_number': 'columnNumber',
         'original_name': 'originalName',
         'is_used_in_data_table_join': 'isUsedInDataTableJoin',
+        'is_used_in_poi_analysis': 'isUsedInPOIAnalysis',
+        'is_used_in_cvs': 'isUsedInCVS',
         'only_has_unique_values': 'onlyHasUniqueValues',
-        'domain_type': 'domainType',
         'not_available_values': 'notAvailableValues',
-        'value_to_convert': 'valueToConvert',
-        'domain_type_string': 'domainTypeString',
-        'column_domain': 'columnDomain'
+        'value_to_convert': 'valueToConvert'
     }
 
-    def __init__(self, internal_sys_column=None, name=None, data_type=None, description=None, units=None, unit_placement=None, id=None, table_id=None, identifier=None, aggregation_type=None, mappable=None, precision=None, round_to_precision=None, metadata=None, time_stamp=None, time_stamp_type=None, column_number=None, original_name=None, is_used_in_data_table_join=None, only_has_unique_values=None, domain_type=None, not_available_values=None, value_to_convert=None, domain_type_string=None, column_domain=None):  # noqa: E501
+    def __init__(self, date_format=None, internal_sys_column=None, name=None, data_type=None, description=None, units=None, unit_placement=None, id=None, table_id=None, identifier=None, aggregation_type=None, mappable=None, precision=None, round_to_precision=None, metadata=None, time_stamp=None, time_stamp_type=None, column_number=None, original_name=None, is_used_in_data_table_join=None, is_used_in_poi_analysis=None, is_used_in_cvs=None, only_has_unique_values=None, not_available_values=None, value_to_convert=None):  # noqa: E501
         """DataTableColumnDTO - a model defined in Swagger"""  # noqa: E501
+        self._date_format = None
         self._internal_sys_column = None
         self._name = None
         self._data_type = None
@@ -104,13 +105,14 @@ class DataTableColumnDTO(object):
         self._column_number = None
         self._original_name = None
         self._is_used_in_data_table_join = None
+        self._is_used_in_poi_analysis = None
+        self._is_used_in_cvs = None
         self._only_has_unique_values = None
-        self._domain_type = None
         self._not_available_values = None
         self._value_to_convert = None
-        self._domain_type_string = None
-        self._column_domain = None
         self.discriminator = None
+        if date_format is not None:
+            self.date_format = date_format
         if internal_sys_column is not None:
             self.internal_sys_column = internal_sys_column
         if name is not None:
@@ -149,18 +151,37 @@ class DataTableColumnDTO(object):
             self.original_name = original_name
         if is_used_in_data_table_join is not None:
             self.is_used_in_data_table_join = is_used_in_data_table_join
+        if is_used_in_poi_analysis is not None:
+            self.is_used_in_poi_analysis = is_used_in_poi_analysis
+        if is_used_in_cvs is not None:
+            self.is_used_in_cvs = is_used_in_cvs
         if only_has_unique_values is not None:
             self.only_has_unique_values = only_has_unique_values
-        if domain_type is not None:
-            self.domain_type = domain_type
         if not_available_values is not None:
             self.not_available_values = not_available_values
         if value_to_convert is not None:
             self.value_to_convert = value_to_convert
-        if domain_type_string is not None:
-            self.domain_type_string = domain_type_string
-        if column_domain is not None:
-            self.column_domain = column_domain
+
+    @property
+    def date_format(self):
+        """Gets the date_format of this DataTableColumnDTO.  # noqa: E501
+
+
+        :return: The date_format of this DataTableColumnDTO.  # noqa: E501
+        :rtype: DateFormat
+        """
+        return self._date_format
+
+    @date_format.setter
+    def date_format(self, date_format):
+        """Sets the date_format of this DataTableColumnDTO.
+
+
+        :param date_format: The date_format of this DataTableColumnDTO.  # noqa: E501
+        :type: DateFormat
+        """
+
+        self._date_format = date_format
 
     @property
     def internal_sys_column(self):
@@ -562,6 +583,48 @@ class DataTableColumnDTO(object):
         self._is_used_in_data_table_join = is_used_in_data_table_join
 
     @property
+    def is_used_in_poi_analysis(self):
+        """Gets the is_used_in_poi_analysis of this DataTableColumnDTO.  # noqa: E501
+
+
+        :return: The is_used_in_poi_analysis of this DataTableColumnDTO.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_used_in_poi_analysis
+
+    @is_used_in_poi_analysis.setter
+    def is_used_in_poi_analysis(self, is_used_in_poi_analysis):
+        """Sets the is_used_in_poi_analysis of this DataTableColumnDTO.
+
+
+        :param is_used_in_poi_analysis: The is_used_in_poi_analysis of this DataTableColumnDTO.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_used_in_poi_analysis = is_used_in_poi_analysis
+
+    @property
+    def is_used_in_cvs(self):
+        """Gets the is_used_in_cvs of this DataTableColumnDTO.  # noqa: E501
+
+
+        :return: The is_used_in_cvs of this DataTableColumnDTO.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_used_in_cvs
+
+    @is_used_in_cvs.setter
+    def is_used_in_cvs(self, is_used_in_cvs):
+        """Sets the is_used_in_cvs of this DataTableColumnDTO.
+
+
+        :param is_used_in_cvs: The is_used_in_cvs of this DataTableColumnDTO.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_used_in_cvs = is_used_in_cvs
+
+    @property
     def only_has_unique_values(self):
         """Gets the only_has_unique_values of this DataTableColumnDTO.  # noqa: E501
 
@@ -581,27 +644,6 @@ class DataTableColumnDTO(object):
         """
 
         self._only_has_unique_values = only_has_unique_values
-
-    @property
-    def domain_type(self):
-        """Gets the domain_type of this DataTableColumnDTO.  # noqa: E501
-
-
-        :return: The domain_type of this DataTableColumnDTO.  # noqa: E501
-        :rtype: DataColumnDomainEnum
-        """
-        return self._domain_type
-
-    @domain_type.setter
-    def domain_type(self, domain_type):
-        """Sets the domain_type of this DataTableColumnDTO.
-
-
-        :param domain_type: The domain_type of this DataTableColumnDTO.  # noqa: E501
-        :type: DataColumnDomainEnum
-        """
-
-        self._domain_type = domain_type
 
     @property
     def not_available_values(self):
@@ -644,48 +686,6 @@ class DataTableColumnDTO(object):
         """
 
         self._value_to_convert = value_to_convert
-
-    @property
-    def domain_type_string(self):
-        """Gets the domain_type_string of this DataTableColumnDTO.  # noqa: E501
-
-
-        :return: The domain_type_string of this DataTableColumnDTO.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain_type_string
-
-    @domain_type_string.setter
-    def domain_type_string(self, domain_type_string):
-        """Sets the domain_type_string of this DataTableColumnDTO.
-
-
-        :param domain_type_string: The domain_type_string of this DataTableColumnDTO.  # noqa: E501
-        :type: str
-        """
-
-        self._domain_type_string = domain_type_string
-
-    @property
-    def column_domain(self):
-        """Gets the column_domain of this DataTableColumnDTO.  # noqa: E501
-
-
-        :return: The column_domain of this DataTableColumnDTO.  # noqa: E501
-        :rtype: DataColumnDomainDTO
-        """
-        return self._column_domain
-
-    @column_domain.setter
-    def column_domain(self, column_domain):
-        """Sets the column_domain of this DataTableColumnDTO.
-
-
-        :param column_domain: The column_domain of this DataTableColumnDTO.  # noqa: E501
-        :type: DataColumnDomainDTO
-        """
-
-        self._column_domain = column_domain
 
     def to_dict(self):
         """Returns the model properties as a dict"""

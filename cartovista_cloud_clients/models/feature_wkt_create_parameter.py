@@ -30,7 +30,7 @@ class FeatureWKTCreateParameter(object):
     swagger_types = {
         'data_columns_identifiers': 'list[str]',
         'values': 'list[object]',
-        'feature_type': 'FeatureType',
+        'feature_type': 'OneOfFeatureWKTCreateParameterFeatureType',
         'proj4': 'str',
         'wkt': 'str'
     }
@@ -110,7 +110,7 @@ class FeatureWKTCreateParameter(object):
 
 
         :return: The feature_type of this FeatureWKTCreateParameter.  # noqa: E501
-        :rtype: FeatureType
+        :rtype: OneOfFeatureWKTCreateParameterFeatureType
         """
         return self._feature_type
 
@@ -120,7 +120,7 @@ class FeatureWKTCreateParameter(object):
 
 
         :param feature_type: The feature_type of this FeatureWKTCreateParameter.  # noqa: E501
-        :type: FeatureType
+        :type: OneOfFeatureWKTCreateParameterFeatureType
         """
 
         self._feature_type = feature_type

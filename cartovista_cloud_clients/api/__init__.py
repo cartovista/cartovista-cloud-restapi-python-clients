@@ -25,10 +25,10 @@ from cartovista_cloud_clients.api.layer_api import LayerApi
 from cartovista_cloud_clients.api.layer_settings_api import LayerSettingsApi
 from cartovista_cloud_clients.api.location_api import LocationApi
 from cartovista_cloud_clients.api.map_api import MapApi
+from cartovista_cloud_clients.api.o_auth_api import OAuthApi
 from cartovista_cloud_clients.api.ogc_api import OGCApi
 from cartovista_cloud_clients.api.organization_api import OrganizationApi
 from cartovista_cloud_clients.api.permission_api import PermissionApi
-from cartovista_cloud_clients.api.plugin_api import PluginApi
 from cartovista_cloud_clients.api.poi_analysis_api import PoiAnalysisApi
 from cartovista_cloud_clients.api.portal_api import PortalApi
 from cartovista_cloud_clients.api.sign_up_api import SignUpApi
@@ -37,7 +37,6 @@ from cartovista_cloud_clients.api.statistics_api import StatisticsApi
 from cartovista_cloud_clients.api.style_theme_services_api import StyleThemeServicesApi
 from cartovista_cloud_clients.api.subscription_api import SubscriptionApi
 from cartovista_cloud_clients.api.symbol_api import SymbolApi
-from cartovista_cloud_clients.api.territory_manager_api import TerritoryManagerApi
 from cartovista_cloud_clients.api.user_api import UserApi
 from cartovista_cloud_clients.api.vector_services_api import VectorServicesApi
 from cartovista_cloud_clients.api.view_api import ViewApi

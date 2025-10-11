@@ -29,7 +29,6 @@ class LayerCreateParameter(object):
     """
     swagger_types = {
         'identifier': 'str',
-        'proj4': 'str',
         'name': 'str',
         'metadata': 'str',
         'geometry_type': 'str',
@@ -44,7 +43,6 @@ class LayerCreateParameter(object):
 
     attribute_map = {
         'identifier': 'identifier',
-        'proj4': 'proj4',
         'name': 'name',
         'metadata': 'metadata',
         'geometry_type': 'geometryType',
@@ -57,10 +55,9 @@ class LayerCreateParameter(object):
         'folder_id': 'folderId'
     }
 
-    def __init__(self, identifier=None, proj4=None, name=None, metadata=None, geometry_type=None, description=None, vector_tiling=None, live=None, system_identifier=None, data_table_system_identifier=None, feature_id_column_system_identifier=None, folder_id=None):  # noqa: E501
+    def __init__(self, identifier=None, name=None, metadata=None, geometry_type=None, description=None, vector_tiling=None, live=None, system_identifier=None, data_table_system_identifier=None, feature_id_column_system_identifier=None, folder_id=None):  # noqa: E501
         """LayerCreateParameter - a model defined in Swagger"""  # noqa: E501
         self._identifier = None
-        self._proj4 = None
         self._name = None
         self._metadata = None
         self._geometry_type = None
@@ -74,8 +71,6 @@ class LayerCreateParameter(object):
         self.discriminator = None
         if identifier is not None:
             self.identifier = identifier
-        if proj4 is not None:
-            self.proj4 = proj4
         if name is not None:
             self.name = name
         if metadata is not None:
@@ -117,27 +112,6 @@ class LayerCreateParameter(object):
         """
 
         self._identifier = identifier
-
-    @property
-    def proj4(self):
-        """Gets the proj4 of this LayerCreateParameter.  # noqa: E501
-
-
-        :return: The proj4 of this LayerCreateParameter.  # noqa: E501
-        :rtype: str
-        """
-        return self._proj4
-
-    @proj4.setter
-    def proj4(self, proj4):
-        """Sets the proj4 of this LayerCreateParameter.
-
-
-        :param proj4: The proj4 of this LayerCreateParameter.  # noqa: E501
-        :type: str
-        """
-
-        self._proj4 = proj4
 
     @property
     def name(self):

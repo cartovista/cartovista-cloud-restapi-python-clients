@@ -29,33 +29,23 @@ class PoiTable(object):
     """
     swagger_types = {
         'id': 'str',
-        'name': 'str',
-        'layer_id': 'str',
-        'can_use_transmission_layers': 'bool'
+        'name': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'name': 'name',
-        'layer_id': 'layerId',
-        'can_use_transmission_layers': 'canUseTransmissionLayers'
+        'name': 'name'
     }
 
-    def __init__(self, id=None, name=None, layer_id=None, can_use_transmission_layers=None):  # noqa: E501
+    def __init__(self, id=None, name=None):  # noqa: E501
         """PoiTable - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
-        self._layer_id = None
-        self._can_use_transmission_layers = None
         self.discriminator = None
         if id is not None:
             self.id = id
         if name is not None:
             self.name = name
-        if layer_id is not None:
-            self.layer_id = layer_id
-        if can_use_transmission_layers is not None:
-            self.can_use_transmission_layers = can_use_transmission_layers
 
     @property
     def id(self):
@@ -98,48 +88,6 @@ class PoiTable(object):
         """
 
         self._name = name
-
-    @property
-    def layer_id(self):
-        """Gets the layer_id of this PoiTable.  # noqa: E501
-
-
-        :return: The layer_id of this PoiTable.  # noqa: E501
-        :rtype: str
-        """
-        return self._layer_id
-
-    @layer_id.setter
-    def layer_id(self, layer_id):
-        """Sets the layer_id of this PoiTable.
-
-
-        :param layer_id: The layer_id of this PoiTable.  # noqa: E501
-        :type: str
-        """
-
-        self._layer_id = layer_id
-
-    @property
-    def can_use_transmission_layers(self):
-        """Gets the can_use_transmission_layers of this PoiTable.  # noqa: E501
-
-
-        :return: The can_use_transmission_layers of this PoiTable.  # noqa: E501
-        :rtype: bool
-        """
-        return self._can_use_transmission_layers
-
-    @can_use_transmission_layers.setter
-    def can_use_transmission_layers(self, can_use_transmission_layers):
-        """Sets the can_use_transmission_layers of this PoiTable.
-
-
-        :param can_use_transmission_layers: The can_use_transmission_layers of this PoiTable.  # noqa: E501
-        :type: bool
-        """
-
-        self._can_use_transmission_layers = can_use_transmission_layers
 
     def to_dict(self):
         """Returns the model properties as a dict"""

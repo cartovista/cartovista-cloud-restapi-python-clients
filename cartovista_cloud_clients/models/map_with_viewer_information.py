@@ -40,7 +40,9 @@ class MapWithViewerInformation(object):
         'map_actions': 'list[MapActionSettings]',
         'poi_analysis': 'OneOfMapWithViewerInformationPoiAnalysis',
         'poi_analysis_is_generating': 'bool',
-        'custom_applications': 'list[CustomApplicationMapSettings]'
+        'custom_applications': 'list[CustomApplicationMapSettings]',
+        'map_plugins': 'list[MapPlugin]',
+        'map_libre': 'OneOfMapWithViewerInformationMapLibre'
     }
 
     attribute_map = {
@@ -56,10 +58,12 @@ class MapWithViewerInformation(object):
         'map_actions': 'mapActions',
         'poi_analysis': 'poiAnalysis',
         'poi_analysis_is_generating': 'poiAnalysisIsGenerating',
-        'custom_applications': 'customApplications'
+        'custom_applications': 'customApplications',
+        'map_plugins': 'mapPlugins',
+        'map_libre': 'mapLibre'
     }
 
-    def __init__(self, map=None, slide_items=None, toolbar=None, advanced_settings=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None, identities_with_access=None, map_actions=None, poi_analysis=None, poi_analysis_is_generating=None, custom_applications=None):  # noqa: E501
+    def __init__(self, map=None, slide_items=None, toolbar=None, advanced_settings=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None, identities_with_access=None, map_actions=None, poi_analysis=None, poi_analysis_is_generating=None, custom_applications=None, map_plugins=None, map_libre=None):  # noqa: E501
         """MapWithViewerInformation - a model defined in Swagger"""  # noqa: E501
         self._map = None
         self._slide_items = None
@@ -74,6 +78,8 @@ class MapWithViewerInformation(object):
         self._poi_analysis = None
         self._poi_analysis_is_generating = None
         self._custom_applications = None
+        self._map_plugins = None
+        self._map_libre = None
         self.discriminator = None
         if map is not None:
             self.map = map
@@ -101,6 +107,10 @@ class MapWithViewerInformation(object):
             self.poi_analysis_is_generating = poi_analysis_is_generating
         if custom_applications is not None:
             self.custom_applications = custom_applications
+        if map_plugins is not None:
+            self.map_plugins = map_plugins
+        if map_libre is not None:
+            self.map_libre = map_libre
 
     @property
     def map(self):
@@ -374,6 +384,48 @@ class MapWithViewerInformation(object):
         """
 
         self._custom_applications = custom_applications
+
+    @property
+    def map_plugins(self):
+        """Gets the map_plugins of this MapWithViewerInformation.  # noqa: E501
+
+
+        :return: The map_plugins of this MapWithViewerInformation.  # noqa: E501
+        :rtype: list[MapPlugin]
+        """
+        return self._map_plugins
+
+    @map_plugins.setter
+    def map_plugins(self, map_plugins):
+        """Sets the map_plugins of this MapWithViewerInformation.
+
+
+        :param map_plugins: The map_plugins of this MapWithViewerInformation.  # noqa: E501
+        :type: list[MapPlugin]
+        """
+
+        self._map_plugins = map_plugins
+
+    @property
+    def map_libre(self):
+        """Gets the map_libre of this MapWithViewerInformation.  # noqa: E501
+
+
+        :return: The map_libre of this MapWithViewerInformation.  # noqa: E501
+        :rtype: OneOfMapWithViewerInformationMapLibre
+        """
+        return self._map_libre
+
+    @map_libre.setter
+    def map_libre(self, map_libre):
+        """Sets the map_libre of this MapWithViewerInformation.
+
+
+        :param map_libre: The map_libre of this MapWithViewerInformation.  # noqa: E501
+        :type: OneOfMapWithViewerInformationMapLibre
+        """
+
+        self._map_libre = map_libre
 
     def to_dict(self):
         """Returns the model properties as a dict"""

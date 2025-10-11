@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **vector_tiling** | **bool** |  | [optional] 
 **precision** | **int** |  | [optional] 
 **is_live** | **bool** |  | [optional] 
+**is_encrypted** | **bool** |  | [optional] 
 **external_service_live_feed** | **bool** |  | [optional] 
 **vector_quality_type** | [**VectorQualityTypeEnum**](VectorQualityTypeEnum.md) |  | [optional] 
 **data_columns** | [**list[DataColumnUpdateParameterExtended]**](DataColumnUpdateParameterExtended.md) |  | [optional] 

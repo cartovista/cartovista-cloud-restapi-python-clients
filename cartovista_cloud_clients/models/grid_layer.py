@@ -50,7 +50,8 @@ class GridLayer(object):
         'thumbnail_url_expiry': 'datetime',
         'folder_id': 'str',
         'is_heatmap': 'bool',
-        'is_demo_source': 'bool'
+        'is_demo_source': 'bool',
+        'data_usage': 'int'
     }
 
     attribute_map = {
@@ -76,10 +77,11 @@ class GridLayer(object):
         'thumbnail_url_expiry': 'thumbnailUrlExpiry',
         'folder_id': 'folderId',
         'is_heatmap': 'isHeatmap',
-        'is_demo_source': 'isDemoSource'
+        'is_demo_source': 'isDemoSource',
+        'data_usage': 'dataUsage'
     }
 
-    def __init__(self, system_identifier=None, unique_identifier=None, description=None, metadata=None, proj4=None, units=None, precision=None, icon=None, grid_source_count=None, name=None, creation_time=None, modified_time=None, map_use_count=None, grid_layer_type=None, disabled=None, owner_name=None, can_edit=None, public_access=None, thumbnail_url=None, thumbnail_url_expiry=None, folder_id=None, is_heatmap=None, is_demo_source=None):  # noqa: E501
+    def __init__(self, system_identifier=None, unique_identifier=None, description=None, metadata=None, proj4=None, units=None, precision=None, icon=None, grid_source_count=None, name=None, creation_time=None, modified_time=None, map_use_count=None, grid_layer_type=None, disabled=None, owner_name=None, can_edit=None, public_access=None, thumbnail_url=None, thumbnail_url_expiry=None, folder_id=None, is_heatmap=None, is_demo_source=None, data_usage=None):  # noqa: E501
         """GridLayer - a model defined in Swagger"""  # noqa: E501
         self._system_identifier = None
         self._unique_identifier = None
@@ -104,6 +106,7 @@ class GridLayer(object):
         self._folder_id = None
         self._is_heatmap = None
         self._is_demo_source = None
+        self._data_usage = None
         self.discriminator = None
         if system_identifier is not None:
             self.system_identifier = system_identifier
@@ -151,6 +154,8 @@ class GridLayer(object):
             self.is_heatmap = is_heatmap
         if is_demo_source is not None:
             self.is_demo_source = is_demo_source
+        if data_usage is not None:
+            self.data_usage = data_usage
 
     @property
     def system_identifier(self):
@@ -634,6 +639,27 @@ class GridLayer(object):
         """
 
         self._is_demo_source = is_demo_source
+
+    @property
+    def data_usage(self):
+        """Gets the data_usage of this GridLayer.  # noqa: E501
+
+
+        :return: The data_usage of this GridLayer.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_usage
+
+    @data_usage.setter
+    def data_usage(self, data_usage):
+        """Sets the data_usage of this GridLayer.
+
+
+        :param data_usage: The data_usage of this GridLayer.  # noqa: E501
+        :type: int
+        """
+
+        self._data_usage = data_usage
 
     def to_dict(self):
         """Returns the model properties as a dict"""

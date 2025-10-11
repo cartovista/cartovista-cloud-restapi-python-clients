@@ -91,6 +91,34 @@ class TestLayerSettingsApi(unittest.TestCase):
         """
         pass
 
+    def test_layer_settings_update_legend(self):
+        """Test case for layer_settings_update_legend
+
+        Updates the layer settings' legend settings.  # noqa: E501
+        """
+        pass
+
+    def test_layer_settings_update_point_geometry_style(self):
+        """Test case for layer_settings_update_point_geometry_style
+
+        Updates the layer settings' geometry style. The style object must match the layer's geometry type.  # noqa: E501
+        """
+        pass
+
+    def test_layer_settings_update_polygon_geometry_style(self):
+        """Test case for layer_settings_update_polygon_geometry_style
+
+        Updates the layer settings' geometry style. The style object must match the layer's geometry type.  # noqa: E501
+        """
+        pass
+
+    def test_layer_settings_update_polyline_geometry_style(self):
+        """Test case for layer_settings_update_polyline_geometry_style
+
+        Updates the layer settings' geometry style. The style object must match the layer's geometry type.  # noqa: E501
+        """
+        pass
+
     def test_layer_settings_update_rendering(self):
         """Test case for layer_settings_update_rendering
 

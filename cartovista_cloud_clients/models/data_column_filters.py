@@ -29,7 +29,7 @@ class DataColumnFilters(object):
     """
     swagger_types = {
         'column_id': 'str',
-        'filter_logic': 'FilterLogic',
+        'filter_logic': 'OneOfDataColumnFiltersFilterLogic',
         'data_filters': 'list[DataFilter]'
     }
 
@@ -79,7 +79,7 @@ class DataColumnFilters(object):
 
 
         :return: The filter_logic of this DataColumnFilters.  # noqa: E501
-        :rtype: FilterLogic
+        :rtype: OneOfDataColumnFiltersFilterLogic
         """
         return self._filter_logic
 
@@ -89,7 +89,7 @@ class DataColumnFilters(object):
 
 
         :param filter_logic: The filter_logic of this DataColumnFilters.  # noqa: E501
-        :type: FilterLogic
+        :type: OneOfDataColumnFiltersFilterLogic
         """
 
         self._filter_logic = filter_logic

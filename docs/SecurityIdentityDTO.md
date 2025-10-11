@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **identifier** | **str** |  | [optional] 
 **provider_status** | [**ProviderStatus**](ProviderStatus.md) |  | [optional] 
 **path** | **str** |  | [optional] 
-**secure_object_permissions** | [**list[PermissionPairDTO]**](PermissionPairDTO.md) |  | [optional] 
+**secure_object_permissions** | [**list[PermissionPairDTO]**](PermissionPairDTO.md) | Permissions with a secureObject associated to it | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

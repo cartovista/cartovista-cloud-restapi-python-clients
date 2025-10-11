@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **include_layers** | **bool** |  | [optional] 
 **include_addresses** | **bool** |  | [optional] 
 **filter_data_columns** | **dict(str, list[DataQueryColumnDTO])** |  | [optional] 
+**except_layer_ids** | **list[str]** |  | [optional] 
+**language** | **OneOfSearchMapParameterLanguage** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

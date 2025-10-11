@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**portal_finalize_upload**](PortalApi.md#portal_finalize_upload) | **POST** /{tenantUrlCode}/api/v2/Portal/upload/{uploadId}/finalize | Finalizes a data import with a file uploaded using &#x60;upload&#x60;.
 [**portal_get_definition**](PortalApi.md#portal_get_definition) | **GET** /{tenantUrlCode}/api/v2/Portal/upload/{uploadId}/definition | Gets a description of the file&#x27;s content.
 [**portal_get_subscription_and_user**](PortalApi.md#portal_get_subscription_and_user) | **GET** /{tenantUrlCode}/api/v2/Portal | Gets the current user and the organization&#x27;s subscription/license details.
-[**portal_upload**](PortalApi.md#portal_upload) | **POST** /{tenantUrlCode}/api/v2/Portal/upload | Uploads a temporary file for layer use.
+[**portal_upload**](PortalApi.md#portal_upload) | **POST** /{tenantUrlCode}/api/v2/Portal/upload | Uploads a temporary file for layer use.  This will return an uploadId that can be used with /definition to get details on the file uploaded. Then use /finalize to complete the upload of the layer.
 
 # **portal_cancel_upload**
 > bool portal_cancel_upload(upload_id, tenant_url_code)
@@ -28,6 +28,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -59,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -86,6 +90,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -118,7 +126,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -145,6 +153,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -176,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -203,6 +215,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -232,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -242,9 +258,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **portal_upload**
-> str portal_upload(upload_id, tenant_url_code, file=file)
+> str portal_upload(tenant_url_code, file=file, upload_id=upload_id)
 
-Uploads a temporary file for layer use.
+Uploads a temporary file for layer use.  This will return an uploadId that can be used with /definition to get details on the file uploaded. Then use /finalize to complete the upload of the layer.
 
 ### Example
 ```python
@@ -259,6 +275,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -266,13 +286,13 @@ configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.PortalApi(cartovista_cloud_clients.ApiClient(configuration))
-upload_id = 'upload_id_example' # str | 
 tenant_url_code = 'tenant_url_code_example' # str | 
 file = 'file_example' # str |  (optional)
+upload_id = 'upload_id_example' # str |  (optional)
 
 try:
-    # Uploads a temporary file for layer use.
-    api_response = api_instance.portal_upload(upload_id, tenant_url_code, file=file)
+    # Uploads a temporary file for layer use.  This will return an uploadId that can be used with /definition to get details on the file uploaded. Then use /finalize to complete the upload of the layer.
+    api_response = api_instance.portal_upload(tenant_url_code, file=file, upload_id=upload_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PortalApi->portal_upload: %s\n" % e)
@@ -282,9 +302,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **upload_id** | **str**|  | 
  **tenant_url_code** | **str**|  | 
  **file** | **str**|  | [optional] 
+ **upload_id** | **str**|  | [optional] 
 
 ### Return type
 
@@ -292,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -300,4 +320,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+
+
+
 

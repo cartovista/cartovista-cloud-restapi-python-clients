@@ -31,22 +31,28 @@ class SearchMapParameter(object):
         'search': 'str',
         'include_layers': 'bool',
         'include_addresses': 'bool',
-        'filter_data_columns': 'dict(str, list[DataQueryColumnDTO])'
+        'filter_data_columns': 'dict(str, list[DataQueryColumnDTO])',
+        'except_layer_ids': 'list[str]',
+        'language': 'OneOfSearchMapParameterLanguage'
     }
 
     attribute_map = {
         'search': 'search',
         'include_layers': 'includeLayers',
         'include_addresses': 'includeAddresses',
-        'filter_data_columns': 'filterDataColumns'
+        'filter_data_columns': 'filterDataColumns',
+        'except_layer_ids': 'exceptLayerIds',
+        'language': 'language'
     }
 
-    def __init__(self, search=None, include_layers=None, include_addresses=None, filter_data_columns=None):  # noqa: E501
+    def __init__(self, search=None, include_layers=None, include_addresses=None, filter_data_columns=None, except_layer_ids=None, language=None):  # noqa: E501
         """SearchMapParameter - a model defined in Swagger"""  # noqa: E501
         self._search = None
         self._include_layers = None
         self._include_addresses = None
         self._filter_data_columns = None
+        self._except_layer_ids = None
+        self._language = None
         self.discriminator = None
         if search is not None:
             self.search = search
@@ -56,6 +62,10 @@ class SearchMapParameter(object):
             self.include_addresses = include_addresses
         if filter_data_columns is not None:
             self.filter_data_columns = filter_data_columns
+        if except_layer_ids is not None:
+            self.except_layer_ids = except_layer_ids
+        if language is not None:
+            self.language = language
 
     @property
     def search(self):
@@ -140,6 +150,48 @@ class SearchMapParameter(object):
         """
 
         self._filter_data_columns = filter_data_columns
+
+    @property
+    def except_layer_ids(self):
+        """Gets the except_layer_ids of this SearchMapParameter.  # noqa: E501
+
+
+        :return: The except_layer_ids of this SearchMapParameter.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._except_layer_ids
+
+    @except_layer_ids.setter
+    def except_layer_ids(self, except_layer_ids):
+        """Sets the except_layer_ids of this SearchMapParameter.
+
+
+        :param except_layer_ids: The except_layer_ids of this SearchMapParameter.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._except_layer_ids = except_layer_ids
+
+    @property
+    def language(self):
+        """Gets the language of this SearchMapParameter.  # noqa: E501
+
+
+        :return: The language of this SearchMapParameter.  # noqa: E501
+        :rtype: OneOfSearchMapParameterLanguage
+        """
+        return self._language
+
+    @language.setter
+    def language(self, language):
+        """Sets the language of this SearchMapParameter.
+
+
+        :param language: The language of this SearchMapParameter.  # noqa: E501
+        :type: OneOfSearchMapParameterLanguage
+        """
+
+        self._language = language
 
     def to_dict(self):
         """Returns the model properties as a dict"""

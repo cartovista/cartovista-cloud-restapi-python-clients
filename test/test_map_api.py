@@ -49,6 +49,12 @@ class TestMapApi(unittest.TestCase):
         """
         pass
 
+    def test_map_create_map_plugin(self):
+        """Test case for map_create_map_plugin
+
+        """
+        pass
+
     def test_map_create_slide(self):
         """Test case for map_create_slide
 
@@ -74,6 +80,12 @@ class TestMapApi(unittest.TestCase):
         """Test case for map_delete_map_layer
 
         Removes the layer from the map.  # noqa: E501
+        """
+        pass
+
+    def test_map_delete_map_plugin(self):
+        """Test case for map_delete_map_plugin
+
         """
         pass
 

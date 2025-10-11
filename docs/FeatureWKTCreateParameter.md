@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data_columns_identifiers** | **list[str]** |  | [optional] 
 **values** | **list[object]** |  | [optional] 
-**feature_type** | [**FeatureType**](FeatureType.md) |  | [optional] 
+**feature_type** | **OneOfFeatureWKTCreateParameterFeatureType** |  | [optional] 
 **proj4** | **str** |  | [optional] 
 **wkt** | **str** |  | [optional] 
 

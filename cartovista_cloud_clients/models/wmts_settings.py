@@ -33,6 +33,7 @@ class WmtsSettings(object):
         'alias': 'str',
         'rendering': 'LayerSettingsRendering',
         'visibility_ranges': 'WmtsSettingsVisibilityRanges',
+        'legend': 'LayerSettingsLegend',
         'id': 'str'
     }
 
@@ -42,16 +43,18 @@ class WmtsSettings(object):
         'alias': 'alias',
         'rendering': 'rendering',
         'visibility_ranges': 'visibilityRanges',
+        'legend': 'legend',
         'id': 'id'
     }
 
-    def __init__(self, wmts_id=None, map_id=None, alias=None, rendering=None, visibility_ranges=None, id=None):  # noqa: E501
+    def __init__(self, wmts_id=None, map_id=None, alias=None, rendering=None, visibility_ranges=None, legend=None, id=None):  # noqa: E501
         """WmtsSettings - a model defined in Swagger"""  # noqa: E501
         self._wmts_id = None
         self._map_id = None
         self._alias = None
         self._rendering = None
         self._visibility_ranges = None
+        self._legend = None
         self._id = None
         self.discriminator = None
         if wmts_id is not None:
@@ -64,6 +67,8 @@ class WmtsSettings(object):
             self.rendering = rendering
         if visibility_ranges is not None:
             self.visibility_ranges = visibility_ranges
+        if legend is not None:
+            self.legend = legend
         if id is not None:
             self.id = id
 
@@ -171,6 +176,27 @@ class WmtsSettings(object):
         """
 
         self._visibility_ranges = visibility_ranges
+
+    @property
+    def legend(self):
+        """Gets the legend of this WmtsSettings.  # noqa: E501
+
+
+        :return: The legend of this WmtsSettings.  # noqa: E501
+        :rtype: LayerSettingsLegend
+        """
+        return self._legend
+
+    @legend.setter
+    def legend(self, legend):
+        """Sets the legend of this WmtsSettings.
+
+
+        :param legend: The legend of this WmtsSettings.  # noqa: E501
+        :type: LayerSettingsLegend
+        """
+
+        self._legend = legend
 
     @property
     def id(self):

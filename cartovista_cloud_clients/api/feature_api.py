@@ -127,7 +127,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromGeoJSON', 'POST',
@@ -240,7 +240,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromLongLat', 'POST',
@@ -353,7 +353,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createFromWKT', 'POST',
@@ -466,7 +466,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromGeoJSON', 'POST',
@@ -579,7 +579,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromLongLat', 'POST',
@@ -692,7 +692,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/createUpdateFromWKT', 'POST',
@@ -801,7 +801,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}', 'DELETE',
@@ -914,7 +914,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features', 'DELETE',
@@ -1035,7 +1035,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/column/{columnIdentifier}', 'DELETE',
@@ -1046,6 +1046,115 @@ class FeatureApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ApiDeleteReport',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def feature_get_editable_feature_data(self, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets a feature's data including the editable joined tables.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.feature_get_editable_feature_data(layer_identifier, feature_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str layer_identifier: The layer to query (required)
+        :param str feature_identifier: The feature to query (required)
+        :param str tenant_url_code: (required)
+        :return: EditableDataRow
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.feature_get_editable_feature_data_with_http_info(layer_identifier, feature_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.feature_get_editable_feature_data_with_http_info(layer_identifier, feature_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def feature_get_editable_feature_data_with_http_info(self, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets a feature's data including the editable joined tables.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.feature_get_editable_feature_data_with_http_info(layer_identifier, feature_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str layer_identifier: The layer to query (required)
+        :param str feature_identifier: The feature to query (required)
+        :param str tenant_url_code: (required)
+        :return: EditableDataRow
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['layer_identifier', 'feature_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method feature_get_editable_feature_data" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'layer_identifier' is set
+        if ('layer_identifier' not in params or
+                params['layer_identifier'] is None):
+            raise ValueError("Missing the required parameter `layer_identifier` when calling `feature_get_editable_feature_data`")  # noqa: E501
+        # verify the required parameter 'feature_identifier' is set
+        if ('feature_identifier' not in params or
+                params['feature_identifier'] is None):
+            raise ValueError("Missing the required parameter `feature_identifier` when calling `feature_get_editable_feature_data`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `feature_get_editable_feature_data`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'layer_identifier' in params:
+            path_params['layerIdentifier'] = params['layer_identifier']  # noqa: E501
+        if 'feature_identifier' in params:
+            path_params['featureIdentifier'] = params['feature_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/editable-data', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='EditableDataRow',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1144,7 +1253,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/data', 'GET',
@@ -1253,7 +1362,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/GeoJSON', 'GET',
@@ -1362,7 +1471,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/LongLat', 'GET',
@@ -1471,7 +1580,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/WKT', 'GET',
@@ -1584,7 +1693,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features', 'POST',
@@ -1701,7 +1810,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/{latitude}/{longitude}/GeoJSON', 'GET',
@@ -1818,7 +1927,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/{latitude}/{longitude}/LongLat', 'GET',
@@ -1935,7 +2044,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/{latitude}/{longitude}/WKT', 'GET',
@@ -2048,7 +2157,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/GeoJSON', 'POST',
@@ -2161,7 +2270,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/LongLat', 'POST',
@@ -2274,7 +2383,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Features/WKT', 'POST',
@@ -2395,7 +2504,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateFromGeoJSON', 'POST',
@@ -2516,7 +2625,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateFromLongLat', 'POST',
@@ -2637,7 +2746,7 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateGeometryFromWKT', 'POST',
@@ -2655,6 +2764,119 @@ class FeatureApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def feature_update_many_values(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Updates a feature's data. A subset of the columns can be used.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.feature_update_many_values(body, layer_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DataRowUpdateManyParameter body: (required)
+        :param str layer_identifier: The layer to query (required)
+        :param str tenant_url_code: (required)
+        :return: list[FeatureDataRow]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.feature_update_many_values_with_http_info(body, layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.feature_update_many_values_with_http_info(body, layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def feature_update_many_values_with_http_info(self, body, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Updates a feature's data. A subset of the columns can be used.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.feature_update_many_values_with_http_info(body, layer_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DataRowUpdateManyParameter body: (required)
+        :param str layer_identifier: The layer to query (required)
+        :param str tenant_url_code: (required)
+        :return: list[FeatureDataRow]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'layer_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method feature_update_many_values" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `feature_update_many_values`")  # noqa: E501
+        # verify the required parameter 'layer_identifier' is set
+        if ('layer_identifier' not in params or
+                params['layer_identifier'] is None):
+            raise ValueError("Missing the required parameter `layer_identifier` when calling `feature_update_many_values`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `feature_update_many_values`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'layer_identifier' in params:
+            path_params['layerIdentifier'] = params['layer_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/updateManyValues', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[FeatureDataRow]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def feature_update_values(self, body, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Updates a feature's data. A subset of the columns can be used.  # noqa: E501
 
@@ -2665,7 +2887,7 @@ class FeatureApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param DataRowUpdateParameter body: (required)
+        :param FeatureDataUpdateParameter body: (required)
         :param str layer_identifier: The layer to query (required)
         :param str feature_identifier: The feature to query (required)
         :param str tenant_url_code: (required)
@@ -2690,7 +2912,7 @@ class FeatureApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param DataRowUpdateParameter body: (required)
+        :param FeatureDataUpdateParameter body: (required)
         :param str layer_identifier: The layer to query (required)
         :param str feature_identifier: The feature to query (required)
         :param str tenant_url_code: (required)
@@ -2760,10 +2982,131 @@ class FeatureApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateValues', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='FeatureDataRow',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def feature_update_values_and_joins(self, body, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """feature_update_values_and_joins  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.feature_update_values_and_joins(body, layer_identifier, feature_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param CompleteFeatureDataUpdateParameter body: (required)
+        :param str layer_identifier: (required)
+        :param str feature_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: FeatureDataRow
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.feature_update_values_and_joins_with_http_info(body, layer_identifier, feature_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.feature_update_values_and_joins_with_http_info(body, layer_identifier, feature_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def feature_update_values_and_joins_with_http_info(self, body, layer_identifier, feature_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """feature_update_values_and_joins  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.feature_update_values_and_joins_with_http_info(body, layer_identifier, feature_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param CompleteFeatureDataUpdateParameter body: (required)
+        :param str layer_identifier: (required)
+        :param str feature_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: FeatureDataRow
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'layer_identifier', 'feature_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method feature_update_values_and_joins" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `feature_update_values_and_joins`")  # noqa: E501
+        # verify the required parameter 'layer_identifier' is set
+        if ('layer_identifier' not in params or
+                params['layer_identifier'] is None):
+            raise ValueError("Missing the required parameter `layer_identifier` when calling `feature_update_values_and_joins`")  # noqa: E501
+        # verify the required parameter 'feature_identifier' is set
+        if ('feature_identifier' not in params or
+                params['feature_identifier'] is None):
+            raise ValueError("Missing the required parameter `feature_identifier` when calling `feature_update_values_and_joins`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `feature_update_values_and_joins`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'layer_identifier' in params:
+            path_params['layerIdentifier'] = params['layer_identifier']  # noqa: E501
+        if 'feature_identifier' in params:
+            path_params['featureIdentifier'] = params['feature_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/{layerIdentifier}/Feature/{featureIdentifier}/updateValuesAndJoins', 'PATCH',
             path_params,
             query_params,
             header_params,

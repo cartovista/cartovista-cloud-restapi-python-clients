@@ -30,27 +30,27 @@ class TransformationSettingsLatLongDTO(object):
     swagger_types = {
         'table_id': 'str',
         'latitude_column_id': 'str',
-        'longtiude_column_id': 'str'
+        'longitude_column_id': 'str'
     }
 
     attribute_map = {
         'table_id': 'tableId',
         'latitude_column_id': 'latitudeColumnId',
-        'longtiude_column_id': 'longtiudeColumnId'
+        'longitude_column_id': 'longitudeColumnId'
     }
 
-    def __init__(self, table_id=None, latitude_column_id=None, longtiude_column_id=None):  # noqa: E501
+    def __init__(self, table_id=None, latitude_column_id=None, longitude_column_id=None):  # noqa: E501
         """TransformationSettingsLatLongDTO - a model defined in Swagger"""  # noqa: E501
         self._table_id = None
         self._latitude_column_id = None
-        self._longtiude_column_id = None
+        self._longitude_column_id = None
         self.discriminator = None
         if table_id is not None:
             self.table_id = table_id
         if latitude_column_id is not None:
             self.latitude_column_id = latitude_column_id
-        if longtiude_column_id is not None:
-            self.longtiude_column_id = longtiude_column_id
+        if longitude_column_id is not None:
+            self.longitude_column_id = longitude_column_id
 
     @property
     def table_id(self):
@@ -95,25 +95,25 @@ class TransformationSettingsLatLongDTO(object):
         self._latitude_column_id = latitude_column_id
 
     @property
-    def longtiude_column_id(self):
-        """Gets the longtiude_column_id of this TransformationSettingsLatLongDTO.  # noqa: E501
+    def longitude_column_id(self):
+        """Gets the longitude_column_id of this TransformationSettingsLatLongDTO.  # noqa: E501
 
 
-        :return: The longtiude_column_id of this TransformationSettingsLatLongDTO.  # noqa: E501
+        :return: The longitude_column_id of this TransformationSettingsLatLongDTO.  # noqa: E501
         :rtype: str
         """
-        return self._longtiude_column_id
+        return self._longitude_column_id
 
-    @longtiude_column_id.setter
-    def longtiude_column_id(self, longtiude_column_id):
-        """Sets the longtiude_column_id of this TransformationSettingsLatLongDTO.
+    @longitude_column_id.setter
+    def longitude_column_id(self, longitude_column_id):
+        """Sets the longitude_column_id of this TransformationSettingsLatLongDTO.
 
 
-        :param longtiude_column_id: The longtiude_column_id of this TransformationSettingsLatLongDTO.  # noqa: E501
+        :param longitude_column_id: The longitude_column_id of this TransformationSettingsLatLongDTO.  # noqa: E501
         :type: str
         """
 
-        self._longtiude_column_id = longtiude_column_id
+        self._longitude_column_id = longitude_column_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

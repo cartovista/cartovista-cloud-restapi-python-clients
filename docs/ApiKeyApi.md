@@ -15,6 +15,8 @@ Method | HTTP request | Description
 
 Generates an access key for a specific user.
 
+This request requires the identifier of the user to which the API key will be linked.   * The identifier can be retrieved with the GET request `/{tenantUrlCode}/api/v2/users`, which returns all users in the tenant. The relevant field is `securityIdentifier`.    The request also requires a list of IP addresses to be whitelisted for the API key.    Optional notes can be added to describe the purpose of the API key.    For example, the request `/tenantName/api/v2/User/00000000-0000-0000-0000-000000000001/ApiKey` with the following body:   ```json {  \"ipWhitelisting\": [   \"X.X.X.X\"  ],  \"notes\": \"Example API\" } ``` will create an API key for the user 00000000-0000-0000-0000-000000000001, valid only for requests originating from the IP address X.X.X.X.
+
 ### Example
 ```python
 from __future__ import print_function
@@ -28,6 +30,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -61,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -88,6 +94,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -118,7 +128,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -131,6 +141,8 @@ void (empty response body)
 > str api_key_generate_secret_key(id, tenant_url_code)
 
 Generates a secret key for additional security on the access key.
+
+Once a secret key is generated for an API key, it cannot be removed.   If an API key has both an IP whitelist and a secret key, requests must satisfy both conditions.   To use only the secret key, the IP whitelist can be cleared by sending a request to `/{tenantUrlCode}/api/v2/ApiKey` with `\"ipWhitelisting\": []` in the body.
 
 ### Example
 ```python
@@ -145,6 +157,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -176,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -203,6 +219,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -234,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -247,6 +267,8 @@ Name | Type | Description  | Notes
 > api_key_update_access_key(body, tenant_url_code)
 
 Updates the access key.
+
+Updating an access key requires its identifier as well as the properties to be modified. These are provided in the request body. The available fields are:    - **accessKey** (required): The identifier of the access key to update.     The identifier can be retrieved from `/{tenantUrlCode}/api/v2/User/{UserIdentifier}/ApiKey`, where `{UserIdentifier}` corresponds to the user that owns the access key.     If the user identifier is not known, it can be obtained from `/{tenantUrlCode}/api/v2/users`. The `securityIdentifier` field represents the user identifier.    - **enabled** (required): A boolean (`true` or `false`) indicating whether the access key is active.    - **ipWhitelisted** (required): A list of IP addresses from which requests can be made using the access key. An empty list removes all IPs from the access key.    - **notes** (required): A free-text field to describe the purpose or usage of the access key.    For example, the request `tenantName/api/v2/ApiKey` with the body:   ```json {   \"accessKey\": \"00000000-0000-0000-0000-000000000001\",   \"enabled\": false,   \"ipWhitelisted\": [],   \"notes\": \"\" } ``` will disable the access key 00000000-0000-0000-0000-000000000001 as well as removing the notes and all whitelisted IP addresses from it.
 
 ### Example
 ```python
@@ -261,6 +283,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -268,7 +294,7 @@ configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = cartovista_cloud_clients.ApiKeyApi(cartovista_cloud_clients.ApiClient(configuration))
-body = cartovista_cloud_clients.AccessKeyDTO() # AccessKeyDTO | 
+body = cartovista_cloud_clients.UpdateAccessKeyDTO() # UpdateAccessKeyDTO | 
 tenant_url_code = 'tenant_url_code_example' # str | 
 
 try:
@@ -282,7 +308,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AccessKeyDTO**](AccessKeyDTO.md)|  | 
+ **body** | [**UpdateAccessKeyDTO**](UpdateAccessKeyDTO.md)|  | 
  **tenant_url_code** | **str**|  | 
 
 ### Return type
@@ -291,7 +317,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey), [secretKey](../README.md#secretKey)
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
 
 ### HTTP request headers
 
@@ -299,4 +325,9 @@ void (empty response body)
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+
+
+
 

@@ -34,6 +34,7 @@ class LayerUpdateParameter(object):
         'vector_tiling': 'bool',
         'precision': 'int',
         'is_live': 'bool',
+        'is_encrypted': 'bool',
         'external_service_live_feed': 'bool',
         'vector_quality_type': 'VectorQualityTypeEnum',
         'data_columns': 'list[DataColumnUpdateParameterExtended]'
@@ -46,12 +47,13 @@ class LayerUpdateParameter(object):
         'vector_tiling': 'vectorTiling',
         'precision': 'precision',
         'is_live': 'isLive',
+        'is_encrypted': 'isEncrypted',
         'external_service_live_feed': 'externalServiceLiveFeed',
         'vector_quality_type': 'vectorQualityType',
         'data_columns': 'dataColumns'
     }
 
-    def __init__(self, name=None, metadata=None, description=None, vector_tiling=None, precision=None, is_live=None, external_service_live_feed=None, vector_quality_type=None, data_columns=None):  # noqa: E501
+    def __init__(self, name=None, metadata=None, description=None, vector_tiling=None, precision=None, is_live=None, is_encrypted=None, external_service_live_feed=None, vector_quality_type=None, data_columns=None):  # noqa: E501
         """LayerUpdateParameter - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._metadata = None
@@ -59,6 +61,7 @@ class LayerUpdateParameter(object):
         self._vector_tiling = None
         self._precision = None
         self._is_live = None
+        self._is_encrypted = None
         self._external_service_live_feed = None
         self._vector_quality_type = None
         self._data_columns = None
@@ -75,6 +78,8 @@ class LayerUpdateParameter(object):
             self.precision = precision
         if is_live is not None:
             self.is_live = is_live
+        if is_encrypted is not None:
+            self.is_encrypted = is_encrypted
         if external_service_live_feed is not None:
             self.external_service_live_feed = external_service_live_feed
         if vector_quality_type is not None:
@@ -207,6 +212,27 @@ class LayerUpdateParameter(object):
         """
 
         self._is_live = is_live
+
+    @property
+    def is_encrypted(self):
+        """Gets the is_encrypted of this LayerUpdateParameter.  # noqa: E501
+
+
+        :return: The is_encrypted of this LayerUpdateParameter.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_encrypted
+
+    @is_encrypted.setter
+    def is_encrypted(self, is_encrypted):
+        """Sets the is_encrypted of this LayerUpdateParameter.
+
+
+        :param is_encrypted: The is_encrypted of this LayerUpdateParameter.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_encrypted = is_encrypted
 
     @property
     def external_service_live_feed(self):

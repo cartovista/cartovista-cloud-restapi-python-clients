@@ -239,6 +239,13 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                     'key': 'apiKey',
                     'value': self.get_api_key_with_prefix('apiKey')
                 },
+            'bearer':
+                {
+                    'type': 'api_key',
+                    'in': 'header',
+                    'key': 'Authorization',
+                    'value': self.get_api_key_with_prefix('Authorization')
+                },
             'secretKey':
                 {
                     'type': 'api_key',
@@ -257,5 +264,5 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 2.0.0\n"\
-               "SDK Package Version: 8.12".\
+               "SDK Package Version: 8.14".\
                format(env=sys.platform, pyversion=sys.version)

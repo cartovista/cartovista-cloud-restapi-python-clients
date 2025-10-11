@@ -56,6 +56,13 @@ class TestOrganizationApi(unittest.TestCase):
         """
         pass
 
+    def test_organization_get_organization_with_tenant_url(self):
+        """Test case for organization_get_organization_with_tenant_url
+
+        Gets the current organization.  # noqa: E501
+        """
+        pass
+
     def test_organization_set_organization_disclaimers(self):
         """Test case for organization_set_organization_disclaimers
 

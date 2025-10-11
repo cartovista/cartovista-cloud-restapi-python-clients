@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**spatial_metadata_id** | **str** |  | [optional] 
+**spatial_metadata_id** | **str** | Used when importing already existing data from another db.  Should be left blank when importing from the UI. (auto generated) | [optional] 
 **geometry_type** | [**GeometryTypeEnum**](GeometryTypeEnum.md) |  | [optional] 
 **target_proj4** | **str** |  | [optional] 
 **target_srid** | **int** |  | [optional] 

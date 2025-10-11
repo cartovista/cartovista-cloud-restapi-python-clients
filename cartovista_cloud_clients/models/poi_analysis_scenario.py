@@ -34,7 +34,8 @@ class PoiAnalysisScenario(object):
         'case_type': 'str',
         'cluster': 'str',
         'subcluster': 'str',
-        'is_pregenerated': 'bool'
+        'is_pregenerated': 'bool',
+        'is_valid': 'bool'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class PoiAnalysisScenario(object):
         'case_type': 'caseType',
         'cluster': 'cluster',
         'subcluster': 'subcluster',
-        'is_pregenerated': 'isPregenerated'
+        'is_pregenerated': 'isPregenerated',
+        'is_valid': 'isValid'
     }
 
-    def __init__(self, id=None, scenario=None, year=None, case_type=None, cluster=None, subcluster=None, is_pregenerated=None):  # noqa: E501
+    def __init__(self, id=None, scenario=None, year=None, case_type=None, cluster=None, subcluster=None, is_pregenerated=None, is_valid=None):  # noqa: E501
         """PoiAnalysisScenario - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._scenario = None
@@ -56,6 +58,7 @@ class PoiAnalysisScenario(object):
         self._cluster = None
         self._subcluster = None
         self._is_pregenerated = None
+        self._is_valid = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -71,6 +74,8 @@ class PoiAnalysisScenario(object):
             self.subcluster = subcluster
         if is_pregenerated is not None:
             self.is_pregenerated = is_pregenerated
+        if is_valid is not None:
+            self.is_valid = is_valid
 
     @property
     def id(self):
@@ -218,6 +223,27 @@ class PoiAnalysisScenario(object):
         """
 
         self._is_pregenerated = is_pregenerated
+
+    @property
+    def is_valid(self):
+        """Gets the is_valid of this PoiAnalysisScenario.  # noqa: E501
+
+
+        :return: The is_valid of this PoiAnalysisScenario.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_valid
+
+    @is_valid.setter
+    def is_valid(self, is_valid):
+        """Sets the is_valid of this PoiAnalysisScenario.
+
+
+        :param is_valid: The is_valid of this PoiAnalysisScenario.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_valid = is_valid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

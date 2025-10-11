@@ -81,6 +81,7 @@ class FlatFileSheetSpatialMetaDataDTO(object):
     def spatial_metadata_id(self):
         """Gets the spatial_metadata_id of this FlatFileSheetSpatialMetaDataDTO.  # noqa: E501
 
+        Used when importing already existing data from another db.  Should be left blank when importing from the UI. (auto generated)  # noqa: E501
 
         :return: The spatial_metadata_id of this FlatFileSheetSpatialMetaDataDTO.  # noqa: E501
         :rtype: str
@@ -91,6 +92,7 @@ class FlatFileSheetSpatialMetaDataDTO(object):
     def spatial_metadata_id(self, spatial_metadata_id):
         """Sets the spatial_metadata_id of this FlatFileSheetSpatialMetaDataDTO.
 
+        Used when importing already existing data from another db.  Should be left blank when importing from the UI. (auto generated)  # noqa: E501
 
         :param spatial_metadata_id: The spatial_metadata_id of this FlatFileSheetSpatialMetaDataDTO.  # noqa: E501
         :type: str

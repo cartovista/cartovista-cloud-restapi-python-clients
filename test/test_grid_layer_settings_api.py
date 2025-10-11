@@ -56,6 +56,13 @@ class TestGridLayerSettingsApi(unittest.TestCase):
         """
         pass
 
+    def test_grid_layer_settings_update_legend(self):
+        """Test case for grid_layer_settings_update_legend
+
+        Updates the grid layer settings' legend.  # noqa: E501
+        """
+        pass
+
     def test_grid_layer_settings_update_rendering(self):
         """Test case for grid_layer_settings_update_rendering
 

@@ -51,6 +51,7 @@ class CreateViewByExpressionParameters(object):
     def title(self):
         """Gets the title of this CreateViewByExpressionParameters.  # noqa: E501
 
+        The view title.  # noqa: E501
 
         :return: The title of this CreateViewByExpressionParameters.  # noqa: E501
         :rtype: str
@@ -61,6 +62,7 @@ class CreateViewByExpressionParameters(object):
     def title(self, title):
         """Sets the title of this CreateViewByExpressionParameters.
 
+        The view title.  # noqa: E501
 
         :param title: The title of this CreateViewByExpressionParameters.  # noqa: E501
         :type: str
@@ -72,6 +74,7 @@ class CreateViewByExpressionParameters(object):
     def expression(self):
         """Gets the expression of this CreateViewByExpressionParameters.  # noqa: E501
 
+        The view expression. Column friendly identifier can be used and must be surrounded by square bracket. Ex: [Name] = 'Test'  # noqa: E501
 
         :return: The expression of this CreateViewByExpressionParameters.  # noqa: E501
         :rtype: str
@@ -82,6 +85,7 @@ class CreateViewByExpressionParameters(object):
     def expression(self, expression):
         """Sets the expression of this CreateViewByExpressionParameters.
 
+        The view expression. Column friendly identifier can be used and must be surrounded by square bracket. Ex: [Name] = 'Test'  # noqa: E501
 
         :param expression: The expression of this CreateViewByExpressionParameters.  # noqa: E501
         :type: str

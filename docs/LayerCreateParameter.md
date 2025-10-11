@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identifier** | **str** |  | [optional] 
-**proj4** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **metadata** | **str** |  | [optional] 
 **geometry_type** | **str** |  | [optional] 

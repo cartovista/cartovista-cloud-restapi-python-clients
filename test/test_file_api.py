@@ -74,6 +74,18 @@ class TestFileApi(unittest.TestCase):
         """
         pass
 
+    def test_file_get_geo_json(self):
+        """Test case for file_get_geo_json
+
+        """
+        pass
+
+    def test_file_get_mvt_tile(self):
+        """Test case for file_get_mvt_tile
+
+        """
+        pass
+
     def test_file_get_poi_analysis_heatmap(self):
         """Test case for file_get_poi_analysis_heatmap
 

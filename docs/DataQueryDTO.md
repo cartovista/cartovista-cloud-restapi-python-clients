@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **max_count** | **int** |  | [optional] 
 **data_sampling_count** | **int** |  | [optional] 
 **search_criteria** | **str** |  | [optional] 
+**language** | **OneOfDataQueryDTOLanguage** |  | [optional] 
 **statistics** | **list[str]** |  | [optional] 
 **statistics_only** | **bool** |  | [optional] 
 **sort_orders** | **list[str]** |  | [optional] 

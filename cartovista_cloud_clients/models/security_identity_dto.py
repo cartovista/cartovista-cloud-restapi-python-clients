@@ -384,6 +384,7 @@ class SecurityIdentityDTO(object):
     def secure_object_permissions(self):
         """Gets the secure_object_permissions of this SecurityIdentityDTO.  # noqa: E501
 
+        Permissions with a secureObject associated to it  # noqa: E501
 
         :return: The secure_object_permissions of this SecurityIdentityDTO.  # noqa: E501
         :rtype: list[PermissionPairDTO]
@@ -394,6 +395,7 @@ class SecurityIdentityDTO(object):
     def secure_object_permissions(self, secure_object_permissions):
         """Sets the secure_object_permissions of this SecurityIdentityDTO.
 
+        Permissions with a secureObject associated to it  # noqa: E501
 
         :param secure_object_permissions: The secure_object_permissions of this SecurityIdentityDTO.  # noqa: E501
         :type: list[PermissionPairDTO]

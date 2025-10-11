@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
+**id** | **str** | Id that CVWP_DataTable will be assign. If we are updating a DataTable or SpatialMetadata that already exists, this will be assigned to it. For GridLayers, this is the GridLayerId | [optional] 
 **table_ref** | **str** |  | [optional] 
 **sheet_name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 

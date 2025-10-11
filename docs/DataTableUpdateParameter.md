@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **metadata** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **data_columns** | [**list[DataColumnUpdateParameterExtended]**](DataColumnUpdateParameterExtended.md) |  | [optional] 
+**is_encrypted** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

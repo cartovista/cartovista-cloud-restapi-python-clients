@@ -40,7 +40,9 @@ class CustomPoiAnalysis(object):
         'is_overloaded': 'bool',
         'x': 'float',
         'y': 'float',
-        'name': 'str'
+        'name': 'str',
+        'bus_id': 'str',
+        'extent': 'OneOfCustomPoiAnalysisExtent'
     }
 
     attribute_map = {
@@ -56,10 +58,12 @@ class CustomPoiAnalysis(object):
         'is_overloaded': 'isOverloaded',
         'x': 'x',
         'y': 'y',
-        'name': 'name'
+        'name': 'name',
+        'bus_id': 'busId',
+        'extent': 'extent'
     }
 
-    def __init__(self, id=None, poi_analysis_id=None, scenario_id=None, feature_id=None, value=None, scenario=None, year=None, kv_values=None, is_default=None, is_overloaded=None, x=None, y=None, name=None):  # noqa: E501
+    def __init__(self, id=None, poi_analysis_id=None, scenario_id=None, feature_id=None, value=None, scenario=None, year=None, kv_values=None, is_default=None, is_overloaded=None, x=None, y=None, name=None, bus_id=None, extent=None):  # noqa: E501
         """CustomPoiAnalysis - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._poi_analysis_id = None
@@ -74,6 +78,8 @@ class CustomPoiAnalysis(object):
         self._x = None
         self._y = None
         self._name = None
+        self._bus_id = None
+        self._extent = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -101,6 +107,10 @@ class CustomPoiAnalysis(object):
             self.y = y
         if name is not None:
             self.name = name
+        if bus_id is not None:
+            self.bus_id = bus_id
+        if extent is not None:
+            self.extent = extent
 
     @property
     def id(self):
@@ -374,6 +384,48 @@ class CustomPoiAnalysis(object):
         """
 
         self._name = name
+
+    @property
+    def bus_id(self):
+        """Gets the bus_id of this CustomPoiAnalysis.  # noqa: E501
+
+
+        :return: The bus_id of this CustomPoiAnalysis.  # noqa: E501
+        :rtype: str
+        """
+        return self._bus_id
+
+    @bus_id.setter
+    def bus_id(self, bus_id):
+        """Sets the bus_id of this CustomPoiAnalysis.
+
+
+        :param bus_id: The bus_id of this CustomPoiAnalysis.  # noqa: E501
+        :type: str
+        """
+
+        self._bus_id = bus_id
+
+    @property
+    def extent(self):
+        """Gets the extent of this CustomPoiAnalysis.  # noqa: E501
+
+
+        :return: The extent of this CustomPoiAnalysis.  # noqa: E501
+        :rtype: OneOfCustomPoiAnalysisExtent
+        """
+        return self._extent
+
+    @extent.setter
+    def extent(self, extent):
+        """Sets the extent of this CustomPoiAnalysis.
+
+
+        :param extent: The extent of this CustomPoiAnalysis.  # noqa: E501
+        :type: OneOfCustomPoiAnalysisExtent
+        """
+
+        self._extent = extent
 
     def to_dict(self):
         """Returns the model properties as a dict"""

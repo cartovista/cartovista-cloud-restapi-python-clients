@@ -41,6 +41,7 @@ class DataQueryDTO(object):
         'max_count': 'int',
         'data_sampling_count': 'int',
         'search_criteria': 'str',
+        'language': 'OneOfDataQueryDTOLanguage',
         'statistics': 'list[str]',
         'statistics_only': 'bool',
         'sort_orders': 'list[str]',
@@ -66,6 +67,7 @@ class DataQueryDTO(object):
         'max_count': 'maxCount',
         'data_sampling_count': 'dataSamplingCount',
         'search_criteria': 'searchCriteria',
+        'language': 'language',
         'statistics': 'statistics',
         'statistics_only': 'statisticsOnly',
         'sort_orders': 'sortOrders',
@@ -77,7 +79,7 @@ class DataQueryDTO(object):
         'has_quad_keys': 'hasQuadKeys'
     }
 
-    def __init__(self, linking_ids=None, linking_ids_for_stats=None, sort_data_columns=None, data_columns=None, filter_data_columns=None, group_by=None, selection_stack_parameters=None, spatial_filter=None, time_range=None, start_index=None, max_count=None, data_sampling_count=None, search_criteria=None, statistics=None, statistics_only=None, sort_orders=None, exclude_not_available_value=None, server_cache_enabled=None, quad_keys=None, client_stack_trace=None, data_query_filters=None, has_quad_keys=None):  # noqa: E501
+    def __init__(self, linking_ids=None, linking_ids_for_stats=None, sort_data_columns=None, data_columns=None, filter_data_columns=None, group_by=None, selection_stack_parameters=None, spatial_filter=None, time_range=None, start_index=None, max_count=None, data_sampling_count=None, search_criteria=None, language=None, statistics=None, statistics_only=None, sort_orders=None, exclude_not_available_value=None, server_cache_enabled=None, quad_keys=None, client_stack_trace=None, data_query_filters=None, has_quad_keys=None):  # noqa: E501
         """DataQueryDTO - a model defined in Swagger"""  # noqa: E501
         self._linking_ids = None
         self._linking_ids_for_stats = None
@@ -92,6 +94,7 @@ class DataQueryDTO(object):
         self._max_count = None
         self._data_sampling_count = None
         self._search_criteria = None
+        self._language = None
         self._statistics = None
         self._statistics_only = None
         self._sort_orders = None
@@ -128,6 +131,8 @@ class DataQueryDTO(object):
             self.data_sampling_count = data_sampling_count
         if search_criteria is not None:
             self.search_criteria = search_criteria
+        if language is not None:
+            self.language = language
         if statistics is not None:
             self.statistics = statistics
         if statistics_only is not None:
@@ -419,6 +424,27 @@ class DataQueryDTO(object):
         """
 
         self._search_criteria = search_criteria
+
+    @property
+    def language(self):
+        """Gets the language of this DataQueryDTO.  # noqa: E501
+
+
+        :return: The language of this DataQueryDTO.  # noqa: E501
+        :rtype: OneOfDataQueryDTOLanguage
+        """
+        return self._language
+
+    @language.setter
+    def language(self, language):
+        """Sets the language of this DataQueryDTO.
+
+
+        :param language: The language of this DataQueryDTO.  # noqa: E501
+        :type: OneOfDataQueryDTOLanguage
+        """
+
+        self._language = language
 
     @property
     def statistics(self):

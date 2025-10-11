@@ -247,6 +247,7 @@ class UserDTO(object):
     def display_name(self):
         """Gets the display_name of this UserDTO.  # noqa: E501
 
+        User's DisplayName is mapped to the user's fullName  # noqa: E501
 
         :return: The display_name of this UserDTO.  # noqa: E501
         :rtype: str
@@ -257,6 +258,7 @@ class UserDTO(object):
     def display_name(self, display_name):
         """Sets the display_name of this UserDTO.
 
+        User's DisplayName is mapped to the user's fullName  # noqa: E501
 
         :param display_name: The display_name of this UserDTO.  # noqa: E501
         :type: str
@@ -499,6 +501,7 @@ class UserDTO(object):
     def secure_object_permissions(self):
         """Gets the secure_object_permissions of this UserDTO.  # noqa: E501
 
+        Permissions with a secureObject associated to it  # noqa: E501
 
         :return: The secure_object_permissions of this UserDTO.  # noqa: E501
         :rtype: list[PermissionPairDTO]
@@ -509,6 +512,7 @@ class UserDTO(object):
     def secure_object_permissions(self, secure_object_permissions):
         """Sets the secure_object_permissions of this UserDTO.
 
+        Permissions with a secureObject associated to it  # noqa: E501
 
         :param secure_object_permissions: The secure_object_permissions of this UserDTO.  # noqa: E501
         :type: list[PermissionPairDTO]

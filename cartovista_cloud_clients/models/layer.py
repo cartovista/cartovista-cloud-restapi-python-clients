@@ -63,6 +63,8 @@ class Layer(object):
         'is_external': 'bool',
         'is_live': 'bool',
         'is_spatial_file': 'bool',
+        'is_managed': 'bool',
+        'is_encrypted': 'bool',
         'external_service_live_feed': 'bool',
         'external_service_type': 'OneOfLayerExternalServiceType',
         'folder_id': 'str'
@@ -104,12 +106,14 @@ class Layer(object):
         'is_external': 'isExternal',
         'is_live': 'isLive',
         'is_spatial_file': 'isSpatialFile',
+        'is_managed': 'isManaged',
+        'is_encrypted': 'isEncrypted',
         'external_service_live_feed': 'externalServiceLiveFeed',
         'external_service_type': 'externalServiceType',
         'folder_id': 'folderId'
     }
 
-    def __init__(self, unique_identifier=None, name=None, creation_time=None, modified_time=None, data_table_unique_identifier=None, description=None, geometry_type=None, metadata=None, owner_name=None, proj4=None, row_count=None, data_usage=None, system_identifier=None, unique_id_data_column=None, precision=None, public_access=None, thumbnail_url=None, thumbnail_url_expiry=None, icon=None, vector_tiling=None, vector_tiling_forced=None, vector_quality_type=None, can_edit=None, related_maps=None, is_locked=None, is_demo_source=None, is_heatmap_source=None, optimization_status=None, quad_tree_status=None, cluster_status=None, is_clusterable=None, is_view=None, is_external=None, is_live=None, is_spatial_file=None, external_service_live_feed=None, external_service_type=None, folder_id=None):  # noqa: E501
+    def __init__(self, unique_identifier=None, name=None, creation_time=None, modified_time=None, data_table_unique_identifier=None, description=None, geometry_type=None, metadata=None, owner_name=None, proj4=None, row_count=None, data_usage=None, system_identifier=None, unique_id_data_column=None, precision=None, public_access=None, thumbnail_url=None, thumbnail_url_expiry=None, icon=None, vector_tiling=None, vector_tiling_forced=None, vector_quality_type=None, can_edit=None, related_maps=None, is_locked=None, is_demo_source=None, is_heatmap_source=None, optimization_status=None, quad_tree_status=None, cluster_status=None, is_clusterable=None, is_view=None, is_external=None, is_live=None, is_spatial_file=None, is_managed=None, is_encrypted=None, external_service_live_feed=None, external_service_type=None, folder_id=None):  # noqa: E501
         """Layer - a model defined in Swagger"""  # noqa: E501
         self._unique_identifier = None
         self._name = None
@@ -146,6 +150,8 @@ class Layer(object):
         self._is_external = None
         self._is_live = None
         self._is_spatial_file = None
+        self._is_managed = None
+        self._is_encrypted = None
         self._external_service_live_feed = None
         self._external_service_type = None
         self._folder_id = None
@@ -220,6 +226,10 @@ class Layer(object):
             self.is_live = is_live
         if is_spatial_file is not None:
             self.is_spatial_file = is_spatial_file
+        if is_managed is not None:
+            self.is_managed = is_managed
+        if is_encrypted is not None:
+            self.is_encrypted = is_encrypted
         if external_service_live_feed is not None:
             self.external_service_live_feed = external_service_live_feed
         if external_service_type is not None:
@@ -961,6 +971,48 @@ class Layer(object):
         """
 
         self._is_spatial_file = is_spatial_file
+
+    @property
+    def is_managed(self):
+        """Gets the is_managed of this Layer.  # noqa: E501
+
+
+        :return: The is_managed of this Layer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_managed
+
+    @is_managed.setter
+    def is_managed(self, is_managed):
+        """Sets the is_managed of this Layer.
+
+
+        :param is_managed: The is_managed of this Layer.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_managed = is_managed
+
+    @property
+    def is_encrypted(self):
+        """Gets the is_encrypted of this Layer.  # noqa: E501
+
+
+        :return: The is_encrypted of this Layer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_encrypted
+
+    @is_encrypted.setter
+    def is_encrypted(self, is_encrypted):
+        """Sets the is_encrypted of this Layer.
+
+
+        :param is_encrypted: The is_encrypted of this Layer.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_encrypted = is_encrypted
 
     @property
     def external_service_live_feed(self):

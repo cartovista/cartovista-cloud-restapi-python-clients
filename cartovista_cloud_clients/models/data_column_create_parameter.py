@@ -29,7 +29,7 @@ class DataColumnCreateParameter(object):
     """
     swagger_types = {
         'identifier': 'str',
-        'carto_vista_data_type': 'CartoVistaPortalDataType',
+        'carto_vista_data_type': 'OneOfDataColumnCreateParameterCartoVistaDataType',
         'name': 'str',
         'description': 'str',
         'metadata': 'str',
@@ -43,7 +43,8 @@ class DataColumnCreateParameter(object):
         'time_stamp_accuracy': 'object',
         'not_available_values': 'bool',
         'value_to_convert': 'float',
-        'system_identifier': 'str'
+        'system_identifier': 'str',
+        'date_format': 'OneOfDataColumnCreateParameterDateFormat'
     }
 
     attribute_map = {
@@ -62,10 +63,11 @@ class DataColumnCreateParameter(object):
         'time_stamp_accuracy': 'timeStampAccuracy',
         'not_available_values': 'notAvailableValues',
         'value_to_convert': 'valueToConvert',
-        'system_identifier': 'systemIdentifier'
+        'system_identifier': 'systemIdentifier',
+        'date_format': 'dateFormat'
     }
 
-    def __init__(self, identifier=None, carto_vista_data_type=None, name=None, description=None, metadata=None, units=None, unit_placement=None, aggregation_type=None, mappable=None, precision=None, round_to_precision=None, time_stamp=None, time_stamp_accuracy=None, not_available_values=None, value_to_convert=None, system_identifier=None):  # noqa: E501
+    def __init__(self, identifier=None, carto_vista_data_type=None, name=None, description=None, metadata=None, units=None, unit_placement=None, aggregation_type=None, mappable=None, precision=None, round_to_precision=None, time_stamp=None, time_stamp_accuracy=None, not_available_values=None, value_to_convert=None, system_identifier=None, date_format=None):  # noqa: E501
         """DataColumnCreateParameter - a model defined in Swagger"""  # noqa: E501
         self._identifier = None
         self._carto_vista_data_type = None
@@ -83,6 +85,7 @@ class DataColumnCreateParameter(object):
         self._not_available_values = None
         self._value_to_convert = None
         self._system_identifier = None
+        self._date_format = None
         self.discriminator = None
         if identifier is not None:
             self.identifier = identifier
@@ -116,6 +119,8 @@ class DataColumnCreateParameter(object):
             self.value_to_convert = value_to_convert
         if system_identifier is not None:
             self.system_identifier = system_identifier
+        if date_format is not None:
+            self.date_format = date_format
 
     @property
     def identifier(self):
@@ -144,7 +149,7 @@ class DataColumnCreateParameter(object):
 
 
         :return: The carto_vista_data_type of this DataColumnCreateParameter.  # noqa: E501
-        :rtype: CartoVistaPortalDataType
+        :rtype: OneOfDataColumnCreateParameterCartoVistaDataType
         """
         return self._carto_vista_data_type
 
@@ -154,7 +159,7 @@ class DataColumnCreateParameter(object):
 
 
         :param carto_vista_data_type: The carto_vista_data_type of this DataColumnCreateParameter.  # noqa: E501
-        :type: CartoVistaPortalDataType
+        :type: OneOfDataColumnCreateParameterCartoVistaDataType
         """
 
         self._carto_vista_data_type = carto_vista_data_type
@@ -452,6 +457,27 @@ class DataColumnCreateParameter(object):
         """
 
         self._system_identifier = system_identifier
+
+    @property
+    def date_format(self):
+        """Gets the date_format of this DataColumnCreateParameter.  # noqa: E501
+
+
+        :return: The date_format of this DataColumnCreateParameter.  # noqa: E501
+        :rtype: OneOfDataColumnCreateParameterDateFormat
+        """
+        return self._date_format
+
+    @date_format.setter
+    def date_format(self, date_format):
+        """Sets the date_format of this DataColumnCreateParameter.
+
+
+        :param date_format: The date_format of this DataColumnCreateParameter.  # noqa: E501
+        :type: OneOfDataColumnCreateParameterDateFormat
+        """
+
+        self._date_format = date_format
 
     def to_dict(self):
         """Returns the model properties as a dict"""

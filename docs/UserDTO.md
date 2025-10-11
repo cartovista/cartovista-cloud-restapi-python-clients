@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **is_anonymous** | **bool** |  | [optional] 
-**display_name** | **str** |  | [optional] 
+**display_name** | **str** | User&#x27;s DisplayName is mapped to the user&#x27;s fullName | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **is_group** | **bool** |  | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **identifier** | **str** |  | [optional] 
 **provider_status** | [**ProviderStatus**](ProviderStatus.md) |  | [optional] 
 **path** | **str** |  | [optional] 
-**secure_object_permissions** | [**list[PermissionPairDTO]**](PermissionPairDTO.md) |  | [optional] 
+**secure_object_permissions** | [**list[PermissionPairDTO]**](PermissionPairDTO.md) | Permissions with a secureObject associated to it | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 
 **username** | **str** |  | [optional] 

@@ -46,6 +46,12 @@ class TestVectorServicesApi(unittest.TestCase):
         """
         pass
 
+    def test_vector_services_get_configurations(self):
+        """Test case for vector_services_get_configurations
+
+        """
+        pass
+
     def test_vector_services_get_features(self):
         """Test case for vector_services_get_features
 

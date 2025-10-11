@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **interactivity** | [**LayerSettingsInteractivity**](LayerSettingsInteractivity.md) |  | [optional] 
 **rendering** | [**LayerSettingsRendering**](LayerSettingsRendering.md) |  | [optional] 
 **visibility_ranges** | [**LayerSettingsVisibilityRanges**](LayerSettingsVisibilityRanges.md) |  | [optional] 
+**legend** | [**LayerSettingsLegend**](LayerSettingsLegend.md) |  | [optional] 
 **id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

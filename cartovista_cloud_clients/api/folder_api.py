@@ -119,7 +119,7 @@ class FolderApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/folder', 'POST',
@@ -216,7 +216,7 @@ class FolderApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/folder/{id}', 'DELETE',
@@ -317,7 +317,7 @@ class FolderApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/folder/{id}', 'GET',
@@ -422,7 +422,7 @@ class FolderApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/folder/search', 'POST',
@@ -527,7 +527,7 @@ class FolderApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/folder/folders-with-path', 'POST',
@@ -640,7 +640,7 @@ class FolderApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/folder/{id}', 'PATCH',
@@ -661,6 +661,7 @@ class FolderApi(object):
     def folder_update_item_parent_folder(self, body, tenant_url_code, **kwargs):  # noqa: E501
         """Moves an item to a different folder.  # noqa: E501
 
+        In the body, type refers to the type of the item to move. It is one of the following: * `spatialMetadata` if it's a vector layer (shp, mapinfo, geojson, etc.)  * `gridLayer` if it's a generated heatmap  * `WMS` if it's a WMS  * `WMTS` if it's a WMTS  * `dateTable` if it's tabular data (csv, etc.)  * `folder` if it's a folder  * `map` if it's a map  `itemId` and `folderId` can both be found by calling `/{tenantUrlCode}/api/v2/data/elements`. Find the folder id (`id`) and item id (`systemIdentifier`) in the response.  For example, the URL `/{tenantUrlCode}/api/v2/data/elements` with these parameters will move a vector layer to a different folder: ```json {  \"type\": \"spatialMetadata\",  \"itemId\": \"390160e0-78f2-468c-9f69-aef7c3673b2f\",  \"folderId\": \"3ea8a066-c5df-4a1c-8800-98c46d2d5c29\" } ``` If the request goes through, you will simply receive a 200 ok response.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.folder_update_item_parent_folder(body, tenant_url_code, async_req=True)
@@ -683,6 +684,7 @@ class FolderApi(object):
     def folder_update_item_parent_folder_with_http_info(self, body, tenant_url_code, **kwargs):  # noqa: E501
         """Moves an item to a different folder.  # noqa: E501
 
+        In the body, type refers to the type of the item to move. It is one of the following: * `spatialMetadata` if it's a vector layer (shp, mapinfo, geojson, etc.)  * `gridLayer` if it's a generated heatmap  * `WMS` if it's a WMS  * `WMTS` if it's a WMTS  * `dateTable` if it's tabular data (csv, etc.)  * `folder` if it's a folder  * `map` if it's a map  `itemId` and `folderId` can both be found by calling `/{tenantUrlCode}/api/v2/data/elements`. Find the folder id (`id`) and item id (`systemIdentifier`) in the response.  For example, the URL `/{tenantUrlCode}/api/v2/data/elements` with these parameters will move a vector layer to a different folder: ```json {  \"type\": \"spatialMetadata\",  \"itemId\": \"390160e0-78f2-468c-9f69-aef7c3673b2f\",  \"folderId\": \"3ea8a066-c5df-4a1c-8800-98c46d2d5c29\" } ``` If the request goes through, you will simply receive a 200 ok response.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.folder_update_item_parent_folder_with_http_info(body, tenant_url_code, async_req=True)
@@ -741,7 +743,7 @@ class FolderApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/folder/parent', 'PATCH',

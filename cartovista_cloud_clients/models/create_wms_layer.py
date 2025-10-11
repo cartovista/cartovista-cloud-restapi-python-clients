@@ -34,7 +34,7 @@ class CreateWmsLayer(object):
         'folder_id': 'str',
         'set_public_access': 'bool',
         'layer_names': 'list[str]',
-        'extent': 'OneOfCreateWmsLayerExtent',
+        'extents': 'list[WmsExtent]',
         'get_legend_url': 'str',
         'version': 'str'
     }
@@ -46,12 +46,12 @@ class CreateWmsLayer(object):
         'folder_id': 'folderId',
         'set_public_access': 'setPublicAccess',
         'layer_names': 'layerNames',
-        'extent': 'extent',
+        'extents': 'extents',
         'get_legend_url': 'getLegendUrl',
         'version': 'version'
     }
 
-    def __init__(self, name=None, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, layer_names=None, extent=None, get_legend_url=None, version=None):  # noqa: E501
+    def __init__(self, name=None, url=None, add_to_map_id=None, folder_id=None, set_public_access=None, layer_names=None, extents=None, get_legend_url=None, version=None):  # noqa: E501
         """CreateWmsLayer - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._url = None
@@ -59,7 +59,7 @@ class CreateWmsLayer(object):
         self._folder_id = None
         self._set_public_access = None
         self._layer_names = None
-        self._extent = None
+        self._extents = None
         self._get_legend_url = None
         self._version = None
         self.discriminator = None
@@ -75,8 +75,8 @@ class CreateWmsLayer(object):
             self.set_public_access = set_public_access
         if layer_names is not None:
             self.layer_names = layer_names
-        if extent is not None:
-            self.extent = extent
+        if extents is not None:
+            self.extents = extents
         if get_legend_url is not None:
             self.get_legend_url = get_legend_url
         if version is not None:
@@ -209,25 +209,25 @@ class CreateWmsLayer(object):
         self._layer_names = layer_names
 
     @property
-    def extent(self):
-        """Gets the extent of this CreateWmsLayer.  # noqa: E501
+    def extents(self):
+        """Gets the extents of this CreateWmsLayer.  # noqa: E501
 
 
-        :return: The extent of this CreateWmsLayer.  # noqa: E501
-        :rtype: OneOfCreateWmsLayerExtent
+        :return: The extents of this CreateWmsLayer.  # noqa: E501
+        :rtype: list[WmsExtent]
         """
-        return self._extent
+        return self._extents
 
-    @extent.setter
-    def extent(self, extent):
-        """Sets the extent of this CreateWmsLayer.
+    @extents.setter
+    def extents(self, extents):
+        """Sets the extents of this CreateWmsLayer.
 
 
-        :param extent: The extent of this CreateWmsLayer.  # noqa: E501
-        :type: OneOfCreateWmsLayerExtent
+        :param extents: The extents of this CreateWmsLayer.  # noqa: E501
+        :type: list[WmsExtent]
         """
 
-        self._extent = extent
+        self._extents = extents
 
     @property
     def get_legend_url(self):

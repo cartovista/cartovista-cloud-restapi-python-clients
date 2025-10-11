@@ -115,7 +115,7 @@ class PortalApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Portal/upload/{uploadId}/cancel', 'POST',
@@ -224,7 +224,7 @@ class PortalApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Portal/upload/{uploadId}/finalize', 'POST',
@@ -325,7 +325,7 @@ class PortalApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Portal/upload/{uploadId}/definition', 'GET',
@@ -418,7 +418,7 @@ class PortalApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Portal', 'GET',
@@ -436,47 +436,47 @@ class PortalApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def portal_upload(self, upload_id, tenant_url_code, **kwargs):  # noqa: E501
-        """Uploads a temporary file for layer use.  # noqa: E501
+    def portal_upload(self, tenant_url_code, **kwargs):  # noqa: E501
+        """Uploads a temporary file for layer use.  This will return an uploadId that can be used with /definition to get details on the file uploaded. Then use /finalize to complete the upload of the layer.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.portal_upload(upload_id, tenant_url_code, async_req=True)
+        >>> thread = api.portal_upload(tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str upload_id: (required)
         :param str tenant_url_code: (required)
         :param str file:
+        :param str upload_id:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.portal_upload_with_http_info(upload_id, tenant_url_code, **kwargs)  # noqa: E501
+            return self.portal_upload_with_http_info(tenant_url_code, **kwargs)  # noqa: E501
         else:
-            (data) = self.portal_upload_with_http_info(upload_id, tenant_url_code, **kwargs)  # noqa: E501
+            (data) = self.portal_upload_with_http_info(tenant_url_code, **kwargs)  # noqa: E501
             return data
 
-    def portal_upload_with_http_info(self, upload_id, tenant_url_code, **kwargs):  # noqa: E501
-        """Uploads a temporary file for layer use.  # noqa: E501
+    def portal_upload_with_http_info(self, tenant_url_code, **kwargs):  # noqa: E501
+        """Uploads a temporary file for layer use.  This will return an uploadId that can be used with /definition to get details on the file uploaded. Then use /finalize to complete the upload of the layer.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.portal_upload_with_http_info(upload_id, tenant_url_code, async_req=True)
+        >>> thread = api.portal_upload_with_http_info(tenant_url_code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str upload_id: (required)
         :param str tenant_url_code: (required)
         :param str file:
+        :param str upload_id:
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['upload_id', 'tenant_url_code', 'file']  # noqa: E501
+        all_params = ['tenant_url_code', 'file', 'upload_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -491,10 +491,6 @@ class PortalApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'upload_id' is set
-        if ('upload_id' not in params or
-                params['upload_id'] is None):
-            raise ValueError("Missing the required parameter `upload_id` when calling `portal_upload`")  # noqa: E501
         # verify the required parameter 'tenant_url_code' is set
         if ('tenant_url_code' not in params or
                 params['tenant_url_code'] is None):
@@ -527,7 +523,7 @@ class PortalApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/Portal/upload', 'POST',

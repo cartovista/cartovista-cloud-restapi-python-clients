@@ -196,6 +196,7 @@ class FlatFileGridLayerDefinitionDTO(object):
     def file_id(self):
         """Gets the file_id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
 
+        Id of the folder where the file is saved  # noqa: E501
 
         :return: The file_id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
         :rtype: str
@@ -206,6 +207,7 @@ class FlatFileGridLayerDefinitionDTO(object):
     def file_id(self, file_id):
         """Sets the file_id of this FlatFileGridLayerDefinitionDTO.
 
+        Id of the folder where the file is saved  # noqa: E501
 
         :param file_id: The file_id of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
         :type: str
@@ -217,6 +219,7 @@ class FlatFileGridLayerDefinitionDTO(object):
     def uploaded_file_path(self):
         """Gets the uploaded_file_path of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
 
+        Path of the file after the upload. (will be in a Guid named folder)  # noqa: E501
 
         :return: The uploaded_file_path of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
         :rtype: str
@@ -227,6 +230,7 @@ class FlatFileGridLayerDefinitionDTO(object):
     def uploaded_file_path(self, uploaded_file_path):
         """Sets the uploaded_file_path of this FlatFileGridLayerDefinitionDTO.
 
+        Path of the file after the upload. (will be in a Guid named folder)  # noqa: E501
 
         :param uploaded_file_path: The uploaded_file_path of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
         :type: str
@@ -238,6 +242,7 @@ class FlatFileGridLayerDefinitionDTO(object):
     def file_name(self):
         """Gets the file_name of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
 
+        The initial filename  # noqa: E501
 
         :return: The file_name of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
         :rtype: str
@@ -248,6 +253,7 @@ class FlatFileGridLayerDefinitionDTO(object):
     def file_name(self, file_name):
         """Sets the file_name of this FlatFileGridLayerDefinitionDTO.
 
+        The initial filename  # noqa: E501
 
         :param file_name: The file_name of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
         :type: str

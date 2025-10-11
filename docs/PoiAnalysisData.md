@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **post_project_loading_percent** | **float** |  | [optional] 
 **worst_post_project_loading** | **float** |  | [optional] 
 **worst_post_project_loading_percent** | **float** |  | [optional] 
+**constraint_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

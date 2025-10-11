@@ -29,10 +29,12 @@ class PoiAnalysisSettings(object):
     """
     swagger_types = {
         'layers': 'list[PoiSourceLayer]',
-        'tables': 'dict(str, list[PoiTable])',
+        'tables': 'dict(str, list[PoiSourceTable])',
         'footprint_layers': 'list[PoiLayer]',
         'transmission_lines_layers': 'list[PoiLayer]',
         'transmission_points_layers': 'list[PoiLayer]',
+        'harmer_tables': 'list[PoiTable]',
+        'stress_gen_layers': 'list[PoiLayer]',
         'poi_specifications_url': 'str'
     }
 
@@ -42,16 +44,20 @@ class PoiAnalysisSettings(object):
         'footprint_layers': 'footprintLayers',
         'transmission_lines_layers': 'transmissionLinesLayers',
         'transmission_points_layers': 'transmissionPointsLayers',
+        'harmer_tables': 'harmerTables',
+        'stress_gen_layers': 'stressGenLayers',
         'poi_specifications_url': 'poiSpecificationsUrl'
     }
 
-    def __init__(self, layers=None, tables=None, footprint_layers=None, transmission_lines_layers=None, transmission_points_layers=None, poi_specifications_url=None):  # noqa: E501
+    def __init__(self, layers=None, tables=None, footprint_layers=None, transmission_lines_layers=None, transmission_points_layers=None, harmer_tables=None, stress_gen_layers=None, poi_specifications_url=None):  # noqa: E501
         """PoiAnalysisSettings - a model defined in Swagger"""  # noqa: E501
         self._layers = None
         self._tables = None
         self._footprint_layers = None
         self._transmission_lines_layers = None
         self._transmission_points_layers = None
+        self._harmer_tables = None
+        self._stress_gen_layers = None
         self._poi_specifications_url = None
         self.discriminator = None
         if layers is not None:
@@ -64,6 +70,10 @@ class PoiAnalysisSettings(object):
             self.transmission_lines_layers = transmission_lines_layers
         if transmission_points_layers is not None:
             self.transmission_points_layers = transmission_points_layers
+        if harmer_tables is not None:
+            self.harmer_tables = harmer_tables
+        if stress_gen_layers is not None:
+            self.stress_gen_layers = stress_gen_layers
         if poi_specifications_url is not None:
             self.poi_specifications_url = poi_specifications_url
 
@@ -94,7 +104,7 @@ class PoiAnalysisSettings(object):
 
 
         :return: The tables of this PoiAnalysisSettings.  # noqa: E501
-        :rtype: dict(str, list[PoiTable])
+        :rtype: dict(str, list[PoiSourceTable])
         """
         return self._tables
 
@@ -104,7 +114,7 @@ class PoiAnalysisSettings(object):
 
 
         :param tables: The tables of this PoiAnalysisSettings.  # noqa: E501
-        :type: dict(str, list[PoiTable])
+        :type: dict(str, list[PoiSourceTable])
         """
 
         self._tables = tables
@@ -171,6 +181,48 @@ class PoiAnalysisSettings(object):
         """
 
         self._transmission_points_layers = transmission_points_layers
+
+    @property
+    def harmer_tables(self):
+        """Gets the harmer_tables of this PoiAnalysisSettings.  # noqa: E501
+
+
+        :return: The harmer_tables of this PoiAnalysisSettings.  # noqa: E501
+        :rtype: list[PoiTable]
+        """
+        return self._harmer_tables
+
+    @harmer_tables.setter
+    def harmer_tables(self, harmer_tables):
+        """Sets the harmer_tables of this PoiAnalysisSettings.
+
+
+        :param harmer_tables: The harmer_tables of this PoiAnalysisSettings.  # noqa: E501
+        :type: list[PoiTable]
+        """
+
+        self._harmer_tables = harmer_tables
+
+    @property
+    def stress_gen_layers(self):
+        """Gets the stress_gen_layers of this PoiAnalysisSettings.  # noqa: E501
+
+
+        :return: The stress_gen_layers of this PoiAnalysisSettings.  # noqa: E501
+        :rtype: list[PoiLayer]
+        """
+        return self._stress_gen_layers
+
+    @stress_gen_layers.setter
+    def stress_gen_layers(self, stress_gen_layers):
+        """Sets the stress_gen_layers of this PoiAnalysisSettings.
+
+
+        :param stress_gen_layers: The stress_gen_layers of this PoiAnalysisSettings.  # noqa: E501
+        :type: list[PoiLayer]
+        """
+
+        self._stress_gen_layers = stress_gen_layers
 
     @property
     def poi_specifications_url(self):

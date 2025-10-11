@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **folder_id** | **str** |  | [optional] 
 **set_public_access** | **bool** |  | [optional] 
 **layer_names** | **list[str]** |  | [optional] 
-**extent** | **OneOfCreateWmsLayerExtent** |  | [optional] 
+**extents** | [**list[WmsExtent]**](WmsExtent.md) |  | [optional] 
 **get_legend_url** | **str** |  | [optional] 
 **version** | **str** |  | [optional] 
 

@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **poi_analysis** | **OneOfMapWithViewerInformationPoiAnalysis** |  | [optional] 
 **poi_analysis_is_generating** | **bool** |  | [optional] 
 **custom_applications** | [**list[CustomApplicationMapSettings]**](CustomApplicationMapSettings.md) |  | [optional] 
+**map_plugins** | [**list[MapPlugin]**](MapPlugin.md) |  | [optional] 
+**map_libre** | **OneOfMapWithViewerInformationMapLibre** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

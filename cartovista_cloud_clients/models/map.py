@@ -33,8 +33,6 @@ class Map(object):
         'unique_identifier': 'str',
         'description': 'str',
         'language': 'LanguageEnum',
-        'type': 'MapTypeEnum',
-        'is_territory_manager': 'bool',
         'editable': 'bool',
         'seo_title': 'str',
         'seo_description': 'str',
@@ -62,8 +60,6 @@ class Map(object):
         'unique_identifier': 'uniqueIdentifier',
         'description': 'description',
         'language': 'language',
-        'type': 'type',
-        'is_territory_manager': 'isTerritoryManager',
         'editable': 'editable',
         'seo_title': 'seoTitle',
         'seo_description': 'seoDescription',
@@ -85,15 +81,13 @@ class Map(object):
         'folder_id': 'folderId'
     }
 
-    def __init__(self, id=None, title=None, unique_identifier=None, description=None, language=None, type=None, is_territory_manager=None, editable=None, seo_title=None, seo_description=None, seo_custom_html=None, thumbnail_url=None, thumbnail_url_expiry=None, creation_date=None, last_update=None, owner_name=None, keywords=None, can_edit=None, public_access=None, vanity_url=None, has_onboarding=None, is_locked=None, can_add_layers=None, has_custom_thumbnail=None, is_poi_analysis=None, folder_id=None):  # noqa: E501
+    def __init__(self, id=None, title=None, unique_identifier=None, description=None, language=None, editable=None, seo_title=None, seo_description=None, seo_custom_html=None, thumbnail_url=None, thumbnail_url_expiry=None, creation_date=None, last_update=None, owner_name=None, keywords=None, can_edit=None, public_access=None, vanity_url=None, has_onboarding=None, is_locked=None, can_add_layers=None, has_custom_thumbnail=None, is_poi_analysis=None, folder_id=None):  # noqa: E501
         """Map - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._title = None
         self._unique_identifier = None
         self._description = None
         self._language = None
-        self._type = None
-        self._is_territory_manager = None
         self._editable = None
         self._seo_title = None
         self._seo_description = None
@@ -124,10 +118,6 @@ class Map(object):
             self.description = description
         if language is not None:
             self.language = language
-        if type is not None:
-            self.type = type
-        if is_territory_manager is not None:
-            self.is_territory_manager = is_territory_manager
         if editable is not None:
             self.editable = editable
         if seo_title is not None:
@@ -271,48 +261,6 @@ class Map(object):
         """
 
         self._language = language
-
-    @property
-    def type(self):
-        """Gets the type of this Map.  # noqa: E501
-
-
-        :return: The type of this Map.  # noqa: E501
-        :rtype: MapTypeEnum
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this Map.
-
-
-        :param type: The type of this Map.  # noqa: E501
-        :type: MapTypeEnum
-        """
-
-        self._type = type
-
-    @property
-    def is_territory_manager(self):
-        """Gets the is_territory_manager of this Map.  # noqa: E501
-
-
-        :return: The is_territory_manager of this Map.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_territory_manager
-
-    @is_territory_manager.setter
-    def is_territory_manager(self, is_territory_manager):
-        """Sets the is_territory_manager of this Map.
-
-
-        :param is_territory_manager: The is_territory_manager of this Map.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_territory_manager = is_territory_manager
 
     @property
     def editable(self):

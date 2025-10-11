@@ -127,7 +127,7 @@ class DataRowApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/createDataRows', 'POST',
@@ -148,6 +148,7 @@ class DataRowApi(object):
     def data_row_create_update_data_rows(self, body, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Creates new data rows or updates them if they already exists in the table. A subset of the columns can be used. A layer's table can be used.  # noqa: E501
 
+        This request first needs the identifier of the data table to update. * It can be retrieved from the get request `/{tenantUrlCode}/api/v2/DataTables`. This will return all data tables and you can find yours within the list.  It also needs the identifiers of the data columns to update. Please note that the unique identifier column needs to be included. * They can be retrieved from the get request `/{tenantUrlCode}/api/v2/DataTables/{dataTableIdentifier}/details`. You will want the uniqueIdentifier of the dataColumns section.  For example, the request `/tenantName/api/v2/DataTable/00000000-0000-0000-0000-000000000001/createUpdateDataRows` with the body ```json [  {   \"dataColumnsIdentifiers\": [    \"Id\",    \"NewValue\"   ],   \"values\": [    1,    \"Test1\"   ]  },  {   \"dataColumnsIdentifiers\": [    \"Id\",    \"NewValue\"   ],   \"values\": [    2,    \"Test2\"   ]  }, ] ``` will update the rows with Id 1 and 2 with their new values. In this example, Id is the unique column identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.data_row_create_update_data_rows(body, data_table_identifier, tenant_url_code, async_req=True)
@@ -171,6 +172,7 @@ class DataRowApi(object):
     def data_row_create_update_data_rows_with_http_info(self, body, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Creates new data rows or updates them if they already exists in the table. A subset of the columns can be used. A layer's table can be used.  # noqa: E501
 
+        This request first needs the identifier of the data table to update. * It can be retrieved from the get request `/{tenantUrlCode}/api/v2/DataTables`. This will return all data tables and you can find yours within the list.  It also needs the identifiers of the data columns to update. Please note that the unique identifier column needs to be included. * They can be retrieved from the get request `/{tenantUrlCode}/api/v2/DataTables/{dataTableIdentifier}/details`. You will want the uniqueIdentifier of the dataColumns section.  For example, the request `/tenantName/api/v2/DataTable/00000000-0000-0000-0000-000000000001/createUpdateDataRows` with the body ```json [  {   \"dataColumnsIdentifiers\": [    \"Id\",    \"NewValue\"   ],   \"values\": [    1,    \"Test1\"   ]  },  {   \"dataColumnsIdentifiers\": [    \"Id\",    \"NewValue\"   ],   \"values\": [    2,    \"Test2\"   ]  }, ] ``` will update the rows with Id 1 and 2 with their new values. In this example, Id is the unique column identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.data_row_create_update_data_rows_with_http_info(body, data_table_identifier, tenant_url_code, async_req=True)
@@ -240,7 +242,7 @@ class DataRowApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/createUpdateDataRows', 'POST',
@@ -349,7 +351,7 @@ class DataRowApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRow/{dataRowIdentifier}', 'DELETE',
@@ -462,7 +464,7 @@ class DataRowApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRows', 'DELETE',
@@ -571,7 +573,7 @@ class DataRowApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRow/{dataRowIdentifier}', 'GET',
@@ -684,7 +686,7 @@ class DataRowApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRows', 'POST',
@@ -797,7 +799,7 @@ class DataRowApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRowsWithTotal', 'POST',
@@ -918,7 +920,7 @@ class DataRowApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey', 'secretKey']  # noqa: E501
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
             '/{tenantUrlCode}/api/v2/DataTable/{dataTableIdentifier}/DataRow/{dataRowIdentifier}/update', 'POST',

@@ -32,7 +32,8 @@ class GenericWebPortalResponseError(object):
         'codes': 'list[str]',
         'code_details': 'str',
         'message': 'str',
-        'additional_information': 'list[str]'
+        'additional_information': 'list[str]',
+        'stacktrace': 'str'
     }
 
     attribute_map = {
@@ -40,16 +41,18 @@ class GenericWebPortalResponseError(object):
         'codes': 'codes',
         'code_details': 'codeDetails',
         'message': 'message',
-        'additional_information': 'additionalInformation'
+        'additional_information': 'additionalInformation',
+        'stacktrace': 'stacktrace'
     }
 
-    def __init__(self, code=None, codes=None, code_details=None, message=None, additional_information=None):  # noqa: E501
+    def __init__(self, code=None, codes=None, code_details=None, message=None, additional_information=None, stacktrace=None):  # noqa: E501
         """GenericWebPortalResponseError - a model defined in Swagger"""  # noqa: E501
         self._code = None
         self._codes = None
         self._code_details = None
         self._message = None
         self._additional_information = None
+        self._stacktrace = None
         self.discriminator = None
         if code is not None:
             self.code = code
@@ -61,6 +64,8 @@ class GenericWebPortalResponseError(object):
             self.message = message
         if additional_information is not None:
             self.additional_information = additional_information
+        if stacktrace is not None:
+            self.stacktrace = stacktrace
 
     @property
     def code(self):
@@ -166,6 +171,27 @@ class GenericWebPortalResponseError(object):
         """
 
         self._additional_information = additional_information
+
+    @property
+    def stacktrace(self):
+        """Gets the stacktrace of this GenericWebPortalResponseError.  # noqa: E501
+
+
+        :return: The stacktrace of this GenericWebPortalResponseError.  # noqa: E501
+        :rtype: str
+        """
+        return self._stacktrace
+
+    @stacktrace.setter
+    def stacktrace(self, stacktrace):
+        """Sets the stacktrace of this GenericWebPortalResponseError.
+
+
+        :param stacktrace: The stacktrace of this GenericWebPortalResponseError.  # noqa: E501
+        :type: str
+        """
+
+        self._stacktrace = stacktrace
 
     def to_dict(self):
         """Returns the model properties as a dict"""

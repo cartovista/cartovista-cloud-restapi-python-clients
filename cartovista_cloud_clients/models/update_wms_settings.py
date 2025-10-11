@@ -30,20 +30,23 @@ class UpdateWmsSettings(object):
     swagger_types = {
         'alias': 'str',
         'rendering': 'LayerSettingsRendering',
-        'visibility_ranges': 'WmsSettingsVisibilityRanges'
+        'visibility_ranges': 'WmsSettingsVisibilityRanges',
+        'legend': 'LayerSettingsLegend'
     }
 
     attribute_map = {
         'alias': 'alias',
         'rendering': 'rendering',
-        'visibility_ranges': 'visibilityRanges'
+        'visibility_ranges': 'visibilityRanges',
+        'legend': 'legend'
     }
 
-    def __init__(self, alias=None, rendering=None, visibility_ranges=None):  # noqa: E501
+    def __init__(self, alias=None, rendering=None, visibility_ranges=None, legend=None):  # noqa: E501
         """UpdateWmsSettings - a model defined in Swagger"""  # noqa: E501
         self._alias = None
         self._rendering = None
         self._visibility_ranges = None
+        self._legend = None
         self.discriminator = None
         if alias is not None:
             self.alias = alias
@@ -51,6 +54,8 @@ class UpdateWmsSettings(object):
             self.rendering = rendering
         if visibility_ranges is not None:
             self.visibility_ranges = visibility_ranges
+        if legend is not None:
+            self.legend = legend
 
     @property
     def alias(self):
@@ -114,6 +119,27 @@ class UpdateWmsSettings(object):
         """
 
         self._visibility_ranges = visibility_ranges
+
+    @property
+    def legend(self):
+        """Gets the legend of this UpdateWmsSettings.  # noqa: E501
+
+
+        :return: The legend of this UpdateWmsSettings.  # noqa: E501
+        :rtype: LayerSettingsLegend
+        """
+        return self._legend
+
+    @legend.setter
+    def legend(self, legend):
+        """Sets the legend of this UpdateWmsSettings.
+
+
+        :param legend: The legend of this UpdateWmsSettings.  # noqa: E501
+        :type: LayerSettingsLegend
+        """
+
+        self._legend = legend
 
     def to_dict(self):
         """Returns the model properties as a dict"""

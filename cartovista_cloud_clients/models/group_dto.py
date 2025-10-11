@@ -152,6 +152,7 @@ class GroupDTO(object):
     def display_name(self):
         """Gets the display_name of this GroupDTO.  # noqa: E501
 
+        Group's DisplayName is mapped to the group's name  # noqa: E501
 
         :return: The display_name of this GroupDTO.  # noqa: E501
         :rtype: str
@@ -162,6 +163,7 @@ class GroupDTO(object):
     def display_name(self, display_name):
         """Sets the display_name of this GroupDTO.
 
+        Group's DisplayName is mapped to the group's name  # noqa: E501
 
         :param display_name: The display_name of this GroupDTO.  # noqa: E501
         :type: str
@@ -404,6 +406,7 @@ class GroupDTO(object):
     def secure_object_permissions(self):
         """Gets the secure_object_permissions of this GroupDTO.  # noqa: E501
 
+        Permissions with a secureObject associated to it  # noqa: E501
 
         :return: The secure_object_permissions of this GroupDTO.  # noqa: E501
         :rtype: list[PermissionPairDTO]
@@ -414,6 +417,7 @@ class GroupDTO(object):
     def secure_object_permissions(self, secure_object_permissions):
         """Sets the secure_object_permissions of this GroupDTO.
 
+        Permissions with a secureObject associated to it  # noqa: E501
 
         :param secure_object_permissions: The secure_object_permissions of this GroupDTO.  # noqa: E501
         :type: list[PermissionPairDTO]
@@ -488,6 +492,7 @@ class GroupDTO(object):
     def user_count(self):
         """Gets the user_count of this GroupDTO.  # noqa: E501
 
+        The userCount will be set when getting a list of groups,  so we don't have to also get the list of users of each group.  If the array of users is set, return the number of elements. So setting the userCount when an array exists will do nothing.  # noqa: E501
 
         :return: The user_count of this GroupDTO.  # noqa: E501
         :rtype: int
@@ -498,6 +503,7 @@ class GroupDTO(object):
     def user_count(self, user_count):
         """Sets the user_count of this GroupDTO.
 
+        The userCount will be set when getting a list of groups,  so we don't have to also get the list of users of each group.  If the array of users is set, return the number of elements. So setting the userCount when an array exists will do nothing.  # noqa: E501
 
         :param user_count: The user_count of this GroupDTO.  # noqa: E501
         :type: int

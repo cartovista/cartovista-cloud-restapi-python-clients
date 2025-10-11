@@ -30,7 +30,7 @@ class FeatureLongLatCreateParameter(object):
     swagger_types = {
         'data_columns_identifiers': 'list[str]',
         'values': 'list[object]',
-        'feature_type': 'FeatureType',
+        'feature_type': 'OneOfFeatureLongLatCreateParameterFeatureType',
         'proj4': 'str',
         'longitude': 'float',
         'latitude': 'float'
@@ -115,7 +115,7 @@ class FeatureLongLatCreateParameter(object):
 
 
         :return: The feature_type of this FeatureLongLatCreateParameter.  # noqa: E501
-        :rtype: FeatureType
+        :rtype: OneOfFeatureLongLatCreateParameterFeatureType
         """
         return self._feature_type
 
@@ -125,7 +125,7 @@ class FeatureLongLatCreateParameter(object):
 
 
         :param feature_type: The feature_type of this FeatureLongLatCreateParameter.  # noqa: E501
-        :type: FeatureType
+        :type: OneOfFeatureLongLatCreateParameterFeatureType
         """
 
         self._feature_type = feature_type
