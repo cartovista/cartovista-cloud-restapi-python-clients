@@ -31,7 +31,7 @@ class TestGridLayerApi(unittest.TestCase):
     def test_grid_layer_add_grid_source(self):
         """Test case for grid_layer_add_grid_source
 
-        Add a grid source to an existing grid layer.  # noqa: E501
+        Add a grid source to an existing grid layer.  Use /Portal/upload and /Portal/upload/.../definition APIs to upload a geotiff file and get it's definition prior to use this API.  # noqa: E501
         """
         pass
 

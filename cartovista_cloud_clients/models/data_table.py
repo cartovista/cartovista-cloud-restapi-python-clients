@@ -46,6 +46,7 @@ class DataTable(object):
         'geocode_latitude_column_id': 'str',
         'geocode_longitude_column_id': 'str',
         'is_many_table_in_one_to_many_join': 'bool',
+        'is_spatial_aggregation_table': 'bool',
         'public_access': 'bool',
         'permissions': 'list[PermissionPairComplexDTO]',
         'can_edit': 'bool',
@@ -77,6 +78,7 @@ class DataTable(object):
         'geocode_latitude_column_id': 'geocodeLatitudeColumnId',
         'geocode_longitude_column_id': 'geocodeLongitudeColumnId',
         'is_many_table_in_one_to_many_join': 'isManyTableInOneToManyJoin',
+        'is_spatial_aggregation_table': 'isSpatialAggregationTable',
         'public_access': 'publicAccess',
         'permissions': 'permissions',
         'can_edit': 'canEdit',
@@ -89,7 +91,7 @@ class DataTable(object):
         'folder_id': 'folderId'
     }
 
-    def __init__(self, unique_identifier=None, name=None, system_identifier=None, unique_id_data_column=None, owner_name=None, description=None, metadata=None, icon=None, row_count=None, data_usage=None, creation_time=None, modified_time=None, time_series_column_id=None, geocode_address_column_id=None, geocode_accuracy_column_id=None, geocode_latitude_column_id=None, geocode_longitude_column_id=None, is_many_table_in_one_to_many_join=None, public_access=None, permissions=None, can_edit=None, disabled=None, is_demo_source=None, is_external=None, is_managed=None, is_encrypted=None, optimization_status=None, folder_id=None):  # noqa: E501
+    def __init__(self, unique_identifier=None, name=None, system_identifier=None, unique_id_data_column=None, owner_name=None, description=None, metadata=None, icon=None, row_count=None, data_usage=None, creation_time=None, modified_time=None, time_series_column_id=None, geocode_address_column_id=None, geocode_accuracy_column_id=None, geocode_latitude_column_id=None, geocode_longitude_column_id=None, is_many_table_in_one_to_many_join=None, is_spatial_aggregation_table=None, public_access=None, permissions=None, can_edit=None, disabled=None, is_demo_source=None, is_external=None, is_managed=None, is_encrypted=None, optimization_status=None, folder_id=None):  # noqa: E501
         """DataTable - a model defined in Swagger"""  # noqa: E501
         self._unique_identifier = None
         self._name = None
@@ -109,6 +111,7 @@ class DataTable(object):
         self._geocode_latitude_column_id = None
         self._geocode_longitude_column_id = None
         self._is_many_table_in_one_to_many_join = None
+        self._is_spatial_aggregation_table = None
         self._public_access = None
         self._permissions = None
         self._can_edit = None
@@ -156,6 +159,8 @@ class DataTable(object):
             self.geocode_longitude_column_id = geocode_longitude_column_id
         if is_many_table_in_one_to_many_join is not None:
             self.is_many_table_in_one_to_many_join = is_many_table_in_one_to_many_join
+        if is_spatial_aggregation_table is not None:
+            self.is_spatial_aggregation_table = is_spatial_aggregation_table
         if public_access is not None:
             self.public_access = public_access
         if permissions is not None:
@@ -554,6 +559,27 @@ class DataTable(object):
         """
 
         self._is_many_table_in_one_to_many_join = is_many_table_in_one_to_many_join
+
+    @property
+    def is_spatial_aggregation_table(self):
+        """Gets the is_spatial_aggregation_table of this DataTable.  # noqa: E501
+
+
+        :return: The is_spatial_aggregation_table of this DataTable.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_spatial_aggregation_table
+
+    @is_spatial_aggregation_table.setter
+    def is_spatial_aggregation_table(self, is_spatial_aggregation_table):
+        """Sets the is_spatial_aggregation_table of this DataTable.
+
+
+        :param is_spatial_aggregation_table: The is_spatial_aggregation_table of this DataTable.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_spatial_aggregation_table = is_spatial_aggregation_table
 
     @property
     def public_access(self):

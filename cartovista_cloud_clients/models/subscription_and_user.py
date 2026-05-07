@@ -42,7 +42,8 @@ class SubscriptionAndUser(object):
         'license_expired': 'bool',
         'composite_scoring': 'bool',
         'poi_analysis': 'bool',
-        'quad_tree_tiling': 'bool'
+        'quad_tree_tiling': 'bool',
+        'spatial_aggregation': 'bool'
     }
 
     attribute_map = {
@@ -60,10 +61,11 @@ class SubscriptionAndUser(object):
         'license_expired': 'licenseExpired',
         'composite_scoring': 'compositeScoring',
         'poi_analysis': 'poiAnalysis',
-        'quad_tree_tiling': 'quadTreeTiling'
+        'quad_tree_tiling': 'quadTreeTiling',
+        'spatial_aggregation': 'spatialAggregation'
     }
 
-    def __init__(self, current_user=None, subscription=None, subscription_summary=None, maximum_number_of_users=None, public_maps=None, rest_api=None, live_layers=None, content_count=None, query_optimizer=None, heatmap_generation=None, grace_period_end_date=None, license_expired=None, composite_scoring=None, poi_analysis=None, quad_tree_tiling=None):  # noqa: E501
+    def __init__(self, current_user=None, subscription=None, subscription_summary=None, maximum_number_of_users=None, public_maps=None, rest_api=None, live_layers=None, content_count=None, query_optimizer=None, heatmap_generation=None, grace_period_end_date=None, license_expired=None, composite_scoring=None, poi_analysis=None, quad_tree_tiling=None, spatial_aggregation=None):  # noqa: E501
         """SubscriptionAndUser - a model defined in Swagger"""  # noqa: E501
         self._current_user = None
         self._subscription = None
@@ -80,6 +82,7 @@ class SubscriptionAndUser(object):
         self._composite_scoring = None
         self._poi_analysis = None
         self._quad_tree_tiling = None
+        self._spatial_aggregation = None
         self.discriminator = None
         if current_user is not None:
             self.current_user = current_user
@@ -111,6 +114,8 @@ class SubscriptionAndUser(object):
             self.poi_analysis = poi_analysis
         if quad_tree_tiling is not None:
             self.quad_tree_tiling = quad_tree_tiling
+        if spatial_aggregation is not None:
+            self.spatial_aggregation = spatial_aggregation
 
     @property
     def current_user(self):
@@ -426,6 +431,27 @@ class SubscriptionAndUser(object):
         """
 
         self._quad_tree_tiling = quad_tree_tiling
+
+    @property
+    def spatial_aggregation(self):
+        """Gets the spatial_aggregation of this SubscriptionAndUser.  # noqa: E501
+
+
+        :return: The spatial_aggregation of this SubscriptionAndUser.  # noqa: E501
+        :rtype: bool
+        """
+        return self._spatial_aggregation
+
+    @spatial_aggregation.setter
+    def spatial_aggregation(self, spatial_aggregation):
+        """Sets the spatial_aggregation of this SubscriptionAndUser.
+
+
+        :param spatial_aggregation: The spatial_aggregation of this SubscriptionAndUser.  # noqa: E501
+        :type: bool
+        """
+
+        self._spatial_aggregation = spatial_aggregation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

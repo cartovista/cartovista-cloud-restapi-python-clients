@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data_columns_identifiers** | **list[str]** |  | [optional] 
 **values** | **list[object]** |  | [optional] 
-**feature_type** | **OneOfFeatureLongLatCreateParameterFeatureType** |  | [optional] 
+**feature_type** | [**FeatureType**](FeatureType.md) |  | [optional] 
 **proj4** | **str** |  | [optional] 
 **longitude** | **float** |  | [optional] 
 **latitude** | **float** |  | [optional] 

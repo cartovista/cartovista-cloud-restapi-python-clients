@@ -5,7 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **mode** | [**GridLayerSettingsStyleMode**](GridLayerSettingsStyleMode.md) |  | [optional] 
 **values** | [**list[GridLayerSettingsStyleValue]**](GridLayerSettingsStyleValue.md) |  | [optional] 
+**class_values** | [**list[GridLayerSettingsClassStyleValue]**](GridLayerSettingsClassStyleValue.md) |  | [optional] 
 **color_palette** | **str** |  | [optional] 
+**class_color_palette** | **str** |  | [optional] 
 **arrow_color** | **str** |  | [optional] 
 **shadow** | **bool** |  | [optional] 
 **smooth_rendering** | **bool** |  | [optional] 

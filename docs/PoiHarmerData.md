@@ -3,7 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**feature_id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
+**bus_name** | **str** |  | [optional] 
 **kv** | **int** |  | [optional] 
 **dfax_percent** | **float** |  | [optional] 
 **mw_impact** | **float** |  | [optional] 

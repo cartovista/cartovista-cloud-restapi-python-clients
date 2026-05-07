@@ -29,24 +29,29 @@ class ViewReadPermission(object):
     """
     swagger_types = {
         'view_id': 'str',
+        'permission': 'PermissionDTO',
         'identity_id': 'str',
         'is_group': 'bool'
     }
 
     attribute_map = {
         'view_id': 'viewId',
+        'permission': 'permission',
         'identity_id': 'identityId',
         'is_group': 'isGroup'
     }
 
-    def __init__(self, view_id=None, identity_id=None, is_group=None):  # noqa: E501
+    def __init__(self, view_id=None, permission=None, identity_id=None, is_group=None):  # noqa: E501
         """ViewReadPermission - a model defined in Swagger"""  # noqa: E501
         self._view_id = None
+        self._permission = None
         self._identity_id = None
         self._is_group = None
         self.discriminator = None
         if view_id is not None:
             self.view_id = view_id
+        if permission is not None:
+            self.permission = permission
         if identity_id is not None:
             self.identity_id = identity_id
         if is_group is not None:
@@ -72,6 +77,27 @@ class ViewReadPermission(object):
         """
 
         self._view_id = view_id
+
+    @property
+    def permission(self):
+        """Gets the permission of this ViewReadPermission.  # noqa: E501
+
+
+        :return: The permission of this ViewReadPermission.  # noqa: E501
+        :rtype: PermissionDTO
+        """
+        return self._permission
+
+    @permission.setter
+    def permission(self, permission):
+        """Sets the permission of this ViewReadPermission.
+
+
+        :param permission: The permission of this ViewReadPermission.  # noqa: E501
+        :type: PermissionDTO
+        """
+
+        self._permission = permission
 
     @property
     def identity_id(self):

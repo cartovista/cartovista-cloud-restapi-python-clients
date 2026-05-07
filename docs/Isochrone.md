@@ -8,7 +8,8 @@ Name | Type | Description | Notes
 **range** | **str** |  | [optional] 
 **range_type** | **str** |  | [optional] 
 **mode** | **str** |  | [optional] 
-**departure_time** | **str** |  | [optional] 
+**outbound** | **bool** |  | [optional] 
+**time** | **str** |  | [optional] 
 **isoline_coordinates** | **list[float]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

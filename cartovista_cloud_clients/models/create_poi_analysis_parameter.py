@@ -43,7 +43,8 @@ class CreatePoiAnalysisParameter(object):
         'smoothing': 'float',
         'pixel_size': 'int',
         'buffer_size': 'int',
-        'show_injection_area_mask': 'bool'
+        'show_injection_area_mask': 'bool',
+        'only_use_worst_dispatch': 'bool'
     }
 
     attribute_map = {
@@ -62,10 +63,11 @@ class CreatePoiAnalysisParameter(object):
         'smoothing': 'smoothing',
         'pixel_size': 'pixelSize',
         'buffer_size': 'bufferSize',
-        'show_injection_area_mask': 'showInjectionAreaMask'
+        'show_injection_area_mask': 'showInjectionAreaMask',
+        'only_use_worst_dispatch': 'onlyUseWorstDispatch'
     }
 
-    def __init__(self, name=None, heatmap_layer_name=None, injection_area_mask_layer_name=None, harmers_layer_name=None, layer_id=None, table_id=None, footprint_layer_id=None, transmission_lines_layer_id=None, transmission_points_layer_id=None, harmer_table_id=None, stress_gen_layer_id=None, power=None, smoothing=None, pixel_size=None, buffer_size=None, show_injection_area_mask=None):  # noqa: E501
+    def __init__(self, name=None, heatmap_layer_name=None, injection_area_mask_layer_name=None, harmers_layer_name=None, layer_id=None, table_id=None, footprint_layer_id=None, transmission_lines_layer_id=None, transmission_points_layer_id=None, harmer_table_id=None, stress_gen_layer_id=None, power=None, smoothing=None, pixel_size=None, buffer_size=None, show_injection_area_mask=None, only_use_worst_dispatch=None):  # noqa: E501
         """CreatePoiAnalysisParameter - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._heatmap_layer_name = None
@@ -83,6 +85,7 @@ class CreatePoiAnalysisParameter(object):
         self._pixel_size = None
         self._buffer_size = None
         self._show_injection_area_mask = None
+        self._only_use_worst_dispatch = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -116,6 +119,8 @@ class CreatePoiAnalysisParameter(object):
             self.buffer_size = buffer_size
         if show_injection_area_mask is not None:
             self.show_injection_area_mask = show_injection_area_mask
+        if only_use_worst_dispatch is not None:
+            self.only_use_worst_dispatch = only_use_worst_dispatch
 
     @property
     def name(self):
@@ -452,6 +457,27 @@ class CreatePoiAnalysisParameter(object):
         """
 
         self._show_injection_area_mask = show_injection_area_mask
+
+    @property
+    def only_use_worst_dispatch(self):
+        """Gets the only_use_worst_dispatch of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The only_use_worst_dispatch of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: bool
+        """
+        return self._only_use_worst_dispatch
+
+    @only_use_worst_dispatch.setter
+    def only_use_worst_dispatch(self, only_use_worst_dispatch):
+        """Sets the only_use_worst_dispatch of this CreatePoiAnalysisParameter.
+
+
+        :param only_use_worst_dispatch: The only_use_worst_dispatch of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: bool
+        """
+
+        self._only_use_worst_dispatch = only_use_worst_dispatch
 
     def to_dict(self):
         """Returns the model properties as a dict"""

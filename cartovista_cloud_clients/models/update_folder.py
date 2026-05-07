@@ -30,25 +30,30 @@ class UpdateFolder(object):
     swagger_types = {
         'name': 'str',
         'color': 'str',
+        'hide_from_anonymous': 'bool',
         'parent_id': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'color': 'color',
+        'hide_from_anonymous': 'hideFromAnonymous',
         'parent_id': 'parentId'
     }
 
-    def __init__(self, name=None, color=None, parent_id=None):  # noqa: E501
+    def __init__(self, name=None, color=None, hide_from_anonymous=None, parent_id=None):  # noqa: E501
         """UpdateFolder - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._color = None
+        self._hide_from_anonymous = None
         self._parent_id = None
         self.discriminator = None
         if name is not None:
             self.name = name
         if color is not None:
             self.color = color
+        if hide_from_anonymous is not None:
+            self.hide_from_anonymous = hide_from_anonymous
         if parent_id is not None:
             self.parent_id = parent_id
 
@@ -93,6 +98,27 @@ class UpdateFolder(object):
         """
 
         self._color = color
+
+    @property
+    def hide_from_anonymous(self):
+        """Gets the hide_from_anonymous of this UpdateFolder.  # noqa: E501
+
+
+        :return: The hide_from_anonymous of this UpdateFolder.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hide_from_anonymous
+
+    @hide_from_anonymous.setter
+    def hide_from_anonymous(self, hide_from_anonymous):
+        """Sets the hide_from_anonymous of this UpdateFolder.
+
+
+        :param hide_from_anonymous: The hide_from_anonymous of this UpdateFolder.  # noqa: E501
+        :type: bool
+        """
+
+        self._hide_from_anonymous = hide_from_anonymous
 
     @property
     def parent_id(self):

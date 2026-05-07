@@ -28,25 +28,34 @@ class RefreshParam(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'device_id': 'str'
+        'device_id': 'str',
+        'provider_token': 'str',
+        'provider_identifier_claim': 'str'
     }
 
     attribute_map = {
-        'device_id': 'deviceId'
+        'device_id': 'deviceId',
+        'provider_token': 'providerToken',
+        'provider_identifier_claim': 'providerIdentifierClaim'
     }
 
-    def __init__(self, device_id=None):  # noqa: E501
+    def __init__(self, device_id=None, provider_token=None, provider_identifier_claim=None):  # noqa: E501
         """RefreshParam - a model defined in Swagger"""  # noqa: E501
         self._device_id = None
+        self._provider_token = None
+        self._provider_identifier_claim = None
         self.discriminator = None
         if device_id is not None:
             self.device_id = device_id
+        if provider_token is not None:
+            self.provider_token = provider_token
+        if provider_identifier_claim is not None:
+            self.provider_identifier_claim = provider_identifier_claim
 
     @property
     def device_id(self):
         """Gets the device_id of this RefreshParam.  # noqa: E501
 
-        Device that this refresh token belongs to. This allows us to have multiple refresh tokens for the same user if he is logged-in on multiple browsers or device. We would not want to have the refresh token be invalidated by another device.  # noqa: E501
 
         :return: The device_id of this RefreshParam.  # noqa: E501
         :rtype: str
@@ -57,13 +66,54 @@ class RefreshParam(object):
     def device_id(self, device_id):
         """Sets the device_id of this RefreshParam.
 
-        Device that this refresh token belongs to. This allows us to have multiple refresh tokens for the same user if he is logged-in on multiple browsers or device. We would not want to have the refresh token be invalidated by another device.  # noqa: E501
 
         :param device_id: The device_id of this RefreshParam.  # noqa: E501
         :type: str
         """
 
         self._device_id = device_id
+
+    @property
+    def provider_token(self):
+        """Gets the provider_token of this RefreshParam.  # noqa: E501
+
+
+        :return: The provider_token of this RefreshParam.  # noqa: E501
+        :rtype: str
+        """
+        return self._provider_token
+
+    @provider_token.setter
+    def provider_token(self, provider_token):
+        """Sets the provider_token of this RefreshParam.
+
+
+        :param provider_token: The provider_token of this RefreshParam.  # noqa: E501
+        :type: str
+        """
+
+        self._provider_token = provider_token
+
+    @property
+    def provider_identifier_claim(self):
+        """Gets the provider_identifier_claim of this RefreshParam.  # noqa: E501
+
+
+        :return: The provider_identifier_claim of this RefreshParam.  # noqa: E501
+        :rtype: str
+        """
+        return self._provider_identifier_claim
+
+    @provider_identifier_claim.setter
+    def provider_identifier_claim(self, provider_identifier_claim):
+        """Sets the provider_identifier_claim of this RefreshParam.
+
+
+        :param provider_identifier_claim: The provider_identifier_claim of this RefreshParam.  # noqa: E501
+        :type: str
+        """
+
+        self._provider_identifier_claim = provider_identifier_claim
 
     def to_dict(self):
         """Returns the model properties as a dict"""

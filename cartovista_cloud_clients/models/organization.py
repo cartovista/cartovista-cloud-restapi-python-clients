@@ -36,10 +36,14 @@ class Organization(object):
         'logo_icon_url': 'str',
         'is_enterprise': 'bool',
         'url_code': 'str',
+        'users_folder_id': 'str',
+        'data_folder_id': 'str',
+        'maps_folder_id': 'str',
         'open_id_providers': 'list[OpenIdProviderInformation]',
         'froala_key': 'str',
         'disclaimers': 'list[TenantDisclaimer]',
-        'invalidate_disclaimer_time': 'datetime'
+        'invalidate_disclaimer_time': 'datetime',
+        'default_permissions': 'DefaultOrganizationPermissions'
     }
 
     attribute_map = {
@@ -51,13 +55,17 @@ class Organization(object):
         'logo_icon_url': 'logoIconUrl',
         'is_enterprise': 'isEnterprise',
         'url_code': 'urlCode',
+        'users_folder_id': 'usersFolderId',
+        'data_folder_id': 'dataFolderId',
+        'maps_folder_id': 'mapsFolderId',
         'open_id_providers': 'openIdProviders',
         'froala_key': 'froalaKey',
         'disclaimers': 'disclaimers',
-        'invalidate_disclaimer_time': 'invalidateDisclaimerTime'
+        'invalidate_disclaimer_time': 'invalidateDisclaimerTime',
+        'default_permissions': 'defaultPermissions'
     }
 
-    def __init__(self, name=None, default_language=None, primary_color=None, default_theme=None, logo_url=None, logo_icon_url=None, is_enterprise=None, url_code=None, open_id_providers=None, froala_key=None, disclaimers=None, invalidate_disclaimer_time=None):  # noqa: E501
+    def __init__(self, name=None, default_language=None, primary_color=None, default_theme=None, logo_url=None, logo_icon_url=None, is_enterprise=None, url_code=None, users_folder_id=None, data_folder_id=None, maps_folder_id=None, open_id_providers=None, froala_key=None, disclaimers=None, invalidate_disclaimer_time=None, default_permissions=None):  # noqa: E501
         """Organization - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._default_language = None
@@ -67,10 +75,14 @@ class Organization(object):
         self._logo_icon_url = None
         self._is_enterprise = None
         self._url_code = None
+        self._users_folder_id = None
+        self._data_folder_id = None
+        self._maps_folder_id = None
         self._open_id_providers = None
         self._froala_key = None
         self._disclaimers = None
         self._invalidate_disclaimer_time = None
+        self._default_permissions = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -88,6 +100,12 @@ class Organization(object):
             self.is_enterprise = is_enterprise
         if url_code is not None:
             self.url_code = url_code
+        if users_folder_id is not None:
+            self.users_folder_id = users_folder_id
+        if data_folder_id is not None:
+            self.data_folder_id = data_folder_id
+        if maps_folder_id is not None:
+            self.maps_folder_id = maps_folder_id
         if open_id_providers is not None:
             self.open_id_providers = open_id_providers
         if froala_key is not None:
@@ -96,6 +114,8 @@ class Organization(object):
             self.disclaimers = disclaimers
         if invalidate_disclaimer_time is not None:
             self.invalidate_disclaimer_time = invalidate_disclaimer_time
+        if default_permissions is not None:
+            self.default_permissions = default_permissions
 
     @property
     def name(self):
@@ -266,6 +286,69 @@ class Organization(object):
         self._url_code = url_code
 
     @property
+    def users_folder_id(self):
+        """Gets the users_folder_id of this Organization.  # noqa: E501
+
+
+        :return: The users_folder_id of this Organization.  # noqa: E501
+        :rtype: str
+        """
+        return self._users_folder_id
+
+    @users_folder_id.setter
+    def users_folder_id(self, users_folder_id):
+        """Sets the users_folder_id of this Organization.
+
+
+        :param users_folder_id: The users_folder_id of this Organization.  # noqa: E501
+        :type: str
+        """
+
+        self._users_folder_id = users_folder_id
+
+    @property
+    def data_folder_id(self):
+        """Gets the data_folder_id of this Organization.  # noqa: E501
+
+
+        :return: The data_folder_id of this Organization.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_folder_id
+
+    @data_folder_id.setter
+    def data_folder_id(self, data_folder_id):
+        """Sets the data_folder_id of this Organization.
+
+
+        :param data_folder_id: The data_folder_id of this Organization.  # noqa: E501
+        :type: str
+        """
+
+        self._data_folder_id = data_folder_id
+
+    @property
+    def maps_folder_id(self):
+        """Gets the maps_folder_id of this Organization.  # noqa: E501
+
+
+        :return: The maps_folder_id of this Organization.  # noqa: E501
+        :rtype: str
+        """
+        return self._maps_folder_id
+
+    @maps_folder_id.setter
+    def maps_folder_id(self, maps_folder_id):
+        """Sets the maps_folder_id of this Organization.
+
+
+        :param maps_folder_id: The maps_folder_id of this Organization.  # noqa: E501
+        :type: str
+        """
+
+        self._maps_folder_id = maps_folder_id
+
+    @property
     def open_id_providers(self):
         """Gets the open_id_providers of this Organization.  # noqa: E501
 
@@ -348,6 +431,27 @@ class Organization(object):
         """
 
         self._invalidate_disclaimer_time = invalidate_disclaimer_time
+
+    @property
+    def default_permissions(self):
+        """Gets the default_permissions of this Organization.  # noqa: E501
+
+
+        :return: The default_permissions of this Organization.  # noqa: E501
+        :rtype: DefaultOrganizationPermissions
+        """
+        return self._default_permissions
+
+    @default_permissions.setter
+    def default_permissions(self, default_permissions):
+        """Sets the default_permissions of this Organization.
+
+
+        :param default_permissions: The default_permissions of this Organization.  # noqa: E501
+        :type: DefaultOrganizationPermissions
+        """
+
+        self._default_permissions = default_permissions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

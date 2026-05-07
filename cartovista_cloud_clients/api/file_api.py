@@ -994,7 +994,7 @@ class FileApi(object):
         auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
 
         return self.api_client.call_api(
-            '/{tenantUrlCode}/api/v2/Layer/{layerId}/mvt/{x}/{y}/{z}', 'GET',
+            '/{tenantUrlCode}/api/v2/Layer/{layerId}/mvt/{x}/{y}/{z}.pbf', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1010,7 +1010,7 @@ class FileApi(object):
             collection_formats=collection_formats)
 
     def file_get_poi_analysis_heatmap(self, map_id, scenario_id, kvs, tenant_url_code, **kwargs):  # noqa: E501
-        """file_get_poi_analysis_heatmap  # noqa: E501
+        """Downloads the heatmap as a geoTiff file. Use PoiAnalysis_GetPoiAnalysis REST API to get the list of kvs and scenario ids.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -1020,8 +1020,9 @@ class FileApi(object):
         :param async_req bool
         :param str map_id: (required)
         :param str scenario_id: (required)
-        :param str kvs: (required)
+        :param str kvs: Comma separated list of kvs (required)
         :param str tenant_url_code: (required)
+        :param bool no_range: Optional. Set true to download the whole geotiff file. If false, a range request must be sent in the HTTP header.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1034,7 +1035,7 @@ class FileApi(object):
             return data
 
     def file_get_poi_analysis_heatmap_with_http_info(self, map_id, scenario_id, kvs, tenant_url_code, **kwargs):  # noqa: E501
-        """file_get_poi_analysis_heatmap  # noqa: E501
+        """Downloads the heatmap as a geoTiff file. Use PoiAnalysis_GetPoiAnalysis REST API to get the list of kvs and scenario ids.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -1044,14 +1045,15 @@ class FileApi(object):
         :param async_req bool
         :param str map_id: (required)
         :param str scenario_id: (required)
-        :param str kvs: (required)
+        :param str kvs: Comma separated list of kvs (required)
         :param str tenant_url_code: (required)
+        :param bool no_range: Optional. Set true to download the whole geotiff file. If false, a range request must be sent in the HTTP header.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['map_id', 'scenario_id', 'kvs', 'tenant_url_code']  # noqa: E501
+        all_params = ['map_id', 'scenario_id', 'kvs', 'tenant_url_code', 'no_range']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1096,6 +1098,8 @@ class FileApi(object):
         query_params = []
         if 'kvs' in params:
             query_params.append(('kvs', params['kvs']))  # noqa: E501
+        if 'no_range' in params:
+            query_params.append(('noRange', params['no_range']))  # noqa: E501
 
         header_params = {}
 

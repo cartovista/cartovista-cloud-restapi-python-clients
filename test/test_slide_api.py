@@ -105,6 +105,13 @@ class TestSlideApi(unittest.TestCase):
         """
         pass
 
+    def test_slide_update_slide_story(self):
+        """Test case for slide_update_slide_story
+
+        Updates the slide's story.  # noqa: E501
+        """
+        pass
+
     def test_slide_update_slide_theme_set(self):
         """Test case for slide_update_slide_theme_set
 

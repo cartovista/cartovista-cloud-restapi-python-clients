@@ -35,7 +35,7 @@ class SignUpTrialParameter(object):
         'language': 'LanguageEnum',
         'provider': 'SecurityProvider',
         'provider_id': 'str',
-        're_captcha_response': 'str'
+        'sign_up_utm_parameters': 'OneOfSignUpTrialParameterSignUpUtmParameters'
     }
 
     attribute_map = {
@@ -46,10 +46,10 @@ class SignUpTrialParameter(object):
         'language': 'language',
         'provider': 'provider',
         'provider_id': 'providerId',
-        're_captcha_response': 'reCaptchaResponse'
+        'sign_up_utm_parameters': 'signUpUtmParameters'
     }
 
-    def __init__(self, first_name=None, last_name=None, email_address=None, password=None, language=None, provider=None, provider_id=None, re_captcha_response=None):  # noqa: E501
+    def __init__(self, first_name=None, last_name=None, email_address=None, password=None, language=None, provider=None, provider_id=None, sign_up_utm_parameters=None):  # noqa: E501
         """SignUpTrialParameter - a model defined in Swagger"""  # noqa: E501
         self._first_name = None
         self._last_name = None
@@ -58,7 +58,7 @@ class SignUpTrialParameter(object):
         self._language = None
         self._provider = None
         self._provider_id = None
-        self._re_captcha_response = None
+        self._sign_up_utm_parameters = None
         self.discriminator = None
         if first_name is not None:
             self.first_name = first_name
@@ -74,8 +74,8 @@ class SignUpTrialParameter(object):
             self.provider = provider
         if provider_id is not None:
             self.provider_id = provider_id
-        if re_captcha_response is not None:
-            self.re_captcha_response = re_captcha_response
+        if sign_up_utm_parameters is not None:
+            self.sign_up_utm_parameters = sign_up_utm_parameters
 
     @property
     def first_name(self):
@@ -225,25 +225,25 @@ class SignUpTrialParameter(object):
         self._provider_id = provider_id
 
     @property
-    def re_captcha_response(self):
-        """Gets the re_captcha_response of this SignUpTrialParameter.  # noqa: E501
+    def sign_up_utm_parameters(self):
+        """Gets the sign_up_utm_parameters of this SignUpTrialParameter.  # noqa: E501
 
 
-        :return: The re_captcha_response of this SignUpTrialParameter.  # noqa: E501
-        :rtype: str
+        :return: The sign_up_utm_parameters of this SignUpTrialParameter.  # noqa: E501
+        :rtype: OneOfSignUpTrialParameterSignUpUtmParameters
         """
-        return self._re_captcha_response
+        return self._sign_up_utm_parameters
 
-    @re_captcha_response.setter
-    def re_captcha_response(self, re_captcha_response):
-        """Sets the re_captcha_response of this SignUpTrialParameter.
+    @sign_up_utm_parameters.setter
+    def sign_up_utm_parameters(self, sign_up_utm_parameters):
+        """Sets the sign_up_utm_parameters of this SignUpTrialParameter.
 
 
-        :param re_captcha_response: The re_captcha_response of this SignUpTrialParameter.  # noqa: E501
-        :type: str
+        :param sign_up_utm_parameters: The sign_up_utm_parameters of this SignUpTrialParameter.  # noqa: E501
+        :type: OneOfSignUpTrialParameterSignUpUtmParameters
         """
 
-        self._re_captcha_response = re_captcha_response
+        self._sign_up_utm_parameters = sign_up_utm_parameters
 
     def to_dict(self):
         """Returns the model properties as a dict"""

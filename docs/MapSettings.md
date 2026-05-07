@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **zoom_on_map_load** | **bool** |  | [optional] 
 **lazy_loading** | **bool** |  | [optional] 
 **zoom_restrictions** | [**ZoomRestrictionSettings**](ZoomRestrictionSettings.md) |  | [optional] 
+**scalebar_visible** | **bool** |  | [optional] 
+**export_data** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

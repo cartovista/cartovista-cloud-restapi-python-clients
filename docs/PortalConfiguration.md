@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **userflow_token** | **str** |  | [optional] 
 **rechaptcha_site_key** | **str** |  | [optional] 
-**facebook_app_id** | **str** |  | [optional] 
 **google_client_id** | **str** |  | [optional] 
 **feature_flags** | **dict(str, bool)** |  | [optional] 
 **map_symbols** | [**list[MapSymbolFont]**](MapSymbolFont.md) |  | [optional] 

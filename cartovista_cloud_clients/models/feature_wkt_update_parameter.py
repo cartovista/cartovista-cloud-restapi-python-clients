@@ -28,7 +28,7 @@ class FeatureWKTUpdateParameter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'feature_type': 'OneOfFeatureWKTUpdateParameterFeatureType',
+        'feature_type': 'FeatureType',
         'proj4': 'str',
         'wkt': 'str'
     }
@@ -58,7 +58,7 @@ class FeatureWKTUpdateParameter(object):
 
 
         :return: The feature_type of this FeatureWKTUpdateParameter.  # noqa: E501
-        :rtype: OneOfFeatureWKTUpdateParameterFeatureType
+        :rtype: FeatureType
         """
         return self._feature_type
 
@@ -68,7 +68,7 @@ class FeatureWKTUpdateParameter(object):
 
 
         :param feature_type: The feature_type of this FeatureWKTUpdateParameter.  # noqa: E501
-        :type: OneOfFeatureWKTUpdateParameterFeatureType
+        :type: FeatureType
         """
 
         self._feature_type = feature_type

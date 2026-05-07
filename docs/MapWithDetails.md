@@ -5,8 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **map** | [**Map**](Map.md) |  | [optional] 
 **layers** | [**list[Layer]**](Layer.md) |  | [optional] 
-**data_tables** | [**list[DataTable]**](DataTable.md) |  | [optional] 
-**linked_data_tables** | [**list[LayerDataTable]**](LayerDataTable.md) |  | [optional] 
+**data_tables** | [**list[LayerDataTable]**](LayerDataTable.md) |  | [optional] 
 **grid_layers** | [**list[GridLayer]**](GridLayer.md) |  | [optional] 
 **wmts_layers** | [**list[WmtsLayer]**](WmtsLayer.md) |  | [optional] 
 **wms_layers** | [**list[WmsLayer]**](WmsLayer.md) |  | [optional] 

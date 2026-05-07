@@ -33,7 +33,7 @@ class GridLayerApi(object):
         self.api_client = api_client
 
     def grid_layer_add_grid_source(self, body, grid_layer_id, tenant_url_code, **kwargs):  # noqa: E501
-        """Add a grid source to an existing grid layer.  # noqa: E501
+        """Add a grid source to an existing grid layer.  Use /Portal/upload and /Portal/upload/.../definition APIs to upload a geotiff file and get it's definition prior to use this API.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -56,7 +56,7 @@ class GridLayerApi(object):
             return data
 
     def grid_layer_add_grid_source_with_http_info(self, body, grid_layer_id, tenant_url_code, **kwargs):  # noqa: E501
-        """Add a grid source to an existing grid layer.  # noqa: E501
+        """Add a grid source to an existing grid layer.  Use /Portal/upload and /Portal/upload/.../definition APIs to upload a geotiff file and get it's definition prior to use this API.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True

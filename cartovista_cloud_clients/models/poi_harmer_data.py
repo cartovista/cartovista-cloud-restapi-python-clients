@@ -28,7 +28,9 @@ class PoiHarmerData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'feature_id': 'str',
         'name': 'str',
+        'bus_name': 'str',
         'kv': 'int',
         'dfax_percent': 'float',
         'mw_impact': 'float',
@@ -42,7 +44,9 @@ class PoiHarmerData(object):
     }
 
     attribute_map = {
+        'feature_id': 'featureId',
         'name': 'name',
+        'bus_name': 'busName',
         'kv': 'kv',
         'dfax_percent': 'dfaxPercent',
         'mw_impact': 'mwImpact',
@@ -55,9 +59,11 @@ class PoiHarmerData(object):
         'lon': 'lon'
     }
 
-    def __init__(self, name=None, kv=None, dfax_percent=None, mw_impact=None, mw_change=None, p_max=None, p_gen=None, bus_id=None, constraint_id=None, lat=None, lon=None):  # noqa: E501
+    def __init__(self, feature_id=None, name=None, bus_name=None, kv=None, dfax_percent=None, mw_impact=None, mw_change=None, p_max=None, p_gen=None, bus_id=None, constraint_id=None, lat=None, lon=None):  # noqa: E501
         """PoiHarmerData - a model defined in Swagger"""  # noqa: E501
+        self._feature_id = None
         self._name = None
+        self._bus_name = None
         self._kv = None
         self._dfax_percent = None
         self._mw_impact = None
@@ -69,8 +75,12 @@ class PoiHarmerData(object):
         self._lat = None
         self._lon = None
         self.discriminator = None
+        if feature_id is not None:
+            self.feature_id = feature_id
         if name is not None:
             self.name = name
+        if bus_name is not None:
+            self.bus_name = bus_name
         if kv is not None:
             self.kv = kv
         if dfax_percent is not None:
@@ -93,6 +103,27 @@ class PoiHarmerData(object):
             self.lon = lon
 
     @property
+    def feature_id(self):
+        """Gets the feature_id of this PoiHarmerData.  # noqa: E501
+
+
+        :return: The feature_id of this PoiHarmerData.  # noqa: E501
+        :rtype: str
+        """
+        return self._feature_id
+
+    @feature_id.setter
+    def feature_id(self, feature_id):
+        """Sets the feature_id of this PoiHarmerData.
+
+
+        :param feature_id: The feature_id of this PoiHarmerData.  # noqa: E501
+        :type: str
+        """
+
+        self._feature_id = feature_id
+
+    @property
     def name(self):
         """Gets the name of this PoiHarmerData.  # noqa: E501
 
@@ -112,6 +143,27 @@ class PoiHarmerData(object):
         """
 
         self._name = name
+
+    @property
+    def bus_name(self):
+        """Gets the bus_name of this PoiHarmerData.  # noqa: E501
+
+
+        :return: The bus_name of this PoiHarmerData.  # noqa: E501
+        :rtype: str
+        """
+        return self._bus_name
+
+    @bus_name.setter
+    def bus_name(self, bus_name):
+        """Sets the bus_name of this PoiHarmerData.
+
+
+        :param bus_name: The bus_name of this PoiHarmerData.  # noqa: E501
+        :type: str
+        """
+
+        self._bus_name = bus_name
 
     @property
     def kv(self):

@@ -31,6 +31,7 @@ class Folder(object):
         'id': 'str',
         'name': 'str',
         'color': 'str',
+        'hide_from_anonymous': 'bool',
         'parent_id': 'str',
         'creation_time': 'datetime',
         'modified_time': 'datetime',
@@ -41,17 +42,19 @@ class Folder(object):
         'id': 'id',
         'name': 'name',
         'color': 'color',
+        'hide_from_anonymous': 'hideFromAnonymous',
         'parent_id': 'parentId',
         'creation_time': 'creationTime',
         'modified_time': 'modifiedTime',
         'path': 'path'
     }
 
-    def __init__(self, id=None, name=None, color=None, parent_id=None, creation_time=None, modified_time=None, path=None):  # noqa: E501
+    def __init__(self, id=None, name=None, color=None, hide_from_anonymous=None, parent_id=None, creation_time=None, modified_time=None, path=None):  # noqa: E501
         """Folder - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._color = None
+        self._hide_from_anonymous = None
         self._parent_id = None
         self._creation_time = None
         self._modified_time = None
@@ -63,6 +66,8 @@ class Folder(object):
             self.name = name
         if color is not None:
             self.color = color
+        if hide_from_anonymous is not None:
+            self.hide_from_anonymous = hide_from_anonymous
         if parent_id is not None:
             self.parent_id = parent_id
         if creation_time is not None:
@@ -134,6 +139,27 @@ class Folder(object):
         """
 
         self._color = color
+
+    @property
+    def hide_from_anonymous(self):
+        """Gets the hide_from_anonymous of this Folder.  # noqa: E501
+
+
+        :return: The hide_from_anonymous of this Folder.  # noqa: E501
+        :rtype: bool
+        """
+        return self._hide_from_anonymous
+
+    @hide_from_anonymous.setter
+    def hide_from_anonymous(self, hide_from_anonymous):
+        """Sets the hide_from_anonymous of this Folder.
+
+
+        :param hide_from_anonymous: The hide_from_anonymous of this Folder.  # noqa: E501
+        :type: bool
+        """
+
+        self._hide_from_anonymous = hide_from_anonymous
 
     @property
     def parent_id(self):

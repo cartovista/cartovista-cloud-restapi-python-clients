@@ -32,7 +32,9 @@ class PoiSourceTable(object):
         'name': 'str',
         'layer_id': 'str',
         'can_use_transmission_layers': 'bool',
-        'can_use_harmer_and_stress_gen': 'bool'
+        'can_use_harmer_and_stress_gen': 'bool',
+        'can_use_post_project': 'bool',
+        'can_use_worst_dispatch': 'bool'
     }
 
     attribute_map = {
@@ -40,16 +42,20 @@ class PoiSourceTable(object):
         'name': 'name',
         'layer_id': 'layerId',
         'can_use_transmission_layers': 'canUseTransmissionLayers',
-        'can_use_harmer_and_stress_gen': 'canUseHarmerAndStressGen'
+        'can_use_harmer_and_stress_gen': 'canUseHarmerAndStressGen',
+        'can_use_post_project': 'canUsePostProject',
+        'can_use_worst_dispatch': 'canUseWorstDispatch'
     }
 
-    def __init__(self, id=None, name=None, layer_id=None, can_use_transmission_layers=None, can_use_harmer_and_stress_gen=None):  # noqa: E501
+    def __init__(self, id=None, name=None, layer_id=None, can_use_transmission_layers=None, can_use_harmer_and_stress_gen=None, can_use_post_project=None, can_use_worst_dispatch=None):  # noqa: E501
         """PoiSourceTable - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
         self._layer_id = None
         self._can_use_transmission_layers = None
         self._can_use_harmer_and_stress_gen = None
+        self._can_use_post_project = None
+        self._can_use_worst_dispatch = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -61,6 +67,10 @@ class PoiSourceTable(object):
             self.can_use_transmission_layers = can_use_transmission_layers
         if can_use_harmer_and_stress_gen is not None:
             self.can_use_harmer_and_stress_gen = can_use_harmer_and_stress_gen
+        if can_use_post_project is not None:
+            self.can_use_post_project = can_use_post_project
+        if can_use_worst_dispatch is not None:
+            self.can_use_worst_dispatch = can_use_worst_dispatch
 
     @property
     def id(self):
@@ -166,6 +176,48 @@ class PoiSourceTable(object):
         """
 
         self._can_use_harmer_and_stress_gen = can_use_harmer_and_stress_gen
+
+    @property
+    def can_use_post_project(self):
+        """Gets the can_use_post_project of this PoiSourceTable.  # noqa: E501
+
+
+        :return: The can_use_post_project of this PoiSourceTable.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_use_post_project
+
+    @can_use_post_project.setter
+    def can_use_post_project(self, can_use_post_project):
+        """Sets the can_use_post_project of this PoiSourceTable.
+
+
+        :param can_use_post_project: The can_use_post_project of this PoiSourceTable.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_use_post_project = can_use_post_project
+
+    @property
+    def can_use_worst_dispatch(self):
+        """Gets the can_use_worst_dispatch of this PoiSourceTable.  # noqa: E501
+
+
+        :return: The can_use_worst_dispatch of this PoiSourceTable.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_use_worst_dispatch
+
+    @can_use_worst_dispatch.setter
+    def can_use_worst_dispatch(self, can_use_worst_dispatch):
+        """Sets the can_use_worst_dispatch of this PoiSourceTable.
+
+
+        :param can_use_worst_dispatch: The can_use_worst_dispatch of this PoiSourceTable.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_use_worst_dispatch = can_use_worst_dispatch
 
     def to_dict(self):
         """Returns the model properties as a dict"""

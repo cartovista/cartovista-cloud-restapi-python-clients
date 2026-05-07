@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **pixel_size** | **int** |  | [optional] 
 **buffer_size** | **int** |  | [optional] 
 **show_injection_area_mask** | **bool** |  | [optional] 
+**only_use_worst_dispatch** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

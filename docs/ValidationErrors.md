@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**multiple_matches_columns** | [**list[MultipleMatchesColumn]**](MultipleMatchesColumn.md) |  | [optional] 
-**missing_columns** | [**list[MissingColumn]**](MissingColumn.md) |  | [optional] 
-**wrong_types** | [**list[WrongColumnType]**](WrongColumnType.md) |  | [optional] 
+**common_errors** | [**ValidationErrorGroup**](ValidationErrorGroup.md) |  | [optional] 
+**fcitc_errors** | [**ValidationErrorGroup**](ValidationErrorGroup.md) |  | [optional] 
+**trlim_errors** | [**ValidationErrorGroup**](ValidationErrorGroup.md) |  | [optional] 
 **error_count** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

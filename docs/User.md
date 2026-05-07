@@ -18,7 +18,6 @@ Name | Type | Description | Notes
 **creation_time** | **datetime** |  | [optional] 
 **modification_time** | **datetime** |  | [optional] 
 **security_provider** | **str** |  | [optional] 
-**provider_status** | **str** |  | [optional] 
 **provider_name** | **str** |  | [optional] 
 **app_name** | **str** |  | [optional] 
 **access_failed_count** | **int** |  | [optional] 

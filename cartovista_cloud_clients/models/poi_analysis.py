@@ -33,7 +33,8 @@ class PoiAnalysis(object):
         'table_id': 'str',
         'heatmap_layer_id': 'str',
         'name_column_id': 'str',
-        'kv_values_column_id': 'str',
+        'kv_levels_column_id': 'str',
+        'kv_classes_column_id': 'str',
         'bus_id_column_id': 'str',
         'name': 'str',
         'kv_values': 'list[str]',
@@ -42,6 +43,7 @@ class PoiAnalysis(object):
         'has_footprint_polygon': 'bool',
         'is_pregenerating': 'bool',
         'can_use_worst_dispatch': 'bool',
+        'only_use_worst_dispatch': 'bool',
         'generating_scenario_id': 'str',
         'extent': 'OneOfPoiAnalysisExtent',
         'custom_poi_analyses': 'list[CustomPoiAnalysis]',
@@ -49,7 +51,8 @@ class PoiAnalysis(object):
         'transmission': 'OneOfPoiAnalysisTransmission',
         'mask': 'OneOfPoiAnalysisMask',
         'harmer_and_stress_gen': 'OneOfPoiAnalysisHarmerAndStressGen',
-        'harmer_layer': 'OneOfPoiAnalysisHarmerLayer'
+        'harmer_layer': 'OneOfPoiAnalysisHarmerLayer',
+        'kv_values_column_id': 'str'
     }
 
     attribute_map = {
@@ -58,7 +61,8 @@ class PoiAnalysis(object):
         'table_id': 'tableId',
         'heatmap_layer_id': 'heatmapLayerId',
         'name_column_id': 'nameColumnId',
-        'kv_values_column_id': 'kvValuesColumnId',
+        'kv_levels_column_id': 'kvLevelsColumnId',
+        'kv_classes_column_id': 'kvClassesColumnId',
         'bus_id_column_id': 'busIdColumnId',
         'name': 'name',
         'kv_values': 'kvValues',
@@ -67,6 +71,7 @@ class PoiAnalysis(object):
         'has_footprint_polygon': 'hasFootprintPolygon',
         'is_pregenerating': 'isPregenerating',
         'can_use_worst_dispatch': 'canUseWorstDispatch',
+        'only_use_worst_dispatch': 'onlyUseWorstDispatch',
         'generating_scenario_id': 'generatingScenarioId',
         'extent': 'extent',
         'custom_poi_analyses': 'customPoiAnalyses',
@@ -74,17 +79,19 @@ class PoiAnalysis(object):
         'transmission': 'transmission',
         'mask': 'mask',
         'harmer_and_stress_gen': 'harmerAndStressGen',
-        'harmer_layer': 'harmerLayer'
+        'harmer_layer': 'harmerLayer',
+        'kv_values_column_id': 'kvValuesColumnId'
     }
 
-    def __init__(self, map_id=None, layer_id=None, table_id=None, heatmap_layer_id=None, name_column_id=None, kv_values_column_id=None, bus_id_column_id=None, name=None, kv_values=None, kv_classes_to_levels=None, scenarios=None, has_footprint_polygon=None, is_pregenerating=None, can_use_worst_dispatch=None, generating_scenario_id=None, extent=None, custom_poi_analyses=None, initial_contingency_loading_max_data=None, transmission=None, mask=None, harmer_and_stress_gen=None, harmer_layer=None):  # noqa: E501
+    def __init__(self, map_id=None, layer_id=None, table_id=None, heatmap_layer_id=None, name_column_id=None, kv_levels_column_id=None, kv_classes_column_id=None, bus_id_column_id=None, name=None, kv_values=None, kv_classes_to_levels=None, scenarios=None, has_footprint_polygon=None, is_pregenerating=None, can_use_worst_dispatch=None, only_use_worst_dispatch=None, generating_scenario_id=None, extent=None, custom_poi_analyses=None, initial_contingency_loading_max_data=None, transmission=None, mask=None, harmer_and_stress_gen=None, harmer_layer=None, kv_values_column_id=None):  # noqa: E501
         """PoiAnalysis - a model defined in Swagger"""  # noqa: E501
         self._map_id = None
         self._layer_id = None
         self._table_id = None
         self._heatmap_layer_id = None
         self._name_column_id = None
-        self._kv_values_column_id = None
+        self._kv_levels_column_id = None
+        self._kv_classes_column_id = None
         self._bus_id_column_id = None
         self._name = None
         self._kv_values = None
@@ -93,6 +100,7 @@ class PoiAnalysis(object):
         self._has_footprint_polygon = None
         self._is_pregenerating = None
         self._can_use_worst_dispatch = None
+        self._only_use_worst_dispatch = None
         self._generating_scenario_id = None
         self._extent = None
         self._custom_poi_analyses = None
@@ -101,6 +109,7 @@ class PoiAnalysis(object):
         self._mask = None
         self._harmer_and_stress_gen = None
         self._harmer_layer = None
+        self._kv_values_column_id = None
         self.discriminator = None
         if map_id is not None:
             self.map_id = map_id
@@ -112,8 +121,10 @@ class PoiAnalysis(object):
             self.heatmap_layer_id = heatmap_layer_id
         if name_column_id is not None:
             self.name_column_id = name_column_id
-        if kv_values_column_id is not None:
-            self.kv_values_column_id = kv_values_column_id
+        if kv_levels_column_id is not None:
+            self.kv_levels_column_id = kv_levels_column_id
+        if kv_classes_column_id is not None:
+            self.kv_classes_column_id = kv_classes_column_id
         if bus_id_column_id is not None:
             self.bus_id_column_id = bus_id_column_id
         if name is not None:
@@ -130,6 +141,8 @@ class PoiAnalysis(object):
             self.is_pregenerating = is_pregenerating
         if can_use_worst_dispatch is not None:
             self.can_use_worst_dispatch = can_use_worst_dispatch
+        if only_use_worst_dispatch is not None:
+            self.only_use_worst_dispatch = only_use_worst_dispatch
         if generating_scenario_id is not None:
             self.generating_scenario_id = generating_scenario_id
         if extent is not None:
@@ -146,6 +159,8 @@ class PoiAnalysis(object):
             self.harmer_and_stress_gen = harmer_and_stress_gen
         if harmer_layer is not None:
             self.harmer_layer = harmer_layer
+        if kv_values_column_id is not None:
+            self.kv_values_column_id = kv_values_column_id
 
     @property
     def map_id(self):
@@ -253,25 +268,46 @@ class PoiAnalysis(object):
         self._name_column_id = name_column_id
 
     @property
-    def kv_values_column_id(self):
-        """Gets the kv_values_column_id of this PoiAnalysis.  # noqa: E501
+    def kv_levels_column_id(self):
+        """Gets the kv_levels_column_id of this PoiAnalysis.  # noqa: E501
 
 
-        :return: The kv_values_column_id of this PoiAnalysis.  # noqa: E501
+        :return: The kv_levels_column_id of this PoiAnalysis.  # noqa: E501
         :rtype: str
         """
-        return self._kv_values_column_id
+        return self._kv_levels_column_id
 
-    @kv_values_column_id.setter
-    def kv_values_column_id(self, kv_values_column_id):
-        """Sets the kv_values_column_id of this PoiAnalysis.
+    @kv_levels_column_id.setter
+    def kv_levels_column_id(self, kv_levels_column_id):
+        """Sets the kv_levels_column_id of this PoiAnalysis.
 
 
-        :param kv_values_column_id: The kv_values_column_id of this PoiAnalysis.  # noqa: E501
+        :param kv_levels_column_id: The kv_levels_column_id of this PoiAnalysis.  # noqa: E501
         :type: str
         """
 
-        self._kv_values_column_id = kv_values_column_id
+        self._kv_levels_column_id = kv_levels_column_id
+
+    @property
+    def kv_classes_column_id(self):
+        """Gets the kv_classes_column_id of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The kv_classes_column_id of this PoiAnalysis.  # noqa: E501
+        :rtype: str
+        """
+        return self._kv_classes_column_id
+
+    @kv_classes_column_id.setter
+    def kv_classes_column_id(self, kv_classes_column_id):
+        """Sets the kv_classes_column_id of this PoiAnalysis.
+
+
+        :param kv_classes_column_id: The kv_classes_column_id of this PoiAnalysis.  # noqa: E501
+        :type: str
+        """
+
+        self._kv_classes_column_id = kv_classes_column_id
 
     @property
     def bus_id_column_id(self):
@@ -442,6 +478,27 @@ class PoiAnalysis(object):
         self._can_use_worst_dispatch = can_use_worst_dispatch
 
     @property
+    def only_use_worst_dispatch(self):
+        """Gets the only_use_worst_dispatch of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The only_use_worst_dispatch of this PoiAnalysis.  # noqa: E501
+        :rtype: bool
+        """
+        return self._only_use_worst_dispatch
+
+    @only_use_worst_dispatch.setter
+    def only_use_worst_dispatch(self, only_use_worst_dispatch):
+        """Sets the only_use_worst_dispatch of this PoiAnalysis.
+
+
+        :param only_use_worst_dispatch: The only_use_worst_dispatch of this PoiAnalysis.  # noqa: E501
+        :type: bool
+        """
+
+        self._only_use_worst_dispatch = only_use_worst_dispatch
+
+    @property
     def generating_scenario_id(self):
         """Gets the generating_scenario_id of this PoiAnalysis.  # noqa: E501
 
@@ -608,6 +665,27 @@ class PoiAnalysis(object):
         """
 
         self._harmer_layer = harmer_layer
+
+    @property
+    def kv_values_column_id(self):
+        """Gets the kv_values_column_id of this PoiAnalysis.  # noqa: E501
+
+
+        :return: The kv_values_column_id of this PoiAnalysis.  # noqa: E501
+        :rtype: str
+        """
+        return self._kv_values_column_id
+
+    @kv_values_column_id.setter
+    def kv_values_column_id(self, kv_values_column_id):
+        """Sets the kv_values_column_id of this PoiAnalysis.
+
+
+        :param kv_values_column_id: The kv_values_column_id of this PoiAnalysis.  # noqa: E501
+        :type: str
+        """
+
+        self._kv_values_column_id = kv_values_column_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

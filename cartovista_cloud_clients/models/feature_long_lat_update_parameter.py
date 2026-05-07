@@ -28,7 +28,7 @@ class FeatureLongLatUpdateParameter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'feature_type': 'OneOfFeatureLongLatUpdateParameterFeatureType',
+        'feature_type': 'FeatureType',
         'proj4': 'str',
         'longitude': 'float',
         'latitude': 'float'
@@ -63,7 +63,7 @@ class FeatureLongLatUpdateParameter(object):
 
 
         :return: The feature_type of this FeatureLongLatUpdateParameter.  # noqa: E501
-        :rtype: OneOfFeatureLongLatUpdateParameterFeatureType
+        :rtype: FeatureType
         """
         return self._feature_type
 
@@ -73,7 +73,7 @@ class FeatureLongLatUpdateParameter(object):
 
 
         :param feature_type: The feature_type of this FeatureLongLatUpdateParameter.  # noqa: E501
-        :type: OneOfFeatureLongLatUpdateParameterFeatureType
+        :type: FeatureType
         """
 
         self._feature_type = feature_type

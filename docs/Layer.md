@@ -42,6 +42,9 @@ Name | Type | Description | Notes
 **is_encrypted** | **bool** |  | [optional] 
 **external_service_live_feed** | **bool** |  | [optional] 
 **external_service_type** | **OneOfLayerExternalServiceType** |  | [optional] 
+**views_count** | **int** |  | [optional] 
+**is_creating_views** | **bool** |  | [optional] 
+**has_spatial_aggregation** | **bool** |  | [optional] 
 **folder_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

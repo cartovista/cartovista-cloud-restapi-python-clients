@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **view_id** | **str** |  | [optional] 
+**permission** | [**PermissionDTO**](PermissionDTO.md) |  | [optional] 
 **identity_id** | **str** |  | [optional] 
 **is_group** | **bool** |  | [optional] 
 

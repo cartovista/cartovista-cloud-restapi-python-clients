@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **pagination** | **OneOfGetStatisticsParametersPagination** |  | [optional] 
 **sort** | **OneOfGetStatisticsParametersSort** |  | [optional] 
 **filters** | **dict(str, object)** |  | [optional] 
+**types** | [**list[ModificationTypeEnum]**](ModificationTypeEnum.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

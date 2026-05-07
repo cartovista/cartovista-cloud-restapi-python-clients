@@ -43,11 +43,13 @@ class GridSource(object):
         'no_data_value': 'str',
         'min_value': 'float',
         'max_value': 'float',
+        'possible_classified_values': 'list[int]',
         'owner_name': 'str',
         'thumbnail_url': 'str',
         'thumbnail_url_expiry': 'datetime',
         'is_heatmap': 'bool',
-        'is_demo_source': 'bool'
+        'is_demo_source': 'bool',
+        'is_gpkg': 'bool'
     }
 
     attribute_map = {
@@ -66,14 +68,16 @@ class GridSource(object):
         'no_data_value': 'noDataValue',
         'min_value': 'minValue',
         'max_value': 'maxValue',
+        'possible_classified_values': 'possibleClassifiedValues',
         'owner_name': 'ownerName',
         'thumbnail_url': 'thumbnailUrl',
         'thumbnail_url_expiry': 'thumbnailUrlExpiry',
         'is_heatmap': 'isHeatmap',
-        'is_demo_source': 'isDemoSource'
+        'is_demo_source': 'isDemoSource',
+        'is_gpkg': 'isGpkg'
     }
 
-    def __init__(self, id=None, grid_layer_id=None, unique_identifier=None, name=None, description=None, file_metadata=None, band_metadata=None, band=None, creation_time=None, modified_time=None, timestamp=None, no_data_enabled=None, no_data_value=None, min_value=None, max_value=None, owner_name=None, thumbnail_url=None, thumbnail_url_expiry=None, is_heatmap=None, is_demo_source=None):  # noqa: E501
+    def __init__(self, id=None, grid_layer_id=None, unique_identifier=None, name=None, description=None, file_metadata=None, band_metadata=None, band=None, creation_time=None, modified_time=None, timestamp=None, no_data_enabled=None, no_data_value=None, min_value=None, max_value=None, possible_classified_values=None, owner_name=None, thumbnail_url=None, thumbnail_url_expiry=None, is_heatmap=None, is_demo_source=None, is_gpkg=None):  # noqa: E501
         """GridSource - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._grid_layer_id = None
@@ -90,11 +94,13 @@ class GridSource(object):
         self._no_data_value = None
         self._min_value = None
         self._max_value = None
+        self._possible_classified_values = None
         self._owner_name = None
         self._thumbnail_url = None
         self._thumbnail_url_expiry = None
         self._is_heatmap = None
         self._is_demo_source = None
+        self._is_gpkg = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -126,6 +132,8 @@ class GridSource(object):
             self.min_value = min_value
         if max_value is not None:
             self.max_value = max_value
+        if possible_classified_values is not None:
+            self.possible_classified_values = possible_classified_values
         if owner_name is not None:
             self.owner_name = owner_name
         if thumbnail_url is not None:
@@ -136,6 +144,8 @@ class GridSource(object):
             self.is_heatmap = is_heatmap
         if is_demo_source is not None:
             self.is_demo_source = is_demo_source
+        if is_gpkg is not None:
+            self.is_gpkg = is_gpkg
 
     @property
     def id(self):
@@ -453,6 +463,27 @@ class GridSource(object):
         self._max_value = max_value
 
     @property
+    def possible_classified_values(self):
+        """Gets the possible_classified_values of this GridSource.  # noqa: E501
+
+
+        :return: The possible_classified_values of this GridSource.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._possible_classified_values
+
+    @possible_classified_values.setter
+    def possible_classified_values(self, possible_classified_values):
+        """Sets the possible_classified_values of this GridSource.
+
+
+        :param possible_classified_values: The possible_classified_values of this GridSource.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._possible_classified_values = possible_classified_values
+
+    @property
     def owner_name(self):
         """Gets the owner_name of this GridSource.  # noqa: E501
 
@@ -556,6 +587,27 @@ class GridSource(object):
         """
 
         self._is_demo_source = is_demo_source
+
+    @property
+    def is_gpkg(self):
+        """Gets the is_gpkg of this GridSource.  # noqa: E501
+
+
+        :return: The is_gpkg of this GridSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_gpkg
+
+    @is_gpkg.setter
+    def is_gpkg(self, is_gpkg):
+        """Sets the is_gpkg of this GridSource.
+
+
+        :param is_gpkg: The is_gpkg of this GridSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_gpkg = is_gpkg
 
     def to_dict(self):
         """Returns the model properties as a dict"""

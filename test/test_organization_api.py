@@ -70,6 +70,12 @@ class TestOrganizationApi(unittest.TestCase):
         """
         pass
 
+    def test_organization_update_default_permissions(self):
+        """Test case for organization_update_default_permissions
+
+        """
+        pass
+
     def test_organization_update_license(self):
         """Test case for organization_update_license
 
