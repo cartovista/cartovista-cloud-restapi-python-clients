@@ -29,23 +29,48 @@ class MapLibreConfiguration(object):
     """
     swagger_types = {
         'layer_order': 'list[OrderedLayer]',
-        'layer_settings': 'dict(str, MapLibreLayerSettings)'
+        'layer_settings': 'dict(str, MapLibreLayerSettings)',
+        'wms_layer_settings': 'dict(str, MapLibreWmsLayerSettings)',
+        'wmts_layer_settings': 'dict(str, MapLibreWmtsLayerSettings)',
+        'grid_layer_settings': 'dict(str, MapLibreGridLayerSettings)',
+        'tile_providers': 'list[TileProvider]',
+        'glyphs_base_url': 'str'
     }
 
     attribute_map = {
         'layer_order': 'layerOrder',
-        'layer_settings': 'layerSettings'
+        'layer_settings': 'layerSettings',
+        'wms_layer_settings': 'wmsLayerSettings',
+        'wmts_layer_settings': 'wmtsLayerSettings',
+        'grid_layer_settings': 'gridLayerSettings',
+        'tile_providers': 'tileProviders',
+        'glyphs_base_url': 'glyphsBaseUrl'
     }
 
-    def __init__(self, layer_order=None, layer_settings=None):  # noqa: E501
+    def __init__(self, layer_order=None, layer_settings=None, wms_layer_settings=None, wmts_layer_settings=None, grid_layer_settings=None, tile_providers=None, glyphs_base_url=None):  # noqa: E501
         """MapLibreConfiguration - a model defined in Swagger"""  # noqa: E501
         self._layer_order = None
         self._layer_settings = None
+        self._wms_layer_settings = None
+        self._wmts_layer_settings = None
+        self._grid_layer_settings = None
+        self._tile_providers = None
+        self._glyphs_base_url = None
         self.discriminator = None
         if layer_order is not None:
             self.layer_order = layer_order
         if layer_settings is not None:
             self.layer_settings = layer_settings
+        if wms_layer_settings is not None:
+            self.wms_layer_settings = wms_layer_settings
+        if wmts_layer_settings is not None:
+            self.wmts_layer_settings = wmts_layer_settings
+        if grid_layer_settings is not None:
+            self.grid_layer_settings = grid_layer_settings
+        if tile_providers is not None:
+            self.tile_providers = tile_providers
+        if glyphs_base_url is not None:
+            self.glyphs_base_url = glyphs_base_url
 
     @property
     def layer_order(self):
@@ -88,6 +113,111 @@ class MapLibreConfiguration(object):
         """
 
         self._layer_settings = layer_settings
+
+    @property
+    def wms_layer_settings(self):
+        """Gets the wms_layer_settings of this MapLibreConfiguration.  # noqa: E501
+
+
+        :return: The wms_layer_settings of this MapLibreConfiguration.  # noqa: E501
+        :rtype: dict(str, MapLibreWmsLayerSettings)
+        """
+        return self._wms_layer_settings
+
+    @wms_layer_settings.setter
+    def wms_layer_settings(self, wms_layer_settings):
+        """Sets the wms_layer_settings of this MapLibreConfiguration.
+
+
+        :param wms_layer_settings: The wms_layer_settings of this MapLibreConfiguration.  # noqa: E501
+        :type: dict(str, MapLibreWmsLayerSettings)
+        """
+
+        self._wms_layer_settings = wms_layer_settings
+
+    @property
+    def wmts_layer_settings(self):
+        """Gets the wmts_layer_settings of this MapLibreConfiguration.  # noqa: E501
+
+
+        :return: The wmts_layer_settings of this MapLibreConfiguration.  # noqa: E501
+        :rtype: dict(str, MapLibreWmtsLayerSettings)
+        """
+        return self._wmts_layer_settings
+
+    @wmts_layer_settings.setter
+    def wmts_layer_settings(self, wmts_layer_settings):
+        """Sets the wmts_layer_settings of this MapLibreConfiguration.
+
+
+        :param wmts_layer_settings: The wmts_layer_settings of this MapLibreConfiguration.  # noqa: E501
+        :type: dict(str, MapLibreWmtsLayerSettings)
+        """
+
+        self._wmts_layer_settings = wmts_layer_settings
+
+    @property
+    def grid_layer_settings(self):
+        """Gets the grid_layer_settings of this MapLibreConfiguration.  # noqa: E501
+
+
+        :return: The grid_layer_settings of this MapLibreConfiguration.  # noqa: E501
+        :rtype: dict(str, MapLibreGridLayerSettings)
+        """
+        return self._grid_layer_settings
+
+    @grid_layer_settings.setter
+    def grid_layer_settings(self, grid_layer_settings):
+        """Sets the grid_layer_settings of this MapLibreConfiguration.
+
+
+        :param grid_layer_settings: The grid_layer_settings of this MapLibreConfiguration.  # noqa: E501
+        :type: dict(str, MapLibreGridLayerSettings)
+        """
+
+        self._grid_layer_settings = grid_layer_settings
+
+    @property
+    def tile_providers(self):
+        """Gets the tile_providers of this MapLibreConfiguration.  # noqa: E501
+
+
+        :return: The tile_providers of this MapLibreConfiguration.  # noqa: E501
+        :rtype: list[TileProvider]
+        """
+        return self._tile_providers
+
+    @tile_providers.setter
+    def tile_providers(self, tile_providers):
+        """Sets the tile_providers of this MapLibreConfiguration.
+
+
+        :param tile_providers: The tile_providers of this MapLibreConfiguration.  # noqa: E501
+        :type: list[TileProvider]
+        """
+
+        self._tile_providers = tile_providers
+
+    @property
+    def glyphs_base_url(self):
+        """Gets the glyphs_base_url of this MapLibreConfiguration.  # noqa: E501
+
+
+        :return: The glyphs_base_url of this MapLibreConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._glyphs_base_url
+
+    @glyphs_base_url.setter
+    def glyphs_base_url(self, glyphs_base_url):
+        """Sets the glyphs_base_url of this MapLibreConfiguration.
+
+
+        :param glyphs_base_url: The glyphs_base_url of this MapLibreConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._glyphs_base_url = glyphs_base_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

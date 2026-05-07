@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **geocode_latitude_column_id** | **str** |  | [optional] 
 **geocode_longitude_column_id** | **str** |  | [optional] 
 **is_many_table_in_one_to_many_join** | **bool** |  | [optional] 
+**is_spatial_aggregation_table** | **bool** |  | [optional] 
 **public_access** | **bool** |  | [optional] 
 **permissions** | [**list[PermissionPairComplexDTO]**](PermissionPairComplexDTO.md) |  | [optional] 
 **can_edit** | **bool** |  | [optional] 

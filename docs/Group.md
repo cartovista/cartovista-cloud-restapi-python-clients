@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **creation_time** | **datetime** |  | [optional] 
 **last_modification_time** | **datetime** |  | [optional] 
 **provider** | [**SecurityProvider**](SecurityProvider.md) |  | [optional] 
-**provider_status** | [**ProviderStatus**](ProviderStatus.md) |  | [optional] 
 **provider_name** | **str** |  | [optional] 
 **users** | [**list[User]**](User.md) |  | [optional] 
 **permissions** | [**list[PermissionDTO]**](PermissionDTO.md) |  | [optional] 

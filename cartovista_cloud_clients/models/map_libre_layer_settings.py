@@ -28,44 +28,85 @@ class MapLibreLayerSettings(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
         'type': 'GeometryTypeEnum',
+        'record_count': 'int',
+        'is_tiled': 'bool',
+        'unique_column_id': 'str',
+        'fid_column_id': 'str',
         'extent': 'ExtentDTO',
-        'style': 'object',
+        'style': 'LayerSettings',
         'src': 'str',
-        'feature_id_attribute': 'str',
-        'is_tiled': 'bool'
+        'columns': 'list[DataColumn]'
     }
 
     attribute_map = {
+        'id': 'id',
         'type': 'type',
+        'record_count': 'recordCount',
+        'is_tiled': 'isTiled',
+        'unique_column_id': 'uniqueColumnId',
+        'fid_column_id': 'fidColumnId',
         'extent': 'extent',
         'style': 'style',
         'src': 'src',
-        'feature_id_attribute': 'featureIdAttribute',
-        'is_tiled': 'isTiled'
+        'columns': 'columns'
     }
 
-    def __init__(self, type=None, extent=None, style=None, src=None, feature_id_attribute=None, is_tiled=None):  # noqa: E501
+    def __init__(self, id=None, type=None, record_count=None, is_tiled=None, unique_column_id=None, fid_column_id=None, extent=None, style=None, src=None, columns=None):  # noqa: E501
         """MapLibreLayerSettings - a model defined in Swagger"""  # noqa: E501
+        self._id = None
         self._type = None
+        self._record_count = None
+        self._is_tiled = None
+        self._unique_column_id = None
+        self._fid_column_id = None
         self._extent = None
         self._style = None
         self._src = None
-        self._feature_id_attribute = None
-        self._is_tiled = None
+        self._columns = None
         self.discriminator = None
+        if id is not None:
+            self.id = id
         if type is not None:
             self.type = type
+        if record_count is not None:
+            self.record_count = record_count
+        if is_tiled is not None:
+            self.is_tiled = is_tiled
+        if unique_column_id is not None:
+            self.unique_column_id = unique_column_id
+        if fid_column_id is not None:
+            self.fid_column_id = fid_column_id
         if extent is not None:
             self.extent = extent
         if style is not None:
             self.style = style
         if src is not None:
             self.src = src
-        if feature_id_attribute is not None:
-            self.feature_id_attribute = feature_id_attribute
-        if is_tiled is not None:
-            self.is_tiled = is_tiled
+        if columns is not None:
+            self.columns = columns
+
+    @property
+    def id(self):
+        """Gets the id of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The id of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this MapLibreLayerSettings.
+
+
+        :param id: The id of this MapLibreLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def type(self):
@@ -87,6 +128,90 @@ class MapLibreLayerSettings(object):
         """
 
         self._type = type
+
+    @property
+    def record_count(self):
+        """Gets the record_count of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The record_count of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: int
+        """
+        return self._record_count
+
+    @record_count.setter
+    def record_count(self, record_count):
+        """Sets the record_count of this MapLibreLayerSettings.
+
+
+        :param record_count: The record_count of this MapLibreLayerSettings.  # noqa: E501
+        :type: int
+        """
+
+        self._record_count = record_count
+
+    @property
+    def is_tiled(self):
+        """Gets the is_tiled of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The is_tiled of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_tiled
+
+    @is_tiled.setter
+    def is_tiled(self, is_tiled):
+        """Sets the is_tiled of this MapLibreLayerSettings.
+
+
+        :param is_tiled: The is_tiled of this MapLibreLayerSettings.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_tiled = is_tiled
+
+    @property
+    def unique_column_id(self):
+        """Gets the unique_column_id of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The unique_column_id of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._unique_column_id
+
+    @unique_column_id.setter
+    def unique_column_id(self, unique_column_id):
+        """Sets the unique_column_id of this MapLibreLayerSettings.
+
+
+        :param unique_column_id: The unique_column_id of this MapLibreLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._unique_column_id = unique_column_id
+
+    @property
+    def fid_column_id(self):
+        """Gets the fid_column_id of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The fid_column_id of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._fid_column_id
+
+    @fid_column_id.setter
+    def fid_column_id(self, fid_column_id):
+        """Sets the fid_column_id of this MapLibreLayerSettings.
+
+
+        :param fid_column_id: The fid_column_id of this MapLibreLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._fid_column_id = fid_column_id
 
     @property
     def extent(self):
@@ -115,7 +240,7 @@ class MapLibreLayerSettings(object):
 
 
         :return: The style of this MapLibreLayerSettings.  # noqa: E501
-        :rtype: object
+        :rtype: LayerSettings
         """
         return self._style
 
@@ -125,7 +250,7 @@ class MapLibreLayerSettings(object):
 
 
         :param style: The style of this MapLibreLayerSettings.  # noqa: E501
-        :type: object
+        :type: LayerSettings
         """
 
         self._style = style
@@ -152,46 +277,25 @@ class MapLibreLayerSettings(object):
         self._src = src
 
     @property
-    def feature_id_attribute(self):
-        """Gets the feature_id_attribute of this MapLibreLayerSettings.  # noqa: E501
+    def columns(self):
+        """Gets the columns of this MapLibreLayerSettings.  # noqa: E501
 
 
-        :return: The feature_id_attribute of this MapLibreLayerSettings.  # noqa: E501
-        :rtype: str
+        :return: The columns of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: list[DataColumn]
         """
-        return self._feature_id_attribute
+        return self._columns
 
-    @feature_id_attribute.setter
-    def feature_id_attribute(self, feature_id_attribute):
-        """Sets the feature_id_attribute of this MapLibreLayerSettings.
-
-
-        :param feature_id_attribute: The feature_id_attribute of this MapLibreLayerSettings.  # noqa: E501
-        :type: str
-        """
-
-        self._feature_id_attribute = feature_id_attribute
-
-    @property
-    def is_tiled(self):
-        """Gets the is_tiled of this MapLibreLayerSettings.  # noqa: E501
+    @columns.setter
+    def columns(self, columns):
+        """Sets the columns of this MapLibreLayerSettings.
 
 
-        :return: The is_tiled of this MapLibreLayerSettings.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_tiled
-
-    @is_tiled.setter
-    def is_tiled(self, is_tiled):
-        """Sets the is_tiled of this MapLibreLayerSettings.
-
-
-        :param is_tiled: The is_tiled of this MapLibreLayerSettings.  # noqa: E501
-        :type: bool
+        :param columns: The columns of this MapLibreLayerSettings.  # noqa: E501
+        :type: list[DataColumn]
         """
 
-        self._is_tiled = is_tiled
+        self._columns = columns
 
     def to_dict(self):
         """Returns the model properties as a dict"""

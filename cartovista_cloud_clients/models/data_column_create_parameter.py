@@ -29,7 +29,7 @@ class DataColumnCreateParameter(object):
     """
     swagger_types = {
         'identifier': 'str',
-        'carto_vista_data_type': 'OneOfDataColumnCreateParameterCartoVistaDataType',
+        'carto_vista_data_type': 'CartoVistaPortalDataType',
         'name': 'str',
         'description': 'str',
         'metadata': 'str',
@@ -149,7 +149,7 @@ class DataColumnCreateParameter(object):
 
 
         :return: The carto_vista_data_type of this DataColumnCreateParameter.  # noqa: E501
-        :rtype: OneOfDataColumnCreateParameterCartoVistaDataType
+        :rtype: CartoVistaPortalDataType
         """
         return self._carto_vista_data_type
 
@@ -159,7 +159,7 @@ class DataColumnCreateParameter(object):
 
 
         :param carto_vista_data_type: The carto_vista_data_type of this DataColumnCreateParameter.  # noqa: E501
-        :type: OneOfDataColumnCreateParameterCartoVistaDataType
+        :type: CartoVistaPortalDataType
         """
 
         self._carto_vista_data_type = carto_vista_data_type

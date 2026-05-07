@@ -485,6 +485,7 @@ class DataRowApi(object):
     def data_row_get_data_row(self, data_table_identifier, data_row_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Gets a specific row in the table. The geometry column is ignored if the table belongs to a layer.  # noqa: E501
 
+        Possible values for the `filterOperator` attribute are: ```json IS_EQUAL_TO IS_NOT_EQUAL_TO IS_GREATER_THAN_OR_EQUAL IS_GREATER_THAN IS_LESS_THAN_OR_EQUAL IS_LESS_THAN STARTS_WITH ENDS_WITH CONTAINS DOES_NOT_CONTAIN IS_NULL IS_NOT_NULL ```  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.data_row_get_data_row(data_table_identifier, data_row_identifier, tenant_url_code, async_req=True)
@@ -508,6 +509,7 @@ class DataRowApi(object):
     def data_row_get_data_row_with_http_info(self, data_table_identifier, data_row_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Gets a specific row in the table. The geometry column is ignored if the table belongs to a layer.  # noqa: E501
 
+        Possible values for the `filterOperator` attribute are: ```json IS_EQUAL_TO IS_NOT_EQUAL_TO IS_GREATER_THAN_OR_EQUAL IS_GREATER_THAN IS_LESS_THAN_OR_EQUAL IS_LESS_THAN STARTS_WITH ENDS_WITH CONTAINS DOES_NOT_CONTAIN IS_NULL IS_NOT_NULL ```  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.data_row_get_data_row_with_http_info(data_table_identifier, data_row_identifier, tenant_url_code, async_req=True)
@@ -594,6 +596,7 @@ class DataRowApi(object):
     def data_row_get_data_rows(self, body, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Gets the rows in the table.  # noqa: E501
 
+        Possible values for the `filterOperator` attribute are: ```json IS_EQUAL_TO IS_NOT_EQUAL_TO IS_GREATER_THAN_OR_EQUAL IS_GREATER_THAN IS_LESS_THAN_OR_EQUAL IS_LESS_THAN STARTS_WITH ENDS_WITH CONTAINS DOES_NOT_CONTAIN IS_NULL IS_NOT_NULL ```  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.data_row_get_data_rows(body, data_table_identifier, tenant_url_code, async_req=True)
@@ -617,6 +620,7 @@ class DataRowApi(object):
     def data_row_get_data_rows_with_http_info(self, body, data_table_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Gets the rows in the table.  # noqa: E501
 
+        Possible values for the `filterOperator` attribute are: ```json IS_EQUAL_TO IS_NOT_EQUAL_TO IS_GREATER_THAN_OR_EQUAL IS_GREATER_THAN IS_LESS_THAN_OR_EQUAL IS_LESS_THAN STARTS_WITH ENDS_WITH CONTAINS DOES_NOT_CONTAIN IS_NULL IS_NOT_NULL ```  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.data_row_get_data_rows_with_http_info(body, data_table_identifier, tenant_url_code, async_req=True)

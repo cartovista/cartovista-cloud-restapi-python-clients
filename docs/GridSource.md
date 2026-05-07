@@ -18,11 +18,13 @@ Name | Type | Description | Notes
 **no_data_value** | **str** |  | [optional] 
 **min_value** | **float** |  | [optional] 
 **max_value** | **float** |  | [optional] 
+**possible_classified_values** | **list[int]** |  | [optional] 
 **owner_name** | **str** |  | [optional] 
 **thumbnail_url** | **str** |  | [optional] 
 **thumbnail_url_expiry** | **datetime** |  | [optional] 
 **is_heatmap** | **bool** |  | [optional] 
 **is_demo_source** | **bool** |  | [optional] 
+**is_gpkg** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

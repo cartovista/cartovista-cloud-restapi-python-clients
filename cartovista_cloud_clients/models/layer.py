@@ -67,6 +67,9 @@ class Layer(object):
         'is_encrypted': 'bool',
         'external_service_live_feed': 'bool',
         'external_service_type': 'OneOfLayerExternalServiceType',
+        'views_count': 'int',
+        'is_creating_views': 'bool',
+        'has_spatial_aggregation': 'bool',
         'folder_id': 'str'
     }
 
@@ -110,10 +113,13 @@ class Layer(object):
         'is_encrypted': 'isEncrypted',
         'external_service_live_feed': 'externalServiceLiveFeed',
         'external_service_type': 'externalServiceType',
+        'views_count': 'viewsCount',
+        'is_creating_views': 'isCreatingViews',
+        'has_spatial_aggregation': 'hasSpatialAggregation',
         'folder_id': 'folderId'
     }
 
-    def __init__(self, unique_identifier=None, name=None, creation_time=None, modified_time=None, data_table_unique_identifier=None, description=None, geometry_type=None, metadata=None, owner_name=None, proj4=None, row_count=None, data_usage=None, system_identifier=None, unique_id_data_column=None, precision=None, public_access=None, thumbnail_url=None, thumbnail_url_expiry=None, icon=None, vector_tiling=None, vector_tiling_forced=None, vector_quality_type=None, can_edit=None, related_maps=None, is_locked=None, is_demo_source=None, is_heatmap_source=None, optimization_status=None, quad_tree_status=None, cluster_status=None, is_clusterable=None, is_view=None, is_external=None, is_live=None, is_spatial_file=None, is_managed=None, is_encrypted=None, external_service_live_feed=None, external_service_type=None, folder_id=None):  # noqa: E501
+    def __init__(self, unique_identifier=None, name=None, creation_time=None, modified_time=None, data_table_unique_identifier=None, description=None, geometry_type=None, metadata=None, owner_name=None, proj4=None, row_count=None, data_usage=None, system_identifier=None, unique_id_data_column=None, precision=None, public_access=None, thumbnail_url=None, thumbnail_url_expiry=None, icon=None, vector_tiling=None, vector_tiling_forced=None, vector_quality_type=None, can_edit=None, related_maps=None, is_locked=None, is_demo_source=None, is_heatmap_source=None, optimization_status=None, quad_tree_status=None, cluster_status=None, is_clusterable=None, is_view=None, is_external=None, is_live=None, is_spatial_file=None, is_managed=None, is_encrypted=None, external_service_live_feed=None, external_service_type=None, views_count=None, is_creating_views=None, has_spatial_aggregation=None, folder_id=None):  # noqa: E501
         """Layer - a model defined in Swagger"""  # noqa: E501
         self._unique_identifier = None
         self._name = None
@@ -154,6 +160,9 @@ class Layer(object):
         self._is_encrypted = None
         self._external_service_live_feed = None
         self._external_service_type = None
+        self._views_count = None
+        self._is_creating_views = None
+        self._has_spatial_aggregation = None
         self._folder_id = None
         self.discriminator = None
         if unique_identifier is not None:
@@ -234,6 +243,12 @@ class Layer(object):
             self.external_service_live_feed = external_service_live_feed
         if external_service_type is not None:
             self.external_service_type = external_service_type
+        if views_count is not None:
+            self.views_count = views_count
+        if is_creating_views is not None:
+            self.is_creating_views = is_creating_views
+        if has_spatial_aggregation is not None:
+            self.has_spatial_aggregation = has_spatial_aggregation
         if folder_id is not None:
             self.folder_id = folder_id
 
@@ -1055,6 +1070,69 @@ class Layer(object):
         """
 
         self._external_service_type = external_service_type
+
+    @property
+    def views_count(self):
+        """Gets the views_count of this Layer.  # noqa: E501
+
+
+        :return: The views_count of this Layer.  # noqa: E501
+        :rtype: int
+        """
+        return self._views_count
+
+    @views_count.setter
+    def views_count(self, views_count):
+        """Sets the views_count of this Layer.
+
+
+        :param views_count: The views_count of this Layer.  # noqa: E501
+        :type: int
+        """
+
+        self._views_count = views_count
+
+    @property
+    def is_creating_views(self):
+        """Gets the is_creating_views of this Layer.  # noqa: E501
+
+
+        :return: The is_creating_views of this Layer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_creating_views
+
+    @is_creating_views.setter
+    def is_creating_views(self, is_creating_views):
+        """Sets the is_creating_views of this Layer.
+
+
+        :param is_creating_views: The is_creating_views of this Layer.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_creating_views = is_creating_views
+
+    @property
+    def has_spatial_aggregation(self):
+        """Gets the has_spatial_aggregation of this Layer.  # noqa: E501
+
+
+        :return: The has_spatial_aggregation of this Layer.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_spatial_aggregation
+
+    @has_spatial_aggregation.setter
+    def has_spatial_aggregation(self, has_spatial_aggregation):
+        """Sets the has_spatial_aggregation of this Layer.
+
+
+        :param has_spatial_aggregation: The has_spatial_aggregation of this Layer.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_spatial_aggregation = has_spatial_aggregation
 
     @property
     def folder_id(self):

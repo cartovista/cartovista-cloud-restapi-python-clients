@@ -28,97 +28,97 @@ class ValidationErrors(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'multiple_matches_columns': 'list[MultipleMatchesColumn]',
-        'missing_columns': 'list[MissingColumn]',
-        'wrong_types': 'list[WrongColumnType]',
+        'common_errors': 'ValidationErrorGroup',
+        'fcitc_errors': 'ValidationErrorGroup',
+        'trlim_errors': 'ValidationErrorGroup',
         'error_count': 'int'
     }
 
     attribute_map = {
-        'multiple_matches_columns': 'multipleMatchesColumns',
-        'missing_columns': 'missingColumns',
-        'wrong_types': 'wrongTypes',
+        'common_errors': 'commonErrors',
+        'fcitc_errors': 'fcitcErrors',
+        'trlim_errors': 'trlimErrors',
         'error_count': 'errorCount'
     }
 
-    def __init__(self, multiple_matches_columns=None, missing_columns=None, wrong_types=None, error_count=None):  # noqa: E501
+    def __init__(self, common_errors=None, fcitc_errors=None, trlim_errors=None, error_count=None):  # noqa: E501
         """ValidationErrors - a model defined in Swagger"""  # noqa: E501
-        self._multiple_matches_columns = None
-        self._missing_columns = None
-        self._wrong_types = None
+        self._common_errors = None
+        self._fcitc_errors = None
+        self._trlim_errors = None
         self._error_count = None
         self.discriminator = None
-        if multiple_matches_columns is not None:
-            self.multiple_matches_columns = multiple_matches_columns
-        if missing_columns is not None:
-            self.missing_columns = missing_columns
-        if wrong_types is not None:
-            self.wrong_types = wrong_types
+        if common_errors is not None:
+            self.common_errors = common_errors
+        if fcitc_errors is not None:
+            self.fcitc_errors = fcitc_errors
+        if trlim_errors is not None:
+            self.trlim_errors = trlim_errors
         if error_count is not None:
             self.error_count = error_count
 
     @property
-    def multiple_matches_columns(self):
-        """Gets the multiple_matches_columns of this ValidationErrors.  # noqa: E501
+    def common_errors(self):
+        """Gets the common_errors of this ValidationErrors.  # noqa: E501
 
 
-        :return: The multiple_matches_columns of this ValidationErrors.  # noqa: E501
-        :rtype: list[MultipleMatchesColumn]
+        :return: The common_errors of this ValidationErrors.  # noqa: E501
+        :rtype: ValidationErrorGroup
         """
-        return self._multiple_matches_columns
+        return self._common_errors
 
-    @multiple_matches_columns.setter
-    def multiple_matches_columns(self, multiple_matches_columns):
-        """Sets the multiple_matches_columns of this ValidationErrors.
+    @common_errors.setter
+    def common_errors(self, common_errors):
+        """Sets the common_errors of this ValidationErrors.
 
 
-        :param multiple_matches_columns: The multiple_matches_columns of this ValidationErrors.  # noqa: E501
-        :type: list[MultipleMatchesColumn]
+        :param common_errors: The common_errors of this ValidationErrors.  # noqa: E501
+        :type: ValidationErrorGroup
         """
 
-        self._multiple_matches_columns = multiple_matches_columns
+        self._common_errors = common_errors
 
     @property
-    def missing_columns(self):
-        """Gets the missing_columns of this ValidationErrors.  # noqa: E501
+    def fcitc_errors(self):
+        """Gets the fcitc_errors of this ValidationErrors.  # noqa: E501
 
 
-        :return: The missing_columns of this ValidationErrors.  # noqa: E501
-        :rtype: list[MissingColumn]
+        :return: The fcitc_errors of this ValidationErrors.  # noqa: E501
+        :rtype: ValidationErrorGroup
         """
-        return self._missing_columns
+        return self._fcitc_errors
 
-    @missing_columns.setter
-    def missing_columns(self, missing_columns):
-        """Sets the missing_columns of this ValidationErrors.
+    @fcitc_errors.setter
+    def fcitc_errors(self, fcitc_errors):
+        """Sets the fcitc_errors of this ValidationErrors.
 
 
-        :param missing_columns: The missing_columns of this ValidationErrors.  # noqa: E501
-        :type: list[MissingColumn]
+        :param fcitc_errors: The fcitc_errors of this ValidationErrors.  # noqa: E501
+        :type: ValidationErrorGroup
         """
 
-        self._missing_columns = missing_columns
+        self._fcitc_errors = fcitc_errors
 
     @property
-    def wrong_types(self):
-        """Gets the wrong_types of this ValidationErrors.  # noqa: E501
+    def trlim_errors(self):
+        """Gets the trlim_errors of this ValidationErrors.  # noqa: E501
 
 
-        :return: The wrong_types of this ValidationErrors.  # noqa: E501
-        :rtype: list[WrongColumnType]
+        :return: The trlim_errors of this ValidationErrors.  # noqa: E501
+        :rtype: ValidationErrorGroup
         """
-        return self._wrong_types
+        return self._trlim_errors
 
-    @wrong_types.setter
-    def wrong_types(self, wrong_types):
-        """Sets the wrong_types of this ValidationErrors.
+    @trlim_errors.setter
+    def trlim_errors(self, trlim_errors):
+        """Sets the trlim_errors of this ValidationErrors.
 
 
-        :param wrong_types: The wrong_types of this ValidationErrors.  # noqa: E501
-        :type: list[WrongColumnType]
+        :param trlim_errors: The trlim_errors of this ValidationErrors.  # noqa: E501
+        :type: ValidationErrorGroup
         """
 
-        self._wrong_types = wrong_types
+        self._trlim_errors = trlim_errors
 
     @property
     def error_count(self):

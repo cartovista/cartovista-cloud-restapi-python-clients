@@ -63,6 +63,12 @@ class TestLayerApi(unittest.TestCase):
         """
         pass
 
+    def test_layer_create_spatial_join(self):
+        """Test case for layer_create_spatial_join
+
+        """
+        pass
+
     def test_layer_de_optimize_layer(self):
         """Test case for layer_de_optimize_layer
 
@@ -81,6 +87,12 @@ class TestLayerApi(unittest.TestCase):
         """Test case for layer_delete_layer_by_id
 
         Deletes the layer.  # noqa: E501
+        """
+        pass
+
+    def test_layer_delete_spatial_join(self):
+        """Test case for layer_delete_spatial_join
+
         """
         pass
 

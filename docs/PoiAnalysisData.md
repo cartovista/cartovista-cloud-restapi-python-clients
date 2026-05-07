@@ -3,8 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**poi_feature_id** | **str** |  | [optional] 
 **scenario** | **str** |  | [optional] 
+**cluster** | **str** |  | [optional] 
+**subcluster** | **str** |  | [optional] 
 **year** | **float** |  | [optional] 
+**case_type** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **constraint** | **str** |  | [optional] 
 **contingency** | **str** |  | [optional] 
@@ -14,6 +18,7 @@ Name | Type | Description | Notes
 **impact_percent** | **float** |  | [optional] 
 **loading_before_percent** | **float** |  | [optional] 
 **loading_after_percent** | **float** |  | [optional] 
+**loading_delta_percent** | **float** |  | [optional] 
 **initial_loading** | **float** |  | [optional] 
 **rating** | **float** |  | [optional] 
 **fcitc** | **float** |  | [optional] 

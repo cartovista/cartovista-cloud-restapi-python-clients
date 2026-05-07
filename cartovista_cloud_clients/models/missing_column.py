@@ -28,66 +28,66 @@ class MissingColumn(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'column_name': 'str',
-        'is_like': 'str'
+        'poi_column_name': 'str',
+        'is_like_column': 'OneOfMissingColumnIsLikeColumn'
     }
 
     attribute_map = {
-        'column_name': 'columnName',
-        'is_like': 'isLike'
+        'poi_column_name': 'poiColumnName',
+        'is_like_column': 'isLikeColumn'
     }
 
-    def __init__(self, column_name=None, is_like=None):  # noqa: E501
+    def __init__(self, poi_column_name=None, is_like_column=None):  # noqa: E501
         """MissingColumn - a model defined in Swagger"""  # noqa: E501
-        self._column_name = None
-        self._is_like = None
+        self._poi_column_name = None
+        self._is_like_column = None
         self.discriminator = None
-        if column_name is not None:
-            self.column_name = column_name
-        if is_like is not None:
-            self.is_like = is_like
+        if poi_column_name is not None:
+            self.poi_column_name = poi_column_name
+        if is_like_column is not None:
+            self.is_like_column = is_like_column
 
     @property
-    def column_name(self):
-        """Gets the column_name of this MissingColumn.  # noqa: E501
+    def poi_column_name(self):
+        """Gets the poi_column_name of this MissingColumn.  # noqa: E501
 
 
-        :return: The column_name of this MissingColumn.  # noqa: E501
+        :return: The poi_column_name of this MissingColumn.  # noqa: E501
         :rtype: str
         """
-        return self._column_name
+        return self._poi_column_name
 
-    @column_name.setter
-    def column_name(self, column_name):
-        """Sets the column_name of this MissingColumn.
+    @poi_column_name.setter
+    def poi_column_name(self, poi_column_name):
+        """Sets the poi_column_name of this MissingColumn.
 
 
-        :param column_name: The column_name of this MissingColumn.  # noqa: E501
+        :param poi_column_name: The poi_column_name of this MissingColumn.  # noqa: E501
         :type: str
         """
 
-        self._column_name = column_name
+        self._poi_column_name = poi_column_name
 
     @property
-    def is_like(self):
-        """Gets the is_like of this MissingColumn.  # noqa: E501
+    def is_like_column(self):
+        """Gets the is_like_column of this MissingColumn.  # noqa: E501
 
 
-        :return: The is_like of this MissingColumn.  # noqa: E501
-        :rtype: str
+        :return: The is_like_column of this MissingColumn.  # noqa: E501
+        :rtype: OneOfMissingColumnIsLikeColumn
         """
-        return self._is_like
+        return self._is_like_column
 
-    @is_like.setter
-    def is_like(self, is_like):
-        """Sets the is_like of this MissingColumn.
+    @is_like_column.setter
+    def is_like_column(self, is_like_column):
+        """Sets the is_like_column of this MissingColumn.
 
 
-        :param is_like: The is_like of this MissingColumn.  # noqa: E501
-        :type: str
+        :param is_like_column: The is_like_column of this MissingColumn.  # noqa: E501
+        :type: OneOfMissingColumnIsLikeColumn
         """
 
-        self._is_like = is_like
+        self._is_like_column = is_like_column
 
     def to_dict(self):
         """Returns the model properties as a dict"""

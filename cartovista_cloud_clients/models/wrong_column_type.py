@@ -28,50 +28,97 @@ class WrongColumnType(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'column_name': 'str',
-        'column_type': 'CartoVistaPortalDataType',
-        'correct_type': 'CartoVistaPortalDataType'
+        'poi_column_name': 'str',
+        'poi_column_type': 'CartoVistaPortalDataType',
+        'column': 'DataColumn',
+        'column_type': 'CartoVistaPortalDataType'
     }
 
     attribute_map = {
-        'column_name': 'columnName',
-        'column_type': 'columnType',
-        'correct_type': 'correctType'
+        'poi_column_name': 'poiColumnName',
+        'poi_column_type': 'poiColumnType',
+        'column': 'column',
+        'column_type': 'columnType'
     }
 
-    def __init__(self, column_name=None, column_type=None, correct_type=None):  # noqa: E501
+    def __init__(self, poi_column_name=None, poi_column_type=None, column=None, column_type=None):  # noqa: E501
         """WrongColumnType - a model defined in Swagger"""  # noqa: E501
-        self._column_name = None
+        self._poi_column_name = None
+        self._poi_column_type = None
+        self._column = None
         self._column_type = None
-        self._correct_type = None
         self.discriminator = None
-        if column_name is not None:
-            self.column_name = column_name
+        if poi_column_name is not None:
+            self.poi_column_name = poi_column_name
+        if poi_column_type is not None:
+            self.poi_column_type = poi_column_type
+        if column is not None:
+            self.column = column
         if column_type is not None:
             self.column_type = column_type
-        if correct_type is not None:
-            self.correct_type = correct_type
 
     @property
-    def column_name(self):
-        """Gets the column_name of this WrongColumnType.  # noqa: E501
+    def poi_column_name(self):
+        """Gets the poi_column_name of this WrongColumnType.  # noqa: E501
 
 
-        :return: The column_name of this WrongColumnType.  # noqa: E501
+        :return: The poi_column_name of this WrongColumnType.  # noqa: E501
         :rtype: str
         """
-        return self._column_name
+        return self._poi_column_name
 
-    @column_name.setter
-    def column_name(self, column_name):
-        """Sets the column_name of this WrongColumnType.
+    @poi_column_name.setter
+    def poi_column_name(self, poi_column_name):
+        """Sets the poi_column_name of this WrongColumnType.
 
 
-        :param column_name: The column_name of this WrongColumnType.  # noqa: E501
+        :param poi_column_name: The poi_column_name of this WrongColumnType.  # noqa: E501
         :type: str
         """
 
-        self._column_name = column_name
+        self._poi_column_name = poi_column_name
+
+    @property
+    def poi_column_type(self):
+        """Gets the poi_column_type of this WrongColumnType.  # noqa: E501
+
+
+        :return: The poi_column_type of this WrongColumnType.  # noqa: E501
+        :rtype: CartoVistaPortalDataType
+        """
+        return self._poi_column_type
+
+    @poi_column_type.setter
+    def poi_column_type(self, poi_column_type):
+        """Sets the poi_column_type of this WrongColumnType.
+
+
+        :param poi_column_type: The poi_column_type of this WrongColumnType.  # noqa: E501
+        :type: CartoVistaPortalDataType
+        """
+
+        self._poi_column_type = poi_column_type
+
+    @property
+    def column(self):
+        """Gets the column of this WrongColumnType.  # noqa: E501
+
+
+        :return: The column of this WrongColumnType.  # noqa: E501
+        :rtype: DataColumn
+        """
+        return self._column
+
+    @column.setter
+    def column(self, column):
+        """Sets the column of this WrongColumnType.
+
+
+        :param column: The column of this WrongColumnType.  # noqa: E501
+        :type: DataColumn
+        """
+
+        self._column = column
 
     @property
     def column_type(self):
@@ -93,27 +140,6 @@ class WrongColumnType(object):
         """
 
         self._column_type = column_type
-
-    @property
-    def correct_type(self):
-        """Gets the correct_type of this WrongColumnType.  # noqa: E501
-
-
-        :return: The correct_type of this WrongColumnType.  # noqa: E501
-        :rtype: CartoVistaPortalDataType
-        """
-        return self._correct_type
-
-    @correct_type.setter
-    def correct_type(self, correct_type):
-        """Sets the correct_type of this WrongColumnType.
-
-
-        :param correct_type: The correct_type of this WrongColumnType.  # noqa: E501
-        :type: CartoVistaPortalDataType
-        """
-
-        self._correct_type = correct_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

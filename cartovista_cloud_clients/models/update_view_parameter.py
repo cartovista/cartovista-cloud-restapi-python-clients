@@ -51,7 +51,6 @@ class UpdateViewParameter(object):
     def title(self):
         """Gets the title of this UpdateViewParameter.  # noqa: E501
 
-        The new view title.  # noqa: E501
 
         :return: The title of this UpdateViewParameter.  # noqa: E501
         :rtype: str
@@ -62,7 +61,6 @@ class UpdateViewParameter(object):
     def title(self, title):
         """Sets the title of this UpdateViewParameter.
 
-        The new view title.  # noqa: E501
 
         :param title: The title of this UpdateViewParameter.  # noqa: E501
         :type: str
@@ -74,7 +72,6 @@ class UpdateViewParameter(object):
     def permissions(self):
         """Gets the permissions of this UpdateViewParameter.  # noqa: E501
 
-        The list of permissions to assign to the view. Note: We need to list all the permissions on the view as the missing permissions will be deleted.  # noqa: E501
 
         :return: The permissions of this UpdateViewParameter.  # noqa: E501
         :rtype: list[ViewReadPermission]
@@ -85,7 +82,6 @@ class UpdateViewParameter(object):
     def permissions(self, permissions):
         """Sets the permissions of this UpdateViewParameter.
 
-        The list of permissions to assign to the view. Note: We need to list all the permissions on the view as the missing permissions will be deleted.  # noqa: E501
 
         :param permissions: The permissions of this UpdateViewParameter.  # noqa: E501
         :type: list[ViewReadPermission]

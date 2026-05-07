@@ -35,6 +35,13 @@ class TestPortalApi(unittest.TestCase):
         """
         pass
 
+    def test_portal_finalize_synchronous(self):
+        """Test case for portal_finalize_synchronous
+
+        Finalizes a data import with a file uploaded using `upload`.  # noqa: E501
+        """
+        pass
+
     def test_portal_finalize_upload(self):
         """Test case for portal_finalize_upload
 

@@ -30,8 +30,7 @@ class MapWithDetails(object):
     swagger_types = {
         'map': 'Map',
         'layers': 'list[Layer]',
-        'data_tables': 'list[DataTable]',
-        'linked_data_tables': 'list[LayerDataTable]',
+        'data_tables': 'list[LayerDataTable]',
         'grid_layers': 'list[GridLayer]',
         'wmts_layers': 'list[WmtsLayer]',
         'wms_layers': 'list[WmsLayer]',
@@ -42,19 +41,17 @@ class MapWithDetails(object):
         'map': 'map',
         'layers': 'layers',
         'data_tables': 'dataTables',
-        'linked_data_tables': 'linkedDataTables',
         'grid_layers': 'gridLayers',
         'wmts_layers': 'wmtsLayers',
         'wms_layers': 'wmsLayers',
         'permissions': 'permissions'
     }
 
-    def __init__(self, map=None, layers=None, data_tables=None, linked_data_tables=None, grid_layers=None, wmts_layers=None, wms_layers=None, permissions=None):  # noqa: E501
+    def __init__(self, map=None, layers=None, data_tables=None, grid_layers=None, wmts_layers=None, wms_layers=None, permissions=None):  # noqa: E501
         """MapWithDetails - a model defined in Swagger"""  # noqa: E501
         self._map = None
         self._layers = None
         self._data_tables = None
-        self._linked_data_tables = None
         self._grid_layers = None
         self._wmts_layers = None
         self._wms_layers = None
@@ -66,8 +63,6 @@ class MapWithDetails(object):
             self.layers = layers
         if data_tables is not None:
             self.data_tables = data_tables
-        if linked_data_tables is not None:
-            self.linked_data_tables = linked_data_tables
         if grid_layers is not None:
             self.grid_layers = grid_layers
         if wmts_layers is not None:
@@ -125,7 +120,7 @@ class MapWithDetails(object):
 
 
         :return: The data_tables of this MapWithDetails.  # noqa: E501
-        :rtype: list[DataTable]
+        :rtype: list[LayerDataTable]
         """
         return self._data_tables
 
@@ -135,31 +130,10 @@ class MapWithDetails(object):
 
 
         :param data_tables: The data_tables of this MapWithDetails.  # noqa: E501
-        :type: list[DataTable]
-        """
-
-        self._data_tables = data_tables
-
-    @property
-    def linked_data_tables(self):
-        """Gets the linked_data_tables of this MapWithDetails.  # noqa: E501
-
-
-        :return: The linked_data_tables of this MapWithDetails.  # noqa: E501
-        :rtype: list[LayerDataTable]
-        """
-        return self._linked_data_tables
-
-    @linked_data_tables.setter
-    def linked_data_tables(self, linked_data_tables):
-        """Sets the linked_data_tables of this MapWithDetails.
-
-
-        :param linked_data_tables: The linked_data_tables of this MapWithDetails.  # noqa: E501
         :type: list[LayerDataTable]
         """
 
-        self._linked_data_tables = linked_data_tables
+        self._data_tables = data_tables
 
     @property
     def grid_layers(self):

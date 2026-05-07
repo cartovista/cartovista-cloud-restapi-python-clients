@@ -52,6 +52,7 @@ class TestMapApi(unittest.TestCase):
     def test_map_create_map_plugin(self):
         """Test case for map_create_map_plugin
 
+        Creates map plugin. Only usable by superadministrators.  # noqa: E501
         """
         pass
 
@@ -86,6 +87,7 @@ class TestMapApi(unittest.TestCase):
     def test_map_delete_map_plugin(self):
         """Test case for map_delete_map_plugin
 
+        Delete a map plugin. Only usable by superadministrators.  # noqa: E501
         """
         pass
 
@@ -246,14 +248,14 @@ class TestMapApi(unittest.TestCase):
     def test_map_search_map(self):
         """Test case for map_search_map
 
-        Searches for a match in the searchable columns of the map's layers and geocoded addresses.  # noqa: E501
+        Searches for a match in the searchable columns of the map's layers and geocoded addresses. When no search column is set on a layer, the layer will be excluded from the map search.  # noqa: E501
         """
         pass
 
     def test_map_search_map_layer(self):
         """Test case for map_search_map_layer
 
-        Searches for a match in the searchable columns of the map's layers.  # noqa: E501
+        Searches for a match in the searchable columns of the map's layers. When no search column is set on the layer, it will use the feature name column if defined, else the feature id column will be used.  # noqa: E501
         """
         pass
 
@@ -268,6 +270,13 @@ class TestMapApi(unittest.TestCase):
         """Test case for map_share_map_external
 
         Shares the map with external users. The map is set to public.  # noqa: E501
+        """
+        pass
+
+    def test_map_transfer_maps(self):
+        """Test case for map_transfer_maps
+
+        Clones maps from other organizations. Only usable by superadministrators.  # noqa: E501
         """
         pass
 
@@ -288,7 +297,7 @@ class TestMapApi(unittest.TestCase):
     def test_map_update_map_identifier(self):
         """Test case for map_update_map_identifier
 
-        Updates the map identifier.  # noqa: E501
+        Updates the map identifier. Only usable by superadministrators.  # noqa: E501
         """
         pass
 

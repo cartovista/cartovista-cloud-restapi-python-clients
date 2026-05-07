@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **color** | **str** |  | [optional] 
+**hide_from_anonymous** | **bool** |  | [optional] 
 **parent_id** | **str** |  | [optional] 
 **creation_time** | **datetime** |  | [optional] 
 **modified_time** | **datetime** |  | [optional] 

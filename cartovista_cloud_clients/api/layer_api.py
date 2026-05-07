@@ -549,6 +549,119 @@ class LayerApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def layer_create_spatial_join(self, body, polygon_layer_id, tenant_url_code, **kwargs):  # noqa: E501
+        """layer_create_spatial_join  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_create_spatial_join(body, polygon_layer_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param CreateSpatialJoinParameter body: (required)
+        :param str polygon_layer_id: (required)
+        :param str tenant_url_code: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.layer_create_spatial_join_with_http_info(body, polygon_layer_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.layer_create_spatial_join_with_http_info(body, polygon_layer_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def layer_create_spatial_join_with_http_info(self, body, polygon_layer_id, tenant_url_code, **kwargs):  # noqa: E501
+        """layer_create_spatial_join  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_create_spatial_join_with_http_info(body, polygon_layer_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param CreateSpatialJoinParameter body: (required)
+        :param str polygon_layer_id: (required)
+        :param str tenant_url_code: (required)
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'polygon_layer_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method layer_create_spatial_join" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `layer_create_spatial_join`")  # noqa: E501
+        # verify the required parameter 'polygon_layer_id' is set
+        if ('polygon_layer_id' not in params or
+                params['polygon_layer_id'] is None):
+            raise ValueError("Missing the required parameter `polygon_layer_id` when calling `layer_create_spatial_join`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `layer_create_spatial_join`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'polygon_layer_id' in params:
+            path_params['polygonLayerId'] = params['polygon_layer_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/Layer/{polygonLayerId}/create-spatial-join', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='str',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def layer_de_optimize_layer(self, layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Disables the ClickHouse optimization for this layer.  # noqa: E501
 
@@ -845,6 +958,103 @@ class LayerApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='DeleteLayerResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def layer_delete_spatial_join(self, spatial_join_id, tenant_url_code, **kwargs):  # noqa: E501
+        """layer_delete_spatial_join  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_delete_spatial_join(spatial_join_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str spatial_join_id: (required)
+        :param str tenant_url_code: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.layer_delete_spatial_join_with_http_info(spatial_join_id, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.layer_delete_spatial_join_with_http_info(spatial_join_id, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def layer_delete_spatial_join_with_http_info(self, spatial_join_id, tenant_url_code, **kwargs):  # noqa: E501
+        """layer_delete_spatial_join  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.layer_delete_spatial_join_with_http_info(spatial_join_id, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str spatial_join_id: (required)
+        :param str tenant_url_code: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['spatial_join_id', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method layer_delete_spatial_join" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'spatial_join_id' is set
+        if ('spatial_join_id' not in params or
+                params['spatial_join_id'] is None):
+            raise ValueError("Missing the required parameter `spatial_join_id` when calling `layer_delete_spatial_join`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `layer_delete_spatial_join`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'spatial_join_id' in params:
+            path_params['spatialJoinId'] = params['spatial_join_id']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/SpatialJoin/{spatialJoinId}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

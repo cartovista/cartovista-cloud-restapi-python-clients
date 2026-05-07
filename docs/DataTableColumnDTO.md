@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **only_has_unique_values** | **bool** |  | [optional] 
 **not_available_values** | **bool** |  | [optional] 
 **value_to_convert** | **float** |  | [optional] 
+**separate_thousands** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

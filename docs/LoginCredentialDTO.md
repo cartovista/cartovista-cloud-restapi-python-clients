@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **provider** | [**SecurityProvider**](SecurityProvider.md) |  | [optional] 
 **provider_name** | **str** |  | [optional] 
 **username_or_email_address** | **str** |  | [optional] 
-**token_claims** | **str** |  | [optional] 
+**provider_identifier_claim** | **str** |  | [optional] 
 **password_or_token** | **str** |  | [optional] 
 **re_captcha_response** | **str** |  | [optional] 
 **keep_me_signed** | **bool** |  | [optional] 

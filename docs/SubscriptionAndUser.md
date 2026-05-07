@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **composite_scoring** | **bool** |  | [optional] 
 **poi_analysis** | **bool** |  | [optional] 
 **quad_tree_tiling** | **bool** |  | [optional] 
+**spatial_aggregation** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

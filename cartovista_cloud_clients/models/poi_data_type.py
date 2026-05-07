@@ -29,6 +29,7 @@ class PoiDataType(object):
     _2 = "2"
     _3 = "3"
     _4 = "4"
+    _5 = "5"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

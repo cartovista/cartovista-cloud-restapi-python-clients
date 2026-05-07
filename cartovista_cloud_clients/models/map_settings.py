@@ -32,7 +32,9 @@ class MapSettings(object):
         'area_unit': 'str',
         'zoom_on_map_load': 'bool',
         'lazy_loading': 'bool',
-        'zoom_restrictions': 'ZoomRestrictionSettings'
+        'zoom_restrictions': 'ZoomRestrictionSettings',
+        'scalebar_visible': 'bool',
+        'export_data': 'bool'
     }
 
     attribute_map = {
@@ -40,16 +42,20 @@ class MapSettings(object):
         'area_unit': 'areaUnit',
         'zoom_on_map_load': 'zoomOnMapLoad',
         'lazy_loading': 'lazyLoading',
-        'zoom_restrictions': 'zoomRestrictions'
+        'zoom_restrictions': 'zoomRestrictions',
+        'scalebar_visible': 'scalebarVisible',
+        'export_data': 'exportData'
     }
 
-    def __init__(self, distance_unit=None, area_unit=None, zoom_on_map_load=None, lazy_loading=None, zoom_restrictions=None):  # noqa: E501
+    def __init__(self, distance_unit=None, area_unit=None, zoom_on_map_load=None, lazy_loading=None, zoom_restrictions=None, scalebar_visible=None, export_data=None):  # noqa: E501
         """MapSettings - a model defined in Swagger"""  # noqa: E501
         self._distance_unit = None
         self._area_unit = None
         self._zoom_on_map_load = None
         self._lazy_loading = None
         self._zoom_restrictions = None
+        self._scalebar_visible = None
+        self._export_data = None
         self.discriminator = None
         if distance_unit is not None:
             self.distance_unit = distance_unit
@@ -61,6 +67,10 @@ class MapSettings(object):
             self.lazy_loading = lazy_loading
         if zoom_restrictions is not None:
             self.zoom_restrictions = zoom_restrictions
+        if scalebar_visible is not None:
+            self.scalebar_visible = scalebar_visible
+        if export_data is not None:
+            self.export_data = export_data
 
     @property
     def distance_unit(self):
@@ -166,6 +176,48 @@ class MapSettings(object):
         """
 
         self._zoom_restrictions = zoom_restrictions
+
+    @property
+    def scalebar_visible(self):
+        """Gets the scalebar_visible of this MapSettings.  # noqa: E501
+
+
+        :return: The scalebar_visible of this MapSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._scalebar_visible
+
+    @scalebar_visible.setter
+    def scalebar_visible(self, scalebar_visible):
+        """Sets the scalebar_visible of this MapSettings.
+
+
+        :param scalebar_visible: The scalebar_visible of this MapSettings.  # noqa: E501
+        :type: bool
+        """
+
+        self._scalebar_visible = scalebar_visible
+
+    @property
+    def export_data(self):
+        """Gets the export_data of this MapSettings.  # noqa: E501
+
+
+        :return: The export_data of this MapSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._export_data
+
+    @export_data.setter
+    def export_data(self, export_data):
+        """Sets the export_data of this MapSettings.
+
+
+        :param export_data: The export_data of this MapSettings.  # noqa: E501
+        :type: bool
+        """
+
+        self._export_data = export_data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

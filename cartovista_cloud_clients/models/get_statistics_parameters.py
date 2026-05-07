@@ -31,22 +31,25 @@ class GetStatisticsParameters(object):
         'search_criteria': 'str',
         'pagination': 'OneOfGetStatisticsParametersPagination',
         'sort': 'OneOfGetStatisticsParametersSort',
-        'filters': 'dict(str, object)'
+        'filters': 'dict(str, object)',
+        'types': 'list[ModificationTypeEnum]'
     }
 
     attribute_map = {
         'search_criteria': 'searchCriteria',
         'pagination': 'pagination',
         'sort': 'sort',
-        'filters': 'filters'
+        'filters': 'filters',
+        'types': 'types'
     }
 
-    def __init__(self, search_criteria=None, pagination=None, sort=None, filters=None):  # noqa: E501
+    def __init__(self, search_criteria=None, pagination=None, sort=None, filters=None, types=None):  # noqa: E501
         """GetStatisticsParameters - a model defined in Swagger"""  # noqa: E501
         self._search_criteria = None
         self._pagination = None
         self._sort = None
         self._filters = None
+        self._types = None
         self.discriminator = None
         if search_criteria is not None:
             self.search_criteria = search_criteria
@@ -56,6 +59,8 @@ class GetStatisticsParameters(object):
             self.sort = sort
         if filters is not None:
             self.filters = filters
+        if types is not None:
+            self.types = types
 
     @property
     def search_criteria(self):
@@ -140,6 +145,27 @@ class GetStatisticsParameters(object):
         """
 
         self._filters = filters
+
+    @property
+    def types(self):
+        """Gets the types of this GetStatisticsParameters.  # noqa: E501
+
+
+        :return: The types of this GetStatisticsParameters.  # noqa: E501
+        :rtype: list[ModificationTypeEnum]
+        """
+        return self._types
+
+    @types.setter
+    def types(self, types):
+        """Sets the types of this GetStatisticsParameters.
+
+
+        :param types: The types of this GetStatisticsParameters.  # noqa: E501
+        :type: list[ModificationTypeEnum]
+        """
+
+        self._types = types
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identifier** | **str** |  | [optional] 
-**carto_vista_data_type** | **OneOfDataColumnCreateParameterCartoVistaDataType** |  | [optional] 
+**carto_vista_data_type** | [**CartoVistaPortalDataType**](CartoVistaPortalDataType.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **metadata** | **str** |  | [optional] 

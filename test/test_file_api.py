@@ -89,6 +89,7 @@ class TestFileApi(unittest.TestCase):
     def test_file_get_poi_analysis_heatmap(self):
         """Test case for file_get_poi_analysis_heatmap
 
+        Downloads the heatmap as a geoTiff file. Use PoiAnalysis_GetPoiAnalysis REST API to get the list of kvs and scenario ids.  # noqa: E501
         """
         pass
 

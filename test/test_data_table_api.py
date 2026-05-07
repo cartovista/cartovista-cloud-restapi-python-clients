@@ -91,8 +91,22 @@ class TestDataTableApi(unittest.TestCase):
         """
         pass
 
+    def test_data_table_geocode_data_table_synchronous(self):
+        """Test case for data_table_geocode_data_table_synchronous
+
+        Converts a table to a point by building addresses using the list of columns.  # noqa: E501
+        """
+        pass
+
     def test_data_table_georeference_data_table(self):
         """Test case for data_table_georeference_data_table
+
+        Converts a table to a point layer using two of its columns as latitude and longitude.  # noqa: E501
+        """
+        pass
+
+    def test_data_table_georeference_data_table_synchronous(self):
+        """Test case for data_table_georeference_data_table_synchronous
 
         Converts a table to a point layer using two of its columns as latitude and longitude.  # noqa: E501
         """

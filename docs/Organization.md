@@ -11,10 +11,14 @@ Name | Type | Description | Notes
 **logo_icon_url** | **str** |  | [optional] 
 **is_enterprise** | **bool** |  | [optional] 
 **url_code** | **str** |  | [optional] 
+**users_folder_id** | **str** |  | [optional] 
+**data_folder_id** | **str** |  | [optional] 
+**maps_folder_id** | **str** |  | [optional] 
 **open_id_providers** | [**list[OpenIdProviderInformation]**](OpenIdProviderInformation.md) |  | [optional] 
 **froala_key** | **str** |  | [optional] 
 **disclaimers** | [**list[TenantDisclaimer]**](TenantDisclaimer.md) |  | [optional] 
 **invalidate_disclaimer_time** | **datetime** |  | [optional] 
+**default_permissions** | [**DefaultOrganizationPermissions**](DefaultOrganizationPermissions.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

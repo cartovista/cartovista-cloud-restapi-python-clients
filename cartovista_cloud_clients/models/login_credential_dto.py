@@ -31,7 +31,7 @@ class LoginCredentialDTO(object):
         'provider': 'SecurityProvider',
         'provider_name': 'str',
         'username_or_email_address': 'str',
-        'token_claims': 'str',
+        'provider_identifier_claim': 'str',
         'password_or_token': 'str',
         're_captcha_response': 'str',
         'keep_me_signed': 'bool',
@@ -42,19 +42,19 @@ class LoginCredentialDTO(object):
         'provider': 'provider',
         'provider_name': 'providerName',
         'username_or_email_address': 'usernameOrEmailAddress',
-        'token_claims': 'tokenClaims',
+        'provider_identifier_claim': 'providerIdentifierClaim',
         'password_or_token': 'passwordOrToken',
         're_captcha_response': 'reCaptchaResponse',
         'keep_me_signed': 'keepMeSigned',
         'device_id': 'deviceId'
     }
 
-    def __init__(self, provider=None, provider_name=None, username_or_email_address=None, token_claims=None, password_or_token=None, re_captcha_response=None, keep_me_signed=None, device_id=None):  # noqa: E501
+    def __init__(self, provider=None, provider_name=None, username_or_email_address=None, provider_identifier_claim=None, password_or_token=None, re_captcha_response=None, keep_me_signed=None, device_id=None):  # noqa: E501
         """LoginCredentialDTO - a model defined in Swagger"""  # noqa: E501
         self._provider = None
         self._provider_name = None
         self._username_or_email_address = None
-        self._token_claims = None
+        self._provider_identifier_claim = None
         self._password_or_token = None
         self._re_captcha_response = None
         self._keep_me_signed = None
@@ -66,8 +66,8 @@ class LoginCredentialDTO(object):
             self.provider_name = provider_name
         if username_or_email_address is not None:
             self.username_or_email_address = username_or_email_address
-        if token_claims is not None:
-            self.token_claims = token_claims
+        if provider_identifier_claim is not None:
+            self.provider_identifier_claim = provider_identifier_claim
         if password_or_token is not None:
             self.password_or_token = password_or_token
         if re_captcha_response is not None:
@@ -141,25 +141,25 @@ class LoginCredentialDTO(object):
         self._username_or_email_address = username_or_email_address
 
     @property
-    def token_claims(self):
-        """Gets the token_claims of this LoginCredentialDTO.  # noqa: E501
+    def provider_identifier_claim(self):
+        """Gets the provider_identifier_claim of this LoginCredentialDTO.  # noqa: E501
 
 
-        :return: The token_claims of this LoginCredentialDTO.  # noqa: E501
+        :return: The provider_identifier_claim of this LoginCredentialDTO.  # noqa: E501
         :rtype: str
         """
-        return self._token_claims
+        return self._provider_identifier_claim
 
-    @token_claims.setter
-    def token_claims(self, token_claims):
-        """Sets the token_claims of this LoginCredentialDTO.
+    @provider_identifier_claim.setter
+    def provider_identifier_claim(self, provider_identifier_claim):
+        """Sets the provider_identifier_claim of this LoginCredentialDTO.
 
 
-        :param token_claims: The token_claims of this LoginCredentialDTO.  # noqa: E501
+        :param provider_identifier_claim: The provider_identifier_claim of this LoginCredentialDTO.  # noqa: E501
         :type: str
         """
 
-        self._token_claims = token_claims
+        self._provider_identifier_claim = provider_identifier_claim
 
     @property
     def password_or_token(self):

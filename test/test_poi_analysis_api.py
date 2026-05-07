@@ -49,6 +49,13 @@ class TestPoiAnalysisApi(unittest.TestCase):
         """
         pass
 
+    def test_poi_analysis_fix_column(self):
+        """Test case for poi_analysis_fix_column
+
+        Updates the data column so it matches the name (if FixName is true) and type (if FixType is true) of the given POI Column.  # noqa: E501
+        """
+        pass
+
     def test_poi_analysis_get_contingency_loading_max_data(self):
         """Test case for poi_analysis_get_contingency_loading_max_data
 

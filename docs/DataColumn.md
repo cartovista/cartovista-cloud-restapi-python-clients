@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **internal_system_column** | **bool** |  | [optional] 
 **editor_settings** | [**EditorSettings**](EditorSettings.md) |  | [optional] 
 **date_format** | [**DateFormat**](DateFormat.md) |  | [optional] 
+**separate_thousands** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

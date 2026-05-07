@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **column_numbers_to_keep** | **list[int]** |  | [optional] 
-**uploaded_path** | **str** |  | [optional] 
+**upload_id** | **str** |  | [optional] 
 **sheet_name** | **str** |  | [optional] 
 **is_append** | **bool** |  | [optional] 
 

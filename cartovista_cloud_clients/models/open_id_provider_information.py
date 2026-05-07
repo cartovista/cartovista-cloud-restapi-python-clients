@@ -30,20 +30,29 @@ class OpenIdProviderInformation(object):
     swagger_types = {
         'provider_name': 'str',
         'authority': 'str',
-        'client_id': 'str'
+        'client_id': 'str',
+        'type': 'SecurityProvider',
+        'group_sync': 'bool',
+        'user_sync': 'bool'
     }
 
     attribute_map = {
         'provider_name': 'providerName',
         'authority': 'authority',
-        'client_id': 'clientId'
+        'client_id': 'clientId',
+        'type': 'type',
+        'group_sync': 'groupSync',
+        'user_sync': 'userSync'
     }
 
-    def __init__(self, provider_name=None, authority=None, client_id=None):  # noqa: E501
+    def __init__(self, provider_name=None, authority=None, client_id=None, type=None, group_sync=None, user_sync=None):  # noqa: E501
         """OpenIdProviderInformation - a model defined in Swagger"""  # noqa: E501
         self._provider_name = None
         self._authority = None
         self._client_id = None
+        self._type = None
+        self._group_sync = None
+        self._user_sync = None
         self.discriminator = None
         if provider_name is not None:
             self.provider_name = provider_name
@@ -51,6 +60,12 @@ class OpenIdProviderInformation(object):
             self.authority = authority
         if client_id is not None:
             self.client_id = client_id
+        if type is not None:
+            self.type = type
+        if group_sync is not None:
+            self.group_sync = group_sync
+        if user_sync is not None:
+            self.user_sync = user_sync
 
     @property
     def provider_name(self):
@@ -114,6 +129,69 @@ class OpenIdProviderInformation(object):
         """
 
         self._client_id = client_id
+
+    @property
+    def type(self):
+        """Gets the type of this OpenIdProviderInformation.  # noqa: E501
+
+
+        :return: The type of this OpenIdProviderInformation.  # noqa: E501
+        :rtype: SecurityProvider
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this OpenIdProviderInformation.
+
+
+        :param type: The type of this OpenIdProviderInformation.  # noqa: E501
+        :type: SecurityProvider
+        """
+
+        self._type = type
+
+    @property
+    def group_sync(self):
+        """Gets the group_sync of this OpenIdProviderInformation.  # noqa: E501
+
+
+        :return: The group_sync of this OpenIdProviderInformation.  # noqa: E501
+        :rtype: bool
+        """
+        return self._group_sync
+
+    @group_sync.setter
+    def group_sync(self, group_sync):
+        """Sets the group_sync of this OpenIdProviderInformation.
+
+
+        :param group_sync: The group_sync of this OpenIdProviderInformation.  # noqa: E501
+        :type: bool
+        """
+
+        self._group_sync = group_sync
+
+    @property
+    def user_sync(self):
+        """Gets the user_sync of this OpenIdProviderInformation.  # noqa: E501
+
+
+        :return: The user_sync of this OpenIdProviderInformation.  # noqa: E501
+        :rtype: bool
+        """
+        return self._user_sync
+
+    @user_sync.setter
+    def user_sync(self, user_sync):
+        """Sets the user_sync of this OpenIdProviderInformation.
+
+
+        :param user_sync: The user_sync of this OpenIdProviderInformation.  # noqa: E501
+        :type: bool
+        """
+
+        self._user_sync = user_sync
 
     def to_dict(self):
         """Returns the model properties as a dict"""

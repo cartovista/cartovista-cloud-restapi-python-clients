@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **layer_id** | **str** |  | [optional] 
 **can_use_transmission_layers** | **bool** |  | [optional] 
 **can_use_harmer_and_stress_gen** | **bool** |  | [optional] 
+**can_use_post_project** | **bool** |  | [optional] 
+**can_use_worst_dispatch** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

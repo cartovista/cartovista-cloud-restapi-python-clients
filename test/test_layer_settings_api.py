@@ -56,6 +56,13 @@ class TestLayerSettingsApi(unittest.TestCase):
         """
         pass
 
+    def test_layer_settings_update_common_settings(self):
+        """Test case for layer_settings_update_common_settings
+
+        Allows the update of all of the layer's non-geometry style settings in one call  # noqa: E501
+        """
+        pass
+
     def test_layer_settings_update_effect(self):
         """Test case for layer_settings_update_effect
 

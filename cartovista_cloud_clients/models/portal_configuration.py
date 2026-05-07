@@ -30,7 +30,6 @@ class PortalConfiguration(object):
     swagger_types = {
         'userflow_token': 'str',
         'rechaptcha_site_key': 'str',
-        'facebook_app_id': 'str',
         'google_client_id': 'str',
         'feature_flags': 'dict(str, bool)',
         'map_symbols': 'list[MapSymbolFont]',
@@ -42,7 +41,6 @@ class PortalConfiguration(object):
     attribute_map = {
         'userflow_token': 'userflowToken',
         'rechaptcha_site_key': 'rechaptchaSiteKey',
-        'facebook_app_id': 'facebookAppId',
         'google_client_id': 'googleClientId',
         'feature_flags': 'featureFlags',
         'map_symbols': 'mapSymbols',
@@ -51,11 +49,10 @@ class PortalConfiguration(object):
         'demo_maps_img_base_url': 'demoMapsImgBaseUrl'
     }
 
-    def __init__(self, userflow_token=None, rechaptcha_site_key=None, facebook_app_id=None, google_client_id=None, feature_flags=None, map_symbols=None, background_font=None, categories_font_url=None, demo_maps_img_base_url=None):  # noqa: E501
+    def __init__(self, userflow_token=None, rechaptcha_site_key=None, google_client_id=None, feature_flags=None, map_symbols=None, background_font=None, categories_font_url=None, demo_maps_img_base_url=None):  # noqa: E501
         """PortalConfiguration - a model defined in Swagger"""  # noqa: E501
         self._userflow_token = None
         self._rechaptcha_site_key = None
-        self._facebook_app_id = None
         self._google_client_id = None
         self._feature_flags = None
         self._map_symbols = None
@@ -67,8 +64,6 @@ class PortalConfiguration(object):
             self.userflow_token = userflow_token
         if rechaptcha_site_key is not None:
             self.rechaptcha_site_key = rechaptcha_site_key
-        if facebook_app_id is not None:
-            self.facebook_app_id = facebook_app_id
         if google_client_id is not None:
             self.google_client_id = google_client_id
         if feature_flags is not None:
@@ -123,27 +118,6 @@ class PortalConfiguration(object):
         """
 
         self._rechaptcha_site_key = rechaptcha_site_key
-
-    @property
-    def facebook_app_id(self):
-        """Gets the facebook_app_id of this PortalConfiguration.  # noqa: E501
-
-
-        :return: The facebook_app_id of this PortalConfiguration.  # noqa: E501
-        :rtype: str
-        """
-        return self._facebook_app_id
-
-    @facebook_app_id.setter
-    def facebook_app_id(self, facebook_app_id):
-        """Sets the facebook_app_id of this PortalConfiguration.
-
-
-        :param facebook_app_id: The facebook_app_id of this PortalConfiguration.  # noqa: E501
-        :type: str
-        """
-
-        self._facebook_app_id = facebook_app_id
 
     @property
     def google_client_id(self):

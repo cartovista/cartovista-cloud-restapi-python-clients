@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**feature_type** | **OneOfFeatureGeoJSONUpdateParameterFeatureType** |  | [optional] 
+**feature_type** | [**FeatureType**](FeatureType.md) |  | [optional] 
 **proj4** | **str** |  | [optional] 
 **geo_json** | **str** |  | [optional] 
 

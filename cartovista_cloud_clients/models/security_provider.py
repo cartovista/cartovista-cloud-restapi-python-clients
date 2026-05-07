@@ -25,10 +25,9 @@ class SecurityProvider(object):
     allowed enum values
     """
     CARTOVISTA = "CartoVista"
-    ACTIVEDIRECTORY = "ActiveDirectory"
     GOOGLE = "Google"
-    FACEBOOK = "Facebook"
-    OPENIDCONNECT = "OpenIdConnect"
+    ENTRAID = "EntraID"
+    AUTH0 = "Auth0"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

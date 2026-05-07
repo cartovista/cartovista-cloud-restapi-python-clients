@@ -29,7 +29,7 @@ class MapLayerParameter(object):
     """
     swagger_types = {
         'identifier': 'str',
-        'type': 'OneOfMapLayerParameterType'
+        'type': 'MapLayerType'
     }
 
     attribute_map = {
@@ -74,7 +74,7 @@ class MapLayerParameter(object):
 
 
         :return: The type of this MapLayerParameter.  # noqa: E501
-        :rtype: OneOfMapLayerParameterType
+        :rtype: MapLayerType
         """
         return self._type
 
@@ -84,7 +84,7 @@ class MapLayerParameter(object):
 
 
         :param type: The type of this MapLayerParameter.  # noqa: E501
-        :type: OneOfMapLayerParameterType
+        :type: MapLayerType
         """
 
         self._type = type

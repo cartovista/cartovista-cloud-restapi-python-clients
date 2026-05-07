@@ -28,6 +28,7 @@ class CalculatedValuesTokenError(object):
     COLUMNUSESCALCULATEDEXPRESSION = "ColumnUsesCalculatedExpression"
     MISSINGORMISPLACEDOPERATOR = "MissingOrMisplacedOperator"
     CURRENTCOLUMNCANNOTBEUSED = "CurrentColumnCannotBeUsed"
+    MISSINGCOLUMNORVALUE = "MissingColumnOrValue"
     COLUMNNOTINDATATABLE = "ColumnNotInDataTable"
     COLUMNMUSTBENUMERIC = "ColumnMustBeNumeric"
     INVALIDTOKEN = "InvalidToken"

@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **provider** | [**SecurityProvider**](SecurityProvider.md) |  | [optional] 
 **provider_name** | **str** |  | [optional] 
 **identifier** | **str** |  | [optional] 
-**provider_status** | [**ProviderStatus**](ProviderStatus.md) |  | [optional] 
 **path** | **str** |  | [optional] 
 **secure_object_permissions** | [**list[PermissionPairDTO]**](PermissionPairDTO.md) | Permissions with a secureObject associated to it | [optional] 
 

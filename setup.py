@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "cartovista-cloud-clients"
-VERSION = "8.14"
+VERSION = "8.15"
 # To install the library, run the following
 #
 # python setup.py install

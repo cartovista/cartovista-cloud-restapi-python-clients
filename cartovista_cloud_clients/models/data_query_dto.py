@@ -48,8 +48,10 @@ class DataQueryDTO(object):
         'exclude_not_available_value': 'bool',
         'server_cache_enabled': 'bool',
         'quad_keys': 'list[str]',
+        'fids': 'list[int]',
         'client_stack_trace': 'str',
         'data_query_filters': 'list[DataQueryFilterDTOOfDataQueryColumnDTO]',
+        'aggregated_data_filters': 'dict(str, list[DataQueryFilterDTOOfDataQueryColumnDTO])',
         'has_quad_keys': 'bool'
     }
 
@@ -74,12 +76,14 @@ class DataQueryDTO(object):
         'exclude_not_available_value': 'excludeNotAvailableValue',
         'server_cache_enabled': 'serverCacheEnabled',
         'quad_keys': 'quadKeys',
+        'fids': 'fids',
         'client_stack_trace': 'clientStackTrace',
         'data_query_filters': 'dataQueryFilters',
+        'aggregated_data_filters': 'aggregatedDataFilters',
         'has_quad_keys': 'hasQuadKeys'
     }
 
-    def __init__(self, linking_ids=None, linking_ids_for_stats=None, sort_data_columns=None, data_columns=None, filter_data_columns=None, group_by=None, selection_stack_parameters=None, spatial_filter=None, time_range=None, start_index=None, max_count=None, data_sampling_count=None, search_criteria=None, language=None, statistics=None, statistics_only=None, sort_orders=None, exclude_not_available_value=None, server_cache_enabled=None, quad_keys=None, client_stack_trace=None, data_query_filters=None, has_quad_keys=None):  # noqa: E501
+    def __init__(self, linking_ids=None, linking_ids_for_stats=None, sort_data_columns=None, data_columns=None, filter_data_columns=None, group_by=None, selection_stack_parameters=None, spatial_filter=None, time_range=None, start_index=None, max_count=None, data_sampling_count=None, search_criteria=None, language=None, statistics=None, statistics_only=None, sort_orders=None, exclude_not_available_value=None, server_cache_enabled=None, quad_keys=None, fids=None, client_stack_trace=None, data_query_filters=None, aggregated_data_filters=None, has_quad_keys=None):  # noqa: E501
         """DataQueryDTO - a model defined in Swagger"""  # noqa: E501
         self._linking_ids = None
         self._linking_ids_for_stats = None
@@ -101,8 +105,10 @@ class DataQueryDTO(object):
         self._exclude_not_available_value = None
         self._server_cache_enabled = None
         self._quad_keys = None
+        self._fids = None
         self._client_stack_trace = None
         self._data_query_filters = None
+        self._aggregated_data_filters = None
         self._has_quad_keys = None
         self.discriminator = None
         if linking_ids is not None:
@@ -145,10 +151,14 @@ class DataQueryDTO(object):
             self.server_cache_enabled = server_cache_enabled
         if quad_keys is not None:
             self.quad_keys = quad_keys
+        if fids is not None:
+            self.fids = fids
         if client_stack_trace is not None:
             self.client_stack_trace = client_stack_trace
         if data_query_filters is not None:
             self.data_query_filters = data_query_filters
+        if aggregated_data_filters is not None:
+            self.aggregated_data_filters = aggregated_data_filters
         if has_quad_keys is not None:
             self.has_quad_keys = has_quad_keys
 
@@ -573,6 +583,27 @@ class DataQueryDTO(object):
         self._quad_keys = quad_keys
 
     @property
+    def fids(self):
+        """Gets the fids of this DataQueryDTO.  # noqa: E501
+
+
+        :return: The fids of this DataQueryDTO.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._fids
+
+    @fids.setter
+    def fids(self, fids):
+        """Sets the fids of this DataQueryDTO.
+
+
+        :param fids: The fids of this DataQueryDTO.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._fids = fids
+
+    @property
     def client_stack_trace(self):
         """Gets the client_stack_trace of this DataQueryDTO.  # noqa: E501
 
@@ -613,6 +644,27 @@ class DataQueryDTO(object):
         """
 
         self._data_query_filters = data_query_filters
+
+    @property
+    def aggregated_data_filters(self):
+        """Gets the aggregated_data_filters of this DataQueryDTO.  # noqa: E501
+
+
+        :return: The aggregated_data_filters of this DataQueryDTO.  # noqa: E501
+        :rtype: dict(str, list[DataQueryFilterDTOOfDataQueryColumnDTO])
+        """
+        return self._aggregated_data_filters
+
+    @aggregated_data_filters.setter
+    def aggregated_data_filters(self, aggregated_data_filters):
+        """Sets the aggregated_data_filters of this DataQueryDTO.
+
+
+        :param aggregated_data_filters: The aggregated_data_filters of this DataQueryDTO.  # noqa: E501
+        :type: dict(str, list[DataQueryFilterDTOOfDataQueryColumnDTO])
+        """
+
+        self._aggregated_data_filters = aggregated_data_filters
 
     @property
     def has_quad_keys(self):

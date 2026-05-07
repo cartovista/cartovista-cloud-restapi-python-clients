@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **not_available_values** | **bool** |  | [optional] 
 **value_to_convert** | **float** |  | [optional] 
 **date_format** | **OneOfDataColumnUpdateParameterDateFormat** |  | [optional] 
+**separate_thousands** | **bool** |  | [optional] 
 **editor_visible** | **bool** |  | [optional] 
 **editor_mode** | [**EditorMode**](EditorMode.md) |  | [optional] 
 
