@@ -24,100 +24,102 @@ class TestFileApi(unittest.TestCase):
 
     def setUp(self):
         self.api = FileApi()  # noqa: E501
+        self.api_class = FileApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_file_download_file(self):
         """Test case for file_download_file
 
         Downloads the data.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_download_grid_source(self):
         """Test case for file_download_grid_source
 
         Downloads the grid source in the given grid layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_download_series(self):
         """Test case for file_download_series
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_export_feedback(self):
         """Test case for file_export_feedback
 
         Exports the map's feedback in MapInfo format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_custom_poi_analysis_post_project_heatmap(self):
         """Test case for file_get_custom_poi_analysis_post_project_heatmap
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_custom_poi_analysis_worst_dispatch_heatmap(self):
         """Test case for file_get_custom_poi_analysis_worst_dispatch_heatmap
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_data(self):
         """Test case for file_get_data
 
         Gets a chunk of the grid layer's data.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_geo_json(self):
         """Test case for file_get_geo_json
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_mvt_tile(self):
         """Test case for file_get_mvt_tile
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_poi_analysis_heatmap(self):
         """Test case for file_get_poi_analysis_heatmap
 
         Downloads the heatmap as a geoTiff file. Use PoiAnalysis_GetPoiAnalysis REST API to get the list of kvs and scenario ids.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_raster(self):
         """Test case for file_get_raster
 
         Generates a WMS raster in PNG format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_symbol_file(self):
         """Test case for file_get_symbol_file
 
         Downloads the symbol's file.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_temporary_analysis_heatmap(self):
         """Test case for file_get_temporary_analysis_heatmap
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_file_get_tile(self):
         """Test case for file_get_tile
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

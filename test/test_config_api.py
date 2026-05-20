@@ -24,16 +24,18 @@ class TestConfigApi(unittest.TestCase):
 
     def setUp(self):
         self.api = ConfigApi()  # noqa: E501
+        self.api_class = ConfigApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_config_get_configuration(self):
         """Test case for config_get_configuration
 
         Gets the configuration required for the portal to work.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

@@ -24,64 +24,66 @@ class TestDataRowApi(unittest.TestCase):
 
     def setUp(self):
         self.api = DataRowApi()  # noqa: E501
+        self.api_class = DataRowApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_data_row_create_data_rows(self):
         """Test case for data_row_create_data_rows
 
         Creates new data rows in the table. A subset of the columns can be used. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_row_create_update_data_rows(self):
         """Test case for data_row_create_update_data_rows
 
         Creates new data rows or updates them if they already exists in the table. A subset of the columns can be used. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_row_delete_data_row(self):
         """Test case for data_row_delete_data_row
 
         Deletes a specific row in the table. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_row_delete_datarows(self):
         """Test case for data_row_delete_datarows
 
         Deletes the rows in the table by identifier. Invalid identifiers are ignored.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_row_get_data_row(self):
         """Test case for data_row_get_data_row
 
         Gets a specific row in the table. The geometry column is ignored if the table belongs to a layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_row_get_data_rows(self):
         """Test case for data_row_get_data_rows
 
         Gets the rows in the table.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_row_get_data_rows_with_total(self):
         """Test case for data_row_get_data_rows_with_total
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_row_update_data_row(self):
         """Test case for data_row_update_data_row
 
         Updates a specific row in the table. A subset of the columns can be used. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

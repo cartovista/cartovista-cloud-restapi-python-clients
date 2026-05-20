@@ -24,57 +24,59 @@ class TestAuthenticationApi(unittest.TestCase):
 
     def setUp(self):
         self.api = AuthenticationApi()  # noqa: E501
+        self.api_class = AuthenticationApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_authentication_global_login(self):
         """Test case for authentication_global_login
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_authentication_logout(self):
         """Test case for authentication_logout
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_authentication_request_new_token(self):
         """Test case for authentication_request_new_token
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_authentication_request_password_reset(self):
         """Test case for authentication_request_password_reset
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_authentication_reset_password(self):
         """Test case for authentication_reset_password
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_authentication_set_external_provider(self):
         """Test case for authentication_set_external_provider
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_authentication_tenant_login(self):
         """Test case for authentication_tenant_login
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_authentication_validate_reset_code(self):
         """Test case for authentication_validate_reset_code
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

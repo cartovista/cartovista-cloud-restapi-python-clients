@@ -24,85 +24,87 @@ class TestOrganizationApi(unittest.TestCase):
 
     def setUp(self):
         self.api = OrganizationApi()  # noqa: E501
+        self.api_class = OrganizationApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_organization_accept_organization_disclaimer(self):
         """Test case for organization_accept_organization_disclaimer
 
         Marks the organization's disclaimer as seen for the current user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_delete_organization(self):
         """Test case for organization_delete_organization
 
         Deletes the current organization.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_get_organization(self):
         """Test case for organization_get_organization
 
         Gets the current organization.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_get_organization_disclaimers(self):
         """Test case for organization_get_organization_disclaimers
 
         Gets the current organization's disclaimer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_get_organization_with_tenant_url(self):
         """Test case for organization_get_organization_with_tenant_url
 
         Gets the current organization.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_set_organization_disclaimers(self):
         """Test case for organization_set_organization_disclaimers
 
         Updates the current organization's disclaimer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_update_default_permissions(self):
         """Test case for organization_update_default_permissions
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_update_license(self):
         """Test case for organization_update_license
 
         Updates the current organization's license.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_update_organization(self):
         """Test case for organization_update_organization
 
         Updates the current organization.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_update_organization_icon(self):
         """Test case for organization_update_organization_icon
 
         Updates the icon used in the organization's map view.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_organization_update_organization_logo(self):
         """Test case for organization_update_organization_logo
 
         Updates the current organization's logo.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

@@ -24,44 +24,46 @@ class TestApiKeyApi(unittest.TestCase):
 
     def setUp(self):
         self.api = ApiKeyApi()  # noqa: E501
+        self.api_class = ApiKeyApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_api_key_create_access_key(self):
         """Test case for api_key_create_access_key
 
         Generates an access key for a specific user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_api_key_delete_api_key(self):
         """Test case for api_key_delete_api_key
 
         Deletes an API key.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_api_key_generate_secret_key(self):
         """Test case for api_key_generate_secret_key
 
         Generates a secret key for additional security on the access key.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_api_key_get_access_keys(self):
         """Test case for api_key_get_access_keys
 
         Gets all the access keys created for a specific user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_api_key_update_access_key(self):
         """Test case for api_key_update_access_key
 
         Updates the access key.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

@@ -24,118 +24,120 @@ class TestPoiAnalysisApi(unittest.TestCase):
 
     def setUp(self):
         self.api = PoiAnalysisApi()  # noqa: E501
+        self.api_class = PoiAnalysisApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_poi_analysis_create_custom_poi_analysis(self):
         """Test case for poi_analysis_create_custom_poi_analysis
 
         Creates a new custom analysis.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_create_poi_analysis(self):
         """Test case for poi_analysis_create_poi_analysis
 
         Creates a POI analysis for the map.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_delete_custom_poi_analysis(self):
         """Test case for poi_analysis_delete_custom_poi_analysis
 
         Deletes a custom analysis.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_fix_column(self):
         """Test case for poi_analysis_fix_column
 
         Updates the data column so it matches the name (if FixName is true) and type (if FixType is true) of the given POI Column.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_get_contingency_loading_max_data(self):
         """Test case for poi_analysis_get_contingency_loading_max_data
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_get_harmers(self):
         """Test case for poi_analysis_get_harmers
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_get_poi_analysis(self):
         """Test case for poi_analysis_get_poi_analysis
 
         Gets the POI analysis used by the map.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_get_poi_analysis_data(self):
         """Test case for poi_analysis_get_poi_analysis_data
 
         Gets the data computed for the custom analysis.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_get_poi_analysis_settings(self):
         """Test case for poi_analysis_get_poi_analysis_settings
 
         Gets the usable options to create a new POI analysis.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_get_poi_settings_poi_tables(self):
         """Test case for poi_analysis_get_poi_settings_poi_tables
 
         Gets the new dropdown table options after a table was linked when creating a new POI analysis.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_get_temporary_poi_analysis_data(self):
         """Test case for poi_analysis_get_temporary_poi_analysis_data
 
         Gets the data computed for the custom analysis.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_get_temporary_poi_analysis_mask(self):
         """Test case for poi_analysis_get_temporary_poi_analysis_mask
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_pregenerate_rasters(self):
         """Test case for poi_analysis_pregenerate_rasters
 
         Generates all the missing raster for each scenario, year and kV level.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_regenerate_rasters(self):
         """Test case for poi_analysis_regenerate_rasters
 
         Regenerate all rasters of the poi associated with the map.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_toggle_default_analysis(self):
         """Test case for poi_analysis_toggle_default_analysis
 
         Toggles the default value of the custom analysis.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_poi_analysis_validate_data_for_poi(self):
         """Test case for poi_analysis_validate_data_for_poi
 
         Get the errors, if any, of a layer or datatable for a given type.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

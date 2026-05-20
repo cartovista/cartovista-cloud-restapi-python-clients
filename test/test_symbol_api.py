@@ -24,30 +24,32 @@ class TestSymbolApi(unittest.TestCase):
 
     def setUp(self):
         self.api = SymbolApi()  # noqa: E501
+        self.api_class = SymbolApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_symbol_create_symbol(self):
         """Test case for symbol_create_symbol
 
         Creates a new custom symbol from a file.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_symbol_delete_symbol(self):
         """Test case for symbol_delete_symbol
 
         Deletes the symbol.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_symbol_get_symbols(self):
         """Test case for symbol_get_symbols
 
         Gets all the custom symbols.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

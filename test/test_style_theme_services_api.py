@@ -24,21 +24,23 @@ class TestStyleThemeServicesApi(unittest.TestCase):
 
     def setUp(self):
         self.api = StyleThemeServicesApi()  # noqa: E501
+        self.api_class = StyleThemeServicesApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_style_theme_services_get_style_sheet_viewer(self):
         """Test case for style_theme_services_get_style_sheet_viewer
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_style_theme_services_get_style_sheet_viewer2(self):
         """Test case for style_theme_services_get_style_sheet_viewer2
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

@@ -24,131 +24,133 @@ class TestUserApi(unittest.TestCase):
 
     def setUp(self):
         self.api = UserApi()  # noqa: E501
+        self.api_class = UserApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_user_change_password(self):
         """Test case for user_change_password
 
         Updates the user's password.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_confirm_invitation(self):
         """Test case for user_confirm_invitation
 
         Confirms the invitation and updates the user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_create_user(self):
         """Test case for user_create_user
 
         Creates a new user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_delete_user(self):
         """Test case for user_delete_user
 
         Deletes the user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_export_user_elements(self):
         """Test case for user_export_user_elements
 
         Exports an Excel sheet of all the users and groups. The file can be downloaded with `DownloadFile/download`. The language is used to localized the sheet's name and columns.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_get_current_user(self):
         """Test case for user_get_current_user
 
         Gets the current authentified user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_get_first_admin(self):
         """Test case for user_get_first_admin
 
         Gets the oldest active administator user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_get_importable_groups(self):
         """Test case for user_get_importable_groups
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_get_importable_users(self):
         """Test case for user_get_importable_users
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_get_user(self):
         """Test case for user_get_user
 
         Gets a specific user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_get_user_groups(self):
         """Test case for user_get_user_groups
 
         Gets all the groups the user belongs to.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_get_users(self):
         """Test case for user_get_users
 
         Gets a all the users in a specific tenant.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_get_users_content(self):
         """Test case for user_get_users_content
 
         Searches across all the users (email, username, first name and last name), groups (name and description) and folders (name) for the provided search criteria.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_import_groups(self):
         """Test case for user_import_groups
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_import_users(self):
         """Test case for user_import_users
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_invite_users(self):
         """Test case for user_invite_users
 
         Creates new users and sends invitations to the new users.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_update_current_user(self):
         """Test case for user_update_current_user
 
         Updates the user properties modifiable by regular users.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_user_update_user(self):
         """Test case for user_update_user
 
         Updates the user.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

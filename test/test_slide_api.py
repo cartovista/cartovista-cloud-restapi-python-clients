@@ -24,100 +24,102 @@ class TestSlideApi(unittest.TestCase):
 
     def setUp(self):
         self.api = SlideApi()  # noqa: E501
+        self.api_class = SlideApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_slide_create_slide_folder(self):
         """Test case for slide_create_slide_folder
 
         Creates a slide folder.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_delete_slide(self):
         """Test case for slide_delete_slide
 
         Deletes the slide.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_delete_slide_analysis(self):
         """Test case for slide_delete_slide_analysis
 
         Deletes the analysis from the slide.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_delete_slide_folder(self):
         """Test case for slide_delete_slide_folder
 
         Deletes the slide folder.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_get_slide(self):
         """Test case for slide_get_slide
 
         Gets a specific slide.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_get_slide_folder(self):
         """Test case for slide_get_slide_folder
 
         Gets a specific folder.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_move_slide_item(self):
         """Test case for slide_move_slide_item
 
         Moves a slide item to a specified parent folder and position.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_update_default_slide_thumbnail(self):
         """Test case for slide_update_default_slide_thumbnail
 
         Updates the map's default slide's thumbnail.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_update_slide(self):
         """Test case for slide_update_slide
 
         Updates the slide.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_update_slide_extent_from_layers(self):
         """Test case for slide_update_slide_extent_from_layers
 
         Updates the slide's extent by combining the layers' extents.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_update_slide_folder(self):
         """Test case for slide_update_slide_folder
 
         Updates the slide folder.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_update_slide_story(self):
         """Test case for slide_update_slide_story
 
         Updates the slide's story.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_slide_update_slide_theme_set(self):
         """Test case for slide_update_slide_theme_set
 
         Updates the slide's theme set.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

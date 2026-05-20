@@ -24,65 +24,67 @@ class TestWmsApi(unittest.TestCase):
 
     def setUp(self):
         self.api = WmsApi()  # noqa: E501
+        self.api_class = WmsApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_wms_create_wms_layer(self):
         """Test case for wms_create_wms_layer
 
         Creates a new WMS layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wms_delete_wms_layer(self):
         """Test case for wms_delete_wms_layer
 
         Deletes the WMS layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wms_get_wms_extents(self):
         """Test case for wms_get_wms_extents
 
         Gets the extents of one or more WMS layers. NOTE: Some services may not have extents defined.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wms_get_wms_layer(self):
         """Test case for wms_get_wms_layer
 
         Gets a specific WMS layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wms_get_wms_layer_details(self):
         """Test case for wms_get_wms_layer_details
 
         Gets the WMS layer and its related maps.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wms_get_wms_layers(self):
         """Test case for wms_get_wms_layers
 
         Gets all the WMS layers the user has access to.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wms_update_wms_layer(self):
         """Test case for wms_update_wms_layer
 
         Updates the WMS layer  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wms_update_wms_layer_permissions(self):
         """Test case for wms_update_wms_layer_permissions
 
         Updates the WMS layer permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

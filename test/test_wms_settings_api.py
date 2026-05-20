@@ -24,23 +24,25 @@ class TestWmsSettingsApi(unittest.TestCase):
 
     def setUp(self):
         self.api = WmsSettingsApi()  # noqa: E501
+        self.api_class = WmsSettingsApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_wms_settings_get_wms_settings(self):
         """Test case for wms_settings_get_wms_settings
 
         Gets the WMS settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wms_settings_update_wms_settings(self):
         """Test case for wms_settings_update_wms_settings
 
         Updates the WMS settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

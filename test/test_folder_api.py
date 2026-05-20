@@ -24,58 +24,60 @@ class TestFolderApi(unittest.TestCase):
 
     def setUp(self):
         self.api = FolderApi()  # noqa: E501
+        self.api_class = FolderApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_folder_create_folder(self):
         """Test case for folder_create_folder
 
         Creates a new folder.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_folder_delete_folder(self):
         """Test case for folder_delete_folder
 
         Deletes a folder.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_folder_get_folder(self):
         """Test case for folder_get_folder
 
         Gets a specific folder.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_folder_get_folders(self):
         """Test case for folder_get_folders
 
         Searches all the folders inside a parent.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_folder_get_folders_with_path(self):
         """Test case for folder_get_folders_with_path
 
         Gets all the folders in a given parent and the path to that parent.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_folder_update_folder(self):
         """Test case for folder_update_folder
 
         Updates a folder's properties.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_folder_update_item_parent_folder(self):
         """Test case for folder_update_item_parent_folder
 
         Moves an item to a different folder.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

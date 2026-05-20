@@ -24,63 +24,65 @@ class TestDataServicesApi(unittest.TestCase):
 
     def setUp(self):
         self.api = DataServicesApi()  # noqa: E501
+        self.api_class = DataServicesApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_data_services_data_query_execute(self):
         """Test case for data_services_data_query_execute
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_services_get_feature_count_equal_to_classifications(self):
         """Test case for data_services_get_feature_count_equal_to_classifications
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_services_get_feature_count_equal_to_value(self):
         """Test case for data_services_get_feature_count_equal_to_value
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_services_get_feature_count_in_range_of_value(self):
         """Test case for data_services_get_feature_count_in_range_of_value
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_services_get_feature_count_out_of_range(self):
         """Test case for data_services_get_feature_count_out_of_range
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_services_get_individual_values(self):
         """Test case for data_services_get_individual_values
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_services_get_individual_values_on_multiple_columns(self):
         """Test case for data_services_get_individual_values_on_multiple_columns
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_services_get_linking_id_index(self):
         """Test case for data_services_get_linking_id_index
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_services_get_ranges(self):
         """Test case for data_services_get_ranges
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

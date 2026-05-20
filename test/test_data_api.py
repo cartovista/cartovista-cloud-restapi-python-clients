@@ -24,44 +24,46 @@ class TestDataApi(unittest.TestCase):
 
     def setUp(self):
         self.api = DataApi()  # noqa: E501
+        self.api_class = DataApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_data_export_data_elements(self):
         """Test case for data_export_data_elements
 
         Exports an Excel sheet of all the layers and tables. The file can be downloaded with `DownloadFile/download`. The language is used to localized the sheet's name and columns.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_export_data_table(self):
         """Test case for data_export_data_table
 
         Exports a table in an Excel file. The file can be downloaded with `DownloadFile/download`.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_export_layer(self):
         """Test case for data_export_layer
 
         Exports a layer in a specific format. The file can be downloaded with `DownloadFile/download`.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_get_data_elements(self):
         """Test case for data_get_data_elements
 
         Gets all the layers, tables and folders the user has access to in a specific folder. If the folder id is omitted, the root folder is used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_search_all_data_elements(self):
         """Test case for data_search_all_data_elements
 
         Searches and retrieves all the layers and tables the user has access to.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

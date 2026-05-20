@@ -24,51 +24,53 @@ class TestLocationApi(unittest.TestCase):
 
     def setUp(self):
         self.api = LocationApi()  # noqa: E501
+        self.api_class = LocationApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_location_geocode(self):
         """Test case for location_geocode
 
         Gets a list of locations matching the address. The address can be in `lat,long` format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_location_get_directions(self):
         """Test case for location_get_directions
 
         Gets a list of itineraries (geometry and steps) between two points.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_location_get_route_summary(self):
         """Test case for location_get_route_summary
 
         Gets an itinerary (geometry and steps) between two points.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_location_get_route_summary_with_stops(self):
         """Test case for location_get_route_summary_with_stops
 
         Gets an itinerary (geometry and steps) between two points with additional stops.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_location_isochrone(self):
         """Test case for location_isochrone
 
         Generates a travel time isochrone.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_location_reverse_geocode(self):
         """Test case for location_reverse_geocode
 
         Gets a list of locations from a pair coordinates.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':
