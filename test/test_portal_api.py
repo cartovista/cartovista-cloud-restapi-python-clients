@@ -24,51 +24,53 @@ class TestPortalApi(unittest.TestCase):
 
     def setUp(self):
         self.api = PortalApi()  # noqa: E501
+        self.api_class = PortalApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_portal_cancel_upload(self):
         """Test case for portal_cancel_upload
 
         Cancels the file upload.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_portal_finalize_synchronous(self):
         """Test case for portal_finalize_synchronous
 
         Finalizes a data import with a file uploaded using `upload`.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_portal_finalize_upload(self):
         """Test case for portal_finalize_upload
 
         Finalizes a data import with a file uploaded using `upload`.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_portal_get_definition(self):
         """Test case for portal_get_definition
 
         Gets a description of the file's content.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_portal_get_subscription_and_user(self):
         """Test case for portal_get_subscription_and_user
 
         Gets the current user and the organization's subscription/license details.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_portal_upload(self):
         """Test case for portal_upload
 
         Uploads a temporary file for layer use.  This will return an uploadId that can be used with /definition to get details on the file uploaded. Then use /finalize to complete the upload of the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

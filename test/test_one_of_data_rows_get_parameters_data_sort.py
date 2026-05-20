@@ -17,22 +17,25 @@ import unittest
 import cartovista_cloud_clients
 from cartovista_cloud_clients.models.one_of_data_rows_get_parameters_data_sort import OneOfDataRowsGetParametersDataSort  # noqa: E501
 from cartovista_cloud_clients.rest import ApiException
+from generated_test_utils import build_model_instance
 
 
 class TestOneOfDataRowsGetParametersDataSort(unittest.TestCase):
     """OneOfDataRowsGetParametersDataSort unit test stubs"""
 
     def setUp(self):
-        pass
+        self.model_class = OneOfDataRowsGetParametersDataSort
 
     def tearDown(self):
-        pass
+        self.model_class = None
 
     def testOneOfDataRowsGetParametersDataSort(self):
         """Test OneOfDataRowsGetParametersDataSort"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = cartovista_cloud_clients.models.one_of_data_rows_get_parameters_data_sort.OneOfDataRowsGetParametersDataSort()  # noqa: E501
-        pass
+        model = build_model_instance(self.model_class)
+        self.assertIsInstance(model, self.model_class)
+        self.assertEqual(set(model.swagger_types), set(model.to_dict()))
+        self.assertEqual(model.to_str(), repr(model))
+        self.assertEqual(model, build_model_instance(self.model_class))
 
 
 if __name__ == '__main__':

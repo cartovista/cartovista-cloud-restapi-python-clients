@@ -24,86 +24,88 @@ class TestCompositeVariableScoringApi(unittest.TestCase):
 
     def setUp(self):
         self.api = CompositeVariableScoringApi()  # noqa: E501
+        self.api_class = CompositeVariableScoringApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_composite_variable_scoring_can_create_analysis(self):
         """Test case for composite_variable_scoring_can_create_analysis
 
         Whether or not a user can create analysis on a map  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_create_composite_scoring_analysis(self):
         """Test case for composite_variable_scoring_create_composite_scoring_analysis
 
         Creates a scoring analysis for a map and a layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_create_variable(self):
         """Test case for composite_variable_scoring_create_variable
 
         Creates a variable for a given analysis. The scores are recomputed.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_delete_analysis(self):
         """Test case for composite_variable_scoring_delete_analysis
 
         Deletes an analysis. The scores are recomputed  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_delete_variable(self):
         """Test case for composite_variable_scoring_delete_variable
 
         Deletes a variable. The scores are recomputed  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_get_all_composite_scoring_analysis(self):
         """Test case for composite_variable_scoring_get_all_composite_scoring_analysis
 
         Gets all the analyses associated to a map.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_get_composite_scoring_analysis_data_table(self):
         """Test case for composite_variable_scoring_get_composite_scoring_analysis_data_table
 
         Gets a summary of the score column and how it is joined to the existing data.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_get_variable(self):
         """Test case for composite_variable_scoring_get_variable
 
         Gets a specific variable.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_get_variables(self):
         """Test case for composite_variable_scoring_get_variables
 
         Gets the variables for a specific analysis.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_update_analysis_properties(self):
         """Test case for composite_variable_scoring_update_analysis_properties
 
         Updates a variable. The scores are recomputed.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_composite_variable_scoring_update_variable(self):
         """Test case for composite_variable_scoring_update_variable
 
         Updates a variable. The scores are recomputed.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

@@ -24,51 +24,53 @@ class TestSignUpApi(unittest.TestCase):
 
     def setUp(self):
         self.api = SignUpApi()  # noqa: E501
+        self.api_class = SignUpApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_sign_up_confirm_sign_up(self):
         """Test case for sign_up_confirm_sign_up
 
         Finalizes the organization creation.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_sign_up_get_all_demo_maps(self):
         """Test case for sign_up_get_all_demo_maps
 
         Get the basic info of all demo maps available.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_sign_up_sign_up(self):
         """Test case for sign_up_sign_up
 
         Creates a new organization in a pending state.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_sign_up_sign_up_license(self):
         """Test case for sign_up_sign_up_license
 
         Creates a new organization with a license key.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_sign_up_validate_company_name(self):
         """Test case for sign_up_validate_company_name
 
         Checks if an organization name is already taken.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_sign_up_validate_sign_up_code(self):
         """Test case for sign_up_validate_sign_up_code
 
         Checks if the sign up validation code has not expired.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

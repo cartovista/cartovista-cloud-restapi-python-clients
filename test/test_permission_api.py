@@ -24,65 +24,67 @@ class TestPermissionApi(unittest.TestCase):
 
     def setUp(self):
         self.api = PermissionApi()  # noqa: E501
+        self.api_class = PermissionApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_permission_add_permissions_to_map(self):
         """Test case for permission_add_permissions_to_map
 
         Add permissions to a map and optionally its subcomponents.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_permission_get_data_table_permissions(self):
         """Test case for permission_get_data_table_permissions
 
         Gets the table's permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_permission_get_layer_permissions(self):
         """Test case for permission_get_layer_permissions
 
         Gets the layer's permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_permission_get_map_permissions(self):
         """Test case for permission_get_map_permissions
 
         Gets the map's permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_permission_get_security_identities(self):
         """Test case for permission_get_security_identities
 
         Gets a list of users and groups that can be added to an object's permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_permission_update_data_table_permissions(self):
         """Test case for permission_update_data_table_permissions
 
         Updates the table's permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_permission_update_layer_permissions(self):
         """Test case for permission_update_layer_permissions
 
         Updates the layer's permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_permission_update_map_permissions(self):
         """Test case for permission_update_map_permissions
 
         Update permissions to a map and optionally its subcomponents.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

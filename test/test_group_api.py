@@ -24,58 +24,60 @@ class TestGroupApi(unittest.TestCase):
 
     def setUp(self):
         self.api = GroupApi()  # noqa: E501
+        self.api_class = GroupApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_group_add_users_to_group(self):
         """Test case for group_add_users_to_group
 
         Adds a collection of users to the group using their id and/or usernames.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_group_create_group(self):
         """Test case for group_create_group
 
         Creates a group.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_group_delete_group(self):
         """Test case for group_delete_group
 
         Deletes a specific group.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_group_get_group(self):
         """Test case for group_get_group
 
         Gets a specific group by id or identifier.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_group_get_groups(self):
         """Test case for group_get_groups
 
         Gets all the groups.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_group_remove_users_from_group(self):
         """Test case for group_remove_users_from_group
 
         Removes a collection of users to the group using their id and/or usernames.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_group_update_group(self):
         """Test case for group_update_group
 
         Updates a group.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

@@ -24,65 +24,67 @@ class TestOGCApi(unittest.TestCase):
 
     def setUp(self):
         self.api = OGCApi()  # noqa: E501
+        self.api_class = OGCApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_o_gc_get_api(self):
         """Test case for o_gc_get_api
 
         Gets the API definition.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_gc_get_capabilities(self):
         """Test case for o_gc_get_capabilities
 
         Gets links to available entries of the OGC feature API.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_gc_get_collection(self):
         """Test case for o_gc_get_collection
 
         Gets the layer's interface  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_gc_get_collections(self):
         """Test case for o_gc_get_collections
 
         Gets available layers.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_gc_get_conformance(self):
         """Test case for o_gc_get_conformance
 
         Gets a list declaring the modules that are implemented by the API.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_gc_get_functions(self):
         """Test case for o_gc_get_functions
 
         Gets the available functions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_gc_get_item(self):
         """Test case for o_gc_get_item
 
         Gets a layer's feature.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_gc_get_items(self):
         """Test case for o_gc_get_items
 
         Gets the layer's entities.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

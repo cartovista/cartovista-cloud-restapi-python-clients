@@ -17,22 +17,25 @@ import unittest
 import cartovista_cloud_clients
 from cartovista_cloud_clients.models.layer_identifier_update_from_zip_body import LayerIdentifierUpdateFromZipBody  # noqa: E501
 from cartovista_cloud_clients.rest import ApiException
+from generated_test_utils import build_model_instance
 
 
 class TestLayerIdentifierUpdateFromZipBody(unittest.TestCase):
     """LayerIdentifierUpdateFromZipBody unit test stubs"""
 
     def setUp(self):
-        pass
+        self.model_class = LayerIdentifierUpdateFromZipBody
 
     def tearDown(self):
-        pass
+        self.model_class = None
 
     def testLayerIdentifierUpdateFromZipBody(self):
         """Test LayerIdentifierUpdateFromZipBody"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = cartovista_cloud_clients.models.layer_identifier_update_from_zip_body.LayerIdentifierUpdateFromZipBody()  # noqa: E501
-        pass
+        model = build_model_instance(self.model_class)
+        self.assertIsInstance(model, self.model_class)
+        self.assertEqual(set(model.swagger_types), set(model.to_dict()))
+        self.assertEqual(model.to_str(), repr(model))
+        self.assertEqual(model, build_model_instance(self.model_class))
 
 
 if __name__ == '__main__':

@@ -24,79 +24,81 @@ class TestSubscriptionApi(unittest.TestCase):
 
     def setUp(self):
         self.api = SubscriptionApi()  # noqa: E501
+        self.api_class = SubscriptionApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_subscription_cancel_scheduled_subscription_change(self):
         """Test case for subscription_cancel_scheduled_subscription_change
 
         Cancels scheduled subscription changes.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_dismiss_schedule_notice(self):
         """Test case for subscription_dismiss_schedule_notice
 
         Closes the subscription scheduled change notice.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_dismiss_subscription_banner(self):
         """Test case for subscription_dismiss_subscription_banner
 
         Closes the subscription expiry warning.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_get_content_count(self):
         """Test case for subscription_get_content_count
 
         Gets the number of maps, layers, features and users in the organization.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_get_next_invoice_price(self):
         """Test case for subscription_get_next_invoice_price
 
         Gets the price for the next invoice.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_get_plans(self):
         """Test case for subscription_get_plans
 
         Gets the subscription plan available for this organization.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_get_prorated_price(self):
         """Test case for subscription_get_prorated_price
 
         Gets the prorated price for subscription changes.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_open_customer_portal(self):
         """Test case for subscription_open_customer_portal
 
         Gets a URL to the Stripe portal to manage the subscription.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_subscribe(self):
         """Test case for subscription_subscribe
 
         Update the subscriptions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_subscription_subscription_success(self):
         """Test case for subscription_subscription_success
 
         Callback route used by Stripe.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

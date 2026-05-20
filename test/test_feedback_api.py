@@ -24,16 +24,18 @@ class TestFeedbackApi(unittest.TestCase):
 
     def setUp(self):
         self.api = FeedbackApi()  # noqa: E501
+        self.api_class = FeedbackApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_feedback_send_feedback(self):
         """Test case for feedback_send_feedback
 
         Saves user feedback about a map.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

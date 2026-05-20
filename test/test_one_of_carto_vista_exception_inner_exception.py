@@ -17,22 +17,25 @@ import unittest
 import cartovista_cloud_clients
 from cartovista_cloud_clients.models.one_of_carto_vista_exception_inner_exception import OneOfCartoVistaExceptionInnerException  # noqa: E501
 from cartovista_cloud_clients.rest import ApiException
+from generated_test_utils import build_model_instance
 
 
 class TestOneOfCartoVistaExceptionInnerException(unittest.TestCase):
     """OneOfCartoVistaExceptionInnerException unit test stubs"""
 
     def setUp(self):
-        pass
+        self.model_class = OneOfCartoVistaExceptionInnerException
 
     def tearDown(self):
-        pass
+        self.model_class = None
 
     def testOneOfCartoVistaExceptionInnerException(self):
         """Test OneOfCartoVistaExceptionInnerException"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = cartovista_cloud_clients.models.one_of_carto_vista_exception_inner_exception.OneOfCartoVistaExceptionInnerException()  # noqa: E501
-        pass
+        model = build_model_instance(self.model_class)
+        self.assertIsInstance(model, self.model_class)
+        self.assertEqual(set(model.swagger_types), set(model.to_dict()))
+        self.assertEqual(model.to_str(), repr(model))
+        self.assertEqual(model, build_model_instance(self.model_class))
 
 
 if __name__ == '__main__':

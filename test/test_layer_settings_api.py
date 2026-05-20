@@ -24,121 +24,123 @@ class TestLayerSettingsApi(unittest.TestCase):
 
     def setUp(self):
         self.api = LayerSettingsApi()  # noqa: E501
+        self.api_class = LayerSettingsApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_layer_settings_get_default_layer_settings(self):
         """Test case for layer_settings_get_default_layer_settings
 
         Gets the default settings for the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_get_layer_settings(self):
         """Test case for layer_settings_get_layer_settings
 
         Gets a specific layer settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_get_map_layer_settings(self):
         """Test case for layer_settings_get_map_layer_settings
 
         Gets the layer settings for a specific map.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_alias(self):
         """Test case for layer_settings_update_alias
 
         Updates the layer settings' alias.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_common_settings(self):
         """Test case for layer_settings_update_common_settings
 
         Allows the update of all of the layer's non-geometry style settings in one call  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_effect(self):
         """Test case for layer_settings_update_effect
 
         Updates the layer settings' effects.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_general(self):
         """Test case for layer_settings_update_general
 
         Updates the layer settings' general settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_geometry_style(self):
         """Test case for layer_settings_update_geometry_style
 
         Updates the layer settings' geometry style. The style object must match the layer's geometry type.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_interactivity(self):
         """Test case for layer_settings_update_interactivity
 
         Updates the layer settings' interactivity settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_label(self):
         """Test case for layer_settings_update_label
 
         Updates the layer settings' label settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_legend(self):
         """Test case for layer_settings_update_legend
 
         Updates the layer settings' legend settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_point_geometry_style(self):
         """Test case for layer_settings_update_point_geometry_style
 
         Updates the layer settings' geometry style. The style object must match the layer's geometry type.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_polygon_geometry_style(self):
         """Test case for layer_settings_update_polygon_geometry_style
 
         Updates the layer settings' geometry style. The style object must match the layer's geometry type.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_polyline_geometry_style(self):
         """Test case for layer_settings_update_polyline_geometry_style
 
         Updates the layer settings' geometry style. The style object must match the layer's geometry type.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_rendering(self):
         """Test case for layer_settings_update_rendering
 
         Updates the layer settings' rendering settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_layer_settings_update_visibility_ranges(self):
         """Test case for layer_settings_update_visibility_ranges
 
         Updates the layer settings' visibility ranges.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

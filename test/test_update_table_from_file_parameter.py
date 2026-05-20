@@ -17,22 +17,25 @@ import unittest
 import cartovista_cloud_clients
 from cartovista_cloud_clients.models.update_table_from_file_parameter import UpdateTableFromFileParameter  # noqa: E501
 from cartovista_cloud_clients.rest import ApiException
+from generated_test_utils import build_model_instance
 
 
 class TestUpdateTableFromFileParameter(unittest.TestCase):
     """UpdateTableFromFileParameter unit test stubs"""
 
     def setUp(self):
-        pass
+        self.model_class = UpdateTableFromFileParameter
 
     def tearDown(self):
-        pass
+        self.model_class = None
 
     def testUpdateTableFromFileParameter(self):
         """Test UpdateTableFromFileParameter"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = cartovista_cloud_clients.models.update_table_from_file_parameter.UpdateTableFromFileParameter()  # noqa: E501
-        pass
+        model = build_model_instance(self.model_class)
+        self.assertIsInstance(model, self.model_class)
+        self.assertEqual(set(model.swagger_types), set(model.to_dict()))
+        self.assertEqual(model.to_str(), repr(model))
+        self.assertEqual(model, build_model_instance(self.model_class))
 
 
 if __name__ == '__main__':

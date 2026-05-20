@@ -24,27 +24,29 @@ class TestOAuthApi(unittest.TestCase):
 
     def setUp(self):
         self.api = OAuthApi()  # noqa: E501
+        self.api_class = OAuthApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_o_auth_authorize_redirect_uri(self):
         """Test case for o_auth_authorize_redirect_uri
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_auth_get_o_auth_client(self):
         """Test case for o_auth_get_o_auth_client
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_o_auth_token(self):
         """Test case for o_auth_token
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

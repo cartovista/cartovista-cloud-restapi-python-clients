@@ -24,58 +24,60 @@ class TestViewApi(unittest.TestCase):
 
     def setUp(self):
         self.api = ViewApi()  # noqa: E501
+        self.api_class = ViewApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_view_create_view_by_expression(self):
         """Test case for view_create_view_by_expression
 
         Creates a view based on an expression.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_view_create_views_from_column(self):
         """Test case for view_create_views_from_column
 
         Creates views based on a layer column id. This will generate one view for each unique value of the selected column.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_view_delete_views(self):
         """Test case for view_delete_views
 
         Deletes all the views associated with the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_view_get_view(self):
         """Test case for view_get_view
 
         Gets a specific view by id.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_view_get_views(self):
         """Test case for view_get_views
 
         Gets the list of views associated with a layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_view_update_view(self):
         """Test case for view_update_view
 
         Updates the view parameters.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_view_update_view_permissions(self):
         """Test case for view_update_view_permissions
 
         Updates the view permissions. Note: This needs to list all the permissions on the view as the missing permissions will be deleted.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

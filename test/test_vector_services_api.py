@@ -24,75 +24,77 @@ class TestVectorServicesApi(unittest.TestCase):
 
     def setUp(self):
         self.api = VectorServicesApi()  # noqa: E501
+        self.api_class = VectorServicesApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_vector_services_get_clusters_count(self):
         """Test case for vector_services_get_clusters_count
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_clusters_representation(self):
         """Test case for vector_services_get_clusters_representation
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_configuration(self):
         """Test case for vector_services_get_configuration
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_configurations(self):
         """Test case for vector_services_get_configurations
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_features(self):
         """Test case for vector_services_get_features
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_features_combine_min_max_value(self):
         """Test case for vector_services_get_features_combine_min_max_value
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_features_extent(self):
         """Test case for vector_services_get_features_extent
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_heat_map_items(self):
         """Test case for vector_services_get_heat_map_items
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_intersecting_geometries(self):
         """Test case for vector_services_get_intersecting_geometries
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_selection_stack(self):
         """Test case for vector_services_get_selection_stack
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_vector_services_get_vector_tile(self):
         """Test case for vector_services_get_vector_tile
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

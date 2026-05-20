@@ -24,197 +24,199 @@ class TestFeatureApi(unittest.TestCase):
 
     def setUp(self):
         self.api = FeatureApi()  # noqa: E501
+        self.api_class = FeatureApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_feature_create_features_from_geo_json(self):
         """Test case for feature_create_features_from_geo_json
 
         Creates a feature using the provided geometry in GeoJSON format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_create_features_from_long_lat(self):
         """Test case for feature_create_features_from_long_lat
 
         Creates features from the provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_create_features_from_wkt(self):
         """Test case for feature_create_features_from_wkt
 
         Creates a feature using the provided geometry in WKT format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_create_update_features_from_geo_json(self):
         """Test case for feature_create_update_features_from_geo_json
 
         Creates a feature or updates it if it already exists with the input geometry in GeoJSON format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_create_update_features_from_long_lat(self):
         """Test case for feature_create_update_features_from_long_lat
 
         Creates features or update them if they already exist with provided latutude and longitude coordinates. The layer must be a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_create_update_features_from_wkt(self):
         """Test case for feature_create_update_features_from_wkt
 
         Creates a feature or updates it if it already exists with the input geometry in WKT format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_delete_feature(self):
         """Test case for feature_delete_feature
 
         Deletes a specific feature.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_delete_features(self):
         """Test case for feature_delete_features
 
         Deletes a set of features. Invalid identifiers are ignored.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_delete_features_by_values(self):
         """Test case for feature_delete_features_by_values
 
         Deletes all the features where the column values are included in the list of values.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_editable_feature_data(self):
         """Test case for feature_get_editable_feature_data
 
         Gets a feature's data including the editable joined tables.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_feature_data(self):
         """Test case for feature_get_feature_data
 
         Gets a feature's data.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_feature_in_geo_json(self):
         """Test case for feature_get_feature_in_geo_json
 
         Gets a specific feature with its geometry in GeoJSON format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_feature_in_long_lat(self):
         """Test case for feature_get_feature_in_long_lat
 
         Gets a specific feature with its coordinates. The layer must be a point layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_feature_in_wkt(self):
         """Test case for feature_get_feature_in_wkt
 
         Gets a specific feature with its geometry in WKT format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_features(self):
         """Test case for feature_get_features
 
         Gets the rows in the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_features_at_location_in_geo_json(self):
         """Test case for feature_get_features_at_location_in_geo_json
 
         Return all the features with all their associated data intersecting the specified coordinates.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_features_at_location_in_long_lat(self):
         """Test case for feature_get_features_at_location_in_long_lat
 
         Return all the features with all their associated data intersecting the specified coordinates. Important: this api call will only work if the queried layer has points. For any other geometry type, use the GeoJSON or WKT call instead.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_features_at_location_in_wkt(self):
         """Test case for feature_get_features_at_location_in_wkt
 
         Return all the features with all their associated data intersecting the specified coordinates.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_features_in_geo_json(self):
         """Test case for feature_get_features_in_geo_json
 
         Gets the layer's features with the geometries in GeoJSON format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_features_in_long_lat(self):
         """Test case for feature_get_features_in_long_lat
 
         Retrives the layer's features with their coordinates. The layer must be a point layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_get_features_in_wkt(self):
         """Test case for feature_get_features_in_wkt
 
         Gets the layer's features with the geometries in WKT format.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_update_from_geo_json(self):
         """Test case for feature_update_from_geo_json
 
         Updates a feature's geometry from a GeoJSON.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_update_from_long_lat(self):
         """Test case for feature_update_from_long_lat
 
         Updates a feature's geometry with coordinates. The layer must a point layer. Use \"proj4\": \"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs\".  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_update_geometry_from_wkt(self):
         """Test case for feature_update_geometry_from_wkt
 
         Updates a feature's geometry from a WKT.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_update_many_values(self):
         """Test case for feature_update_many_values
 
         Updates a feature's data. A subset of the columns can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_update_values(self):
         """Test case for feature_update_values
 
         Updates a feature's data. A subset of the columns can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_feature_update_values_and_joins(self):
         """Test case for feature_update_values_and_joins
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

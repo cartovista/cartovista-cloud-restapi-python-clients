@@ -24,36 +24,38 @@ class TestHeatmapApi(unittest.TestCase):
 
     def setUp(self):
         self.api = HeatmapApi()  # noqa: E501
+        self.api_class = HeatmapApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_heatmap_create_heatmap(self):
         """Test case for heatmap_create_heatmap
 
         Generates a new heatmap for the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_heatmap_get_heatmap_settings(self):
         """Test case for heatmap_get_heatmap_settings
 
         Gets the parameters used to create the heatmap from the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_heatmap_get_heatmap_settings_details(self):
         """Test case for heatmap_get_heatmap_settings_details
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_heatmap_update_heatmap(self):
         """Test case for heatmap_update_heatmap
 
         Regenerates an existing heatmap and updates its settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

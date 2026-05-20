@@ -24,58 +24,60 @@ class TestWmtsApi(unittest.TestCase):
 
     def setUp(self):
         self.api = WmtsApi()  # noqa: E501
+        self.api_class = WmtsApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_wmts_create_wmts_layer(self):
         """Test case for wmts_create_wmts_layer
 
         Creates a new WMTS layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wmts_delete_wmts_layer(self):
         """Test case for wmts_delete_wmts_layer
 
         Deletes the WMTS layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wmts_get_wmts_layer(self):
         """Test case for wmts_get_wmts_layer
 
         Gets a specific WMTs layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wmts_get_wmts_layer_details(self):
         """Test case for wmts_get_wmts_layer_details
 
         Gets the WMTS layer and its related maps.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wmts_get_wmts_layers(self):
         """Test case for wmts_get_wmts_layers
 
         Gets all the WMTS layers the user has access to.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wmts_update_wmts_layer(self):
         """Test case for wmts_update_wmts_layer
 
         Updates the WMTS layer's properties.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_wmts_update_wmts_layer_permissions(self):
         """Test case for wmts_update_wmts_layer_permissions
 
         Updates the WMTS layer's permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

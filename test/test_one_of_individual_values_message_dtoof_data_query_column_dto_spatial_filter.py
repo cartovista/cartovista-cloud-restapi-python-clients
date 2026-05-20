@@ -17,22 +17,25 @@ import unittest
 import cartovista_cloud_clients
 from cartovista_cloud_clients.models.one_of_individual_values_message_dtoof_data_query_column_dto_spatial_filter import OneOfIndividualValuesMessageDTOOfDataQueryColumnDTOSpatialFilter  # noqa: E501
 from cartovista_cloud_clients.rest import ApiException
+from generated_test_utils import build_model_instance
 
 
 class TestOneOfIndividualValuesMessageDTOOfDataQueryColumnDTOSpatialFilter(unittest.TestCase):
     """OneOfIndividualValuesMessageDTOOfDataQueryColumnDTOSpatialFilter unit test stubs"""
 
     def setUp(self):
-        pass
+        self.model_class = OneOfIndividualValuesMessageDTOOfDataQueryColumnDTOSpatialFilter
 
     def tearDown(self):
-        pass
+        self.model_class = None
 
     def testOneOfIndividualValuesMessageDTOOfDataQueryColumnDTOSpatialFilter(self):
         """Test OneOfIndividualValuesMessageDTOOfDataQueryColumnDTOSpatialFilter"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = cartovista_cloud_clients.models.one_of_individual_values_message_dtoof_data_query_column_dto_spatial_filter.OneOfIndividualValuesMessageDTOOfDataQueryColumnDTOSpatialFilter()  # noqa: E501
-        pass
+        model = build_model_instance(self.model_class)
+        self.assertIsInstance(model, self.model_class)
+        self.assertEqual(set(model.swagger_types), set(model.to_dict()))
+        self.assertEqual(model.to_str(), repr(model))
+        self.assertEqual(model, build_model_instance(self.model_class))
 
 
 if __name__ == '__main__':

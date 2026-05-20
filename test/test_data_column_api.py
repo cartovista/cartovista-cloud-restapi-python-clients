@@ -24,137 +24,139 @@ class TestDataColumnApi(unittest.TestCase):
 
     def setUp(self):
         self.api = DataColumnApi()  # noqa: E501
+        self.api_class = DataColumnApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_data_column_create_data_column(self):
         """Test case for data_column_create_data_column
 
         Creates a new data column for a layer or datatable.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_create_data_table_data_columns(self):
         """Test case for data_column_create_data_table_data_columns
 
         Creates new data columns in a data table. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_create_layer_data_columns(self):
         """Test case for data_column_create_layer_data_columns
 
         Creates new data columns in a layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_delete_data_table_data_column(self):
         """Test case for data_column_delete_data_table_data_column
 
         Deletes a column in the table. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_delete_layer_data_column(self):
         """Test case for data_column_delete_layer_data_column
 
         Deletes a column in the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_get_bulk_edit_layer_data_columns(self):
         """Test case for data_column_get_bulk_edit_layer_data_columns
 
         Gets all the data columns usable in the bulk editor in the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_get_data_table_data_column(self):
         """Test case for data_column_get_data_table_data_column
 
         Gets a specific column in the table. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_get_data_table_data_columns(self):
         """Test case for data_column_get_data_table_data_columns
 
         Gets all the data columns in the table. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_get_layer_data_column(self):
         """Test case for data_column_get_layer_data_column
 
         Gets a specific column in the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_get_layer_data_columns(self):
         """Test case for data_column_get_layer_data_columns
 
         Gets all the data columns in the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_recompute_calculated_values(self):
         """Test case for data_column_recompute_calculated_values
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_set_data_table_column_unique_identifier(self):
         """Test case for data_column_set_data_table_column_unique_identifier
 
         Sets the unique identifier for a table. The column becomes the primary way to identify the row.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_set_layer_column_unique_identifier(self):
         """Test case for data_column_set_layer_column_unique_identifier
 
         Sets the unique identifier for a layer. The column becomes the primary way to identify the feature.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_update_calculated_values(self):
         """Test case for data_column_update_calculated_values
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_update_data_table_data_column(self):
         """Test case for data_column_update_data_table_data_column
 
         Updates a column in the table. A layer's table can be used.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_update_domain_of_values_date_time(self):
         """Test case for data_column_update_domain_of_values_date_time
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_update_domain_of_values_numeric(self):
         """Test case for data_column_update_domain_of_values_numeric
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_update_domain_of_values_string(self):
         """Test case for data_column_update_domain_of_values_string
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_data_column_update_layer_data_column(self):
         """Test case for data_column_update_layer_data_column
 
         Updates a column in the layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

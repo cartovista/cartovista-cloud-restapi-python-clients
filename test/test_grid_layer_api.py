@@ -24,128 +24,130 @@ class TestGridLayerApi(unittest.TestCase):
 
     def setUp(self):
         self.api = GridLayerApi()  # noqa: E501
+        self.api_class = GridLayerApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_grid_layer_add_grid_source(self):
         """Test case for grid_layer_add_grid_source
 
         Add a grid source to an existing grid layer.  Use /Portal/upload and /Portal/upload/.../definition APIs to upload a geotiff file and get it's definition prior to use this API.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_add_grid_sources(self):
         """Test case for grid_layer_add_grid_sources
 
         Add all the bands from a tif file to an existing grid layer as distinct grid sources. If the grid layer is an RGB layer and the file has the required bands, a single RGB grid source will be added instead.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_create_grid_layer(self):
         """Test case for grid_layer_create_grid_layer
 
         Create a grid layer with the specified parameters.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_delete_grid_layer(self):
         """Test case for grid_layer_delete_grid_layer
 
         Delete an existing grid layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_delete_grid_source(self):
         """Test case for grid_layer_delete_grid_source
 
         Delete an existing grid source.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_export_grid_source_subset(self):
         """Test case for grid_layer_export_grid_source_subset
 
         Exports a subset of the grid source. The file can be downloaded with `DownloadFile/download`.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_get_first_grid_source_extents(self):
         """Test case for grid_layer_get_first_grid_source_extents
 
         Gets the extents of the first grid source of each layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_get_grid_layer_by_id(self):
         """Test case for grid_layer_get_grid_layer_by_id
 
         Get a grid layer by identifier.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_get_grid_layer_details(self):
         """Test case for grid_layer_get_grid_layer_details
 
         Gets the grid layer, its grid sources, related maps and settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_get_grid_layers(self):
         """Test case for grid_layer_get_grid_layers
 
         Get the list of all grid layers.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_get_grid_source(self):
         """Test case for grid_layer_get_grid_source
 
         Get a grid source by identifier.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_get_grid_sources_for_grid_layer(self):
         """Test case for grid_layer_get_grid_sources_for_grid_layer
 
         Get all the grid sources associated with the grid layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_get_maps_by_grid_layer(self):
         """Test case for grid_layer_get_maps_by_grid_layer
 
         Gets all the maps that use the grid layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_update_grid_layer(self):
         """Test case for grid_layer_update_grid_layer
 
         Update the properties of an existing grid layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_update_grid_layer_permissions(self):
         """Test case for grid_layer_update_grid_layer_permissions
 
         Updates the grid layer's permissions.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_update_grid_source(self):
         """Test case for grid_layer_update_grid_source
 
         Update the properties of an existing grid source.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_update_grid_source_geotiff(self):
         """Test case for grid_layer_update_grid_source_geotiff
 
         Update the geoTIFF of an existing grid source.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

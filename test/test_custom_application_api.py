@@ -24,39 +24,41 @@ class TestCustomApplicationApi(unittest.TestCase):
 
     def setUp(self):
         self.api = CustomApplicationApi()  # noqa: E501
+        self.api_class = CustomApplicationApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_custom_application_get_custom_application_map_settings(self):
         """Test case for custom_application_get_custom_application_map_settings
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_custom_application_get_custom_application_settings(self):
         """Test case for custom_application_get_custom_application_settings
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_custom_application_toggle_custom_application(self):
         """Test case for custom_application_toggle_custom_application
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_custom_application_update_custom_application_map_settings(self):
         """Test case for custom_application_update_custom_application_map_settings
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_custom_application_update_custom_application_settings(self):
         """Test case for custom_application_update_custom_application_settings
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

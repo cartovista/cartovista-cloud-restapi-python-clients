@@ -17,22 +17,25 @@ import unittest
 import cartovista_cloud_clients
 from cartovista_cloud_clients.models.create_view_by_expression_parameters import CreateViewByExpressionParameters  # noqa: E501
 from cartovista_cloud_clients.rest import ApiException
+from generated_test_utils import build_model_instance
 
 
 class TestCreateViewByExpressionParameters(unittest.TestCase):
     """CreateViewByExpressionParameters unit test stubs"""
 
     def setUp(self):
-        pass
+        self.model_class = CreateViewByExpressionParameters
 
     def tearDown(self):
-        pass
+        self.model_class = None
 
     def testCreateViewByExpressionParameters(self):
         """Test CreateViewByExpressionParameters"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = cartovista_cloud_clients.models.create_view_by_expression_parameters.CreateViewByExpressionParameters()  # noqa: E501
-        pass
+        model = build_model_instance(self.model_class)
+        self.assertIsInstance(model, self.model_class)
+        self.assertEqual(set(model.swagger_types), set(model.to_dict()))
+        self.assertEqual(model.to_str(), repr(model))
+        self.assertEqual(model, build_model_instance(self.model_class))
 
 
 if __name__ == '__main__':

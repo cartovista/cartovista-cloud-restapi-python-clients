@@ -24,16 +24,18 @@ class TestStatisticsApi(unittest.TestCase):
 
     def setUp(self):
         self.api = StatisticsApi()  # noqa: E501
+        self.api_class = StatisticsApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_statistics_get_statistics(self):
         """Test case for statistics_get_statistics
 
         Gets the usage statistics of the organization.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

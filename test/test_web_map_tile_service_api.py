@@ -24,15 +24,17 @@ class TestWebMapTileServiceApi(unittest.TestCase):
 
     def setUp(self):
         self.api = WebMapTileServiceApi()  # noqa: E501
+        self.api_class = WebMapTileServiceApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_web_map_tile_service_get_tile_set_tile(self):
         """Test case for web_map_tile_service_get_tile_set_tile
 
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':

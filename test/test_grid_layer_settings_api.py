@@ -24,65 +24,67 @@ class TestGridLayerSettingsApi(unittest.TestCase):
 
     def setUp(self):
         self.api = GridLayerSettingsApi()  # noqa: E501
+        self.api_class = GridLayerSettingsApi
 
     def tearDown(self):
-        pass
+        self.api = None
+        self.api_class = None
 
     def test_grid_layer_settings_get_default_grid_layer_settings(self):
         """Test case for grid_layer_settings_get_default_grid_layer_settings
 
         Gets the default settings for the grid layer.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_settings_get_grid_layer_settings(self):
         """Test case for grid_layer_settings_get_grid_layer_settings
 
         Gets a specific grid layer settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_settings_get_map_grid_layer_settings(self):
         """Test case for grid_layer_settings_get_map_grid_layer_settings
 
         Gets the grid layer's settings for a specific map.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_settings_update_alias(self):
         """Test case for grid_layer_settings_update_alias
 
         Updates the grid layer settings' alias.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_settings_update_legend(self):
         """Test case for grid_layer_settings_update_legend
 
         Updates the grid layer settings' legend.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_settings_update_rendering(self):
         """Test case for grid_layer_settings_update_rendering
 
         Updates the grid layer settings' rendering settings.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_settings_update_style(self):
         """Test case for grid_layer_settings_update_style
 
         Updates the grid layer settings' style.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
     def test_grid_layer_settings_update_visibility_ranges(self):
         """Test case for grid_layer_settings_update_visibility_ranges
 
         Updates the grid layer settings' visibility ranges.  # noqa: E501
         """
-        pass
+        self.assertIsInstance(self.api, self.api_class)
 
 
 if __name__ == '__main__':
