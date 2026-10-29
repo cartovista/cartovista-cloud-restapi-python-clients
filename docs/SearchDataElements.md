@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **spatial_metadatas** | [**list[Layer]**](Layer.md) |  | [optional] 
 **grid_layers** | [**list[GridLayer]**](GridLayer.md) |  | [optional] 
 **wmts_layers** | [**list[WmtsLayer]**](WmtsLayer.md) |  | [optional] 
+**pmt_layers** | [**list[PMTLayer]**](PMTLayer.md) |  | [optional] 
 **wms_layers** | [**list[WmsLayer]**](WmsLayer.md) |  | [optional] 
 **folders** | [**list[Folder]**](Folder.md) |  | [optional] 
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **feature_id** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **bus_name** | **str** |  | [optional] 
-**kv** | **int** |  | [optional] 
+**kv** | **float** |  | [optional] 
 **dfax_percent** | **float** |  | [optional] 
 **mw_impact** | **float** |  | [optional] 
 **mw_change** | **float** |  | [optional] 

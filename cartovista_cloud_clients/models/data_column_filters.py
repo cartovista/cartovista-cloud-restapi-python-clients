@@ -45,12 +45,10 @@ class DataColumnFilters(object):
         self._filter_logic = None
         self._data_filters = None
         self.discriminator = None
-        if column_id is not None:
-            self.column_id = column_id
+        self.column_id = column_id
         if filter_logic is not None:
             self.filter_logic = filter_logic
-        if data_filters is not None:
-            self.data_filters = data_filters
+        self.data_filters = data_filters
 
     @property
     def column_id(self):
@@ -70,6 +68,8 @@ class DataColumnFilters(object):
         :param column_id: The column_id of this DataColumnFilters.  # noqa: E501
         :type: str
         """
+        if column_id is None:
+            raise ValueError("Invalid value for `column_id`, must not be `None`")  # noqa: E501
 
         self._column_id = column_id
 
@@ -112,6 +112,8 @@ class DataColumnFilters(object):
         :param data_filters: The data_filters of this DataColumnFilters.  # noqa: E501
         :type: list[DataFilter]
         """
+        if data_filters is None:
+            raise ValueError("Invalid value for `data_filters`, must not be `None`")  # noqa: E501
 
         self._data_filters = data_filters
 

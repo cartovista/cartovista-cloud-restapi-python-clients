@@ -80,16 +80,12 @@ class WmtsLayer(object):
         self.discriminator = None
         if id is not None:
             self.id = id
-        if identifier is not None:
-            self.identifier = identifier
-        if name is not None:
-            self.name = name
-        if url is not None:
-            self.url = url
+        self.identifier = identifier
+        self.name = name
+        self.url = url
         if extent is not None:
             self.extent = extent
-        if owner_name is not None:
-            self.owner_name = owner_name
+        self.owner_name = owner_name
         if public_access is not None:
             self.public_access = public_access
         if can_edit is not None:
@@ -146,6 +142,8 @@ class WmtsLayer(object):
         :param identifier: The identifier of this WmtsLayer.  # noqa: E501
         :type: str
         """
+        if identifier is None:
+            raise ValueError("Invalid value for `identifier`, must not be `None`")  # noqa: E501
 
         self._identifier = identifier
 
@@ -167,6 +165,8 @@ class WmtsLayer(object):
         :param name: The name of this WmtsLayer.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -188,6 +188,8 @@ class WmtsLayer(object):
         :param url: The url of this WmtsLayer.  # noqa: E501
         :type: str
         """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
 
@@ -230,6 +232,8 @@ class WmtsLayer(object):
         :param owner_name: The owner_name of this WmtsLayer.  # noqa: E501
         :type: str
         """
+        if owner_name is None:
+            raise ValueError("Invalid value for `owner_name`, must not be `None`")  # noqa: E501
 
         self._owner_name = owner_name
 

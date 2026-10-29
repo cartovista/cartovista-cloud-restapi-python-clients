@@ -91,6 +91,13 @@ class TestMapApi(unittest.TestCase):
         """
         pass
 
+    def test_map_delete_map_pmt_layer(self):
+        """Test case for map_delete_map_pmt_layer
+
+        Removes the PM Tile layer from the map.  # noqa: E501
+        """
+        pass
+
     def test_map_delete_map_wms_layer(self):
         """Test case for map_delete_map_wms_layer
 
@@ -172,6 +179,13 @@ class TestMapApi(unittest.TestCase):
         """Test case for map_get_map_for_viewer
 
         Gets all the data required to open a map.  # noqa: E501
+        """
+        pass
+
+    def test_map_get_map_libre_configuration(self):
+        """Test case for map_get_map_libre_configuration
+
+        Gets the MapLibre configuration for an opened map (used to refresh the running viewer when layers are added).  # noqa: E501
         """
         pass
 

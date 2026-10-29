@@ -29,6 +29,7 @@ class MapLibreGridLayerSettings(object):
     """
     swagger_types = {
         'id': 'str',
+        'identifier': 'str',
         'name': 'str',
         'grid_layer_type': 'GridLayerTypeEnum',
         'grid_sources': 'list[MapLibreGridSourceSettings]',
@@ -37,15 +38,17 @@ class MapLibreGridLayerSettings(object):
 
     attribute_map = {
         'id': 'id',
+        'identifier': 'identifier',
         'name': 'name',
         'grid_layer_type': 'gridLayerType',
         'grid_sources': 'gridSources',
         'settings': 'settings'
     }
 
-    def __init__(self, id=None, name=None, grid_layer_type=None, grid_sources=None, settings=None):  # noqa: E501
+    def __init__(self, id=None, identifier=None, name=None, grid_layer_type=None, grid_sources=None, settings=None):  # noqa: E501
         """MapLibreGridLayerSettings - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._identifier = None
         self._name = None
         self._grid_layer_type = None
         self._grid_sources = None
@@ -53,6 +56,8 @@ class MapLibreGridLayerSettings(object):
         self.discriminator = None
         if id is not None:
             self.id = id
+        if identifier is not None:
+            self.identifier = identifier
         if name is not None:
             self.name = name
         if grid_layer_type is not None:
@@ -82,6 +87,27 @@ class MapLibreGridLayerSettings(object):
         """
 
         self._id = id
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this MapLibreGridLayerSettings.  # noqa: E501
+
+
+        :return: The identifier of this MapLibreGridLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this MapLibreGridLayerSettings.
+
+
+        :param identifier: The identifier of this MapLibreGridLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._identifier = identifier
 
     @property
     def name(self):

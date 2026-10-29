@@ -31,7 +31,7 @@ class PoiHarmerData(object):
         'feature_id': 'str',
         'name': 'str',
         'bus_name': 'str',
-        'kv': 'int',
+        'kv': 'float',
         'dfax_percent': 'float',
         'mw_impact': 'float',
         'mw_change': 'float',
@@ -171,7 +171,7 @@ class PoiHarmerData(object):
 
 
         :return: The kv of this PoiHarmerData.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._kv
 
@@ -181,7 +181,7 @@ class PoiHarmerData(object):
 
 
         :param kv: The kv of this PoiHarmerData.  # noqa: E501
-        :type: int
+        :type: float
         """
 
         self._kv = kv

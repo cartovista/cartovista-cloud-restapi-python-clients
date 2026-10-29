@@ -75,32 +75,19 @@ class PropertiesOfComponentLayout(object):
         self._composite_scoring = None
         self._poi_analysis = None
         self.discriminator = None
-        if map is not None:
-            self.map = map
-        if layers is not None:
-            self.layers = layers
-        if info is not None:
-            self.info = info
-        if data is not None:
-            self.data = data
-        if legend is not None:
-            self.legend = legend
-        if chart is not None:
-            self.chart = chart
-        if story is not None:
-            self.story = story
-        if routing is not None:
-            self.routing = routing
-        if profile is not None:
-            self.profile = profile
-        if time_view is not None:
-            self.time_view = time_view
-        if time_animation_controller is not None:
-            self.time_animation_controller = time_animation_controller
-        if composite_scoring is not None:
-            self.composite_scoring = composite_scoring
-        if poi_analysis is not None:
-            self.poi_analysis = poi_analysis
+        self.map = map
+        self.layers = layers
+        self.info = info
+        self.data = data
+        self.legend = legend
+        self.chart = chart
+        self.story = story
+        self.routing = routing
+        self.profile = profile
+        self.time_view = time_view
+        self.time_animation_controller = time_animation_controller
+        self.composite_scoring = composite_scoring
+        self.poi_analysis = poi_analysis
 
     @property
     def map(self):
@@ -120,6 +107,8 @@ class PropertiesOfComponentLayout(object):
         :param map: The map of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutMap
         """
+        if map is None:
+            raise ValueError("Invalid value for `map`, must not be `None`")  # noqa: E501
 
         self._map = map
 
@@ -141,6 +130,8 @@ class PropertiesOfComponentLayout(object):
         :param layers: The layers of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutLayers
         """
+        if layers is None:
+            raise ValueError("Invalid value for `layers`, must not be `None`")  # noqa: E501
 
         self._layers = layers
 
@@ -162,6 +153,8 @@ class PropertiesOfComponentLayout(object):
         :param info: The info of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutInfo
         """
+        if info is None:
+            raise ValueError("Invalid value for `info`, must not be `None`")  # noqa: E501
 
         self._info = info
 
@@ -183,6 +176,8 @@ class PropertiesOfComponentLayout(object):
         :param data: The data of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutData
         """
+        if data is None:
+            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 
@@ -204,6 +199,8 @@ class PropertiesOfComponentLayout(object):
         :param legend: The legend of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutLegend
         """
+        if legend is None:
+            raise ValueError("Invalid value for `legend`, must not be `None`")  # noqa: E501
 
         self._legend = legend
 
@@ -225,6 +222,8 @@ class PropertiesOfComponentLayout(object):
         :param chart: The chart of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutChart
         """
+        if chart is None:
+            raise ValueError("Invalid value for `chart`, must not be `None`")  # noqa: E501
 
         self._chart = chart
 
@@ -246,6 +245,8 @@ class PropertiesOfComponentLayout(object):
         :param story: The story of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutStory
         """
+        if story is None:
+            raise ValueError("Invalid value for `story`, must not be `None`")  # noqa: E501
 
         self._story = story
 
@@ -267,6 +268,8 @@ class PropertiesOfComponentLayout(object):
         :param routing: The routing of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutRouting
         """
+        if routing is None:
+            raise ValueError("Invalid value for `routing`, must not be `None`")  # noqa: E501
 
         self._routing = routing
 
@@ -288,6 +291,8 @@ class PropertiesOfComponentLayout(object):
         :param profile: The profile of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutProfile
         """
+        if profile is None:
+            raise ValueError("Invalid value for `profile`, must not be `None`")  # noqa: E501
 
         self._profile = profile
 
@@ -309,6 +314,8 @@ class PropertiesOfComponentLayout(object):
         :param time_view: The time_view of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutTimeView
         """
+        if time_view is None:
+            raise ValueError("Invalid value for `time_view`, must not be `None`")  # noqa: E501
 
         self._time_view = time_view
 
@@ -330,6 +337,8 @@ class PropertiesOfComponentLayout(object):
         :param time_animation_controller: The time_animation_controller of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutTimeAnimationController
         """
+        if time_animation_controller is None:
+            raise ValueError("Invalid value for `time_animation_controller`, must not be `None`")  # noqa: E501
 
         self._time_animation_controller = time_animation_controller
 
@@ -351,6 +360,8 @@ class PropertiesOfComponentLayout(object):
         :param composite_scoring: The composite_scoring of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutCompositeScoring
         """
+        if composite_scoring is None:
+            raise ValueError("Invalid value for `composite_scoring`, must not be `None`")  # noqa: E501
 
         self._composite_scoring = composite_scoring
 
@@ -372,6 +383,8 @@ class PropertiesOfComponentLayout(object):
         :param poi_analysis: The poi_analysis of this PropertiesOfComponentLayout.  # noqa: E501
         :type: OneOfPropertiesOfComponentLayoutPoiAnalysis
         """
+        if poi_analysis is None:
+            raise ValueError("Invalid value for `poi_analysis`, must not be `None`")  # noqa: E501
 
         self._poi_analysis = poi_analysis
 

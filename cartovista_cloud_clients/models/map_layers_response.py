@@ -33,7 +33,8 @@ class MapLayersResponse(object):
         'layers': 'list[Layer]',
         'wmts_layers': 'list[WmtsLayer]',
         'grid_layers': 'list[GridLayer]',
-        'wms_layers': 'list[WmsLayer]'
+        'wms_layers': 'list[WmsLayer]',
+        'pmt_layers': 'list[PMTLayer]'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class MapLayersResponse(object):
         'layers': 'layers',
         'wmts_layers': 'wmtsLayers',
         'grid_layers': 'gridLayers',
-        'wms_layers': 'wmsLayers'
+        'wms_layers': 'wmsLayers',
+        'pmt_layers': 'pmtLayers'
     }
 
-    def __init__(self, map_id=None, can_add_layers=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None):  # noqa: E501
+    def __init__(self, map_id=None, can_add_layers=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None, pmt_layers=None):  # noqa: E501
         """MapLayersResponse - a model defined in Swagger"""  # noqa: E501
         self._map_id = None
         self._can_add_layers = None
@@ -53,6 +55,7 @@ class MapLayersResponse(object):
         self._wmts_layers = None
         self._grid_layers = None
         self._wms_layers = None
+        self._pmt_layers = None
         self.discriminator = None
         if map_id is not None:
             self.map_id = map_id
@@ -66,6 +69,8 @@ class MapLayersResponse(object):
             self.grid_layers = grid_layers
         if wms_layers is not None:
             self.wms_layers = wms_layers
+        if pmt_layers is not None:
+            self.pmt_layers = pmt_layers
 
     @property
     def map_id(self):
@@ -192,6 +197,27 @@ class MapLayersResponse(object):
         """
 
         self._wms_layers = wms_layers
+
+    @property
+    def pmt_layers(self):
+        """Gets the pmt_layers of this MapLayersResponse.  # noqa: E501
+
+
+        :return: The pmt_layers of this MapLayersResponse.  # noqa: E501
+        :rtype: list[PMTLayer]
+        """
+        return self._pmt_layers
+
+    @pmt_layers.setter
+    def pmt_layers(self, pmt_layers):
+        """Sets the pmt_layers of this MapLayersResponse.
+
+
+        :param pmt_layers: The pmt_layers of this MapLayersResponse.  # noqa: E501
+        :type: list[PMTLayer]
+        """
+
+        self._pmt_layers = pmt_layers
 
     def to_dict(self):
         """Returns the model properties as a dict"""

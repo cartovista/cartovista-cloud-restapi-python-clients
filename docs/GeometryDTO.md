@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**c** | **list[list[float]]** |  | [optional] 
 **t** | **str** |  | [optional] 
 **centroid** | **list[float]** |  | [optional] 
 **extent** | **list[float]** |  | [optional] 

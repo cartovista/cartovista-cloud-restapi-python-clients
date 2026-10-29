@@ -48,14 +48,10 @@ class MapElements(object):
         self._path_folders = None
         self._folder_id = None
         self.discriminator = None
-        if maps is not None:
-            self.maps = maps
-        if folders is not None:
-            self.folders = folders
-        if path_folders is not None:
-            self.path_folders = path_folders
-        if folder_id is not None:
-            self.folder_id = folder_id
+        self.maps = maps
+        self.folders = folders
+        self.path_folders = path_folders
+        self.folder_id = folder_id
 
     @property
     def maps(self):
@@ -75,6 +71,8 @@ class MapElements(object):
         :param maps: The maps of this MapElements.  # noqa: E501
         :type: list[Map]
         """
+        if maps is None:
+            raise ValueError("Invalid value for `maps`, must not be `None`")  # noqa: E501
 
         self._maps = maps
 
@@ -96,6 +94,8 @@ class MapElements(object):
         :param folders: The folders of this MapElements.  # noqa: E501
         :type: list[Folder]
         """
+        if folders is None:
+            raise ValueError("Invalid value for `folders`, must not be `None`")  # noqa: E501
 
         self._folders = folders
 
@@ -117,6 +117,8 @@ class MapElements(object):
         :param path_folders: The path_folders of this MapElements.  # noqa: E501
         :type: list[Folder]
         """
+        if path_folders is None:
+            raise ValueError("Invalid value for `path_folders`, must not be `None`")  # noqa: E501
 
         self._path_folders = path_folders
 
@@ -138,6 +140,8 @@ class MapElements(object):
         :param folder_id: The folder_id of this MapElements.  # noqa: E501
         :type: str
         """
+        if folder_id is None:
+            raise ValueError("Invalid value for `folder_id`, must not be `None`")  # noqa: E501
 
         self._folder_id = folder_id
 

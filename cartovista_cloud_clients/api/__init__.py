@@ -28,6 +28,7 @@ from cartovista_cloud_clients.api.map_api import MapApi
 from cartovista_cloud_clients.api.o_auth_api import OAuthApi
 from cartovista_cloud_clients.api.ogc_api import OGCApi
 from cartovista_cloud_clients.api.organization_api import OrganizationApi
+from cartovista_cloud_clients.api.pmt_api import PMTApi
 from cartovista_cloud_clients.api.permission_api import PermissionApi
 from cartovista_cloud_clients.api.poi_analysis_api import PoiAnalysisApi
 from cartovista_cloud_clients.api.portal_api import PortalApi

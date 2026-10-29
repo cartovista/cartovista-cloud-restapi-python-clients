@@ -4,10 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
+**identifier** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **wms_layer_name** | **str** |  | [optional] 
 **version** | **str** |  | [optional] 
+**get_legend_url** | **str** |  | [optional] 
 **extent** | **OneOfMapLibreWmsLayerSettingsExtent** |  | [optional] 
 **settings** | [**WmsSettings**](WmsSettings.md) |  | [optional] 
 

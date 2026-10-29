@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code** | **str** |  | [optional] 
+**code** | **str** |  | 
 **codes** | **list[str]** |  | [optional] 
 **code_details** | **str** |  | [optional] 
 **message** | **str** |  | [optional] 

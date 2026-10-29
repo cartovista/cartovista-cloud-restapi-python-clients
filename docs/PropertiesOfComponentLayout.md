@@ -3,19 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**map** | **OneOfPropertiesOfComponentLayoutMap** |  | [optional] 
-**layers** | **OneOfPropertiesOfComponentLayoutLayers** |  | [optional] 
-**info** | **OneOfPropertiesOfComponentLayoutInfo** |  | [optional] 
-**data** | **OneOfPropertiesOfComponentLayoutData** |  | [optional] 
-**legend** | **OneOfPropertiesOfComponentLayoutLegend** |  | [optional] 
-**chart** | **OneOfPropertiesOfComponentLayoutChart** |  | [optional] 
-**story** | **OneOfPropertiesOfComponentLayoutStory** |  | [optional] 
-**routing** | **OneOfPropertiesOfComponentLayoutRouting** |  | [optional] 
-**profile** | **OneOfPropertiesOfComponentLayoutProfile** |  | [optional] 
-**time_view** | **OneOfPropertiesOfComponentLayoutTimeView** |  | [optional] 
-**time_animation_controller** | **OneOfPropertiesOfComponentLayoutTimeAnimationController** |  | [optional] 
-**composite_scoring** | **OneOfPropertiesOfComponentLayoutCompositeScoring** |  | [optional] 
-**poi_analysis** | **OneOfPropertiesOfComponentLayoutPoiAnalysis** |  | [optional] 
+**map** | **OneOfPropertiesOfComponentLayoutMap** |  | 
+**layers** | **OneOfPropertiesOfComponentLayoutLayers** |  | 
+**info** | **OneOfPropertiesOfComponentLayoutInfo** |  | 
+**data** | **OneOfPropertiesOfComponentLayoutData** |  | 
+**legend** | **OneOfPropertiesOfComponentLayoutLegend** |  | 
+**chart** | **OneOfPropertiesOfComponentLayoutChart** |  | 
+**story** | **OneOfPropertiesOfComponentLayoutStory** |  | 
+**routing** | **OneOfPropertiesOfComponentLayoutRouting** |  | 
+**profile** | **OneOfPropertiesOfComponentLayoutProfile** |  | 
+**time_view** | **OneOfPropertiesOfComponentLayoutTimeView** |  | 
+**time_animation_controller** | **OneOfPropertiesOfComponentLayoutTimeAnimationController** |  | 
+**composite_scoring** | **OneOfPropertiesOfComponentLayoutCompositeScoring** |  | 
+**poi_analysis** | **OneOfPropertiesOfComponentLayoutPoiAnalysis** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

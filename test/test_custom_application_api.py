@@ -28,6 +28,12 @@ class TestCustomApplicationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_custom_application_create_access_token(self):
+        """Test case for custom_application_create_access_token
+
+        """
+        pass
+
     def test_custom_application_get_custom_application_map_settings(self):
         """Test case for custom_application_get_custom_application_map_settings
 

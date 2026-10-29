@@ -171,7 +171,7 @@ class TestDataTableApi(unittest.TestCase):
     def test_data_table_get_time_series_data(self):
         """Test case for data_table_get_time_series_data
 
-        Returns an aggregation of the table's data using the time series column.  # noqa: E501
+        Returns an aggregation of the table's data using the time series column. There is a hard limit of 200 for range = \"allValues\". startAt is 0 based.  # noqa: E501
         """
         pass
 
@@ -221,6 +221,13 @@ class TestDataTableApi(unittest.TestCase):
         """Test case for data_table_set_unique_identifier
 
         Sets the table's identifier.  # noqa: E501
+        """
+        pass
+
+    def test_data_table_update_data_columns_order(self):
+        """Test case for data_table_update_data_columns_order
+
+        Updates the order of the columns in the table. All the columns must be provided.  # noqa: E501
         """
         pass
 

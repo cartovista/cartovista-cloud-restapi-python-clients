@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **data_tables** | [**list[LayerDataTable]**](LayerDataTable.md) |  | [optional] 
 **grid_layers** | [**list[GridLayer]**](GridLayer.md) |  | [optional] 
 **wmts_layers** | [**list[WmtsLayer]**](WmtsLayer.md) |  | [optional] 
+**pmt_layers** | [**list[PMTLayer]**](PMTLayer.md) |  | [optional] 
 **wms_layers** | [**list[WmsLayer]**](WmsLayer.md) |  | [optional] 
 **permissions** | [**list[PermissionPairComplexDTO]**](PermissionPairComplexDTO.md) |  | [optional] 
 

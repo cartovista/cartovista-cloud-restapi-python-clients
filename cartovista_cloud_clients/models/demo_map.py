@@ -32,6 +32,7 @@ class DemoMap(object):
         'layer_ids': 'list[str]',
         'grid_layer_ids': 'list[str]',
         'wmts_ids': 'list[str]',
+        'pmt_ids': 'list[str]',
         'wms_ids': 'list[str]',
         'title': 'str',
         'friendly_identifier': 'str',
@@ -44,6 +45,7 @@ class DemoMap(object):
         'layer_ids': 'layerIds',
         'grid_layer_ids': 'gridLayerIds',
         'wmts_ids': 'wmtsIds',
+        'pmt_ids': 'pmtIds',
         'wms_ids': 'wmsIds',
         'title': 'title',
         'friendly_identifier': 'friendlyIdentifier',
@@ -51,12 +53,13 @@ class DemoMap(object):
         'goals': 'goals'
     }
 
-    def __init__(self, map_id=None, layer_ids=None, grid_layer_ids=None, wmts_ids=None, wms_ids=None, title=None, friendly_identifier=None, industries=None, goals=None):  # noqa: E501
+    def __init__(self, map_id=None, layer_ids=None, grid_layer_ids=None, wmts_ids=None, pmt_ids=None, wms_ids=None, title=None, friendly_identifier=None, industries=None, goals=None):  # noqa: E501
         """DemoMap - a model defined in Swagger"""  # noqa: E501
         self._map_id = None
         self._layer_ids = None
         self._grid_layer_ids = None
         self._wmts_ids = None
+        self._pmt_ids = None
         self._wms_ids = None
         self._title = None
         self._friendly_identifier = None
@@ -71,6 +74,8 @@ class DemoMap(object):
             self.grid_layer_ids = grid_layer_ids
         if wmts_ids is not None:
             self.wmts_ids = wmts_ids
+        if pmt_ids is not None:
+            self.pmt_ids = pmt_ids
         if wms_ids is not None:
             self.wms_ids = wms_ids
         if title is not None:
@@ -165,6 +170,27 @@ class DemoMap(object):
         """
 
         self._wmts_ids = wmts_ids
+
+    @property
+    def pmt_ids(self):
+        """Gets the pmt_ids of this DemoMap.  # noqa: E501
+
+
+        :return: The pmt_ids of this DemoMap.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._pmt_ids
+
+    @pmt_ids.setter
+    def pmt_ids(self, pmt_ids):
+        """Sets the pmt_ids of this DemoMap.
+
+
+        :param pmt_ids: The pmt_ids of this DemoMap.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._pmt_ids = pmt_ids
 
     @property
     def wms_ids(self):

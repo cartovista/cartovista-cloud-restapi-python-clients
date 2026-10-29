@@ -28,29 +28,55 @@ class GeometryDTO(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'c': 'list[list[float]]',
         't': 'str',
         'centroid': 'list[float]',
         'extent': 'list[float]'
     }
 
     attribute_map = {
+        'c': 'c',
         't': 't',
         'centroid': 'centroid',
         'extent': 'extent'
     }
 
-    def __init__(self, t=None, centroid=None, extent=None):  # noqa: E501
+    def __init__(self, c=None, t=None, centroid=None, extent=None):  # noqa: E501
         """GeometryDTO - a model defined in Swagger"""  # noqa: E501
+        self._c = None
         self._t = None
         self._centroid = None
         self._extent = None
         self.discriminator = None
+        if c is not None:
+            self.c = c
         if t is not None:
             self.t = t
         if centroid is not None:
             self.centroid = centroid
         if extent is not None:
             self.extent = extent
+
+    @property
+    def c(self):
+        """Gets the c of this GeometryDTO.  # noqa: E501
+
+
+        :return: The c of this GeometryDTO.  # noqa: E501
+        :rtype: list[list[float]]
+        """
+        return self._c
+
+    @c.setter
+    def c(self, c):
+        """Sets the c of this GeometryDTO.
+
+
+        :param c: The c of this GeometryDTO.  # noqa: E501
+        :type: list[list[float]]
+        """
+
+        self._c = c
 
     @property
     def t(self):

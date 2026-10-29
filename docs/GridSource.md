@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **is_heatmap** | **bool** |  | [optional] 
 **is_demo_source** | **bool** |  | [optional] 
 **is_gpkg** | **bool** |  | [optional] 
+**overview_resampling** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

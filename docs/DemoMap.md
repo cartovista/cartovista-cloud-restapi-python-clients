@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **layer_ids** | **list[str]** |  | [optional] 
 **grid_layer_ids** | **list[str]** |  | [optional] 
 **wmts_ids** | **list[str]** |  | [optional] 
+**pmt_ids** | **list[str]** |  | [optional] 
 **wms_ids** | **list[str]** |  | [optional] 
 **title** | **str** |  | [optional] 
 **friendly_identifier** | **str** |  | [optional] 

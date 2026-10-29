@@ -147,6 +147,13 @@ class TestGridLayerApi(unittest.TestCase):
         """
         pass
 
+    def test_grid_layer_update_overview_resampling(self):
+        """Test case for grid_layer_update_overview_resampling
+
+        Rebuild the COG overviews of an existing grid source with a new resampling method. Full-resolution pixels are left unchanged.  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

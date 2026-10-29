@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**search** | **str** |  | [optional] 
+**search** | **str** |  | 
 **include_layers** | **bool** |  | [optional] 
 **include_addresses** | **bool** |  | [optional] 
 **filter_data_columns** | **dict(str, list[DataQueryColumnDTO])** |  | [optional] 

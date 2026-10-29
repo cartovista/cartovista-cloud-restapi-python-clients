@@ -32,6 +32,7 @@ class SearchDataElements(object):
         'spatial_metadatas': 'list[Layer]',
         'grid_layers': 'list[GridLayer]',
         'wmts_layers': 'list[WmtsLayer]',
+        'pmt_layers': 'list[PMTLayer]',
         'wms_layers': 'list[WmsLayer]',
         'folders': 'list[Folder]'
     }
@@ -41,16 +42,18 @@ class SearchDataElements(object):
         'spatial_metadatas': 'spatialMetadatas',
         'grid_layers': 'gridLayers',
         'wmts_layers': 'wmtsLayers',
+        'pmt_layers': 'pmtLayers',
         'wms_layers': 'wmsLayers',
         'folders': 'folders'
     }
 
-    def __init__(self, data_tables=None, spatial_metadatas=None, grid_layers=None, wmts_layers=None, wms_layers=None, folders=None):  # noqa: E501
+    def __init__(self, data_tables=None, spatial_metadatas=None, grid_layers=None, wmts_layers=None, pmt_layers=None, wms_layers=None, folders=None):  # noqa: E501
         """SearchDataElements - a model defined in Swagger"""  # noqa: E501
         self._data_tables = None
         self._spatial_metadatas = None
         self._grid_layers = None
         self._wmts_layers = None
+        self._pmt_layers = None
         self._wms_layers = None
         self._folders = None
         self.discriminator = None
@@ -62,6 +65,8 @@ class SearchDataElements(object):
             self.grid_layers = grid_layers
         if wmts_layers is not None:
             self.wmts_layers = wmts_layers
+        if pmt_layers is not None:
+            self.pmt_layers = pmt_layers
         if wms_layers is not None:
             self.wms_layers = wms_layers
         if folders is not None:
@@ -150,6 +155,27 @@ class SearchDataElements(object):
         """
 
         self._wmts_layers = wmts_layers
+
+    @property
+    def pmt_layers(self):
+        """Gets the pmt_layers of this SearchDataElements.  # noqa: E501
+
+
+        :return: The pmt_layers of this SearchDataElements.  # noqa: E501
+        :rtype: list[PMTLayer]
+        """
+        return self._pmt_layers
+
+    @pmt_layers.setter
+    def pmt_layers(self, pmt_layers):
+        """Sets the pmt_layers of this SearchDataElements.
+
+
+        :param pmt_layers: The pmt_layers of this SearchDataElements.  # noqa: E501
+        :type: list[PMTLayer]
+        """
+
+        self._pmt_layers = pmt_layers
 
     @property
     def wms_layers(self):

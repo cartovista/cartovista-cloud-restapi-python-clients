@@ -32,6 +32,7 @@ class ModelTypeEnum(object):
     FOLDER = "folder"
     GRIDLAYER = "gridLayer"
     WMTS = "WMTS"
+    PMT = "PMT"
     WMS = "WMS"
     """
     Attributes:

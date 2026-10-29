@@ -58,7 +58,8 @@ class FlatFileGridLayerDefinitionDTO(object):
         'is_scale_cumulative': 'bool',
         'cut_under': 'int',
         'cut_above': 'int',
-        'compression': 'str'
+        'compression': 'str',
+        'overview_resampling': 'str'
     }
 
     attribute_map = {
@@ -92,10 +93,11 @@ class FlatFileGridLayerDefinitionDTO(object):
         'is_scale_cumulative': 'isScaleCumulative',
         'cut_under': 'cutUnder',
         'cut_above': 'cutAbove',
-        'compression': 'compression'
+        'compression': 'compression',
+        'overview_resampling': 'overviewResampling'
     }
 
-    def __init__(self, file_id=None, uploaded_file_path=None, file_name=None, name=None, type_string=None, sheets=None, selected_sheet_names=None, sheet_count=None, upload_id=None, type=None, band_count=None, proj4=None, user_friendly_proj=None, is_spherical_mercator=None, extent=None, unit=None, selected_band=None, metadata=None, width=None, height=None, band_metadatas=None, no_data_values=None, selected_band_metadata=None, reprojection_requested=None, select_all_bands=None, is_rgb=None, is_scale_min_max=None, is_scale_cumulative=None, cut_under=None, cut_above=None, compression=None):  # noqa: E501
+    def __init__(self, file_id=None, uploaded_file_path=None, file_name=None, name=None, type_string=None, sheets=None, selected_sheet_names=None, sheet_count=None, upload_id=None, type=None, band_count=None, proj4=None, user_friendly_proj=None, is_spherical_mercator=None, extent=None, unit=None, selected_band=None, metadata=None, width=None, height=None, band_metadatas=None, no_data_values=None, selected_band_metadata=None, reprojection_requested=None, select_all_bands=None, is_rgb=None, is_scale_min_max=None, is_scale_cumulative=None, cut_under=None, cut_above=None, compression=None, overview_resampling=None):  # noqa: E501
         """FlatFileGridLayerDefinitionDTO - a model defined in Swagger"""  # noqa: E501
         self._file_id = None
         self._uploaded_file_path = None
@@ -128,6 +130,7 @@ class FlatFileGridLayerDefinitionDTO(object):
         self._cut_under = None
         self._cut_above = None
         self._compression = None
+        self._overview_resampling = None
         self.discriminator = None
         if file_id is not None:
             self.file_id = file_id
@@ -191,6 +194,8 @@ class FlatFileGridLayerDefinitionDTO(object):
             self.cut_above = cut_above
         if compression is not None:
             self.compression = compression
+        if overview_resampling is not None:
+            self.overview_resampling = overview_resampling
 
     @property
     def file_id(self):
@@ -848,6 +853,29 @@ class FlatFileGridLayerDefinitionDTO(object):
         """
 
         self._compression = compression
+
+    @property
+    def overview_resampling(self):
+        """Gets the overview_resampling of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+
+        GDAL overview resampling method used when generating the COG. Allowed values: NEAREST, AVERAGE, BILINEAR, CUBIC, CUBICSPLINE, LANCZOS, MODE, RMS. Null or empty keeps the GDAL default.  # noqa: E501
+
+        :return: The overview_resampling of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :rtype: str
+        """
+        return self._overview_resampling
+
+    @overview_resampling.setter
+    def overview_resampling(self, overview_resampling):
+        """Sets the overview_resampling of this FlatFileGridLayerDefinitionDTO.
+
+        GDAL overview resampling method used when generating the COG. Allowed values: NEAREST, AVERAGE, BILINEAR, CUBIC, CUBICSPLINE, LANCZOS, MODE, RMS. Null or empty keeps the GDAL default.  # noqa: E501
+
+        :param overview_resampling: The overview_resampling of this FlatFileGridLayerDefinitionDTO.  # noqa: E501
+        :type: str
+        """
+
+        self._overview_resampling = overview_resampling
 
     def to_dict(self):
         """Returns the model properties as a dict"""

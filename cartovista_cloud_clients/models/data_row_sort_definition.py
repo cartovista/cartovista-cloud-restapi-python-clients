@@ -42,8 +42,7 @@ class DataRowSortDefinition(object):
         self._column_id = None
         self._data_row_sort_order = None
         self.discriminator = None
-        if column_id is not None:
-            self.column_id = column_id
+        self.column_id = column_id
         if data_row_sort_order is not None:
             self.data_row_sort_order = data_row_sort_order
 
@@ -65,6 +64,8 @@ class DataRowSortDefinition(object):
         :param column_id: The column_id of this DataRowSortDefinition.  # noqa: E501
         :type: str
         """
+        if column_id is None:
+            raise ValueError("Invalid value for `column_id`, must not be `None`")  # noqa: E501
 
         self._column_id = column_id
 

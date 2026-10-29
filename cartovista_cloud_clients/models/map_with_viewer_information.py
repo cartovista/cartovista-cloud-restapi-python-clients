@@ -34,6 +34,7 @@ class MapWithViewerInformation(object):
         'advanced_settings': 'MapAdvancedSettings',
         'layers': 'list[Layer]',
         'wmts_layers': 'list[WmtsLayer]',
+        'pmt_layers': 'list[PMTLayer]',
         'grid_layers': 'list[GridLayer]',
         'wms_layers': 'list[WmsLayer]',
         'identities_with_access': 'list[str]',
@@ -52,6 +53,7 @@ class MapWithViewerInformation(object):
         'advanced_settings': 'advancedSettings',
         'layers': 'layers',
         'wmts_layers': 'wmtsLayers',
+        'pmt_layers': 'pmtLayers',
         'grid_layers': 'gridLayers',
         'wms_layers': 'wmsLayers',
         'identities_with_access': 'identitiesWithAccess',
@@ -63,7 +65,7 @@ class MapWithViewerInformation(object):
         'map_libre': 'mapLibre'
     }
 
-    def __init__(self, map=None, slide_items=None, toolbar=None, advanced_settings=None, layers=None, wmts_layers=None, grid_layers=None, wms_layers=None, identities_with_access=None, map_actions=None, poi_analysis=None, poi_analysis_is_generating=None, custom_applications=None, map_plugins=None, map_libre=None):  # noqa: E501
+    def __init__(self, map=None, slide_items=None, toolbar=None, advanced_settings=None, layers=None, wmts_layers=None, pmt_layers=None, grid_layers=None, wms_layers=None, identities_with_access=None, map_actions=None, poi_analysis=None, poi_analysis_is_generating=None, custom_applications=None, map_plugins=None, map_libre=None):  # noqa: E501
         """MapWithViewerInformation - a model defined in Swagger"""  # noqa: E501
         self._map = None
         self._slide_items = None
@@ -71,6 +73,7 @@ class MapWithViewerInformation(object):
         self._advanced_settings = None
         self._layers = None
         self._wmts_layers = None
+        self._pmt_layers = None
         self._grid_layers = None
         self._wms_layers = None
         self._identities_with_access = None
@@ -81,36 +84,22 @@ class MapWithViewerInformation(object):
         self._map_plugins = None
         self._map_libre = None
         self.discriminator = None
-        if map is not None:
-            self.map = map
-        if slide_items is not None:
-            self.slide_items = slide_items
-        if toolbar is not None:
-            self.toolbar = toolbar
-        if advanced_settings is not None:
-            self.advanced_settings = advanced_settings
-        if layers is not None:
-            self.layers = layers
-        if wmts_layers is not None:
-            self.wmts_layers = wmts_layers
-        if grid_layers is not None:
-            self.grid_layers = grid_layers
-        if wms_layers is not None:
-            self.wms_layers = wms_layers
-        if identities_with_access is not None:
-            self.identities_with_access = identities_with_access
-        if map_actions is not None:
-            self.map_actions = map_actions
-        if poi_analysis is not None:
-            self.poi_analysis = poi_analysis
-        if poi_analysis_is_generating is not None:
-            self.poi_analysis_is_generating = poi_analysis_is_generating
-        if custom_applications is not None:
-            self.custom_applications = custom_applications
-        if map_plugins is not None:
-            self.map_plugins = map_plugins
-        if map_libre is not None:
-            self.map_libre = map_libre
+        self.map = map
+        self.slide_items = slide_items
+        self.toolbar = toolbar
+        self.advanced_settings = advanced_settings
+        self.layers = layers
+        self.wmts_layers = wmts_layers
+        self.pmt_layers = pmt_layers
+        self.grid_layers = grid_layers
+        self.wms_layers = wms_layers
+        self.identities_with_access = identities_with_access
+        self.map_actions = map_actions
+        self.poi_analysis = poi_analysis
+        self.poi_analysis_is_generating = poi_analysis_is_generating
+        self.custom_applications = custom_applications
+        self.map_plugins = map_plugins
+        self.map_libre = map_libre
 
     @property
     def map(self):
@@ -130,6 +119,8 @@ class MapWithViewerInformation(object):
         :param map: The map of this MapWithViewerInformation.  # noqa: E501
         :type: Map
         """
+        if map is None:
+            raise ValueError("Invalid value for `map`, must not be `None`")  # noqa: E501
 
         self._map = map
 
@@ -151,6 +142,8 @@ class MapWithViewerInformation(object):
         :param slide_items: The slide_items of this MapWithViewerInformation.  # noqa: E501
         :type: SlideItems
         """
+        if slide_items is None:
+            raise ValueError("Invalid value for `slide_items`, must not be `None`")  # noqa: E501
 
         self._slide_items = slide_items
 
@@ -172,6 +165,8 @@ class MapWithViewerInformation(object):
         :param toolbar: The toolbar of this MapWithViewerInformation.  # noqa: E501
         :type: MapToolbar
         """
+        if toolbar is None:
+            raise ValueError("Invalid value for `toolbar`, must not be `None`")  # noqa: E501
 
         self._toolbar = toolbar
 
@@ -193,6 +188,8 @@ class MapWithViewerInformation(object):
         :param advanced_settings: The advanced_settings of this MapWithViewerInformation.  # noqa: E501
         :type: MapAdvancedSettings
         """
+        if advanced_settings is None:
+            raise ValueError("Invalid value for `advanced_settings`, must not be `None`")  # noqa: E501
 
         self._advanced_settings = advanced_settings
 
@@ -214,6 +211,8 @@ class MapWithViewerInformation(object):
         :param layers: The layers of this MapWithViewerInformation.  # noqa: E501
         :type: list[Layer]
         """
+        if layers is None:
+            raise ValueError("Invalid value for `layers`, must not be `None`")  # noqa: E501
 
         self._layers = layers
 
@@ -235,8 +234,33 @@ class MapWithViewerInformation(object):
         :param wmts_layers: The wmts_layers of this MapWithViewerInformation.  # noqa: E501
         :type: list[WmtsLayer]
         """
+        if wmts_layers is None:
+            raise ValueError("Invalid value for `wmts_layers`, must not be `None`")  # noqa: E501
 
         self._wmts_layers = wmts_layers
+
+    @property
+    def pmt_layers(self):
+        """Gets the pmt_layers of this MapWithViewerInformation.  # noqa: E501
+
+
+        :return: The pmt_layers of this MapWithViewerInformation.  # noqa: E501
+        :rtype: list[PMTLayer]
+        """
+        return self._pmt_layers
+
+    @pmt_layers.setter
+    def pmt_layers(self, pmt_layers):
+        """Sets the pmt_layers of this MapWithViewerInformation.
+
+
+        :param pmt_layers: The pmt_layers of this MapWithViewerInformation.  # noqa: E501
+        :type: list[PMTLayer]
+        """
+        if pmt_layers is None:
+            raise ValueError("Invalid value for `pmt_layers`, must not be `None`")  # noqa: E501
+
+        self._pmt_layers = pmt_layers
 
     @property
     def grid_layers(self):
@@ -256,6 +280,8 @@ class MapWithViewerInformation(object):
         :param grid_layers: The grid_layers of this MapWithViewerInformation.  # noqa: E501
         :type: list[GridLayer]
         """
+        if grid_layers is None:
+            raise ValueError("Invalid value for `grid_layers`, must not be `None`")  # noqa: E501
 
         self._grid_layers = grid_layers
 
@@ -277,6 +303,8 @@ class MapWithViewerInformation(object):
         :param wms_layers: The wms_layers of this MapWithViewerInformation.  # noqa: E501
         :type: list[WmsLayer]
         """
+        if wms_layers is None:
+            raise ValueError("Invalid value for `wms_layers`, must not be `None`")  # noqa: E501
 
         self._wms_layers = wms_layers
 
@@ -298,6 +326,8 @@ class MapWithViewerInformation(object):
         :param identities_with_access: The identities_with_access of this MapWithViewerInformation.  # noqa: E501
         :type: list[str]
         """
+        if identities_with_access is None:
+            raise ValueError("Invalid value for `identities_with_access`, must not be `None`")  # noqa: E501
 
         self._identities_with_access = identities_with_access
 
@@ -319,6 +349,8 @@ class MapWithViewerInformation(object):
         :param map_actions: The map_actions of this MapWithViewerInformation.  # noqa: E501
         :type: list[MapActionSettings]
         """
+        if map_actions is None:
+            raise ValueError("Invalid value for `map_actions`, must not be `None`")  # noqa: E501
 
         self._map_actions = map_actions
 
@@ -340,6 +372,8 @@ class MapWithViewerInformation(object):
         :param poi_analysis: The poi_analysis of this MapWithViewerInformation.  # noqa: E501
         :type: OneOfMapWithViewerInformationPoiAnalysis
         """
+        if poi_analysis is None:
+            raise ValueError("Invalid value for `poi_analysis`, must not be `None`")  # noqa: E501
 
         self._poi_analysis = poi_analysis
 
@@ -361,6 +395,8 @@ class MapWithViewerInformation(object):
         :param poi_analysis_is_generating: The poi_analysis_is_generating of this MapWithViewerInformation.  # noqa: E501
         :type: bool
         """
+        if poi_analysis_is_generating is None:
+            raise ValueError("Invalid value for `poi_analysis_is_generating`, must not be `None`")  # noqa: E501
 
         self._poi_analysis_is_generating = poi_analysis_is_generating
 
@@ -382,6 +418,8 @@ class MapWithViewerInformation(object):
         :param custom_applications: The custom_applications of this MapWithViewerInformation.  # noqa: E501
         :type: list[CustomApplicationMapSettings]
         """
+        if custom_applications is None:
+            raise ValueError("Invalid value for `custom_applications`, must not be `None`")  # noqa: E501
 
         self._custom_applications = custom_applications
 
@@ -403,6 +441,8 @@ class MapWithViewerInformation(object):
         :param map_plugins: The map_plugins of this MapWithViewerInformation.  # noqa: E501
         :type: list[MapPlugin]
         """
+        if map_plugins is None:
+            raise ValueError("Invalid value for `map_plugins`, must not be `None`")  # noqa: E501
 
         self._map_plugins = map_plugins
 
@@ -424,6 +464,8 @@ class MapWithViewerInformation(object):
         :param map_libre: The map_libre of this MapWithViewerInformation.  # noqa: E501
         :type: OneOfMapWithViewerInformationMapLibre
         """
+        if map_libre is None:
+            raise ValueError("Invalid value for `map_libre`, must not be `None`")  # noqa: E501
 
         self._map_libre = map_libre
 

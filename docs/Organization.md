@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **disclaimers** | [**list[TenantDisclaimer]**](TenantDisclaimer.md) |  | [optional] 
 **invalidate_disclaimer_time** | **datetime** |  | [optional] 
 **default_permissions** | [**DefaultOrganizationPermissions**](DefaultOrganizationPermissions.md) |  | [optional] 
+**allowed_domains** | **list[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

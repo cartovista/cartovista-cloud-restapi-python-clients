@@ -32,9 +32,12 @@ class MapLibreConfiguration(object):
         'layer_settings': 'dict(str, MapLibreLayerSettings)',
         'wms_layer_settings': 'dict(str, MapLibreWmsLayerSettings)',
         'wmts_layer_settings': 'dict(str, MapLibreWmtsLayerSettings)',
+        'pmt_layer_settings': 'dict(str, PMTLayer)',
         'grid_layer_settings': 'dict(str, MapLibreGridLayerSettings)',
         'tile_providers': 'list[TileProvider]',
-        'glyphs_base_url': 'str'
+        'glyphs_base_url': 'str',
+        'vector_basemap_style_url': 'str',
+        'here_vector_basemap_style_url': 'str'
     }
 
     attribute_map = {
@@ -42,20 +45,26 @@ class MapLibreConfiguration(object):
         'layer_settings': 'layerSettings',
         'wms_layer_settings': 'wmsLayerSettings',
         'wmts_layer_settings': 'wmtsLayerSettings',
+        'pmt_layer_settings': 'pmtLayerSettings',
         'grid_layer_settings': 'gridLayerSettings',
         'tile_providers': 'tileProviders',
-        'glyphs_base_url': 'glyphsBaseUrl'
+        'glyphs_base_url': 'glyphsBaseUrl',
+        'vector_basemap_style_url': 'vectorBasemapStyleUrl',
+        'here_vector_basemap_style_url': 'hereVectorBasemapStyleUrl'
     }
 
-    def __init__(self, layer_order=None, layer_settings=None, wms_layer_settings=None, wmts_layer_settings=None, grid_layer_settings=None, tile_providers=None, glyphs_base_url=None):  # noqa: E501
+    def __init__(self, layer_order=None, layer_settings=None, wms_layer_settings=None, wmts_layer_settings=None, pmt_layer_settings=None, grid_layer_settings=None, tile_providers=None, glyphs_base_url=None, vector_basemap_style_url=None, here_vector_basemap_style_url=None):  # noqa: E501
         """MapLibreConfiguration - a model defined in Swagger"""  # noqa: E501
         self._layer_order = None
         self._layer_settings = None
         self._wms_layer_settings = None
         self._wmts_layer_settings = None
+        self._pmt_layer_settings = None
         self._grid_layer_settings = None
         self._tile_providers = None
         self._glyphs_base_url = None
+        self._vector_basemap_style_url = None
+        self._here_vector_basemap_style_url = None
         self.discriminator = None
         if layer_order is not None:
             self.layer_order = layer_order
@@ -65,12 +74,18 @@ class MapLibreConfiguration(object):
             self.wms_layer_settings = wms_layer_settings
         if wmts_layer_settings is not None:
             self.wmts_layer_settings = wmts_layer_settings
+        if pmt_layer_settings is not None:
+            self.pmt_layer_settings = pmt_layer_settings
         if grid_layer_settings is not None:
             self.grid_layer_settings = grid_layer_settings
         if tile_providers is not None:
             self.tile_providers = tile_providers
         if glyphs_base_url is not None:
             self.glyphs_base_url = glyphs_base_url
+        if vector_basemap_style_url is not None:
+            self.vector_basemap_style_url = vector_basemap_style_url
+        if here_vector_basemap_style_url is not None:
+            self.here_vector_basemap_style_url = here_vector_basemap_style_url
 
     @property
     def layer_order(self):
@@ -157,6 +172,27 @@ class MapLibreConfiguration(object):
         self._wmts_layer_settings = wmts_layer_settings
 
     @property
+    def pmt_layer_settings(self):
+        """Gets the pmt_layer_settings of this MapLibreConfiguration.  # noqa: E501
+
+
+        :return: The pmt_layer_settings of this MapLibreConfiguration.  # noqa: E501
+        :rtype: dict(str, PMTLayer)
+        """
+        return self._pmt_layer_settings
+
+    @pmt_layer_settings.setter
+    def pmt_layer_settings(self, pmt_layer_settings):
+        """Sets the pmt_layer_settings of this MapLibreConfiguration.
+
+
+        :param pmt_layer_settings: The pmt_layer_settings of this MapLibreConfiguration.  # noqa: E501
+        :type: dict(str, PMTLayer)
+        """
+
+        self._pmt_layer_settings = pmt_layer_settings
+
+    @property
     def grid_layer_settings(self):
         """Gets the grid_layer_settings of this MapLibreConfiguration.  # noqa: E501
 
@@ -218,6 +254,48 @@ class MapLibreConfiguration(object):
         """
 
         self._glyphs_base_url = glyphs_base_url
+
+    @property
+    def vector_basemap_style_url(self):
+        """Gets the vector_basemap_style_url of this MapLibreConfiguration.  # noqa: E501
+
+
+        :return: The vector_basemap_style_url of this MapLibreConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._vector_basemap_style_url
+
+    @vector_basemap_style_url.setter
+    def vector_basemap_style_url(self, vector_basemap_style_url):
+        """Sets the vector_basemap_style_url of this MapLibreConfiguration.
+
+
+        :param vector_basemap_style_url: The vector_basemap_style_url of this MapLibreConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._vector_basemap_style_url = vector_basemap_style_url
+
+    @property
+    def here_vector_basemap_style_url(self):
+        """Gets the here_vector_basemap_style_url of this MapLibreConfiguration.  # noqa: E501
+
+
+        :return: The here_vector_basemap_style_url of this MapLibreConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._here_vector_basemap_style_url
+
+    @here_vector_basemap_style_url.setter
+    def here_vector_basemap_style_url(self, here_vector_basemap_style_url):
+        """Sets the here_vector_basemap_style_url of this MapLibreConfiguration.
+
+
+        :param here_vector_basemap_style_url: The here_vector_basemap_style_url of this MapLibreConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._here_vector_basemap_style_url = here_vector_basemap_style_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

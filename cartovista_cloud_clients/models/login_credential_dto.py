@@ -62,14 +62,11 @@ class LoginCredentialDTO(object):
         self.discriminator = None
         if provider is not None:
             self.provider = provider
-        if provider_name is not None:
-            self.provider_name = provider_name
-        if username_or_email_address is not None:
-            self.username_or_email_address = username_or_email_address
+        self.provider_name = provider_name
+        self.username_or_email_address = username_or_email_address
         if provider_identifier_claim is not None:
             self.provider_identifier_claim = provider_identifier_claim
-        if password_or_token is not None:
-            self.password_or_token = password_or_token
+        self.password_or_token = password_or_token
         if re_captcha_response is not None:
             self.re_captcha_response = re_captcha_response
         if keep_me_signed is not None:
@@ -116,6 +113,8 @@ class LoginCredentialDTO(object):
         :param provider_name: The provider_name of this LoginCredentialDTO.  # noqa: E501
         :type: str
         """
+        if provider_name is None:
+            raise ValueError("Invalid value for `provider_name`, must not be `None`")  # noqa: E501
 
         self._provider_name = provider_name
 
@@ -137,6 +136,8 @@ class LoginCredentialDTO(object):
         :param username_or_email_address: The username_or_email_address of this LoginCredentialDTO.  # noqa: E501
         :type: str
         """
+        if username_or_email_address is None:
+            raise ValueError("Invalid value for `username_or_email_address`, must not be `None`")  # noqa: E501
 
         self._username_or_email_address = username_or_email_address
 
@@ -179,6 +180,8 @@ class LoginCredentialDTO(object):
         :param password_or_token: The password_or_token of this LoginCredentialDTO.  # noqa: E501
         :type: str
         """
+        if password_or_token is None:
+            raise ValueError("Invalid value for `password_or_token`, must not be `None`")  # noqa: E501
 
         self._password_or_token = password_or_token
 

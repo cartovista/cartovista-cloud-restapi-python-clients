@@ -91,6 +91,13 @@ class TestFeatureApi(unittest.TestCase):
         """
         pass
 
+    def test_feature_duplicate_feature(self):
+        """Test case for feature_duplicate_feature
+
+        Duplicates a feature by copying its base-table attributes and stored geometry (point, polyline, or polygon). Joined-table rows are not copied; the new feature gets a regenerated Unique ID.  # noqa: E501
+        """
+        pass
+
     def test_feature_get_editable_feature_data(self):
         """Test case for feature_get_editable_feature_data
 

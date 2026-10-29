@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifier** | **str** |  | [optional] 
+**identifier** | **str** |  | 
 **carto_vista_data_type** | [**CartoVistaPortalDataType**](CartoVistaPortalDataType.md) |  | [optional] 
-**name** | **str** |  | [optional] 
+**name** | **str** |  | 
 **description** | **str** |  | [optional] 
 **metadata** | **str** |  | [optional] 
 **units** | **str** |  | [optional] 

@@ -60,16 +60,11 @@ class ConfirmInvitationParameter(object):
         self._email = None
         self._password = None
         self.discriminator = None
-        if user_id is not None:
-            self.user_id = user_id
-        if invitation_code is not None:
-            self.invitation_code = invitation_code
-        if first_name is not None:
-            self.first_name = first_name
-        if last_name is not None:
-            self.last_name = last_name
-        if provider is not None:
-            self.provider = provider
+        self.user_id = user_id
+        self.invitation_code = invitation_code
+        self.first_name = first_name
+        self.last_name = last_name
+        self.provider = provider
         if provider_id is not None:
             self.provider_id = provider_id
         if email is not None:
@@ -95,6 +90,8 @@ class ConfirmInvitationParameter(object):
         :param user_id: The user_id of this ConfirmInvitationParameter.  # noqa: E501
         :type: str
         """
+        if user_id is None:
+            raise ValueError("Invalid value for `user_id`, must not be `None`")  # noqa: E501
 
         self._user_id = user_id
 
@@ -116,6 +113,8 @@ class ConfirmInvitationParameter(object):
         :param invitation_code: The invitation_code of this ConfirmInvitationParameter.  # noqa: E501
         :type: str
         """
+        if invitation_code is None:
+            raise ValueError("Invalid value for `invitation_code`, must not be `None`")  # noqa: E501
 
         self._invitation_code = invitation_code
 
@@ -137,6 +136,8 @@ class ConfirmInvitationParameter(object):
         :param first_name: The first_name of this ConfirmInvitationParameter.  # noqa: E501
         :type: str
         """
+        if first_name is None:
+            raise ValueError("Invalid value for `first_name`, must not be `None`")  # noqa: E501
 
         self._first_name = first_name
 
@@ -158,6 +159,8 @@ class ConfirmInvitationParameter(object):
         :param last_name: The last_name of this ConfirmInvitationParameter.  # noqa: E501
         :type: str
         """
+        if last_name is None:
+            raise ValueError("Invalid value for `last_name`, must not be `None`")  # noqa: E501
 
         self._last_name = last_name
 
@@ -179,6 +182,8 @@ class ConfirmInvitationParameter(object):
         :param provider: The provider of this ConfirmInvitationParameter.  # noqa: E501
         :type: SecurityProvider
         """
+        if provider is None:
+            raise ValueError("Invalid value for `provider`, must not be `None`")  # noqa: E501
 
         self._provider = provider
 

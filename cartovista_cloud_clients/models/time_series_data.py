@@ -31,6 +31,7 @@ class TimeSeriesData(object):
         'data': 'list[TimeSeriesDataValue]',
         'range': 'TimeSeriesRange',
         'limit': 'int',
+        'start_at': 'int',
         'feature_id': 'str'
     }
 
@@ -38,14 +39,16 @@ class TimeSeriesData(object):
         'data': 'data',
         'range': 'range',
         'limit': 'limit',
+        'start_at': 'startAt',
         'feature_id': 'featureId'
     }
 
-    def __init__(self, data=None, range=None, limit=None, feature_id=None):  # noqa: E501
+    def __init__(self, data=None, range=None, limit=None, start_at=None, feature_id=None):  # noqa: E501
         """TimeSeriesData - a model defined in Swagger"""  # noqa: E501
         self._data = None
         self._range = None
         self._limit = None
+        self._start_at = None
         self._feature_id = None
         self.discriminator = None
         if data is not None:
@@ -54,6 +57,8 @@ class TimeSeriesData(object):
             self.range = range
         if limit is not None:
             self.limit = limit
+        if start_at is not None:
+            self.start_at = start_at
         if feature_id is not None:
             self.feature_id = feature_id
 
@@ -119,6 +124,27 @@ class TimeSeriesData(object):
         """
 
         self._limit = limit
+
+    @property
+    def start_at(self):
+        """Gets the start_at of this TimeSeriesData.  # noqa: E501
+
+
+        :return: The start_at of this TimeSeriesData.  # noqa: E501
+        :rtype: int
+        """
+        return self._start_at
+
+    @start_at.setter
+    def start_at(self, start_at):
+        """Sets the start_at of this TimeSeriesData.
+
+
+        :param start_at: The start_at of this TimeSeriesData.  # noqa: E501
+        :type: int
+        """
+
+        self._start_at = start_at
 
     @property
     def feature_id(self):

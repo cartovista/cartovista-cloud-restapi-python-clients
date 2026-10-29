@@ -26,6 +26,7 @@ class MapLayerType(object):
     """
     INTERACTIVE = "Interactive"
     WMTS = "WMTS"
+    PMT = "PMT"
     GRID = "Grid"
     WMS = "WMS"
     """

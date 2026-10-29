@@ -87,12 +87,10 @@ class DataColumnCreateParameter(object):
         self._system_identifier = None
         self._date_format = None
         self.discriminator = None
-        if identifier is not None:
-            self.identifier = identifier
+        self.identifier = identifier
         if carto_vista_data_type is not None:
             self.carto_vista_data_type = carto_vista_data_type
-        if name is not None:
-            self.name = name
+        self.name = name
         if description is not None:
             self.description = description
         if metadata is not None:
@@ -140,6 +138,8 @@ class DataColumnCreateParameter(object):
         :param identifier: The identifier of this DataColumnCreateParameter.  # noqa: E501
         :type: str
         """
+        if identifier is None:
+            raise ValueError("Invalid value for `identifier`, must not be `None`")  # noqa: E501
 
         self._identifier = identifier
 
@@ -182,6 +182,8 @@ class DataColumnCreateParameter(object):
         :param name: The name of this DataColumnCreateParameter.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

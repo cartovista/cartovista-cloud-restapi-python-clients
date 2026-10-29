@@ -58,6 +58,12 @@ class TestVectorServicesApi(unittest.TestCase):
         """
         pass
 
+    def test_vector_services_get_features_by_ids(self):
+        """Test case for vector_services_get_features_by_ids
+
+        """
+        pass
+
     def test_vector_services_get_features_combine_min_max_value(self):
         """Test case for vector_services_get_features_combine_min_max_value
 

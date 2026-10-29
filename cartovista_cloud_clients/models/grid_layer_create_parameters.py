@@ -65,20 +65,16 @@ class GridLayerCreateParameters(object):
         self.discriminator = None
         if unique_identifier is not None:
             self.unique_identifier = unique_identifier
-        if name is not None:
-            self.name = name
+        self.name = name
         if description is not None:
             self.description = description
         if metadata is not None:
             self.metadata = metadata
         if units is not None:
             self.units = units
-        if precision is not None:
-            self.precision = precision
-        if proj4 is not None:
-            self.proj4 = proj4
-        if grid_layer_type is not None:
-            self.grid_layer_type = grid_layer_type
+        self.precision = precision
+        self.proj4 = proj4
+        self.grid_layer_type = grid_layer_type
         if folder_id is not None:
             self.folder_id = folder_id
 
@@ -121,6 +117,8 @@ class GridLayerCreateParameters(object):
         :param name: The name of this GridLayerCreateParameters.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -205,6 +203,8 @@ class GridLayerCreateParameters(object):
         :param precision: The precision of this GridLayerCreateParameters.  # noqa: E501
         :type: int
         """
+        if precision is None:
+            raise ValueError("Invalid value for `precision`, must not be `None`")  # noqa: E501
 
         self._precision = precision
 
@@ -226,6 +226,8 @@ class GridLayerCreateParameters(object):
         :param proj4: The proj4 of this GridLayerCreateParameters.  # noqa: E501
         :type: str
         """
+        if proj4 is None:
+            raise ValueError("Invalid value for `proj4`, must not be `None`")  # noqa: E501
 
         self._proj4 = proj4
 
@@ -247,6 +249,8 @@ class GridLayerCreateParameters(object):
         :param grid_layer_type: The grid_layer_type of this GridLayerCreateParameters.  # noqa: E501
         :type: GridLayerTypeEnum
         """
+        if grid_layer_type is None:
+            raise ValueError("Invalid value for `grid_layer_type`, must not be `None`")  # noqa: E501
 
         self._grid_layer_type = grid_layer_type
 

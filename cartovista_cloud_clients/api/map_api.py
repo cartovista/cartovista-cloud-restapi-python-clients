@@ -993,6 +993,115 @@ class MapApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def map_delete_map_pmt_layer(self, map_identifier, pmt_layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Removes the PM Tile layer from the map.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.map_delete_map_pmt_layer(map_identifier, pmt_layer_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str map_identifier: (required)
+        :param str pmt_layer_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: MapLayersResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.map_delete_map_pmt_layer_with_http_info(map_identifier, pmt_layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.map_delete_map_pmt_layer_with_http_info(map_identifier, pmt_layer_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def map_delete_map_pmt_layer_with_http_info(self, map_identifier, pmt_layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Removes the PM Tile layer from the map.  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.map_delete_map_pmt_layer_with_http_info(map_identifier, pmt_layer_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str map_identifier: (required)
+        :param str pmt_layer_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: MapLayersResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['map_identifier', 'pmt_layer_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method map_delete_map_pmt_layer" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'map_identifier' is set
+        if ('map_identifier' not in params or
+                params['map_identifier'] is None):
+            raise ValueError("Missing the required parameter `map_identifier` when calling `map_delete_map_pmt_layer`")  # noqa: E501
+        # verify the required parameter 'pmt_layer_identifier' is set
+        if ('pmt_layer_identifier' not in params or
+                params['pmt_layer_identifier'] is None):
+            raise ValueError("Missing the required parameter `pmt_layer_identifier` when calling `map_delete_map_pmt_layer`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `map_delete_map_pmt_layer`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'map_identifier' in params:
+            path_params['mapIdentifier'] = params['map_identifier']  # noqa: E501
+        if 'pmt_layer_identifier' in params:
+            path_params['pmtLayerIdentifier'] = params['pmt_layer_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/pmt/{pmtLayerIdentifier}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='MapLayersResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def map_delete_map_wms_layer(self, map_identifier, wms_layer_identifier, tenant_url_code, **kwargs):  # noqa: E501
         """Removes the WMS layer from the map.  # noqa: E501
 
@@ -2222,6 +2331,107 @@ class MapApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='MapWithViewerInformation',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def map_get_map_libre_configuration(self, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets the MapLibre configuration for an opened map (used to refresh the running viewer when layers are added).  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.map_get_map_libre_configuration(map_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str map_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: MapLibreConfiguration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.map_get_map_libre_configuration_with_http_info(map_identifier, tenant_url_code, **kwargs)  # noqa: E501
+        else:
+            (data) = self.map_get_map_libre_configuration_with_http_info(map_identifier, tenant_url_code, **kwargs)  # noqa: E501
+            return data
+
+    def map_get_map_libre_configuration_with_http_info(self, map_identifier, tenant_url_code, **kwargs):  # noqa: E501
+        """Gets the MapLibre configuration for an opened map (used to refresh the running viewer when layers are added).  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.map_get_map_libre_configuration_with_http_info(map_identifier, tenant_url_code, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str map_identifier: (required)
+        :param str tenant_url_code: (required)
+        :return: MapLibreConfiguration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['map_identifier', 'tenant_url_code']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method map_get_map_libre_configuration" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'map_identifier' is set
+        if ('map_identifier' not in params or
+                params['map_identifier'] is None):
+            raise ValueError("Missing the required parameter `map_identifier` when calling `map_get_map_libre_configuration`")  # noqa: E501
+        # verify the required parameter 'tenant_url_code' is set
+        if ('tenant_url_code' not in params or
+                params['tenant_url_code'] is None):
+            raise ValueError("Missing the required parameter `tenant_url_code` when calling `map_get_map_libre_configuration`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'map_identifier' in params:
+            path_params['mapIdentifier'] = params['map_identifier']  # noqa: E501
+        if 'tenant_url_code' in params:
+            path_params['tenantUrlCode'] = params['tenant_url_code']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apiKey', 'bearer', 'secretKey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/{tenantUrlCode}/api/v2/maps/{mapIdentifier}/maplibre', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='MapLibreConfiguration',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -39,8 +39,7 @@ class DomainOfValuesDateTime(object):
         """DomainOfValuesDateTime - a model defined in Swagger"""  # noqa: E501
         self._date_time_range = None
         self.discriminator = None
-        if date_time_range is not None:
-            self.date_time_range = date_time_range
+        self.date_time_range = date_time_range
 
     @property
     def date_time_range(self):
@@ -60,6 +59,8 @@ class DomainOfValuesDateTime(object):
         :param date_time_range: The date_time_range of this DomainOfValuesDateTime.  # noqa: E501
         :type: DomainOfValuesRangeOfDateTime
         """
+        if date_time_range is None:
+            raise ValueError("Invalid value for `date_time_range`, must not be `None`")  # noqa: E501
 
         self._date_time_range = date_time_range
 

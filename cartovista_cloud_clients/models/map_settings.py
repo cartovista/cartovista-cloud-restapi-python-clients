@@ -32,9 +32,11 @@ class MapSettings(object):
         'area_unit': 'str',
         'zoom_on_map_load': 'bool',
         'lazy_loading': 'bool',
+        'maximum_extent': 'OneOfMapSettingsMaximumExtent',
         'zoom_restrictions': 'ZoomRestrictionSettings',
         'scalebar_visible': 'bool',
-        'export_data': 'bool'
+        'export_data': 'bool',
+        'preserve_map_extent_between_slides': 'bool'
     }
 
     attribute_map = {
@@ -42,20 +44,24 @@ class MapSettings(object):
         'area_unit': 'areaUnit',
         'zoom_on_map_load': 'zoomOnMapLoad',
         'lazy_loading': 'lazyLoading',
+        'maximum_extent': 'maximumExtent',
         'zoom_restrictions': 'zoomRestrictions',
         'scalebar_visible': 'scalebarVisible',
-        'export_data': 'exportData'
+        'export_data': 'exportData',
+        'preserve_map_extent_between_slides': 'preserveMapExtentBetweenSlides'
     }
 
-    def __init__(self, distance_unit=None, area_unit=None, zoom_on_map_load=None, lazy_loading=None, zoom_restrictions=None, scalebar_visible=None, export_data=None):  # noqa: E501
+    def __init__(self, distance_unit=None, area_unit=None, zoom_on_map_load=None, lazy_loading=None, maximum_extent=None, zoom_restrictions=None, scalebar_visible=None, export_data=None, preserve_map_extent_between_slides=None):  # noqa: E501
         """MapSettings - a model defined in Swagger"""  # noqa: E501
         self._distance_unit = None
         self._area_unit = None
         self._zoom_on_map_load = None
         self._lazy_loading = None
+        self._maximum_extent = None
         self._zoom_restrictions = None
         self._scalebar_visible = None
         self._export_data = None
+        self._preserve_map_extent_between_slides = None
         self.discriminator = None
         if distance_unit is not None:
             self.distance_unit = distance_unit
@@ -65,12 +71,16 @@ class MapSettings(object):
             self.zoom_on_map_load = zoom_on_map_load
         if lazy_loading is not None:
             self.lazy_loading = lazy_loading
+        if maximum_extent is not None:
+            self.maximum_extent = maximum_extent
         if zoom_restrictions is not None:
             self.zoom_restrictions = zoom_restrictions
         if scalebar_visible is not None:
             self.scalebar_visible = scalebar_visible
         if export_data is not None:
             self.export_data = export_data
+        if preserve_map_extent_between_slides is not None:
+            self.preserve_map_extent_between_slides = preserve_map_extent_between_slides
 
     @property
     def distance_unit(self):
@@ -157,6 +167,27 @@ class MapSettings(object):
         self._lazy_loading = lazy_loading
 
     @property
+    def maximum_extent(self):
+        """Gets the maximum_extent of this MapSettings.  # noqa: E501
+
+
+        :return: The maximum_extent of this MapSettings.  # noqa: E501
+        :rtype: OneOfMapSettingsMaximumExtent
+        """
+        return self._maximum_extent
+
+    @maximum_extent.setter
+    def maximum_extent(self, maximum_extent):
+        """Sets the maximum_extent of this MapSettings.
+
+
+        :param maximum_extent: The maximum_extent of this MapSettings.  # noqa: E501
+        :type: OneOfMapSettingsMaximumExtent
+        """
+
+        self._maximum_extent = maximum_extent
+
+    @property
     def zoom_restrictions(self):
         """Gets the zoom_restrictions of this MapSettings.  # noqa: E501
 
@@ -218,6 +249,27 @@ class MapSettings(object):
         """
 
         self._export_data = export_data
+
+    @property
+    def preserve_map_extent_between_slides(self):
+        """Gets the preserve_map_extent_between_slides of this MapSettings.  # noqa: E501
+
+
+        :return: The preserve_map_extent_between_slides of this MapSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._preserve_map_extent_between_slides
+
+    @preserve_map_extent_between_slides.setter
+    def preserve_map_extent_between_slides(self, preserve_map_extent_between_slides):
+        """Sets the preserve_map_extent_between_slides of this MapSettings.
+
+
+        :param preserve_map_extent_between_slides: The preserve_map_extent_between_slides of this MapSettings.  # noqa: E501
+        :type: bool
+        """
+
+        self._preserve_map_extent_between_slides = preserve_map_extent_between_slides
 
     def to_dict(self):
         """Returns the model properties as a dict"""

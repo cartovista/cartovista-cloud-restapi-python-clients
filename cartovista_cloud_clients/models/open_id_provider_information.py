@@ -33,7 +33,8 @@ class OpenIdProviderInformation(object):
         'client_id': 'str',
         'type': 'SecurityProvider',
         'group_sync': 'bool',
-        'user_sync': 'bool'
+        'user_sync': 'bool',
+        'secret_invalid': 'bool'
     }
 
     attribute_map = {
@@ -42,10 +43,11 @@ class OpenIdProviderInformation(object):
         'client_id': 'clientId',
         'type': 'type',
         'group_sync': 'groupSync',
-        'user_sync': 'userSync'
+        'user_sync': 'userSync',
+        'secret_invalid': 'secretInvalid'
     }
 
-    def __init__(self, provider_name=None, authority=None, client_id=None, type=None, group_sync=None, user_sync=None):  # noqa: E501
+    def __init__(self, provider_name=None, authority=None, client_id=None, type=None, group_sync=None, user_sync=None, secret_invalid=None):  # noqa: E501
         """OpenIdProviderInformation - a model defined in Swagger"""  # noqa: E501
         self._provider_name = None
         self._authority = None
@@ -53,6 +55,7 @@ class OpenIdProviderInformation(object):
         self._type = None
         self._group_sync = None
         self._user_sync = None
+        self._secret_invalid = None
         self.discriminator = None
         if provider_name is not None:
             self.provider_name = provider_name
@@ -66,6 +69,8 @@ class OpenIdProviderInformation(object):
             self.group_sync = group_sync
         if user_sync is not None:
             self.user_sync = user_sync
+        if secret_invalid is not None:
+            self.secret_invalid = secret_invalid
 
     @property
     def provider_name(self):
@@ -192,6 +197,27 @@ class OpenIdProviderInformation(object):
         """
 
         self._user_sync = user_sync
+
+    @property
+    def secret_invalid(self):
+        """Gets the secret_invalid of this OpenIdProviderInformation.  # noqa: E501
+
+
+        :return: The secret_invalid of this OpenIdProviderInformation.  # noqa: E501
+        :rtype: bool
+        """
+        return self._secret_invalid
+
+    @secret_invalid.setter
+    def secret_invalid(self, secret_invalid):
+        """Sets the secret_invalid of this OpenIdProviderInformation.
+
+
+        :param secret_invalid: The secret_invalid of this OpenIdProviderInformation.  # noqa: E501
+        :type: bool
+        """
+
+        self._secret_invalid = secret_invalid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**identifier** | **str** |  | [optional] 
-**name** | **str** |  | [optional] 
-**url** | **str** |  | [optional] 
+**identifier** | **str** |  | 
+**name** | **str** |  | 
+**url** | **str** |  | 
 **extent** | **OneOfWmtsLayerExtent** |  | [optional] 
-**owner_name** | **str** |  | [optional] 
+**owner_name** | **str** |  | 
 **public_access** | **bool** |  | [optional] 
 **can_edit** | **bool** |  | [optional] 
 **creation_time** | **datetime** |  | [optional] 

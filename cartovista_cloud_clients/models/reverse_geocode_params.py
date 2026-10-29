@@ -42,10 +42,8 @@ class ReverseGeocodeParams(object):
         self._longitude = None
         self._latitude = None
         self.discriminator = None
-        if longitude is not None:
-            self.longitude = longitude
-        if latitude is not None:
-            self.latitude = latitude
+        self.longitude = longitude
+        self.latitude = latitude
 
     @property
     def longitude(self):
@@ -65,6 +63,8 @@ class ReverseGeocodeParams(object):
         :param longitude: The longitude of this ReverseGeocodeParams.  # noqa: E501
         :type: str
         """
+        if longitude is None:
+            raise ValueError("Invalid value for `longitude`, must not be `None`")  # noqa: E501
 
         self._longitude = longitude
 
@@ -86,6 +86,8 @@ class ReverseGeocodeParams(object):
         :param latitude: The latitude of this ReverseGeocodeParams.  # noqa: E501
         :type: str
         """
+        if latitude is None:
+            raise ValueError("Invalid value for `latitude`, must not be `None`")  # noqa: E501
 
         self._latitude = latitude
 
