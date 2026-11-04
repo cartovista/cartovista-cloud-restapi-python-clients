@@ -30,11 +30,13 @@ class PoiAnalysisData(object):
     swagger_types = {
         'poi_feature_id': 'str',
         'scenario': 'str',
+        'injection_value': 'float',
         'cluster': 'str',
         'subcluster': 'str',
         'year': 'float',
         'case_type': 'str',
         'name': 'str',
+        'kv_value': 'str',
         'constraint': 'str',
         'contingency': 'str',
         'mw_available': 'float',
@@ -61,11 +63,13 @@ class PoiAnalysisData(object):
     attribute_map = {
         'poi_feature_id': 'poiFeatureId',
         'scenario': 'scenario',
+        'injection_value': 'injectionValue',
         'cluster': 'cluster',
         'subcluster': 'subcluster',
         'year': 'year',
         'case_type': 'caseType',
         'name': 'name',
+        'kv_value': 'kvValue',
         'constraint': 'constraint',
         'contingency': 'contingency',
         'mw_available': 'mwAvailable',
@@ -89,15 +93,17 @@ class PoiAnalysisData(object):
         'constraint_id': 'constraintId'
     }
 
-    def __init__(self, poi_feature_id=None, scenario=None, cluster=None, subcluster=None, year=None, case_type=None, name=None, constraint=None, contingency=None, mw_available=None, dfax_percent=None, mw_impact=None, impact_percent=None, loading_before_percent=None, loading_after_percent=None, loading_delta_percent=None, initial_loading=None, rating=None, fcitc=None, transmission_id=None, worst_dispatch_capacity=None, worst_dispatch_loading=None, worst_dispatch_loading_percent=None, post_project_loading=None, post_project_loading_percent=None, worst_post_project_loading=None, worst_post_project_loading_percent=None, constraint_id=None):  # noqa: E501
+    def __init__(self, poi_feature_id=None, scenario=None, injection_value=None, cluster=None, subcluster=None, year=None, case_type=None, name=None, kv_value=None, constraint=None, contingency=None, mw_available=None, dfax_percent=None, mw_impact=None, impact_percent=None, loading_before_percent=None, loading_after_percent=None, loading_delta_percent=None, initial_loading=None, rating=None, fcitc=None, transmission_id=None, worst_dispatch_capacity=None, worst_dispatch_loading=None, worst_dispatch_loading_percent=None, post_project_loading=None, post_project_loading_percent=None, worst_post_project_loading=None, worst_post_project_loading_percent=None, constraint_id=None):  # noqa: E501
         """PoiAnalysisData - a model defined in Swagger"""  # noqa: E501
         self._poi_feature_id = None
         self._scenario = None
+        self._injection_value = None
         self._cluster = None
         self._subcluster = None
         self._year = None
         self._case_type = None
         self._name = None
+        self._kv_value = None
         self._constraint = None
         self._contingency = None
         self._mw_available = None
@@ -124,6 +130,8 @@ class PoiAnalysisData(object):
             self.poi_feature_id = poi_feature_id
         if scenario is not None:
             self.scenario = scenario
+        if injection_value is not None:
+            self.injection_value = injection_value
         if cluster is not None:
             self.cluster = cluster
         if subcluster is not None:
@@ -134,6 +142,8 @@ class PoiAnalysisData(object):
             self.case_type = case_type
         if name is not None:
             self.name = name
+        if kv_value is not None:
+            self.kv_value = kv_value
         if constraint is not None:
             self.constraint = constraint
         if contingency is not None:
@@ -218,6 +228,27 @@ class PoiAnalysisData(object):
         """
 
         self._scenario = scenario
+
+    @property
+    def injection_value(self):
+        """Gets the injection_value of this PoiAnalysisData.  # noqa: E501
+
+
+        :return: The injection_value of this PoiAnalysisData.  # noqa: E501
+        :rtype: float
+        """
+        return self._injection_value
+
+    @injection_value.setter
+    def injection_value(self, injection_value):
+        """Sets the injection_value of this PoiAnalysisData.
+
+
+        :param injection_value: The injection_value of this PoiAnalysisData.  # noqa: E501
+        :type: float
+        """
+
+        self._injection_value = injection_value
 
     @property
     def cluster(self):
@@ -323,6 +354,27 @@ class PoiAnalysisData(object):
         """
 
         self._name = name
+
+    @property
+    def kv_value(self):
+        """Gets the kv_value of this PoiAnalysisData.  # noqa: E501
+
+
+        :return: The kv_value of this PoiAnalysisData.  # noqa: E501
+        :rtype: str
+        """
+        return self._kv_value
+
+    @kv_value.setter
+    def kv_value(self, kv_value):
+        """Sets the kv_value of this PoiAnalysisData.
+
+
+        :param kv_value: The kv_value of this PoiAnalysisData.  # noqa: E501
+        :type: str
+        """
+
+        self._kv_value = kv_value
 
     @property
     def constraint(self):

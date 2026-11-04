@@ -34,6 +34,7 @@ class TimeSeriesOneFeatureDataParameter(object):
         'current_state': 'OneOfTimeSeriesOneFeatureDataParameterCurrentState',
         'data_table_join_id': 'str',
         'limit': 'int',
+        'start_at': 'int',
         'feature_id': 'str'
     }
 
@@ -44,10 +45,11 @@ class TimeSeriesOneFeatureDataParameter(object):
         'current_state': 'currentState',
         'data_table_join_id': 'dataTableJoinId',
         'limit': 'limit',
+        'start_at': 'startAt',
         'feature_id': 'featureID'
     }
 
-    def __init__(self, data_column_identifier=None, start_date=None, end_date=None, current_state=None, data_table_join_id=None, limit=None, feature_id=None):  # noqa: E501
+    def __init__(self, data_column_identifier=None, start_date=None, end_date=None, current_state=None, data_table_join_id=None, limit=None, start_at=None, feature_id=None):  # noqa: E501
         """TimeSeriesOneFeatureDataParameter - a model defined in Swagger"""  # noqa: E501
         self._data_column_identifier = None
         self._start_date = None
@@ -55,6 +57,7 @@ class TimeSeriesOneFeatureDataParameter(object):
         self._current_state = None
         self._data_table_join_id = None
         self._limit = None
+        self._start_at = None
         self._feature_id = None
         self.discriminator = None
         if data_column_identifier is not None:
@@ -69,8 +72,9 @@ class TimeSeriesOneFeatureDataParameter(object):
             self.data_table_join_id = data_table_join_id
         if limit is not None:
             self.limit = limit
-        if feature_id is not None:
-            self.feature_id = feature_id
+        if start_at is not None:
+            self.start_at = start_at
+        self.feature_id = feature_id
 
     @property
     def data_column_identifier(self):
@@ -199,6 +203,27 @@ class TimeSeriesOneFeatureDataParameter(object):
         self._limit = limit
 
     @property
+    def start_at(self):
+        """Gets the start_at of this TimeSeriesOneFeatureDataParameter.  # noqa: E501
+
+
+        :return: The start_at of this TimeSeriesOneFeatureDataParameter.  # noqa: E501
+        :rtype: int
+        """
+        return self._start_at
+
+    @start_at.setter
+    def start_at(self, start_at):
+        """Sets the start_at of this TimeSeriesOneFeatureDataParameter.
+
+
+        :param start_at: The start_at of this TimeSeriesOneFeatureDataParameter.  # noqa: E501
+        :type: int
+        """
+
+        self._start_at = start_at
+
+    @property
     def feature_id(self):
         """Gets the feature_id of this TimeSeriesOneFeatureDataParameter.  # noqa: E501
 
@@ -216,6 +241,8 @@ class TimeSeriesOneFeatureDataParameter(object):
         :param feature_id: The feature_id of this TimeSeriesOneFeatureDataParameter.  # noqa: E501
         :type: str
         """
+        if feature_id is None:
+            raise ValueError("Invalid value for `feature_id`, must not be `None`")  # noqa: E501
 
         self._feature_id = feature_id
 

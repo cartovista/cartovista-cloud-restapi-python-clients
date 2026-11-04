@@ -29,36 +29,44 @@ class MapLibreWmsLayerSettings(object):
     """
     swagger_types = {
         'id': 'str',
+        'identifier': 'str',
         'name': 'str',
         'url': 'str',
         'wms_layer_name': 'str',
         'version': 'str',
+        'get_legend_url': 'str',
         'extent': 'OneOfMapLibreWmsLayerSettingsExtent',
         'settings': 'WmsSettings'
     }
 
     attribute_map = {
         'id': 'id',
+        'identifier': 'identifier',
         'name': 'name',
         'url': 'url',
         'wms_layer_name': 'wmsLayerName',
         'version': 'version',
+        'get_legend_url': 'getLegendUrl',
         'extent': 'extent',
         'settings': 'settings'
     }
 
-    def __init__(self, id=None, name=None, url=None, wms_layer_name=None, version=None, extent=None, settings=None):  # noqa: E501
+    def __init__(self, id=None, identifier=None, name=None, url=None, wms_layer_name=None, version=None, get_legend_url=None, extent=None, settings=None):  # noqa: E501
         """MapLibreWmsLayerSettings - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._identifier = None
         self._name = None
         self._url = None
         self._wms_layer_name = None
         self._version = None
+        self._get_legend_url = None
         self._extent = None
         self._settings = None
         self.discriminator = None
         if id is not None:
             self.id = id
+        if identifier is not None:
+            self.identifier = identifier
         if name is not None:
             self.name = name
         if url is not None:
@@ -67,6 +75,8 @@ class MapLibreWmsLayerSettings(object):
             self.wms_layer_name = wms_layer_name
         if version is not None:
             self.version = version
+        if get_legend_url is not None:
+            self.get_legend_url = get_legend_url
         if extent is not None:
             self.extent = extent
         if settings is not None:
@@ -92,6 +102,27 @@ class MapLibreWmsLayerSettings(object):
         """
 
         self._id = id
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this MapLibreWmsLayerSettings.  # noqa: E501
+
+
+        :return: The identifier of this MapLibreWmsLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this MapLibreWmsLayerSettings.
+
+
+        :param identifier: The identifier of this MapLibreWmsLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._identifier = identifier
 
     @property
     def name(self):
@@ -176,6 +207,27 @@ class MapLibreWmsLayerSettings(object):
         """
 
         self._version = version
+
+    @property
+    def get_legend_url(self):
+        """Gets the get_legend_url of this MapLibreWmsLayerSettings.  # noqa: E501
+
+
+        :return: The get_legend_url of this MapLibreWmsLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._get_legend_url
+
+    @get_legend_url.setter
+    def get_legend_url(self, get_legend_url):
+        """Sets the get_legend_url of this MapLibreWmsLayerSettings.
+
+
+        :param get_legend_url: The get_legend_url of this MapLibreWmsLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._get_legend_url = get_legend_url
 
     @property
     def extent(self):

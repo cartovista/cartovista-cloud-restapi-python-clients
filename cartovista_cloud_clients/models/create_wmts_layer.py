@@ -59,8 +59,7 @@ class CreateWmtsLayer(object):
         self.discriminator = None
         if name is not None:
             self.name = name
-        if url is not None:
-            self.url = url
+        self.url = url
         if add_to_map_id is not None:
             self.add_to_map_id = add_to_map_id
         if folder_id is not None:
@@ -111,6 +110,8 @@ class CreateWmtsLayer(object):
         :param url: The url of this CreateWmtsLayer.  # noqa: E501
         :type: str
         """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
 

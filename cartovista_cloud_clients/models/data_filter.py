@@ -42,8 +42,7 @@ class DataFilter(object):
         self._value = None
         self._filter_operator = None
         self.discriminator = None
-        if value is not None:
-            self.value = value
+        self.value = value
         if filter_operator is not None:
             self.filter_operator = filter_operator
 
@@ -65,6 +64,8 @@ class DataFilter(object):
         :param value: The value of this DataFilter.  # noqa: E501
         :type: str
         """
+        if value is None:
+            raise ValueError("Invalid value for `value`, must not be `None`")  # noqa: E501
 
         self._value = value
 

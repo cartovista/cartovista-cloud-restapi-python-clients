@@ -39,8 +39,7 @@ class ImportGroupsParameter(object):
         """ImportGroupsParameter - a model defined in Swagger"""  # noqa: E501
         self._create_group_parameters = None
         self.discriminator = None
-        if create_group_parameters is not None:
-            self.create_group_parameters = create_group_parameters
+        self.create_group_parameters = create_group_parameters
 
     @property
     def create_group_parameters(self):
@@ -60,6 +59,8 @@ class ImportGroupsParameter(object):
         :param create_group_parameters: The create_group_parameters of this ImportGroupsParameter.  # noqa: E501
         :type: list[CreateGroupParameter]
         """
+        if create_group_parameters is None:
+            raise ValueError("Invalid value for `create_group_parameters`, must not be `None`")  # noqa: E501
 
         self._create_group_parameters = create_group_parameters
 

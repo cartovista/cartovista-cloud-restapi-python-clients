@@ -51,8 +51,7 @@ class UpdateAccessKeyDTO(object):
         self.access_key = access_key
         self.enabled = enabled
         self.ip_whitelisting = ip_whitelisting
-        if notes is not None:
-            self.notes = notes
+        self.notes = notes
 
     @property
     def access_key(self):
@@ -141,6 +140,8 @@ class UpdateAccessKeyDTO(object):
         :param notes: The notes of this UpdateAccessKeyDTO.  # noqa: E501
         :type: str
         """
+        if notes is None:
+            raise ValueError("Invalid value for `notes`, must not be `None`")  # noqa: E501
 
         self._notes = notes
 

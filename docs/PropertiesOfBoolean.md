@@ -3,19 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**map** | **bool** |  | [optional] 
-**layers** | **bool** |  | [optional] 
-**info** | **bool** |  | [optional] 
-**data** | **bool** |  | [optional] 
-**legend** | **bool** |  | [optional] 
-**chart** | **bool** |  | [optional] 
-**story** | **bool** |  | [optional] 
-**routing** | **bool** |  | [optional] 
-**profile** | **bool** |  | [optional] 
-**time_view** | **bool** |  | [optional] 
-**time_animation_controller** | **bool** |  | [optional] 
-**composite_scoring** | **bool** |  | [optional] 
-**poi_analysis** | **bool** |  | [optional] 
+**map** | **bool** |  | 
+**layers** | **bool** |  | 
+**info** | **bool** |  | 
+**data** | **bool** |  | 
+**legend** | **bool** |  | 
+**chart** | **bool** |  | 
+**story** | **bool** |  | 
+**routing** | **bool** |  | 
+**profile** | **bool** |  | 
+**time_view** | **bool** |  | 
+**time_animation_controller** | **bool** |  | 
+**composite_scoring** | **bool** |  | 
+**poi_analysis** | **bool** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

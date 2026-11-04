@@ -51,16 +51,13 @@ class CreateCompositeVariableDTO(object):
         self._weight = None
         self._data_column_ids = None
         self.discriminator = None
-        if name is not None:
-            self.name = name
-        if type is not None:
-            self.type = type
+        self.name = name
+        self.type = type
         if target_value is not None:
             self.target_value = target_value
         if weight is not None:
             self.weight = weight
-        if data_column_ids is not None:
-            self.data_column_ids = data_column_ids
+        self.data_column_ids = data_column_ids
 
     @property
     def name(self):
@@ -80,6 +77,8 @@ class CreateCompositeVariableDTO(object):
         :param name: The name of this CreateCompositeVariableDTO.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -101,6 +100,8 @@ class CreateCompositeVariableDTO(object):
         :param type: The type of this CreateCompositeVariableDTO.  # noqa: E501
         :type: VariableTypeEnum
         """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
 
@@ -164,6 +165,8 @@ class CreateCompositeVariableDTO(object):
         :param data_column_ids: The data_column_ids of this CreateCompositeVariableDTO.  # noqa: E501
         :type: list[str]
         """
+        if data_column_ids is None:
+            raise ValueError("Invalid value for `data_column_ids`, must not be `None`")  # noqa: E501
 
         self._data_column_ids = data_column_ids
 

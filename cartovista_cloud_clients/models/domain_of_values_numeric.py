@@ -39,8 +39,7 @@ class DomainOfValuesNumeric(object):
         """DomainOfValuesNumeric - a model defined in Swagger"""  # noqa: E501
         self._numeric_range = None
         self.discriminator = None
-        if numeric_range is not None:
-            self.numeric_range = numeric_range
+        self.numeric_range = numeric_range
 
     @property
     def numeric_range(self):
@@ -60,6 +59,8 @@ class DomainOfValuesNumeric(object):
         :param numeric_range: The numeric_range of this DomainOfValuesNumeric.  # noqa: E501
         :type: DomainOfValuesRangeOfDouble
         """
+        if numeric_range is None:
+            raise ValueError("Invalid value for `numeric_range`, must not be `None`")  # noqa: E501
 
         self._numeric_range = numeric_range
 

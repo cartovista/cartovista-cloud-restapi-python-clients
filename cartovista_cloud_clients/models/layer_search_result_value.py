@@ -42,10 +42,8 @@ class LayerSearchResultValue(object):
         self._id = None
         self._values = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if values is not None:
-            self.values = values
+        self.id = id
+        self.values = values
 
     @property
     def id(self):
@@ -65,6 +63,8 @@ class LayerSearchResultValue(object):
         :param id: The id of this LayerSearchResultValue.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -86,6 +86,8 @@ class LayerSearchResultValue(object):
         :param values: The values of this LayerSearchResultValue.  # noqa: E501
         :type: list[object]
         """
+        if values is None:
+            raise ValueError("Invalid value for `values`, must not be `None`")  # noqa: E501
 
         self._values = values
 

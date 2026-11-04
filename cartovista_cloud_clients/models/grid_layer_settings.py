@@ -35,7 +35,8 @@ class GridLayerSettings(object):
         'style': 'GridLayerSettingsStyle',
         'rendering': 'LayerSettingsRendering',
         'visibility_ranges': 'GridLayerSettingsVisibilityRanges',
-        'legend': 'LayerSettingsLegend'
+        'legend': 'LayerSettingsLegend',
+        'interactivity': 'GridLayerSettingsInteractivity'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class GridLayerSettings(object):
         'style': 'style',
         'rendering': 'rendering',
         'visibility_ranges': 'visibilityRanges',
-        'legend': 'legend'
+        'legend': 'legend',
+        'interactivity': 'interactivity'
     }
 
-    def __init__(self, id=None, grid_layer_id=None, map_id=None, alias=None, style=None, rendering=None, visibility_ranges=None, legend=None):  # noqa: E501
+    def __init__(self, id=None, grid_layer_id=None, map_id=None, alias=None, style=None, rendering=None, visibility_ranges=None, legend=None, interactivity=None):  # noqa: E501
         """GridLayerSettings - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._grid_layer_id = None
@@ -59,6 +61,7 @@ class GridLayerSettings(object):
         self._rendering = None
         self._visibility_ranges = None
         self._legend = None
+        self._interactivity = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -76,6 +79,8 @@ class GridLayerSettings(object):
             self.visibility_ranges = visibility_ranges
         if legend is not None:
             self.legend = legend
+        if interactivity is not None:
+            self.interactivity = interactivity
 
     @property
     def id(self):
@@ -244,6 +249,27 @@ class GridLayerSettings(object):
         """
 
         self._legend = legend
+
+    @property
+    def interactivity(self):
+        """Gets the interactivity of this GridLayerSettings.  # noqa: E501
+
+
+        :return: The interactivity of this GridLayerSettings.  # noqa: E501
+        :rtype: GridLayerSettingsInteractivity
+        """
+        return self._interactivity
+
+    @interactivity.setter
+    def interactivity(self, interactivity):
+        """Sets the interactivity of this GridLayerSettings.
+
+
+        :param interactivity: The interactivity of this GridLayerSettings.  # noqa: E501
+        :type: GridLayerSettingsInteractivity
+        """
+
+        self._interactivity = interactivity
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -56,16 +56,14 @@ class LayerSearchResult(object):
         self.discriminator = None
         if layer_id is not None:
             self.layer_id = layer_id
-        if layer_name is not None:
-            self.layer_name = layer_name
+        self.layer_name = layer_name
         if search is not None:
             self.search = search
         if total is not None:
             self.total = total
         if row_offset is not None:
             self.row_offset = row_offset
-        if values is not None:
-            self.values = values
+        self.values = values
 
     @property
     def layer_id(self):
@@ -106,6 +104,8 @@ class LayerSearchResult(object):
         :param layer_name: The layer_name of this LayerSearchResult.  # noqa: E501
         :type: str
         """
+        if layer_name is None:
+            raise ValueError("Invalid value for `layer_name`, must not be `None`")  # noqa: E501
 
         self._layer_name = layer_name
 
@@ -190,6 +190,8 @@ class LayerSearchResult(object):
         :param values: The values of this LayerSearchResult.  # noqa: E501
         :type: list[LayerSearchResultValue]
         """
+        if values is None:
+            raise ValueError("Invalid value for `values`, must not be `None`")  # noqa: E501
 
         self._values = values
 

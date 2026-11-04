@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **provider** | [**SecurityProvider**](SecurityProvider.md) |  | [optional] 
-**provider_name** | **str** |  | [optional] 
-**username_or_email_address** | **str** |  | [optional] 
+**provider_name** | **str** |  | 
+**username_or_email_address** | **str** |  | 
 **provider_identifier_claim** | **str** |  | [optional] 
-**password_or_token** | **str** |  | [optional] 
+**password_or_token** | **str** |  | 
 **re_captcha_response** | **str** |  | [optional] 
 **keep_me_signed** | **bool** |  | [optional] 
 **device_id** | **str** |  | [optional] 

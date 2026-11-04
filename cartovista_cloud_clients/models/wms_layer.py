@@ -115,8 +115,7 @@ class WmsLayer(object):
             self.extent = extent
         if get_legend_url is not None:
             self.get_legend_url = get_legend_url
-        if version is not None:
-            self.version = version
+        self.version = version
         if projection_attribute is not None:
             self.projection_attribute = projection_attribute
         if thumbnail_url is not None:
@@ -434,6 +433,8 @@ class WmsLayer(object):
         :param version: The version of this WmsLayer.  # noqa: E501
         :type: str
         """
+        if version is None:
+            raise ValueError("Invalid value for `version`, must not be `None`")  # noqa: E501
 
         self._version = version
 

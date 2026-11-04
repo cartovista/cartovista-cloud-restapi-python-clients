@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **rendering** | [**LayerSettingsRendering**](LayerSettingsRendering.md) |  | [optional] 
 **visibility_ranges** | [**GridLayerSettingsVisibilityRanges**](GridLayerSettingsVisibilityRanges.md) |  | [optional] 
 **legend** | [**LayerSettingsLegend**](LayerSettingsLegend.md) |  | [optional] 
+**interactivity** | [**GridLayerSettingsInteractivity**](GridLayerSettingsInteractivity.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

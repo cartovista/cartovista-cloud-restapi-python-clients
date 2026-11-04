@@ -30,20 +30,23 @@ class UpdateOrganizationParameter(object):
     swagger_types = {
         'default_language': 'LanguageEnum',
         'primary_color': 'str',
-        'default_theme': 'ThemeEnum'
+        'default_theme': 'ThemeEnum',
+        'allowed_domains': 'list[str]'
     }
 
     attribute_map = {
         'default_language': 'defaultLanguage',
         'primary_color': 'primaryColor',
-        'default_theme': 'defaultTheme'
+        'default_theme': 'defaultTheme',
+        'allowed_domains': 'allowedDomains'
     }
 
-    def __init__(self, default_language=None, primary_color=None, default_theme=None):  # noqa: E501
+    def __init__(self, default_language=None, primary_color=None, default_theme=None, allowed_domains=None):  # noqa: E501
         """UpdateOrganizationParameter - a model defined in Swagger"""  # noqa: E501
         self._default_language = None
         self._primary_color = None
         self._default_theme = None
+        self._allowed_domains = None
         self.discriminator = None
         if default_language is not None:
             self.default_language = default_language
@@ -51,6 +54,8 @@ class UpdateOrganizationParameter(object):
             self.primary_color = primary_color
         if default_theme is not None:
             self.default_theme = default_theme
+        if allowed_domains is not None:
+            self.allowed_domains = allowed_domains
 
     @property
     def default_language(self):
@@ -114,6 +119,27 @@ class UpdateOrganizationParameter(object):
         """
 
         self._default_theme = default_theme
+
+    @property
+    def allowed_domains(self):
+        """Gets the allowed_domains of this UpdateOrganizationParameter.  # noqa: E501
+
+
+        :return: The allowed_domains of this UpdateOrganizationParameter.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._allowed_domains
+
+    @allowed_domains.setter
+    def allowed_domains(self, allowed_domains):
+        """Sets the allowed_domains of this UpdateOrganizationParameter.
+
+
+        :param allowed_domains: The allowed_domains of this UpdateOrganizationParameter.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._allowed_domains = allowed_domains
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -65,22 +65,18 @@ class CreateWmsLayer(object):
         self.discriminator = None
         if name is not None:
             self.name = name
-        if url is not None:
-            self.url = url
+        self.url = url
         if add_to_map_id is not None:
             self.add_to_map_id = add_to_map_id
         if folder_id is not None:
             self.folder_id = folder_id
         if set_public_access is not None:
             self.set_public_access = set_public_access
-        if layer_names is not None:
-            self.layer_names = layer_names
-        if extents is not None:
-            self.extents = extents
+        self.layer_names = layer_names
+        self.extents = extents
         if get_legend_url is not None:
             self.get_legend_url = get_legend_url
-        if version is not None:
-            self.version = version
+        self.version = version
 
     @property
     def name(self):
@@ -121,6 +117,8 @@ class CreateWmsLayer(object):
         :param url: The url of this CreateWmsLayer.  # noqa: E501
         :type: str
         """
+        if url is None:
+            raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
 
@@ -205,6 +203,8 @@ class CreateWmsLayer(object):
         :param layer_names: The layer_names of this CreateWmsLayer.  # noqa: E501
         :type: list[str]
         """
+        if layer_names is None:
+            raise ValueError("Invalid value for `layer_names`, must not be `None`")  # noqa: E501
 
         self._layer_names = layer_names
 
@@ -226,6 +226,8 @@ class CreateWmsLayer(object):
         :param extents: The extents of this CreateWmsLayer.  # noqa: E501
         :type: list[WmsExtent]
         """
+        if extents is None:
+            raise ValueError("Invalid value for `extents`, must not be `None`")  # noqa: E501
 
         self._extents = extents
 
@@ -268,6 +270,8 @@ class CreateWmsLayer(object):
         :param version: The version of this CreateWmsLayer.  # noqa: E501
         :type: str
         """
+        if version is None:
+            raise ValueError("Invalid value for `version`, must not be `None`")  # noqa: E501
 
         self._version = version
 

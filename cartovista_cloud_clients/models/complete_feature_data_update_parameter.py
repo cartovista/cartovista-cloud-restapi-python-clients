@@ -42,8 +42,7 @@ class CompleteFeatureDataUpdateParameter(object):
         self._column_ids_to_values = None
         self._update_georeferenced_geometry = None
         self.discriminator = None
-        if column_ids_to_values is not None:
-            self.column_ids_to_values = column_ids_to_values
+        self.column_ids_to_values = column_ids_to_values
         if update_georeferenced_geometry is not None:
             self.update_georeferenced_geometry = update_georeferenced_geometry
 
@@ -65,6 +64,8 @@ class CompleteFeatureDataUpdateParameter(object):
         :param column_ids_to_values: The column_ids_to_values of this CompleteFeatureDataUpdateParameter.  # noqa: E501
         :type: dict(str, object)
         """
+        if column_ids_to_values is None:
+            raise ValueError("Invalid value for `column_ids_to_values`, must not be `None`")  # noqa: E501
 
         self._column_ids_to_values = column_ids_to_values
 

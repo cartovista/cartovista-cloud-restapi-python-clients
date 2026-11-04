@@ -34,6 +34,7 @@ class TimeSeriesManyFeaturesDataParameter(object):
         'current_state': 'OneOfTimeSeriesManyFeaturesDataParameterCurrentState',
         'data_table_join_id': 'str',
         'limit': 'int',
+        'start_at': 'int',
         'feature_ids': 'list[str]'
     }
 
@@ -44,10 +45,11 @@ class TimeSeriesManyFeaturesDataParameter(object):
         'current_state': 'currentState',
         'data_table_join_id': 'dataTableJoinId',
         'limit': 'limit',
+        'start_at': 'startAt',
         'feature_ids': 'featureIds'
     }
 
-    def __init__(self, data_column_identifier=None, start_date=None, end_date=None, current_state=None, data_table_join_id=None, limit=None, feature_ids=None):  # noqa: E501
+    def __init__(self, data_column_identifier=None, start_date=None, end_date=None, current_state=None, data_table_join_id=None, limit=None, start_at=None, feature_ids=None):  # noqa: E501
         """TimeSeriesManyFeaturesDataParameter - a model defined in Swagger"""  # noqa: E501
         self._data_column_identifier = None
         self._start_date = None
@@ -55,6 +57,7 @@ class TimeSeriesManyFeaturesDataParameter(object):
         self._current_state = None
         self._data_table_join_id = None
         self._limit = None
+        self._start_at = None
         self._feature_ids = None
         self.discriminator = None
         if data_column_identifier is not None:
@@ -69,6 +72,8 @@ class TimeSeriesManyFeaturesDataParameter(object):
             self.data_table_join_id = data_table_join_id
         if limit is not None:
             self.limit = limit
+        if start_at is not None:
+            self.start_at = start_at
         if feature_ids is not None:
             self.feature_ids = feature_ids
 
@@ -197,6 +202,27 @@ class TimeSeriesManyFeaturesDataParameter(object):
         """
 
         self._limit = limit
+
+    @property
+    def start_at(self):
+        """Gets the start_at of this TimeSeriesManyFeaturesDataParameter.  # noqa: E501
+
+
+        :return: The start_at of this TimeSeriesManyFeaturesDataParameter.  # noqa: E501
+        :rtype: int
+        """
+        return self._start_at
+
+    @start_at.setter
+    def start_at(self, start_at):
+        """Sets the start_at of this TimeSeriesManyFeaturesDataParameter.
+
+
+        :param start_at: The start_at of this TimeSeriesManyFeaturesDataParameter.  # noqa: E501
+        :type: int
+        """
+
+        self._start_at = start_at
 
     @property
     def feature_ids(self):

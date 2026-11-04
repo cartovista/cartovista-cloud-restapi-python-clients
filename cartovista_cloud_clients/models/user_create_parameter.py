@@ -63,8 +63,7 @@ class UserCreateParameter(object):
         self._provider = None
         self._provider_name = None
         self.discriminator = None
-        if email_address is not None:
-            self.email_address = email_address
+        self.email_address = email_address
         if identifier is not None:
             self.identifier = identifier
         if first_name is not None:
@@ -100,6 +99,8 @@ class UserCreateParameter(object):
         :param email_address: The email_address of this UserCreateParameter.  # noqa: E501
         :type: str
         """
+        if email_address is None:
+            raise ValueError("Invalid value for `email_address`, must not be `None`")  # noqa: E501
 
         self._email_address = email_address
 

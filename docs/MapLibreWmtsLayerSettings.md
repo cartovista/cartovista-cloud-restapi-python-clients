@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
+**identifier** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **extent** | **OneOfMapLibreWmtsLayerSettingsExtent** |  | [optional] 

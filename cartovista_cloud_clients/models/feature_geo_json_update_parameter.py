@@ -49,8 +49,7 @@ class FeatureGeoJSONUpdateParameter(object):
             self.feature_type = feature_type
         if proj4 is not None:
             self.proj4 = proj4
-        if geo_json is not None:
-            self.geo_json = geo_json
+        self.geo_json = geo_json
 
     @property
     def feature_type(self):
@@ -112,6 +111,8 @@ class FeatureGeoJSONUpdateParameter(object):
         :param geo_json: The geo_json of this FeatureGeoJSONUpdateParameter.  # noqa: E501
         :type: str
         """
+        if geo_json is None:
+            raise ValueError("Invalid value for `geo_json`, must not be `None`")  # noqa: E501
 
         self._geo_json = geo_json
 

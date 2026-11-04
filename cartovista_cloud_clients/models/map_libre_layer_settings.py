@@ -29,51 +29,69 @@ class MapLibreLayerSettings(object):
     """
     swagger_types = {
         'id': 'str',
+        'identifier': 'str',
+        'table_id': 'str',
         'type': 'GeometryTypeEnum',
         'record_count': 'int',
         'is_tiled': 'bool',
+        'can_use_clusters': 'bool',
         'unique_column_id': 'str',
         'fid_column_id': 'str',
         'extent': 'ExtentDTO',
         'style': 'LayerSettings',
         'src': 'str',
-        'columns': 'list[DataColumn]'
+        'columns': 'list[DataColumn]',
+        'joined_tables': 'list[MapLibreJoinedTableSettings]'
     }
 
     attribute_map = {
         'id': 'id',
+        'identifier': 'identifier',
+        'table_id': 'tableId',
         'type': 'type',
         'record_count': 'recordCount',
         'is_tiled': 'isTiled',
+        'can_use_clusters': 'canUseClusters',
         'unique_column_id': 'uniqueColumnId',
         'fid_column_id': 'fidColumnId',
         'extent': 'extent',
         'style': 'style',
         'src': 'src',
-        'columns': 'columns'
+        'columns': 'columns',
+        'joined_tables': 'joinedTables'
     }
 
-    def __init__(self, id=None, type=None, record_count=None, is_tiled=None, unique_column_id=None, fid_column_id=None, extent=None, style=None, src=None, columns=None):  # noqa: E501
+    def __init__(self, id=None, identifier=None, table_id=None, type=None, record_count=None, is_tiled=None, can_use_clusters=None, unique_column_id=None, fid_column_id=None, extent=None, style=None, src=None, columns=None, joined_tables=None):  # noqa: E501
         """MapLibreLayerSettings - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._identifier = None
+        self._table_id = None
         self._type = None
         self._record_count = None
         self._is_tiled = None
+        self._can_use_clusters = None
         self._unique_column_id = None
         self._fid_column_id = None
         self._extent = None
         self._style = None
         self._src = None
         self._columns = None
+        self._joined_tables = None
         self.discriminator = None
         if id is not None:
             self.id = id
+        if identifier is not None:
+            self.identifier = identifier
+        if table_id is not None:
+            self.table_id = table_id
         if type is not None:
             self.type = type
         if record_count is not None:
             self.record_count = record_count
         if is_tiled is not None:
             self.is_tiled = is_tiled
+        if can_use_clusters is not None:
+            self.can_use_clusters = can_use_clusters
         if unique_column_id is not None:
             self.unique_column_id = unique_column_id
         if fid_column_id is not None:
@@ -86,6 +104,8 @@ class MapLibreLayerSettings(object):
             self.src = src
         if columns is not None:
             self.columns = columns
+        if joined_tables is not None:
+            self.joined_tables = joined_tables
 
     @property
     def id(self):
@@ -107,6 +127,48 @@ class MapLibreLayerSettings(object):
         """
 
         self._id = id
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The identifier of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this MapLibreLayerSettings.
+
+
+        :param identifier: The identifier of this MapLibreLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._identifier = identifier
+
+    @property
+    def table_id(self):
+        """Gets the table_id of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The table_id of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._table_id
+
+    @table_id.setter
+    def table_id(self, table_id):
+        """Sets the table_id of this MapLibreLayerSettings.
+
+
+        :param table_id: The table_id of this MapLibreLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._table_id = table_id
 
     @property
     def type(self):
@@ -170,6 +232,27 @@ class MapLibreLayerSettings(object):
         """
 
         self._is_tiled = is_tiled
+
+    @property
+    def can_use_clusters(self):
+        """Gets the can_use_clusters of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The can_use_clusters of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_use_clusters
+
+    @can_use_clusters.setter
+    def can_use_clusters(self, can_use_clusters):
+        """Sets the can_use_clusters of this MapLibreLayerSettings.
+
+
+        :param can_use_clusters: The can_use_clusters of this MapLibreLayerSettings.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_use_clusters = can_use_clusters
 
     @property
     def unique_column_id(self):
@@ -296,6 +379,27 @@ class MapLibreLayerSettings(object):
         """
 
         self._columns = columns
+
+    @property
+    def joined_tables(self):
+        """Gets the joined_tables of this MapLibreLayerSettings.  # noqa: E501
+
+
+        :return: The joined_tables of this MapLibreLayerSettings.  # noqa: E501
+        :rtype: list[MapLibreJoinedTableSettings]
+        """
+        return self._joined_tables
+
+    @joined_tables.setter
+    def joined_tables(self, joined_tables):
+        """Sets the joined_tables of this MapLibreLayerSettings.
+
+
+        :param joined_tables: The joined_tables of this MapLibreLayerSettings.  # noqa: E501
+        :type: list[MapLibreJoinedTableSettings]
+        """
+
+        self._joined_tables = joined_tables
 
     def to_dict(self):
         """Returns the model properties as a dict"""

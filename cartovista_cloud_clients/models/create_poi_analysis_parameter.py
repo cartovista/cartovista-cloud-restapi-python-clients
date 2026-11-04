@@ -43,6 +43,7 @@ class CreatePoiAnalysisParameter(object):
         'smoothing': 'float',
         'pixel_size': 'int',
         'buffer_size': 'int',
+        'default_unconstrained_pois_capacity': 'int',
         'show_injection_area_mask': 'bool',
         'only_use_worst_dispatch': 'bool'
     }
@@ -63,11 +64,12 @@ class CreatePoiAnalysisParameter(object):
         'smoothing': 'smoothing',
         'pixel_size': 'pixelSize',
         'buffer_size': 'bufferSize',
+        'default_unconstrained_pois_capacity': 'defaultUnconstrainedPoisCapacity',
         'show_injection_area_mask': 'showInjectionAreaMask',
         'only_use_worst_dispatch': 'onlyUseWorstDispatch'
     }
 
-    def __init__(self, name=None, heatmap_layer_name=None, injection_area_mask_layer_name=None, harmers_layer_name=None, layer_id=None, table_id=None, footprint_layer_id=None, transmission_lines_layer_id=None, transmission_points_layer_id=None, harmer_table_id=None, stress_gen_layer_id=None, power=None, smoothing=None, pixel_size=None, buffer_size=None, show_injection_area_mask=None, only_use_worst_dispatch=None):  # noqa: E501
+    def __init__(self, name=None, heatmap_layer_name=None, injection_area_mask_layer_name=None, harmers_layer_name=None, layer_id=None, table_id=None, footprint_layer_id=None, transmission_lines_layer_id=None, transmission_points_layer_id=None, harmer_table_id=None, stress_gen_layer_id=None, power=None, smoothing=None, pixel_size=None, buffer_size=None, default_unconstrained_pois_capacity=None, show_injection_area_mask=None, only_use_worst_dispatch=None):  # noqa: E501
         """CreatePoiAnalysisParameter - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._heatmap_layer_name = None
@@ -84,6 +86,7 @@ class CreatePoiAnalysisParameter(object):
         self._smoothing = None
         self._pixel_size = None
         self._buffer_size = None
+        self._default_unconstrained_pois_capacity = None
         self._show_injection_area_mask = None
         self._only_use_worst_dispatch = None
         self.discriminator = None
@@ -117,6 +120,8 @@ class CreatePoiAnalysisParameter(object):
             self.pixel_size = pixel_size
         if buffer_size is not None:
             self.buffer_size = buffer_size
+        if default_unconstrained_pois_capacity is not None:
+            self.default_unconstrained_pois_capacity = default_unconstrained_pois_capacity
         if show_injection_area_mask is not None:
             self.show_injection_area_mask = show_injection_area_mask
         if only_use_worst_dispatch is not None:
@@ -436,6 +441,27 @@ class CreatePoiAnalysisParameter(object):
         """
 
         self._buffer_size = buffer_size
+
+    @property
+    def default_unconstrained_pois_capacity(self):
+        """Gets the default_unconstrained_pois_capacity of this CreatePoiAnalysisParameter.  # noqa: E501
+
+
+        :return: The default_unconstrained_pois_capacity of this CreatePoiAnalysisParameter.  # noqa: E501
+        :rtype: int
+        """
+        return self._default_unconstrained_pois_capacity
+
+    @default_unconstrained_pois_capacity.setter
+    def default_unconstrained_pois_capacity(self, default_unconstrained_pois_capacity):
+        """Sets the default_unconstrained_pois_capacity of this CreatePoiAnalysisParameter.
+
+
+        :param default_unconstrained_pois_capacity: The default_unconstrained_pois_capacity of this CreatePoiAnalysisParameter.  # noqa: E501
+        :type: int
+        """
+
+        self._default_unconstrained_pois_capacity = default_unconstrained_pois_capacity
 
     @property
     def show_injection_area_mask(self):

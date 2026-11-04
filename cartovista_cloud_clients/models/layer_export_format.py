@@ -26,6 +26,7 @@ class LayerExportFormat(object):
     """
     MAPINFO = "mapinfo"
     ESRI = "esri"
+    GEOPACKAGE = "geopackage"
     CSV = "csv"
     """
     Attributes:

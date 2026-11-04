@@ -54,8 +54,7 @@ class SearchMapParameter(object):
         self._except_layer_ids = None
         self._language = None
         self.discriminator = None
-        if search is not None:
-            self.search = search
+        self.search = search
         if include_layers is not None:
             self.include_layers = include_layers
         if include_addresses is not None:
@@ -85,6 +84,8 @@ class SearchMapParameter(object):
         :param search: The search of this SearchMapParameter.  # noqa: E501
         :type: str
         """
+        if search is None:
+            raise ValueError("Invalid value for `search`, must not be `None`")  # noqa: E501
 
         self._search = search
 

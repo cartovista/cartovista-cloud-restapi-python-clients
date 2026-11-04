@@ -43,7 +43,8 @@ class Organization(object):
         'froala_key': 'str',
         'disclaimers': 'list[TenantDisclaimer]',
         'invalidate_disclaimer_time': 'datetime',
-        'default_permissions': 'DefaultOrganizationPermissions'
+        'default_permissions': 'DefaultOrganizationPermissions',
+        'allowed_domains': 'list[str]'
     }
 
     attribute_map = {
@@ -62,10 +63,11 @@ class Organization(object):
         'froala_key': 'froalaKey',
         'disclaimers': 'disclaimers',
         'invalidate_disclaimer_time': 'invalidateDisclaimerTime',
-        'default_permissions': 'defaultPermissions'
+        'default_permissions': 'defaultPermissions',
+        'allowed_domains': 'allowedDomains'
     }
 
-    def __init__(self, name=None, default_language=None, primary_color=None, default_theme=None, logo_url=None, logo_icon_url=None, is_enterprise=None, url_code=None, users_folder_id=None, data_folder_id=None, maps_folder_id=None, open_id_providers=None, froala_key=None, disclaimers=None, invalidate_disclaimer_time=None, default_permissions=None):  # noqa: E501
+    def __init__(self, name=None, default_language=None, primary_color=None, default_theme=None, logo_url=None, logo_icon_url=None, is_enterprise=None, url_code=None, users_folder_id=None, data_folder_id=None, maps_folder_id=None, open_id_providers=None, froala_key=None, disclaimers=None, invalidate_disclaimer_time=None, default_permissions=None, allowed_domains=None):  # noqa: E501
         """Organization - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._default_language = None
@@ -83,6 +85,7 @@ class Organization(object):
         self._disclaimers = None
         self._invalidate_disclaimer_time = None
         self._default_permissions = None
+        self._allowed_domains = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -116,6 +119,8 @@ class Organization(object):
             self.invalidate_disclaimer_time = invalidate_disclaimer_time
         if default_permissions is not None:
             self.default_permissions = default_permissions
+        if allowed_domains is not None:
+            self.allowed_domains = allowed_domains
 
     @property
     def name(self):
@@ -452,6 +457,27 @@ class Organization(object):
         """
 
         self._default_permissions = default_permissions
+
+    @property
+    def allowed_domains(self):
+        """Gets the allowed_domains of this Organization.  # noqa: E501
+
+
+        :return: The allowed_domains of this Organization.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._allowed_domains
+
+    @allowed_domains.setter
+    def allowed_domains(self, allowed_domains):
+        """Sets the allowed_domains of this Organization.
+
+
+        :param allowed_domains: The allowed_domains of this Organization.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._allowed_domains = allowed_domains
 
     def to_dict(self):
         """Returns the model properties as a dict"""

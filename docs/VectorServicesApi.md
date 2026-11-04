@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**vector_services_get_configuration**](VectorServicesApi.md#vector_services_get_configuration) | **POST** /{tenantUrlCode}/VectorServices/getConfiguration/{layerId} | 
 [**vector_services_get_configurations**](VectorServicesApi.md#vector_services_get_configurations) | **POST** /{tenantUrlCode}/VectorServices/getConfigurations | 
 [**vector_services_get_features**](VectorServicesApi.md#vector_services_get_features) | **POST** /{tenantUrlCode}/VectorServices/getFeatures | 
+[**vector_services_get_features_by_ids**](VectorServicesApi.md#vector_services_get_features_by_ids) | **POST** /{tenantUrlCode}/VectorServices/getFeaturesByIds | 
 [**vector_services_get_features_combine_min_max_value**](VectorServicesApi.md#vector_services_get_features_combine_min_max_value) | **POST** /{tenantUrlCode}/VectorServices/getFeaturesCombineMinMaxValue | 
 [**vector_services_get_features_extent**](VectorServicesApi.md#vector_services_get_features_extent) | **POST** /{tenantUrlCode}/VectorServices/getFeaturesExtent | 
 [**vector_services_get_heat_map_items**](VectorServicesApi.md#vector_services_get_heat_map_items) | **POST** /{tenantUrlCode}/VectorServices/getHeatMapItems | 
@@ -34,7 +35,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -92,7 +96,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -150,7 +157,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -208,7 +218,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -266,7 +279,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -282,6 +298,67 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling VectorServicesApi->vector_services_get_features: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**GetFeaturesParametersOfDataQueryColumnDTO**](GetFeaturesParametersOfDataQueryColumnDTO.md)|  | 
+ **tenant_url_code** | **str**|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[apiKey](../README.md#apiKey), [bearer](../README.md#bearer), [secretKey](../README.md#secretKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **vector_services_get_features_by_ids**
+> str vector_services_get_features_by_ids(body, tenant_url_code)
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import cartovista_cloud_clients
+from cartovista_cloud_clients.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = cartovista_cloud_clients.Configuration()
+configuration.api_key['apiKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apiKey'] = 'Bearer'
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure API key authorization: secretKey
+configuration.api_key['secretKey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['secretKey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = cartovista_cloud_clients.VectorServicesApi(cartovista_cloud_clients.ApiClient(configuration))
+body = cartovista_cloud_clients.GetFeaturesParametersOfDataQueryColumnDTO() # GetFeaturesParametersOfDataQueryColumnDTO | 
+tenant_url_code = 'tenant_url_code_example' # str | 
+
+try:
+    api_response = api_instance.vector_services_get_features_by_ids(body, tenant_url_code)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling VectorServicesApi->vector_services_get_features_by_ids: %s\n" % e)
 ```
 
 ### Parameters
@@ -324,7 +401,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -382,7 +462,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -440,7 +523,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -498,7 +584,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -539,7 +628,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **vector_services_get_selection_stack**
-> list[str] vector_services_get_selection_stack(body, tenant_url_code)
+> SelectionStackValues vector_services_get_selection_stack(body, tenant_url_code)
 
 
 
@@ -556,7 +645,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -583,7 +675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**list[str]**
+[**SelectionStackValues**](SelectionStackValues.md)
 
 ### Authorization
 
@@ -614,7 +706,10 @@ configuration = cartovista_cloud_clients.Configuration()
 configuration.api_key['apiKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['apiKey'] = 'Bearer'
-
+# Configure API key authorization: bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 # Configure API key authorization: secretKey
 configuration.api_key['secretKey'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

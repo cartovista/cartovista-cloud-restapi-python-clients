@@ -31,22 +31,28 @@ class ApiDeleteReport(object):
         'error_count': 'int',
         'error_details': 'list[ErrorDetail]',
         'delete_count': 'int',
-        'deleted_identifiers': 'list[str]'
+        'deleted_identifiers': 'list[str]',
+        'deleted_fids': 'list[int]',
+        'affected_tiles': 'list[MVTCoordinate]'
     }
 
     attribute_map = {
         'error_count': 'errorCount',
         'error_details': 'errorDetails',
         'delete_count': 'deleteCount',
-        'deleted_identifiers': 'deletedIdentifiers'
+        'deleted_identifiers': 'deletedIdentifiers',
+        'deleted_fids': 'deletedFids',
+        'affected_tiles': 'affectedTiles'
     }
 
-    def __init__(self, error_count=None, error_details=None, delete_count=None, deleted_identifiers=None):  # noqa: E501
+    def __init__(self, error_count=None, error_details=None, delete_count=None, deleted_identifiers=None, deleted_fids=None, affected_tiles=None):  # noqa: E501
         """ApiDeleteReport - a model defined in Swagger"""  # noqa: E501
         self._error_count = None
         self._error_details = None
         self._delete_count = None
         self._deleted_identifiers = None
+        self._deleted_fids = None
+        self._affected_tiles = None
         self.discriminator = None
         if error_count is not None:
             self.error_count = error_count
@@ -56,6 +62,10 @@ class ApiDeleteReport(object):
             self.delete_count = delete_count
         if deleted_identifiers is not None:
             self.deleted_identifiers = deleted_identifiers
+        if deleted_fids is not None:
+            self.deleted_fids = deleted_fids
+        if affected_tiles is not None:
+            self.affected_tiles = affected_tiles
 
     @property
     def error_count(self):
@@ -140,6 +150,48 @@ class ApiDeleteReport(object):
         """
 
         self._deleted_identifiers = deleted_identifiers
+
+    @property
+    def deleted_fids(self):
+        """Gets the deleted_fids of this ApiDeleteReport.  # noqa: E501
+
+
+        :return: The deleted_fids of this ApiDeleteReport.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._deleted_fids
+
+    @deleted_fids.setter
+    def deleted_fids(self, deleted_fids):
+        """Sets the deleted_fids of this ApiDeleteReport.
+
+
+        :param deleted_fids: The deleted_fids of this ApiDeleteReport.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._deleted_fids = deleted_fids
+
+    @property
+    def affected_tiles(self):
+        """Gets the affected_tiles of this ApiDeleteReport.  # noqa: E501
+
+
+        :return: The affected_tiles of this ApiDeleteReport.  # noqa: E501
+        :rtype: list[MVTCoordinate]
+        """
+        return self._affected_tiles
+
+    @affected_tiles.setter
+    def affected_tiles(self, affected_tiles):
+        """Sets the affected_tiles of this ApiDeleteReport.
+
+
+        :param affected_tiles: The affected_tiles of this ApiDeleteReport.  # noqa: E501
+        :type: list[MVTCoordinate]
+        """
+
+        self._affected_tiles = affected_tiles
 
     def to_dict(self):
         """Returns the model properties as a dict"""

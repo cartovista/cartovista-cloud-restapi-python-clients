@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **tenant_id** | **str** |  | [optional] 
 **extent** | **OneOfWmsLayerExtent** |  | [optional] 
 **get_legend_url** | **str** |  | [optional] 
-**version** | **str** |  | [optional] 
+**version** | **str** |  | 
 **projection_attribute** | **str** |  | [optional] 
 **thumbnail_url** | **str** |  | [optional] 
 

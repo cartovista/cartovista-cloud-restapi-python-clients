@@ -44,8 +44,7 @@ class KeywordDTO(object):
         self.discriminator = None
         if id is not None:
             self.id = id
-        if keyword is not None:
-            self.keyword = keyword
+        self.keyword = keyword
 
     @property
     def id(self):
@@ -86,6 +85,8 @@ class KeywordDTO(object):
         :param keyword: The keyword of this KeywordDTO.  # noqa: E501
         :type: str
         """
+        if keyword is None:
+            raise ValueError("Invalid value for `keyword`, must not be `None`")  # noqa: E501
 
         self._keyword = keyword
 

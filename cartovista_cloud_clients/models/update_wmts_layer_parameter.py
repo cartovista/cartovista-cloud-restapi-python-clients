@@ -39,8 +39,7 @@ class UpdateWmtsLayerParameter(object):
         """UpdateWmtsLayerParameter - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self.discriminator = None
-        if name is not None:
-            self.name = name
+        self.name = name
 
     @property
     def name(self):
@@ -60,6 +59,8 @@ class UpdateWmtsLayerParameter(object):
         :param name: The name of this UpdateWmtsLayerParameter.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

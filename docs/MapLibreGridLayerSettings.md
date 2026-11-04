@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
+**identifier** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **grid_layer_type** | [**GridLayerTypeEnum**](GridLayerTypeEnum.md) |  | [optional] 
 **grid_sources** | [**list[MapLibreGridSourceSettings]**](MapLibreGridSourceSettings.md) |  | [optional] 

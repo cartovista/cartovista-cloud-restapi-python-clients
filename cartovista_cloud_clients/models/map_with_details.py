@@ -33,6 +33,7 @@ class MapWithDetails(object):
         'data_tables': 'list[LayerDataTable]',
         'grid_layers': 'list[GridLayer]',
         'wmts_layers': 'list[WmtsLayer]',
+        'pmt_layers': 'list[PMTLayer]',
         'wms_layers': 'list[WmsLayer]',
         'permissions': 'list[PermissionPairComplexDTO]'
     }
@@ -43,17 +44,19 @@ class MapWithDetails(object):
         'data_tables': 'dataTables',
         'grid_layers': 'gridLayers',
         'wmts_layers': 'wmtsLayers',
+        'pmt_layers': 'pmtLayers',
         'wms_layers': 'wmsLayers',
         'permissions': 'permissions'
     }
 
-    def __init__(self, map=None, layers=None, data_tables=None, grid_layers=None, wmts_layers=None, wms_layers=None, permissions=None):  # noqa: E501
+    def __init__(self, map=None, layers=None, data_tables=None, grid_layers=None, wmts_layers=None, pmt_layers=None, wms_layers=None, permissions=None):  # noqa: E501
         """MapWithDetails - a model defined in Swagger"""  # noqa: E501
         self._map = None
         self._layers = None
         self._data_tables = None
         self._grid_layers = None
         self._wmts_layers = None
+        self._pmt_layers = None
         self._wms_layers = None
         self._permissions = None
         self.discriminator = None
@@ -67,6 +70,8 @@ class MapWithDetails(object):
             self.grid_layers = grid_layers
         if wmts_layers is not None:
             self.wmts_layers = wmts_layers
+        if pmt_layers is not None:
+            self.pmt_layers = pmt_layers
         if wms_layers is not None:
             self.wms_layers = wms_layers
         if permissions is not None:
@@ -176,6 +181,27 @@ class MapWithDetails(object):
         """
 
         self._wmts_layers = wmts_layers
+
+    @property
+    def pmt_layers(self):
+        """Gets the pmt_layers of this MapWithDetails.  # noqa: E501
+
+
+        :return: The pmt_layers of this MapWithDetails.  # noqa: E501
+        :rtype: list[PMTLayer]
+        """
+        return self._pmt_layers
+
+    @pmt_layers.setter
+    def pmt_layers(self, pmt_layers):
+        """Sets the pmt_layers of this MapWithDetails.
+
+
+        :param pmt_layers: The pmt_layers of this MapWithDetails.  # noqa: E501
+        :type: list[PMTLayer]
+        """
+
+        self._pmt_layers = pmt_layers
 
     @property
     def wms_layers(self):

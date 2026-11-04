@@ -49,7 +49,8 @@ class GridSource(object):
         'thumbnail_url_expiry': 'datetime',
         'is_heatmap': 'bool',
         'is_demo_source': 'bool',
-        'is_gpkg': 'bool'
+        'is_gpkg': 'bool',
+        'overview_resampling': 'str'
     }
 
     attribute_map = {
@@ -74,10 +75,11 @@ class GridSource(object):
         'thumbnail_url_expiry': 'thumbnailUrlExpiry',
         'is_heatmap': 'isHeatmap',
         'is_demo_source': 'isDemoSource',
-        'is_gpkg': 'isGpkg'
+        'is_gpkg': 'isGpkg',
+        'overview_resampling': 'overviewResampling'
     }
 
-    def __init__(self, id=None, grid_layer_id=None, unique_identifier=None, name=None, description=None, file_metadata=None, band_metadata=None, band=None, creation_time=None, modified_time=None, timestamp=None, no_data_enabled=None, no_data_value=None, min_value=None, max_value=None, possible_classified_values=None, owner_name=None, thumbnail_url=None, thumbnail_url_expiry=None, is_heatmap=None, is_demo_source=None, is_gpkg=None):  # noqa: E501
+    def __init__(self, id=None, grid_layer_id=None, unique_identifier=None, name=None, description=None, file_metadata=None, band_metadata=None, band=None, creation_time=None, modified_time=None, timestamp=None, no_data_enabled=None, no_data_value=None, min_value=None, max_value=None, possible_classified_values=None, owner_name=None, thumbnail_url=None, thumbnail_url_expiry=None, is_heatmap=None, is_demo_source=None, is_gpkg=None, overview_resampling=None):  # noqa: E501
         """GridSource - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._grid_layer_id = None
@@ -101,6 +103,7 @@ class GridSource(object):
         self._is_heatmap = None
         self._is_demo_source = None
         self._is_gpkg = None
+        self._overview_resampling = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -146,6 +149,8 @@ class GridSource(object):
             self.is_demo_source = is_demo_source
         if is_gpkg is not None:
             self.is_gpkg = is_gpkg
+        if overview_resampling is not None:
+            self.overview_resampling = overview_resampling
 
     @property
     def id(self):
@@ -608,6 +613,27 @@ class GridSource(object):
         """
 
         self._is_gpkg = is_gpkg
+
+    @property
+    def overview_resampling(self):
+        """Gets the overview_resampling of this GridSource.  # noqa: E501
+
+
+        :return: The overview_resampling of this GridSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._overview_resampling
+
+    @overview_resampling.setter
+    def overview_resampling(self, overview_resampling):
+        """Sets the overview_resampling of this GridSource.
+
+
+        :param overview_resampling: The overview_resampling of this GridSource.  # noqa: E501
+        :type: str
+        """
+
+        self._overview_resampling = overview_resampling
 
     def to_dict(self):
         """Returns the model properties as a dict"""

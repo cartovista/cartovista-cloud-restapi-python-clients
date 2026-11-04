@@ -29,6 +29,7 @@ class MapLibreWmtsLayerSettings(object):
     """
     swagger_types = {
         'id': 'str',
+        'identifier': 'str',
         'name': 'str',
         'url': 'str',
         'extent': 'OneOfMapLibreWmtsLayerSettingsExtent',
@@ -37,15 +38,17 @@ class MapLibreWmtsLayerSettings(object):
 
     attribute_map = {
         'id': 'id',
+        'identifier': 'identifier',
         'name': 'name',
         'url': 'url',
         'extent': 'extent',
         'settings': 'settings'
     }
 
-    def __init__(self, id=None, name=None, url=None, extent=None, settings=None):  # noqa: E501
+    def __init__(self, id=None, identifier=None, name=None, url=None, extent=None, settings=None):  # noqa: E501
         """MapLibreWmtsLayerSettings - a model defined in Swagger"""  # noqa: E501
         self._id = None
+        self._identifier = None
         self._name = None
         self._url = None
         self._extent = None
@@ -53,6 +56,8 @@ class MapLibreWmtsLayerSettings(object):
         self.discriminator = None
         if id is not None:
             self.id = id
+        if identifier is not None:
+            self.identifier = identifier
         if name is not None:
             self.name = name
         if url is not None:
@@ -82,6 +87,27 @@ class MapLibreWmtsLayerSettings(object):
         """
 
         self._id = id
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this MapLibreWmtsLayerSettings.  # noqa: E501
+
+
+        :return: The identifier of this MapLibreWmtsLayerSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this MapLibreWmtsLayerSettings.
+
+
+        :param identifier: The identifier of this MapLibreWmtsLayerSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._identifier = identifier
 
     @property
     def name(self):

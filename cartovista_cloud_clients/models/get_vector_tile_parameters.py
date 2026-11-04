@@ -47,10 +47,8 @@ class GetVectorTileParameters(object):
         self.discriminator = None
         if id is not None:
             self.id = id
-        if quadkeys is not None:
-            self.quadkeys = quadkeys
-        if column_ids is not None:
-            self.column_ids = column_ids
+        self.quadkeys = quadkeys
+        self.column_ids = column_ids
 
     @property
     def id(self):
@@ -91,6 +89,8 @@ class GetVectorTileParameters(object):
         :param quadkeys: The quadkeys of this GetVectorTileParameters.  # noqa: E501
         :type: list[str]
         """
+        if quadkeys is None:
+            raise ValueError("Invalid value for `quadkeys`, must not be `None`")  # noqa: E501
 
         self._quadkeys = quadkeys
 
@@ -112,6 +112,8 @@ class GetVectorTileParameters(object):
         :param column_ids: The column_ids of this GetVectorTileParameters.  # noqa: E501
         :type: list[str]
         """
+        if column_ids is None:
+            raise ValueError("Invalid value for `column_ids`, must not be `None`")  # noqa: E501
 
         self._column_ids = column_ids
 

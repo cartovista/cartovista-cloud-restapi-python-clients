@@ -42,10 +42,8 @@ class MapSearchResults(object):
         self._layers = None
         self._addresses = None
         self.discriminator = None
-        if layers is not None:
-            self.layers = layers
-        if addresses is not None:
-            self.addresses = addresses
+        self.layers = layers
+        self.addresses = addresses
 
     @property
     def layers(self):
@@ -65,6 +63,8 @@ class MapSearchResults(object):
         :param layers: The layers of this MapSearchResults.  # noqa: E501
         :type: list[LayerSearchResult]
         """
+        if layers is None:
+            raise ValueError("Invalid value for `layers`, must not be `None`")  # noqa: E501
 
         self._layers = layers
 
@@ -86,6 +86,8 @@ class MapSearchResults(object):
         :param addresses: The addresses of this MapSearchResults.  # noqa: E501
         :type: list[GeocodedLocation]
         """
+        if addresses is None:
+            raise ValueError("Invalid value for `addresses`, must not be `None`")  # noqa: E501
 
         self._addresses = addresses
 

@@ -5,11 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **poi_feature_id** | **str** |  | [optional] 
 **scenario** | **str** |  | [optional] 
+**injection_value** | **float** |  | [optional] 
 **cluster** | **str** |  | [optional] 
 **subcluster** | **str** |  | [optional] 
 **year** | **float** |  | [optional] 
 **case_type** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
+**kv_value** | **str** |  | [optional] 
 **constraint** | **str** |  | [optional] 
 **contingency** | **str** |  | [optional] 
 **mw_available** | **float** |  | [optional] 

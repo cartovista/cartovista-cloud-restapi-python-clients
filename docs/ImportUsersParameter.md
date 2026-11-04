@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_create_parameters** | [**list[UserCreateParameter]**](UserCreateParameter.md) |  | [optional] 
+**user_create_parameters** | [**list[UserCreateParameter]**](UserCreateParameter.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

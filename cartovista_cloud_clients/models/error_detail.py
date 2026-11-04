@@ -45,10 +45,8 @@ class ErrorDetail(object):
         self._error_code = None
         self._description = None
         self.discriminator = None
-        if error_type is not None:
-            self.error_type = error_type
-        if error_code is not None:
-            self.error_code = error_code
+        self.error_type = error_type
+        self.error_code = error_code
         if description is not None:
             self.description = description
 
@@ -70,6 +68,8 @@ class ErrorDetail(object):
         :param error_type: The error_type of this ErrorDetail.  # noqa: E501
         :type: ErrorType
         """
+        if error_type is None:
+            raise ValueError("Invalid value for `error_type`, must not be `None`")  # noqa: E501
 
         self._error_type = error_type
 
@@ -91,6 +91,8 @@ class ErrorDetail(object):
         :param error_code: The error_code of this ErrorDetail.  # noqa: E501
         :type: str
         """
+        if error_code is None:
+            raise ValueError("Invalid value for `error_code`, must not be `None`")  # noqa: E501
 
         self._error_code = error_code
 

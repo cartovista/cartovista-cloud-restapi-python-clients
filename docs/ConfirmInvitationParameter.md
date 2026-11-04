@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_id** | **str** |  | [optional] 
-**invitation_code** | **str** |  | [optional] 
-**first_name** | **str** |  | [optional] 
-**last_name** | **str** |  | [optional] 
-**provider** | [**SecurityProvider**](SecurityProvider.md) |  | [optional] 
+**user_id** | **str** |  | 
+**invitation_code** | **str** |  | 
+**first_name** | **str** |  | 
+**last_name** | **str** |  | 
+**provider** | [**SecurityProvider**](SecurityProvider.md) |  | 
 **provider_id** | **str** |  | [optional] 
 **email** | **str** |  | [optional] 
 **password** | **str** |  | [optional] 

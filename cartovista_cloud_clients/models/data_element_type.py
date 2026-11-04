@@ -30,6 +30,7 @@ class DataElementType(object):
     GRID_LAYER = "GRID_LAYER"
     GRID_SOURCE = "GRID_SOURCE"
     WMTS = "WMTS"
+    PMT = "PMT"
     WMS = "WMS"
     """
     Attributes:

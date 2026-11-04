@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **cut_under** | **int** |  | [optional] 
 **cut_above** | **int** |  | [optional] 
 **compression** | **str** |  | [optional] 
+**overview_resampling** | **str** | GDAL overview resampling method used when generating the COG. Allowed values: NEAREST, AVERAGE, BILINEAR, CUBIC, CUBICSPLINE, LANCZOS, MODE, RMS. Null or empty keeps the GDAL default. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

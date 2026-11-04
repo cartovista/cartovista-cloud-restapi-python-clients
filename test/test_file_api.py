@@ -55,6 +55,12 @@ class TestFileApi(unittest.TestCase):
         """
         pass
 
+    def test_file_get_cluster_mvt_tile(self):
+        """Test case for file_get_cluster_mvt_tile
+
+        """
+        pass
+
     def test_file_get_custom_poi_analysis_post_project_heatmap(self):
         """Test case for file_get_custom_poi_analysis_post_project_heatmap
 
@@ -109,6 +115,12 @@ class TestFileApi(unittest.TestCase):
 
     def test_file_get_temporary_analysis_heatmap(self):
         """Test case for file_get_temporary_analysis_heatmap
+
+        """
+        pass
+
+    def test_file_get_temporary_poi_heatmap(self):
+        """Test case for file_get_temporary_poi_heatmap
 
         """
         pass

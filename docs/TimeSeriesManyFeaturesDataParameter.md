@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **current_state** | **OneOfTimeSeriesManyFeaturesDataParameterCurrentState** |  | [optional] 
 **data_table_join_id** | **str** |  | [optional] 
 **limit** | **int** |  | [optional] 
+**start_at** | **int** |  | [optional] 
 **feature_ids** | **list[str]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **smoothing** | **float** |  | [optional] 
 **pixel_size** | **int** |  | [optional] 
 **buffer_size** | **int** |  | [optional] 
+**default_unconstrained_pois_capacity** | **int** |  | [optional] 
 **show_injection_area_mask** | **bool** |  | [optional] 
 **only_use_worst_dispatch** | **bool** |  | [optional] 
 

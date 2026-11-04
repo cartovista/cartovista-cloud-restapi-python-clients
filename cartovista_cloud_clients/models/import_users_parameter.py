@@ -39,8 +39,7 @@ class ImportUsersParameter(object):
         """ImportUsersParameter - a model defined in Swagger"""  # noqa: E501
         self._user_create_parameters = None
         self.discriminator = None
-        if user_create_parameters is not None:
-            self.user_create_parameters = user_create_parameters
+        self.user_create_parameters = user_create_parameters
 
     @property
     def user_create_parameters(self):
@@ -60,6 +59,8 @@ class ImportUsersParameter(object):
         :param user_create_parameters: The user_create_parameters of this ImportUsersParameter.  # noqa: E501
         :type: list[UserCreateParameter]
         """
+        if user_create_parameters is None:
+            raise ValueError("Invalid value for `user_create_parameters`, must not be `None`")  # noqa: E501
 
         self._user_create_parameters = user_create_parameters
 

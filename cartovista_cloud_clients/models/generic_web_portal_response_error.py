@@ -51,8 +51,7 @@ class GenericWebPortalResponseError(object):
         self._message = None
         self._additional_information = None
         self.discriminator = None
-        if code is not None:
-            self.code = code
+        self.code = code
         if codes is not None:
             self.codes = codes
         if code_details is not None:
@@ -80,6 +79,8 @@ class GenericWebPortalResponseError(object):
         :param code: The code of this GenericWebPortalResponseError.  # noqa: E501
         :type: str
         """
+        if code is None:
+            raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
 
         self._code = code
 

@@ -28,6 +28,7 @@ class SecurityProvider(object):
     GOOGLE = "Google"
     ENTRAID = "EntraID"
     AUTH0 = "Auth0"
+    OKTA = "Okta"
     """
     Attributes:
       swagger_types (dict): The key is attribute name
